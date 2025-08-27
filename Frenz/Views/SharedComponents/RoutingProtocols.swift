@@ -1,0 +1,155 @@
+import SwiftUI
+
+// MARK: - Support
+public struct AppLanguage: Identifiable, Equatable {
+    public let id: String   // "it", "en", ...
+    public let name: String // "Italiano", "English", ...
+    public let flag: String // "🇮🇹", "🇬🇧", ...
+}
+
+
+// MARK: - Language Selection
+public protocol LanguageSelectionRouting: ObservableObject {
+    var availableLanguages: [AppLanguage] { get }
+    var title: String { get }
+    var closeTitle: String { get }
+    var language: String { get }
+    func selectLanguage(_ code: String)
+    func closeLanguageSelector()
+}
+
+// MARK: - Player Setup
+public protocol PlayerSetupRouting: ObservableObject {
+    // Dati
+    var inputPlayers: [PlayerInput] { get }
+    // Testi
+    var playerInputPlaceholder: String { get }
+    var addPlayerLabel: String { get }
+    var backButtonTitle: String { get }   // tienilo se lo usi nella UI
+    // Azioni
+    func addPlayerInput()
+    func updatePlayerName(id: Int, name: String)
+    func removePlayerInput(id: Int)
+    func startGame()
+    // Settings (gear in alto a destra)
+    func openLanguageSelector()
+}
+
+// MARK: - Room Selection (NUOVO: estetica tipo screenshot)
+public protocol RoomSelectionRouting: ObservableObject {
+    var availableRooms: [GameRoom] { get }
+    var roomSelectionTitle: String { get }
+    var continueTitle: String { get }
+
+    func displayName(for room: GameRoom) -> String
+    func displaySubtitle(for room: GameRoom) -> String
+
+    // Azioni/Hook UI
+    func select(room: GameRoom)
+    func openSettings()
+    func openPaywall()
+    func addPlayers()
+    func isRoomLocked(_ room: GameRoom) -> Bool
+    func showsCrown(_ room: GameRoom) -> Bool
+    func progressForParty() -> (current: Int, total: Int)?
+    func goBackToPlayerSetup()
+    func enterGameSelection()
+
+    // facoltativo ma comodo se la view deve leggere/settare la selezione
+    var selectedRoom: GameRoom? { get set }
+}
+
+// MARK: - Game Selection (hub “Giochi”)
+public protocol GameSelectionRouting: ObservableObject {
+    var availableGames: [GameType] { get }
+    var gameSelectionTitle: String { get }
+    var startMatchTitle: String { get }
+    var backButtonTitle: String { get }
+    func displayName(for game: GameType) -> String
+    func displaySubtitle(for game: GameType) -> String
+
+    func goBackToRoomSelection()
+    func beginPlaying()
+
+    var selectedGame: GameType? { get set }
+}
+
+// MARK: - Playing
+public protocol PlayingRouting: ObservableObject {
+    // Stato corrente
+    var language: String { get }
+    var currentRoom: GameRoom? { get }
+    var currentGame: GameType? { get }
+    // +++ aggiunte per la nuova UI +++
+    var currentStep: Int { get }   // es. 23
+    var totalSteps: Int { get }    // es. 50
+    func backToRooms()             // torna alla RoomSelection
+    var isSpecialCurrent: Bool { get }             // se l’azione corrente è un minigioco
+    var currentRenderedActionText: String? { get } // testo con placeholder risolti
+    // Testi UI
+    var playingTitle: String { get }
+    var nextTitle: String { get }
+    var skipTitle: String { get }
+    var endTitle: String { get }
+    var startTimerTitle: String { get }
+
+    // Contenuto azione
+    var currentPlayerNameTitle: String? { get }     // Nome giocatore sopra, centrato
+    var currentSpecialTitle: String? { get }        // Titolo minigioco (se presente)
+    var currentSpecialDescription: String? { get }  // Descrizione/regole (se presente)
+    var currentActionText: String? { get }
+    var currentPenalty: Int? { get }
+
+    // Stato caricamento/navigazione
+    var isLoadingActions: Bool { get }
+    var hasMoreActions: Bool { get }
+
+    // Azioni
+    func onPlayingAppear()
+    func goNext()
+    func skip()
+    func startTimer()
+    func endMatch()
+}
+// MARK: - Paywall
+public protocol PaywallRouting: ObservableObject {
+    // Stato
+    var isTrialEnabled: Bool { get set }
+
+    // Testi
+    var paywallTitle: String { get }            // "Sblocca Gratis"
+    var paywallBullets: [String] { get }        // 3 bullet
+    var paywallTrialLabel: String { get }       // "Dubbi? Attivate la prova gratis"
+    var paywallPriceFooter: String { get }      // "Per 3 giorni, poi soli ..."
+    var paywallContinueTitle: String { get }    // "CONTINUA"
+    var paywallRestoreTitle: String { get }     // "Ripristina"
+    var paywallTermsTitle: String { get }       // "Condizioni"
+    var paywallPrivacyTitle: String { get }     // "Privacy"
+
+    // Azioni
+    func paywallPurchase()
+    func paywallRestore()
+    func paywallClose()
+}
+
+// MARK: - Onboarding
+public protocol OnboardingRouting: ObservableObject {
+    // Testi (puoi poi localizzare)
+    var obIntroTitle: String { get }
+    var obIntroSubtitle: String { get }
+    var obStartTitle: String { get }
+
+    var obWhoTitle: String { get }
+    var obWhoOptions: [String] { get }
+
+    var obMoodTitle: String { get }
+    var obMoodOptions: [String] { get }
+
+    // Azioni
+    func obSkip()
+    func obStart()
+    func obSelectWho(_ index: Int)
+    func obSelectMood(_ index: Int)
+}
+
+

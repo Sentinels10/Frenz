@@ -1,0 +1,26 @@
+"appName" = "FRIENZ";
+"appDescription" = "Questo club è gestito da un’AI. Lei formulerà domande sempre nuove e inaspettate.";
+"startButton" = "INIZIA";
+"changeLanguage" = "Cambia lingua";
+"languageSelectTitle" = "Scegli la lingua";
+"close" = "Chiudi";
+"playerInputPlaceholder" = "Nome giocatore";
+"addPlayerLabel" = "Aggiungi giocatore";
+"backButton" = "Indietro";
+"notEnoughPlayersError" = "Aggiungi almeno due giocatori";
+"roomSelectionTitle" = "Scegli la stanza";
+"continue" = "Avanti";
+
+"room.party.title" = "Party";
+"room.red.title" = "Red Room";
+"room.dark.title" = "Dark Room";
+"room.partner.title" = "Partner";
+"room.roulette.title" = "Roulette";
+
+"room.party.subtitle" = "Leggera, sociale, per scaldare la serata.";
+"room.red.subtitle" = "Piccante e provocante, gioca con il consenso.";
+"room.dark.subtitle" = "Drama, segreti, paure: confessa senza filtri.";
+"room.partner.subtitle" = "Sfide per coppie: complicità e pepe.";
+"room.roulette.subtitle" = "Mix casuale di tutte le modalità.";
+"room.games.title" = "Giochi";
+"room.games.subtitle" = "Hub dei minigiochi e varianti speciali.";
