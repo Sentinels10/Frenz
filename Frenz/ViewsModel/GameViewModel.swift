@@ -141,7 +141,7 @@ final class GameViewModel: ObservableObject,
         reseedPlayerOrder()
         gameState = .roomSelection
     }
-    func openLanguageSelector() { gameState = .languageSelection } // ⬅️ gear in alto a destra
+    func openLanguageSelector() { gameState = .languageSelection }
 
     // ============================================================
     // MARK: RoomSelectionRouting
