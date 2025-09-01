@@ -1,7 +1,6 @@
 import SwiftUI
 import Combine
 
-// MARK: - Stato app (senza .welcome)
 enum GameState: Equatable {
     case onboardingIntro
     case onboardingWho
