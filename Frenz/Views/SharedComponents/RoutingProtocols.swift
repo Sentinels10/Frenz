@@ -25,7 +25,7 @@ public protocol PlayerSetupRouting: ObservableObject {
     // Testi
     var playerInputPlaceholder: String { get }
     var addPlayerLabel: String { get }
-    var backButtonTitle: String { get }   // tienilo se lo usi nella UI
+    var backButtonTitle: String { get }
     // Azioni
     func addPlayerInput()
     func updatePlayerName(id: Int, name: String)
