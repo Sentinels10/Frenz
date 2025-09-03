@@ -35,8 +35,14 @@ struct ContentView: View {
                     .routeTransition(trigger: gameVM.gameState)
 
             case .playing:
-                PlayingView(vm: gameVM)
-                    .routeTransition(trigger: gameVM.gameState)
+                if gameVM.isTruthOrDareRound {
+                    TruthOrDareView(vm: gameVM)
+                        .onAppear(perform: gameVM.todChoosePhaseBootstrapIfNeeded)
+                        .routeTransition(trigger: gameVM.gameState)
+                } else {
+                    PlayingView(vm: gameVM)
+                        .routeTransition(trigger: gameVM.gameState)
+                }
 
             case .gameOver:
                 GameOverView_Placeholder()

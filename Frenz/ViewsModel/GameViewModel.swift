@@ -1,6 +1,7 @@
 import SwiftUI
 import Combine
 
+// MARK: - Stato app (senza .welcome)
 enum GameState: Equatable {
     case onboardingIntro
     case onboardingWho
@@ -16,20 +17,25 @@ enum GameState: Equatable {
 }
 
 final class GameViewModel: ObservableObject,
+    // Routing (NO WelcomeRouting)
     LanguageSelectionRouting, PlayerSetupRouting,
     RoomSelectionRouting, GameSelectionRouting,
-    PlayingRouting, PaywallRouting, OnboardingRouting
+    PlayingRouting, PaywallRouting, OnboardingRouting,
+    TruthOrDareRouting
 {
     // ============================================================
     // MARK: Base / Persistenza
     // ============================================================
     @Published var gameState: GameState = .playerSetup
-
     private let onboardingKey = "onboarding.seen"
 
     @Published var language: String = UserDefaults.standard.string(forKey: "app.language")
         ?? Locale.current.language.languageCode?.identifier ?? "it" {
         didSet { UserDefaults.standard.set(language, forKey: "app.language") }
+    }
+    
+    func togglePremium() {
+        premiumUnlocked.toggle()
     }
 
     // ============================================================
@@ -37,7 +43,6 @@ final class GameViewModel: ObservableObject,
     // ============================================================
     @Published var inputPlayers: [PlayerInput] = [PlayerInput(id: 1, name: "")]
 
-    // Giocatori attivi
     @Published private(set) var players: [String] = []
     private var playerOrder: [Int] = []
     private var playerCursor: Int = 0
@@ -65,7 +70,18 @@ final class GameViewModel: ObservableObject,
     // Deck
     @Published private var actions: [GameAction] = []
     @Published private(set) var isLoadingActions: Bool = false
-    @Published private var currentIndex: Int = 0
+    @Published private var currentIndex: Int = 0 {
+        didSet {
+            // Se abbiamo lasciato una carta ToD, resetta lo stato ToD
+            if todActive && !isTruthOrDareRound {
+                todActive = false
+                todText = nil
+                todPhase = .choose
+                todOrder.removeAll()
+                todCursor = 0
+            }
+        }
+    }
 
     // Limiti e mapping
     let MAX_ACTIONS_PER_MATCH = 50
@@ -89,9 +105,32 @@ final class GameViewModel: ObservableObject,
     }
 
     // ============================================================
-    // MARK: Init (niente Welcome)
+    // MARK: Truth or Dare (round per tutti)
+    // ============================================================
+    private enum TODPhase { case choose, truth, dare }
+    @Published private var todActive: Bool = false
+    @Published private var todPhase: TODPhase = .choose
+    private var todOrder: [Int] = []   // indici dei giocatori per il giro
+    private var todCursor: Int = 0
+    @Published private var todText: String? = nil
+    private var todTruths: [String] = []
+    private var todDares:  [String] = []
+
+    // ============================================================
+    // MARK: Premium
+    // ============================================================
+    private let premiumKey = "premium.unlocked"
+
+    @Published var premiumUnlocked: Bool {
+        didSet { UserDefaults.standard.set(premiumUnlocked, forKey: premiumKey) }
+    }
+    private var pendingRoomSelection: GameRoom?
+
+    // ============================================================
+    // MARK: Init
     // ============================================================
     init() {
+        self.premiumUnlocked = UserDefaults.standard.bool(forKey: premiumKey)
         if !["it","en","fr","de"].contains(language) { language = "it" }
         if !UserDefaults.standard.bool(forKey: onboardingKey) {
             gameState = .onboardingIntro
@@ -112,10 +151,16 @@ final class GameViewModel: ObservableObject,
     var title: String      { String(localized: "languageSelectTitle", locale: .init(identifier: language)) }
     var closeTitle: String { String(localized: "close",               locale: .init(identifier: language)) }
     func selectLanguage(_ code: String) { language = code }
-    func closeLanguageSelector() { gameState = .playerSetup } // ⬅️ torna al player setup
+    func closeLanguageSelector() { gameState = .playerSetup }
+
+    // Bootstrap opzionale per Truth or Dare
+    func todChoosePhaseBootstrapIfNeeded() {
+        guard isTruthOrDareRound else { return }
+        ensureTodPrepared()
+    }
 
     // ============================================================
-    // MARK: PlayerSetupRouting (con gear → lingua)
+    // MARK: PlayerSetupRouting
     // ============================================================
     var playerInputPlaceholder: String { String(localized: "playerInputPlaceholder", locale: .init(identifier: language)) }
     var addPlayerLabel: String        { String(localized: "addPlayerLabel",        locale: .init(identifier: language)) }
@@ -170,10 +215,50 @@ final class GameViewModel: ObservableObject,
         case .games:    return String(localized: "room.games.subtitle",    locale: .init(identifier: language))
         }
     }
-    func select(room: GameRoom) {
-        selectedRoom = room
-        enterGameSelection()
+
+    // 🔁 RINOMINATO: era `isPremium(_:)`
+    func isRoomPremium(_ room: GameRoom) -> Bool { room != .party }
+    
+    // MARK: - RoomSelectionRouting shims (per compatibilità con la View/protocollo attuale)
+    func isPremium(_ room: GameRoom) -> Bool {    // il protocollo si aspetta questo nome
+        return isRoomPremium(room)                 // reindirizza al metodo nuovo
     }
+
+    func goBack() {                                // richiesto dal protocollo
+        gameState = .playerSetup                   // stesso comportamento di goBackToPlayerSetup()
+    }
+
+    func openPlayerSetup() {                       // richiesto dal protocollo
+        gameState = .playerSetup
+    }
+
+    func select(room: GameRoom) {
+        // usa la nuova isRoomPremium
+        if isRoomPremium(room) && !premiumUnlocked {
+            pendingRoomSelection = room
+            gameState = .paywall
+            return
+        }
+        currentRoom = room
+        currentGame = nil
+        gameState = .playing
+    }
+
+    // Paywall flow
+    func completePremiumPurchase() {
+        premiumUnlocked = true
+        if let r = pendingRoomSelection {
+            pendingRoomSelection = nil
+            select(room: r)
+        } else {
+            gameState = .roomSelection
+        }
+    }
+    func cancelPremiumFlow() {
+        pendingRoomSelection = nil
+        gameState = .roomSelection
+    }
+
     func openSettings() { }
     func openPaywall() { gameState = .paywall }
     func addPlayers() { gameState = .playerSetup }
@@ -272,12 +357,10 @@ final class GameViewModel: ObservableObject,
         return actions[currentIndex].penalty
     }
 
-    // testo renderizzato con placeholder
     var currentRenderedActionText: String? {
         guard var s = currentActionText else { return nil }
 
         ensureSecondaryForCurrentIndexIfNeeded(in: s)
-
         let main = currentPlayerName ?? ""
         let sec  = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
 
@@ -292,8 +375,7 @@ final class GameViewModel: ObservableObject,
             s = s.replacingOccurrences(of: "{penalty}", with: String(p))
         }
         if s.contains("{count}") {
-            let random = Int.random(in: 1...5)
-            s = s.replacingOccurrences(of: "{count}", with: String(random))
+            s = s.replacingOccurrences(of: "{count}", with: String(Int.random(in: 1...5)))
         }
         return s
     }
@@ -334,10 +416,21 @@ final class GameViewModel: ObservableObject,
 
     func goNext() {
         guard !actions.isEmpty else { return }
+
+        // Blocca l'avanzamento solo se siamo su una carta TruthOrDare *e* il round ToD è attivo
+        if todActive && isTruthOrDareRound { return }
+
         let next = currentIndex + 1
         advancePlayer()
+
         if next < actions.count && next < MAX_ACTIONS_PER_MATCH {
             currentIndex = next
+            // Failsafe: se la prossima non è ToD, spegni qualsiasi stato residuo di ToD
+            if !isTruthOrDareRound {
+                todActive = false
+                todText = nil
+                todPhase = .choose
+            }
         } else {
             gameState = .gameOver
         }
@@ -354,6 +447,7 @@ final class GameViewModel: ObservableObject,
         currentGame = nil; currentRoom = nil
         players.removeAll(); playerOrder.removeAll(); playerCursor = 0
         secondaryByIndex.removeAll()
+        todActive = false; todText = nil; todTruths.removeAll(); todDares.removeAll()
         gameState = .gameOver
     }
 
@@ -402,12 +496,60 @@ final class GameViewModel: ObservableObject,
     }
 
     // ============================================================
+    // MARK: TruthOrDareRouting (implementazione)
+    // ============================================================
+    var isTruthOrDareRound: Bool {
+        guard currentIndex < actions.count else { return false }
+        return actions[currentIndex].game == "truthOrDare"
+    }
+    var todIsChoosePhase: Bool { todActive && todPhase == .choose }
+    var todIsShowingTruth: Bool { todActive && todPhase == .truth }
+    var todIsShowingDare: Bool { todActive && todPhase == .dare }
+
+    var todTitle: String { "OBBLIGO O VERITÀ?" }
+    var todCurrentPlayerName: String? {
+        guard todActive, todCursor < todOrder.count else { return nil }
+        let idx = todOrder[todCursor]
+        return players.indices.contains(idx) ? players[idx] : nil
+    }
+    var todPromptTitle: String {
+        switch todPhase {
+        case .truth: return "VERITÀ!"
+        case .dare:  return "OBBLIGO!"
+        case .choose: return ""
+        }
+    }
+    var todPromptText: String? { todText }
+
+    func todChooseTruth() {
+        ensureTodPrepared()
+        todPhase = .truth
+        todText = renderTODPrompt(pickFrom: todTruths)
+    }
+    func todChooseDare() {
+        ensureTodPrepared()
+        todPhase = .dare
+        todText = renderTODPrompt(pickFrom: todDares)
+    }
+    func todNext() {
+        // passa al prossimo giocatore oppure chiudi round e avanza il deck
+        todPhase = .choose
+        todText = nil
+        todCursor += 1
+        if todCursor >= todOrder.count {
+            todActive = false
+            goNext() // avanza nel mazzo normale
+        }
+    }
+
+    // ============================================================
     // MARK: Helpers
     // ============================================================
     private func resetDeck(with new: [GameAction]) {
         actions = new
         currentIndex = 0
         secondaryByIndex.removeAll()
+        todActive = false; todText = nil; todTruths.removeAll(); todDares.removeAll()
         if !players.isEmpty { reseedPlayerOrder() }
     }
 
@@ -501,5 +643,74 @@ final class GameViewModel: ObservableObject,
         case "timerChallenge":  return .miniChallenges
         default:                return nil
         }
+    }
+
+    // MARK: Truth or Dare helpers
+    private func ensureTodPrepared() {
+        guard isTruthOrDareRound else { return }
+
+        if !todActive {
+            // ordine: giocatore corrente, poi gli altri
+            todOrder = []
+            if let main = currentMainPlayerIndex {
+                todOrder.append(main)
+                let others = players.indices.filter { $0 != main }
+                todOrder.append(contentsOf: others)
+            } else {
+                todOrder = Array(players.indices)
+            }
+            todCursor = 0
+            todPhase = .choose
+            todActive = true
+        }
+
+        if let r = currentRoom,
+           let td = try? ContentLoader.loadTruthOrDare(lang: language, room: r) {
+            todTruths = td.truths.shuffled()
+            todDares  = td.dares.shuffled()
+        }
+    }
+
+    private func loadTruthOrDareContent() {
+        if let r = currentRoom,
+           let td = try? ContentLoader.loadTruthOrDare(room: r) {
+            todTruths = td.truths.shuffled()
+            todDares  = td.dares.shuffled()
+            return
+        }
+        // fallback: usa deck del gioco o frasi base
+        if let deck = try? ContentLoader.loadGameDeck(game: .truthOrDare) {
+            let all = deck.map { $0.text }
+            todTruths = all.shuffled()
+            todDares  = all.shuffled()
+        } else {
+            todTruths = ["Hai mai mentito oggi?", "Qual è il tuo segreto più buffo?"]
+            todDares  = ["Fai 10 flessioni", "Parla con accento strano per 1 turno"]
+        }
+    }
+
+    private func renderTODPrompt(pickFrom source: [String]) -> String {
+        let base = source.randomElement() ?? ""
+        var s = base
+
+        ensureSecondaryForCurrentIndexIfNeeded(in: s)
+
+        let main = todCurrentPlayerName ?? currentPlayerName ?? ""
+        let sec  = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
+
+        s = s.replacingOccurrences(of: "{player}", with: main)
+            .replacingOccurrences(of: "{PLAYER}", with: main.uppercased())
+            .replacingOccurrences(of: "{playerB}", with: sec)
+            .replacingOccurrences(of: "{PLAYERB}", with: sec.uppercased())
+            .replacingOccurrences(of: "{player2}", with: sec)
+            .replacingOccurrences(of: "{PLAYER2}", with: sec.uppercased())
+
+        if let p = currentPenalty {
+            s = s.replacingOccurrences(of: "{penalty}", with: String(p))
+        }
+        if s.contains("{count}") {
+            s = s.replacingOccurrences(of: "{count}", with: String(Int.random(in: 1...5)))
+        }
+        return s
     }
 }

@@ -13,6 +13,12 @@ public struct SpecialGameContent {
     public let timerSeconds: Int?
 }
 
+/// NUOVO: bundle per Obbligo/Verità (Truth or Dare)
+public struct TruthOrDareBundle {
+    public let truths: [String]
+    public let dares:  [String]
+}
+
 struct ContentLoader {
 
     // MARK: - API pubblica (lingua opzionale: se nil sceglie da solo)
@@ -34,6 +40,53 @@ struct ContentLoader {
     static func specialMeta(lang: String? = nil, id: String) -> (title: String, description: String?)? {
         guard let dict = (try? loadMergedDict(lang: lang)) else { return nil }
         return buildSpecialMeta(from: dict, id: id)
+    }
+
+    /// NUOVO: ritorna le liste di VERITÀ e OBBLIGHI per la stanza richiesta
+    /// Supporta sia "truthDareGame" (tuo JSON storico) sia "truthOrDare"
+    static func loadTruthOrDare(lang: String? = nil, room: GameRoom) throws -> TruthOrDareBundle {
+        let dict = try loadMergedDict(lang: lang)
+
+        // Nodo principale (in ordine di priorità: il tuo nome storico → quello nuovo)
+        let node = (dict["truthDareGame"] as? [String: Any])
+                ?? (dict["truthOrDare"]   as? [String: Any])
+
+        guard let tod = node else {
+            // nessun nodo ToD: restituisco array vuoti (più tollerante di un throw)
+            return TruthOrDareBundle(truths: [], dares: [])
+        }
+
+        // Estraggo truths
+        let truths: [String] = {
+            if let map = tod["truth"] as? [String: Any] {
+                return pickRoomArray(map, for: room)
+            } else if let arr = tod["truth"] as? [String] {
+                return arr
+            } else if let verita = tod["verita"] as? [String] {   // eventuale alias IT
+                return verita
+            } else if let veritaMap = tod["verita"] as? [String: Any] {
+                return pickRoomArray(veritaMap, for: room)
+            }
+            return []
+        }()
+
+        // Estraggo dares
+        let dares: [String] = {
+            if let map = tod["dare"] as? [String: Any] {
+                return pickRoomArray(map, for: room)
+            } else if let arr = tod["dare"] as? [String] {
+                return arr
+            } else if let obblighi = tod["obblighi"] as? [String] { // eventuale alias IT
+                return obblighi
+            } else if let obbligoMap = tod["obblighi"] as? [String: Any] {
+                return pickRoomArray(obbligoMap, for: room)
+            } else if let obbligoMap2 = tod["obbligo"] as? [String: Any] {
+                return pickRoomArray(obbligoMap2, for: room)
+            }
+            return []
+        }()
+
+        return TruthOrDareBundle(truths: truths, dares: dares)
     }
 
     // =====================================================================
@@ -105,7 +158,7 @@ struct ContentLoader {
         case .party:    return items(from: "party").shuffled()
         case .redRoom:  return items(from: "redRoom").shuffled()
         case .darkRoom: return items(from: "darkRoom").shuffled()
-        case .partner:  return items(from: "coppie").shuffled()
+        case .partner:  return items(from: "coppie").shuffled()       // mappavi "coppie" nel tuo JSON
         case .roulette:
             let combined = items(from: "party") + items(from: "redRoom") + items(from: "darkRoom") + items(from: "coppie")
             return combined.shuffled()
@@ -122,6 +175,7 @@ struct ContentLoader {
 
         switch game {
         case .truthOrDare:
+            // Manteniamo il tuo schema storico "truthDareGame", ma accettiamo anche "truthOrDare"
             if let td = dict["truthDareGame"] as? [String: Any] {
                 if let truth = td["truth"] as? [String: Any] {
                     flattenRoomStringMap(truth).forEach {
@@ -132,6 +186,13 @@ struct ContentLoader {
                     flattenRoomStringMap(dare).forEach {
                         result.append(GameAction(text: $0, room: "games", game: game.rawValue, penalty: nil, timerSeconds: nil))
                     }
+                }
+            } else if let td2 = dict["truthOrDare"] as? [String: Any] {
+                // supporto futuro
+                let truths = (td2["truth"] as? [String]) ?? flattenRoomStringMap(td2["truth"] as? [String: Any] ?? [:])
+                let dares  = (td2["dare"]  as? [String]) ?? flattenRoomStringMap(td2["dare"]  as? [String: Any] ?? [:])
+                (truths + dares).forEach {
+                    result.append(GameAction(text: $0, room: "games", game: game.rawValue, penalty: nil, timerSeconds: nil))
                 }
             }
 
@@ -225,11 +286,13 @@ struct ContentLoader {
             return nil
         }
 
-        // Truth or Dare (prende una frase tra truth/dare)
+        // Truth or Dare (prende una frase tra truth/dare) — resta compatibile col tuo schema
         if id == "truthOrDare" {
             let title = "Obbligo o Verità"
-            let description = (dict["specialGames"] as? [String: Any])
-                .flatMap { ($0["truthOrDare"] as? [String: Any])?["text"] as? String }
+            let descriptionNew = (dict["specialGames"] as? [String: Any])?["truthOrDare"].flatMap { $0 as? [String: Any] }?["text"] as? String
+            let descriptionOld = (dict["truthDareGame"] as? [String: Any])?["text"] as? String
+            let description = descriptionNew ?? descriptionOld
+
             if let action = truthOrDareOne(dict: dict, room: room) {
                 return SpecialGameContent(title: title, description: description, action: action, timerSeconds: nil)
             }
@@ -262,6 +325,12 @@ struct ContentLoader {
         if id == "wouldYouRather" {
             let desc = (dict["specialGames"] as? [String: Any])?["wouldYouRather"] as? [String: Any]
             return ("Preferiresti", (desc?["text"] as? String))
+        }
+        if id == "truthOrDare" {
+            // meta opzionale sia nello schema nuovo che nel vecchio
+            let descNew = (dict["specialGames"] as? [String: Any])?["truthOrDare"].flatMap { $0 as? [String: Any] }?["text"] as? String
+            let descOld = (dict["truthDareGame"] as? [String: Any])?["text"] as? String
+            return ("Obbligo o Verità", descNew ?? descOld)
         }
         if let sg = dict["specialGames"] as? [String: Any],
            let node = sg[id] as? [String: Any] {
@@ -296,23 +365,46 @@ struct ContentLoader {
         }
     }
 
+    /// Usa il tuo nodo storico "truthDareGame" (o in futuro "truthOrDare") per pescare UNA frase
     private static func truthOrDareOne(dict: [String: Any], room: GameRoom) -> String? {
-        guard let td = dict["truthDareGame"] as? [String: Any] else { return nil }
-        func pick(_ map: [String: Any]) -> String? {
-            let pool: [String]
-            switch room {
-            case .party:    pool = (map["party"] as? [String]) ?? []
-            case .redRoom:  pool = (map["redRoom"] as? [String]) ?? []
-            case .darkRoom: pool = (map["darkRoom"] as? [String]) ?? []
-            case .partner:  pool = (map["party"] as? [String]) ?? []
-            case .roulette: pool = ((map["party"] as? [String]) ?? []) + ((map["redRoom"] as? [String]) ?? []) + ((map["darkRoom"] as? [String]) ?? [])
-            case .games:    pool = []
+        if let td = dict["truthDareGame"] as? [String: Any] {
+            func pick(_ map: [String: Any]) -> String? {
+                let pool: [String]
+                switch room {
+                case .party:    pool = (map["party"] as? [String]) ?? []
+                case .redRoom:  pool = (map["redRoom"] as? [String]) ?? []
+                case .darkRoom: pool = (map["darkRoom"] as? [String]) ?? []
+                case .partner:  pool = (map["party"] as? [String]) ?? []
+                case .roulette: pool = ((map["party"] as? [String]) ?? []) + ((map["redRoom"] as? [String]) ?? []) + ((map["darkRoom"] as? [String]) ?? [])
+                case .games:    pool = []
+                }
+                return pool.randomElement()
             }
-            return pool.randomElement()
+            if let truth = td["truth"] as? [String: Any], let t = pick(truth) { return t }
+            if let dare  = td["dare"]  as? [String: Any], let d = pick(dare)  { return d }
+            return nil
+        } else if let td2 = dict["truthOrDare"] as? [String: Any] {
+            // supporto futuro: mixa truth+dare globali (se array)
+            let truths = (td2["truth"] as? [String]) ?? []
+            let dares  = (td2["dare"]  as? [String]) ?? []
+            return (truths + dares).randomElement()
         }
-        if let truth = td["truth"] as? [String: Any], let t = pick(truth) { return t }
-        if let dare  = td["dare"]  as? [String: Any], let d = pick(dare)  { return d }
         return nil
+    }
+
+    /// Helper per loadTruthOrDare: prende l'array della stanza richiesta, con fallback sensati.
+    private static func pickRoomArray(_ map: [String: Any], for room: GameRoom) -> [String] {
+        func arr(_ k: String) -> [String] { map[k] as? [String] ?? [] }
+        switch room {
+        case .party:    return arr("party").isEmpty ? (arr("all")+arr("common")) : arr("party")
+        case .redRoom:  return arr("redRoom").isEmpty ? (arr("all")+arr("common")) : arr("redRoom")
+        case .darkRoom: return arr("darkRoom").isEmpty ? (arr("all")+arr("common")) : arr("darkRoom")
+        case .partner:  return arr("coppie").isEmpty ? (arr("party").isEmpty ? (arr("all")+arr("common")) : arr("party")) : arr("coppie")
+        case .roulette:
+            let merged = arr("party") + arr("redRoom") + arr("darkRoom") + arr("coppie") + arr("all") + arr("common")
+            return merged
+        case .games:    return []
+        }
     }
 
     private static func poolForRoom(node: [String: Any], room: GameRoom) -> [String] {

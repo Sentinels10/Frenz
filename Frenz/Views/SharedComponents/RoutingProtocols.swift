@@ -37,6 +37,12 @@ public protocol PlayerSetupRouting: ObservableObject {
 
 // MARK: - Room Selection (NUOVO: estetica tipo screenshot)
 public protocol RoomSelectionRouting: ObservableObject {
+    func togglePremium()                // la View chiede al VM di cambiare stato
+    var premiumUnlocked: Bool { get }
+    func isRoomPremium(_ room: GameRoom) -> Bool
+    func openLanguageSelector()
+    func goBack()
+    func openPlayerSetup()
     var availableRooms: [GameRoom] { get }
     var roomSelectionTitle: String { get }
     var continueTitle: String { get }
@@ -111,6 +117,27 @@ public protocol PlayingRouting: ObservableObject {
     func startTimer()
     func endMatch()
 }
+
+// MARK: - Truth or Dare (Obbligo o Verità)
+public protocol TruthOrDareRouting: ObservableObject {
+    // Stato
+    var isTruthOrDareRound: Bool { get }
+    var todIsChoosePhase: Bool { get }
+    var todIsShowingTruth: Bool { get }
+    var todIsShowingDare: Bool { get }
+    
+    // Dati UI
+    var todTitle: String { get }                 // "OBBLIGO O VERITÀ?"
+    var todCurrentPlayerName: String? { get }    // nome del giocatore
+    var todPromptTitle: String { get }           // "OBBLIGO!" / "VERITÀ!"
+    var todPromptText: String? { get }           // testo estratto
+    
+    // Azioni
+    func todChooseTruth()
+    func todChooseDare()
+    func todNext()       // termina la visualizzazione, passa al prossimo giocatore / chiude il round
+}
+
 // MARK: - Paywall
 public protocol PaywallRouting: ObservableObject {
     // Stato
