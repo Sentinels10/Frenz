@@ -30,6 +30,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
         .navigationBarHidden(true)
     }
 
+    // MARK: - Header
     private var header: some View {
         ZStack {
             HStack {
@@ -53,6 +54,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
         }
     }
 
+    // MARK: - Choose phase (usa i colori della stanza)
     private var choosePhase: some View {
         VStack(spacing: 20) {
             Text(vm.todTitle)
@@ -94,6 +96,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
         }
     }
 
+    // MARK: - Result phase (resta bianco/nero)
     private var resultPhase: some View {
         VStack(spacing: 18) {
             Text(vm.todPromptTitle)
@@ -121,10 +124,11 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
         }
     }
 
+    // MARK: - Background
     private var background: LinearGradient {
         if vm.todIsChoosePhase {
-            return LinearGradient(colors: [Color(hex: 0xE61111), Color(hex: 0x5A0013)],
-                                  startPoint: .top, endPoint: .bottom)
+            // ⬇️ QUI prende il gradiente della stanza corrente
+            return gradientForRoom(vm.currentRoom)
         }
         if vm.todIsShowingTruth {
             // sfondo chiaro
@@ -139,5 +143,26 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
 
     private var counterColor: Color {
         vm.todIsShowingTruth ? .black.opacity(0.8) : .white.opacity(0.85)
+    }
+
+    // MARK: - Helpers gradient in base alla stanza
+    private func gradientForRoom(_ room: GameRoom?) -> LinearGradient {
+        let colors: [Color]
+        switch room {
+        case .some(.party):
+            // viola Party
+            colors = [Color(hex: 0x6E11E0), Color(hex: 0x22084B)]
+        case .some(.redRoom):
+            colors = [Color(hex: 0xE61111), Color(hex: 0x5A0013)]
+        case .some(.darkRoom):
+            colors = [Color(hex: 0x1B1B1F), Color(hex: 0x07070A)]
+        case .some(.partner):
+            colors = [Color(hex: 0xC71B4E), Color(hex: 0x4A0B1F)]
+        case .some(.roulette):
+            colors = [Color(hex: 0xFF53AC), Color(hex: 0x2B086F)]
+        default:
+            colors = [Color.black, Color.black]
+        }
+        return LinearGradient(colors: colors, startPoint: .top, endPoint: .bottom)
     }
 }

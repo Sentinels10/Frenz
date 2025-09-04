@@ -51,6 +51,10 @@ struct ContentView: View {
             case .paywall:
                 PaywallView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
+            
+            case .loading:
+                LoadingView(vm: gameVM)
+                    .routeTransition(trigger: gameVM.gameState)
 
             }
         }

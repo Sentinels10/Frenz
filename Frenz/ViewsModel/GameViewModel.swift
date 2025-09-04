@@ -14,6 +14,7 @@ enum GameState: Equatable {
     case playing
     case gameOver
     case paywall
+    case loading
 }
 
 final class GameViewModel: ObservableObject,
@@ -37,6 +38,14 @@ final class GameViewModel: ObservableObject,
     func togglePremium() {
         premiumUnlocked.toggle()
     }
+    
+    // MARK: Loading (splash tra stanza e partita)
+    @Published var loadingProgress: Double = 0        // 0...1
+    @Published var loadingSnippets: [String] = []     // frasi che ruotano
+    @Published var carouselIndex: Int = 0
+
+    private var loadingTimerCancellable: AnyCancellable?
+    private var carouselTimerCancellable: AnyCancellable?
 
     // ============================================================
     // MARK: Player setup
@@ -233,15 +242,79 @@ final class GameViewModel: ObservableObject,
     }
 
     func select(room: GameRoom) {
-        // usa la nuova isRoomPremium
+        // paywall se serve
         if isRoomPremium(room) && !premiumUnlocked {
             pendingRoomSelection = room
             gameState = .paywall
             return
         }
+        // altrimenti avvia schermata di loading
+        startLoadingAndEnter(room: room)
+    }
+    
+    // Avvia schermata di loading e prepara deck/snippets
+    func startLoadingAndEnter(room: GameRoom) {
         currentRoom = room
         currentGame = nil
-        gameState = .playing
+
+        // reset stato loading
+        loadingProgress = 0
+        loadingSnippets = []
+        carouselIndex = 0
+        gameState = .loading
+
+        // Pre-carica 3-4 frasi casuali della stanza per il carosello
+        DispatchQueue.global(qos: .userInitiated).async {
+            let deck = (try? ContentLoader.loadRoomDeck(room: room)) ?? []
+            let texts = deck.map { $0.text }.shuffled().prefix(4)
+            DispatchQueue.main.async {
+                self.loadingSnippets = Array(texts)
+            }
+        }
+
+        // Timer progress bar (~4s)
+        loadingTimerCancellable?.cancel()
+        loadingTimerCancellable = Timer.publish(every: 0.04, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in
+                guard let self else { return }
+                self.loadingProgress += 0.01            // 0.04s * 100 step ≈ 4s
+                if self.loadingProgress >= 1.0 {
+                    self.loadingTimerCancellable?.cancel()
+                    self.finishLoadingAndStartMatch()
+                }
+            }
+
+        // Timer carosello (cambia frase ogni ~1.2s)
+        carouselTimerCancellable?.cancel()
+        carouselTimerCancellable = Timer.publish(every: 1.2, on: .main, in: .common)
+            .autoconnect()
+            .sink { [weak self] _ in
+                guard let self, !self.loadingSnippets.isEmpty else { return }
+                self.carouselIndex = (self.carouselIndex + 1) % self.loadingSnippets.count
+            }
+    }
+
+    // Quando il loading termina, prepara il deck e vai in playing
+    private func finishLoadingAndStartMatch() {
+        carouselTimerCancellable?.cancel()
+
+        DispatchQueue.global(qos: .userInitiated).async {
+            var deck: [GameAction] = []
+            if let r = self.currentRoom, r != .games {
+                deck = (try? ContentLoader.loadRoomDeck(room: r)) ?? []
+                deck = self.injectSpecialGames(into: deck, for: r)
+            } else if let g = self.currentGame {
+                deck = (try? ContentLoader.loadGameDeck(game: g)) ?? []
+            }
+            if deck.count > self.MAX_ACTIONS_PER_MATCH {
+                deck = Array(deck.prefix(self.MAX_ACTIONS_PER_MATCH))
+            }
+            DispatchQueue.main.async {
+                self.resetDeck(with: deck)
+                self.gameState = .playing
+            }
+        }
     }
 
     // Paywall flow
