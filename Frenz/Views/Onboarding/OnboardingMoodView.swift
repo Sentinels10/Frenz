@@ -11,7 +11,7 @@ struct OnboardingMoodView<VM: OnboardingRouting>: View {
                 header
 
                 Text(vm.obMoodTitle)
-                    .font(.system(size: 22, weight: .heavy))
+                    .font(.rammetto(size: 22))
                     .foregroundColor(.white)
                     .padding(.top, 8)
 

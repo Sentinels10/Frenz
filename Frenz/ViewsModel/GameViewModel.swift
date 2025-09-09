@@ -678,15 +678,17 @@ final class GameViewModel: ObservableObject,
             let gid = valid[i % valid.count]
             let safeIndex = min(max(0, pos), deck.count)
 
-            if let content = ContentLoader.loadSpecial(id: gid, room: room) {
-                deck.insert(GameAction(text: content.action,
-                                       room: room.rawValue,
-                                       game: gid,
-                                       penalty: nil,
-                                       timerSeconds: content.timerSeconds),
-                            at: safeIndex)
+            if let content = ContentLoader.loadSpecial(lang: language, id: gid, room: room) {
+                deck.insert(
+                    GameAction(text: content.action,
+                               room: room.rawValue,
+                               game: gid,
+                               penalty: nil,
+                               timerSeconds: content.timerSeconds),
+                    at: safeIndex
+                )
             } else if let mapped = mapSpecialIDToGameType(gid),
-                      let one = try? ContentLoader.loadGameDeck(game: mapped).randomElement() {
+                      let one = try? ContentLoader.loadGameDeck(lang: language, game: mapped).randomElement() {
                 deck.insert(GameAction(text: one.text,
                                        room: room.rawValue,
                                        game: gid,
@@ -694,12 +696,7 @@ final class GameViewModel: ObservableObject,
                                        timerSeconds: one.timerSeconds),
                             at: safeIndex)
             } else {
-                deck.insert(GameAction(text: gid,
-                                       room: room.rawValue,
-                                       game: gid,
-                                       penalty: nil,
-                                       timerSeconds: nil),
-                            at: safeIndex)
+                deck.insert(GameAction(text: gid, room: room.rawValue, game: gid, penalty: nil, timerSeconds: nil), at: safeIndex)
             }
         }
 

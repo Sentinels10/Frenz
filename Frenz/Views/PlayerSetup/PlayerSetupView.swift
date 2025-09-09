@@ -15,11 +15,13 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
 
                 // Titolo grande multi-line
                 Text(titleText)
-                    .font(.system(size: 28, weight: .heavy))
+                    .font(.rammetto(size: 26))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
                     .padding(.top, 6)
+                    .lineSpacing(6)
+                    .shadow(color: .black.opacity(0.35), radius: 6, x: 0, y: 3)
 
                 // Lista input
                 ScrollView {
@@ -42,22 +44,29 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                         Button(action: { withAnimation(.spring(response: 0.25)) { vm.addPlayerInput() } }) {
                             HStack(spacing: 10) {
                                 Text(vm.addPlayerLabel)
-                                    .font(.system(size: 16, weight: .semibold))
+                                    .font(.rammetto(size: 15))
                                     .foregroundColor(.white)
-                                Spacer()
-                                Image(systemName: "plus.circle")
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 18, weight: .bold))
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .fill(Color.white.opacity(0.10))
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .stroke(Color.white.opacity(0.9), lineWidth: 2)
+                                    Image(systemName: "plus")
+                                        .font(.system(size: 13, weight: .bold))
+                                        .foregroundColor(.white)
+                                }
+                                .frame(width: 32, height: 32)
                             }
+                            .frame(maxWidth: .infinity, alignment: .center)
                             .padding(.horizontal, 18)
                             .padding(.vertical, 16)
                             .background(
                                 RoundedRectangle(cornerRadius: 16)
-                                    .fill(Color.white.opacity(0.06))
+                                    .fill(Color.white.opacity(0.08))
                             )
                             .overlay(
                                 RoundedRectangle(cornerRadius: 16)
-                                    .stroke(Color.white.opacity(0.25), lineWidth: 1)
+                                    .stroke(Color.white.opacity(0.20), lineWidth: 1)
                             )
                         }
                         .padding(.top, 6)
@@ -71,7 +80,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                 // CTA continua
                 Button(action: { vm.startGame() }) {
                     Text(continueTitle)
-                        .font(.system(size: 18, weight: .heavy))
+                        .font(.rammetto(size: 18))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 16)
@@ -105,8 +114,6 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
                     .padding(10)
-                    .background(Color.white.opacity(0.18))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
             }
         }
         .padding(.horizontal, 16)
@@ -126,15 +133,12 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
 
     // Localizzazione “CONTINUA”
     private var continueTitle: String {
-        String(localized: "continue",
-               locale: .init(identifier: Locale.current.identifier))
-        .uppercased()
+        String(localized: "continue").uppercased()
     }
 
     // Titolo grande (metti la tua chiave se ce l’hai)
     private var titleText: String {
-        // Se usi LocalizationService, puoi sostituire con: LocalizationService.tr("playerSetup.title", <lang>)
-        "Aggiungete i giocatori e diamo inizio alla festa!"
+        String(localized: "playerSetup.title")
     }
 }
 
@@ -150,26 +154,36 @@ private struct PlayerFieldRow: View {
         ZStack {
             // fondo unico
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.white.opacity(0.12))
+                .fill(
+                    LinearGradient(colors: [Color(hex: 0x4E35A8).opacity(0.55),
+                                            Color(hex: 0x3A1E7A).opacity(0.55)],
+                                   startPoint: .top, endPoint: .bottom)
+                )
 
             HStack(spacing: 8) {
-                TextField(placeholder, text: $text)
-                    .onChange(of: text) { onChange(text) }   // compat iOS16/17
-                    .textInputAutocapitalization(.words)
-                    .disableAutocorrection(true)
-                    .foregroundColor(.white)
-                    .font(.system(size: 16, weight: .semibold))
-                    .padding(.leading, 14)
-                    .padding(.vertical, 14)
+                ZStack(alignment: .leading) {
+                    if text.isEmpty {
+                        Text(placeholder)
+                            .font(.rammetto(size: 15))
+                            .foregroundColor(Color(hex: 0xBCA7FF))
+                            .padding(.leading, 14)
+                    }
+                    TextField("", text: $text)
+                        .onChange(of: text) { onChange(text) }   // compat iOS16/17
+                        .textInputAutocapitalization(.words)
+                        .disableAutocorrection(true)
+                        .foregroundColor(.white)
+                        .font(.rammetto(size: 15))
+                        .padding(.leading, 14)
+                        .padding(.vertical, 14)
+                }
 
                 // bottone “X” interno
                 Button(action: onRemove) {
                     Image(systemName: "xmark")
-                        .font(.system(size: 14, weight: .bold))
+                        .font(.system(size: 16, weight: .bold))
                         .foregroundColor(.white)
                         .padding(10)
-                        .background(Color.white.opacity(0.14))
-                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
                 .padding(.trailing, 8)
             }
@@ -177,9 +191,7 @@ private struct PlayerFieldRow: View {
         .frame(height: 56)
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.white.opacity(0.18), lineWidth: 1)
+                .stroke(Color.white.opacity(0.14), lineWidth: 1)
         )
     }
 }
-
-

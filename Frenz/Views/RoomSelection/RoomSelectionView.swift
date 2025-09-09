@@ -1,5 +1,29 @@
 import SwiftUI
 
+#if canImport(UIKit)
+import UIKit
+#endif
+
+// Ritorna l'immagine dall'asset se esiste, altrimenti un SF Symbol
+@ViewBuilder
+private func assetOrSymbol(_ assetName: String, system symbolName: String) -> some View {
+    #if canImport(UIKit)
+    if let ui = UIImage(named: assetName) {
+        Image(uiImage: ui)
+            .renderingMode(.original)
+            .resizable()
+    } else {
+        Image(systemName: symbolName)
+            .resizable()
+            .renderingMode(.template)
+    }
+    #else
+    Image(systemName: symbolName)
+        .resizable()
+        .renderingMode(.template)
+    #endif
+}
+
 
 // MARK: - View
 struct RoomSelectionView<VM: RoomSelectionRouting>: View {
@@ -28,14 +52,12 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.white)
                             .padding(10)
-                            .background(Color.white.opacity(0.12))
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
 
                     Spacer()
 
-                    Text("Scegli la stanza")
-                        .font(.system(size: 24, weight: .heavy))
+                    Text(String(localized: "roomSelection.title"))
+                        .font(.rammetto(size: 24))
                         .foregroundColor(.white)
 
                     Spacer()
@@ -45,8 +67,6 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                             .font(.system(size: 16, weight: .bold))
                             .foregroundColor(.white)
                             .padding(10)
-                            .background(Color.white.opacity(0.12))
-                            .clipShape(RoundedRectangle(cornerRadius: 12))
                     }
                     // 🔑 bottone toggle premium (solo per debug/test)
                     Button(action: { vm.togglePremium() }) {
@@ -59,7 +79,7 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                 .padding(.top, 8)
 
                 ScrollView(showsIndicators: false) {
-                    VStack(spacing: 14) {
+                    VStack(spacing: 6) {
 
                         // Banner PREMIUM — stile simile a prima (gradiente blu/viola/rosa)
                         PremiumBannerCard {
@@ -72,7 +92,8 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                             RoomCard(
                                 title: title(for: room),
                                 subtitle: subtitle(for: room),
-                                icon: leadingIcon(for: room),
+                                iconAsset: leadingIcon(for: room).asset,
+                                iconSystem: leadingIcon(for: room).system,
                                 gradient: cardGradient(for: room),
                                 showCrown: vm.isRoomPremium(room) && !vm.premiumUnlocked
                             ) {
@@ -81,27 +102,46 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                         }
                     }
                     .padding(.horizontal, 16)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, 2)
                 }
 
-                // CTA "Aggiungi giocatori" (se la usi in basso)
+                // ===== Footer: linea arcobaleno + call-to-action piatto =====
+                // Divider arcobaleno (separato dal footer)
+                LinearGradient(
+                    colors: [
+                        Color(red: 0.27, green: 0.95, blue: 0.56),
+                        Color(red: 0.53, green: 0.27, blue: 0.95)
+                    ],
+                    startPoint: .leading, endPoint: .trailing
+                )
+                .frame(height: 2)
+                .padding(.horizontal, -16) // to visually go edge-to-edge with content padding
+                
+                // Footer “piatto”, senza capsule né sfondi colorati
                 HStack(spacing: 12) {
-                    Image(systemName: "person.2.fill")
+                    assetOrSymbol("ic_addplayers_left", system: "person.2.fill")
+                        .scaledToFit()
+                        .frame(width: 22, height: 22)
                         .foregroundColor(.white)
-                    Text("Aggiungi giocatori")
+                    
+                    Spacer(minLength: 0)
+                    
+                    Text(String(localized: "roomSelection.addPlayers"))
                         .foregroundColor(.white)
-                        .font(.system(size: 16, weight: .semibold))
-                    Spacer()
-                    Image(systemName: "plus.circle.fill")
+                        .font(.rammetto(size: 18))
+                    
+                    Spacer(minLength: 0)
+                    
+                    assetOrSymbol("ic_addplayers_plus", system: "plus.circle.fill")
+                        .scaledToFit()
+                        .frame(width: 22, height: 22)
                         .foregroundColor(.white)
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 14)
-                .background(Color.green.opacity(0.92))
-                .clipShape(RoundedRectangle(cornerRadius: 18))
-                .padding(.horizontal, 16)
-                .padding(.bottom, 12)
+                .contentShape(Rectangle())
+                .padding(.horizontal, 20)
+                .padding(.vertical, 10)
                 .onTapGesture { vm.openPlayerSetup() }
+                .padding(.bottom, 2)
             }
         }
     }
@@ -110,51 +150,51 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
 
     private func title(for room: GameRoom) -> String {
         switch room {
-        case .party:    return "CHILLING"
-        case .darkRoom: return "DARK ROOM"
-        case .partner:  return "PARTNER"
-        case .roulette: return "ROULETTE"
-        case .redRoom:  return "RED ROOM"
-        case .games:    return "GIOCHI"
+        case .party:    return String(localized: "room.party.title")
+        case .darkRoom: return String(localized: "room.dark.title")
+        case .partner:  return String(localized: "room.partner.title")
+        case .roulette: return String(localized: "room.roulette.title")
+        case .redRoom:  return String(localized: "room.red.title")
+        case .games:    return String(localized: "room.games.title")
         }
     }
 
     private func subtitle(for room: GameRoom) -> String {
         switch room {
-        case .party:    return "Leggera, sociale, per scaldare la serata."
-        case .darkRoom: return "Drama, segreti, paure: confessa senza filtri."
-        case .partner:  return "Sfide per coppie: complicità e pepe."
-        case .roulette: return "Mix casuale di tutte le modalità."
-        case .redRoom:  return "Piccante e provocante, gioca con il consenso."
-        case .games:    return "Mini-giochi dedicati."
+        case .party:    return String(localized: "room.party.subtitle")
+        case .darkRoom: return String(localized: "room.dark.subtitle")
+        case .partner:  return String(localized: "room.partner.subtitle")
+        case .roulette: return String(localized: "room.roulette.subtitle")
+        case .redRoom:  return String(localized: "room.red.subtitle")
+        case .games:    return String(localized: "room.games.subtitle")
         }
     }
 
-    private func leadingIcon(for room: GameRoom) -> String {
+    private func leadingIcon(for room: GameRoom) -> (asset: String, system: String) {
         switch room {
-        case .party:    return "cloud.fill"
-        case .darkRoom: return "lock.fill"              // icona solo grafica; la premium la indica la corona
-        case .partner:  return "heart.fill"
-        case .roulette: return "circle.grid.3x3.fill"
-        case .redRoom:  return "lips"
-        case .games:    return "gamecontroller.fill"
+        case .party:    return ("ic_room_cloud", "cloud.fill")
+        case .darkRoom: return ("ic_room_lock", "lock.fill")
+        case .partner:  return ("ic_room_heart", "heart.fill")
+        case .roulette: return ("ic_room_roulette", "circle.grid.3x3.fill")
+        case .redRoom:  return ("ic_room_lips", "face.smiling.fill")
+        case .games:    return ("ic_room_games", "gamecontroller.fill")
         }
     }
 
     private func cardGradient(for room: GameRoom) -> [Color] {
         switch room {
         case .party:
-            return [Color(red: 0.64, green: 0.84, blue: 1.0), Color(red: 0.38, green: 0.63, blue: 1.0)] // azzurro/blu
+            return [Color(red: 0.18, green: 0.46, blue: 0.92), Color(red: 0.28, green: 0.56, blue: 0.98), Color(red: 0.45, green: 0.70, blue: 1.00), Color(red: 0.70, green: 0.88, blue: 1.00)]
         case .darkRoom:
-            return [Color(red: 0.18, green: 0.10, blue: 0.32), Color(red: 0.10, green: 0.06, blue: 0.20)] // viola scuro
+            return [Color(red: 0.10, green: 0.05, blue: 0.18), Color(red: 0.16, green: 0.08, blue: 0.28), Color(red: 0.24, green: 0.12, blue: 0.36)]
         case .partner:
-            return [Color(red: 0.98, green: 0.53, blue: 0.49), Color(red: 0.76, green: 0.27, blue: 0.26)] // rosso/corallo
+            return [Color(red: 0.78, green: 0.18, blue: 0.18), Color(red: 0.86, green: 0.25, blue: 0.22), Color(red: 0.94, green: 0.39, blue: 0.31), Color(red: 0.99, green: 0.58, blue: 0.52)]
         case .roulette:
-            return [Color(red: 0.94, green: 0.63, blue: 0.98), Color(red: 0.69, green: 0.45, blue: 0.86)] // lilla/viola
+            return [Color(red: 0.58, green: 0.31, blue: 0.78), Color(red: 0.73, green: 0.40, blue: 0.87), Color(red: 0.86, green: 0.49, blue: 0.93), Color(red: 0.99, green: 0.64, blue: 0.98)]
         case .redRoom:
-            return [Color(red: 0.97, green: 0.44, blue: 0.35), Color(red: 0.55, green: 0.16, blue: 0.14)] // arancio/rosso
+            return [Color(red: 0.62, green: 0.08, blue: 0.08), Color(red: 0.78, green: 0.16, blue: 0.14), Color(red: 0.92, green: 0.29, blue: 0.23), Color(red: 0.99, green: 0.52, blue: 0.40)]
         case .games:
-            return [Color.purple, Color.pink]
+            return [Color.purple, Color.pink, Color.orange]
         }
     }
 }
@@ -166,30 +206,60 @@ private struct PremiumBannerCard: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 14) {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text("PREMIUM")
-                        .font(.system(size: 22, weight: .heavy))
-                        .foregroundColor(.white)
-                    Text("Sblocca tutte le modalità!")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(.white.opacity(0.95))
+            ZStack(alignment: .leading) {
+                // Card background at same height as other buttons (icons can overflow)
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Color(red: 0.45, green: 0.85, blue: 1.00), // cyan
+                                Color(red: 0.55, green: 0.65, blue: 1.00), // blue
+                                Color(red: 0.66, green: 0.50, blue: 1.00), // violet
+                                Color(red: 1.00, green: 0.50, blue: 0.85), // pink
+                                Color(red: 1.00, green: 0.70, blue: 0.40)  // orange
+                            ],
+                            startPoint: .leading, endPoint: .trailing
+                        )
+                    )
+                    .frame(height: 96)
+
+                // Text left-aligned, above the left sticker
+                HStack {
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text(String(localized: "premium.banner.title"))
+                            .font(.rammetto(size: 20))
+                            .foregroundColor(.white)
+                        Text(String(localized: "premium.banner.subtitle"))
+                            .font(.trebuchet(size: 13))
+                            .foregroundColor(.white.opacity(0.95))
+                            .lineLimit(2)
+                    }
+                    .padding(.leading, 16)
+                    .padding(.trailing, 100) // leave room for right sticker
+
+                    Spacer(minLength: 0)
                 }
-                Spacer()
-                Image(systemName: "crown.fill")
-                    .font(.system(size: 20, weight: .bold))
-                    .foregroundColor(.white)
+                .frame(height: 96)
+
+                // Left sprinkles sticker — overflowing like other icons
+                assetOrSymbol("ic_premium_sparkles", system: "sparkles")
+                    .scaledToFit()
+                    .frame(width: 112, height: 112)
+                    .offset(x: -10, y: 12)
+                    .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
+                    .allowsHitTesting(false)
+
+                // Right crown-with-glasses sticker — overflowing
+                assetOrSymbol("ic_premium_crown_glasses", system: "crown.fill")
+                    .scaledToFit()
+                    .frame(width: 112, height: 112)
+                    .offset(x: 10)
+                    .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .padding(.trailing, 8)
+                    .allowsHitTesting(false)
             }
-            .padding(18)
-            .background(
-                LinearGradient(
-                    colors: [Color(red: 0.45, green: 0.75, blue: 1.0),
-                             Color(red: 0.55, green: 0.45, blue: 1.0),
-                             Color(red: 1.0,  green: 0.45, blue: 0.75)],
-                    startPoint: .leading, endPoint: .trailing
-                )
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .contentShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
         }
     }
 }
@@ -197,45 +267,57 @@ private struct PremiumBannerCard: View {
 private struct RoomCard: View {
     let title: String
     let subtitle: String
-    let icon: String
+    let iconAsset: String
+    let iconSystem: String
     let gradient: [Color]
     let showCrown: Bool
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 14) {
-                Image(systemName: icon)
-                    .foregroundColor(.white)
-                    .font(.system(size: 20, weight: .bold))
-                    .frame(width: 38, height: 38)
-                    .background(Color.white.opacity(0.16))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            ZStack(alignment: .leading) {
+                // Background card (keeps the original compact height)
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(LinearGradient(colors: gradient, startPoint: .leading, endPoint: .trailing)
+                            .opacity(0.95))
+                    .frame(height: 96)
 
-                VStack(alignment: .leading, spacing: 4) {
-                    HStack(spacing: 8) {
+                // Big icon that slightly overflows the card bounds
+                assetOrSymbol(iconAsset, system: iconSystem)
+                    .scaledToFit()
+                    .frame(width: 112, height: 112)
+                    .offset(x: -10) // pushes a bit outside the left edge
+                    .shadow(color: .black.opacity(0.25), radius: 8, x: 0, y: 4)
+
+                // Text content with left padding to leave room for the big icon
+                HStack {
+                    VStack(alignment: .leading, spacing: 4) {
                         Text(title)
-                            .font(.system(size: 18, weight: .heavy))
+                            .font(.rammetto(size: 20))
                             .foregroundColor(.white)
-                        if showCrown {
-                            Image(systemName: "crown.fill")
-                                .foregroundColor(.yellow)
-                                .font(.system(size: 14, weight: .bold))
-                        }
+                        Text(subtitle)
+                            .font(.trebuchet(size: 13))
+                            .foregroundColor(.white.opacity(0.9))
+                            .lineLimit(2)
                     }
-                    Text(subtitle)
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundColor(.white.opacity(0.9))
-                        .lineLimit(2)
+                    .padding(.leading, 98) // space reserved for the icon
+                    .padding(.trailing, 16)
+
+                    Spacer(minLength: 0)
                 }
-                Spacer()
+                .frame(height: 96)
             }
-            .padding(16)
-            .background(
-                LinearGradient(colors: gradient, startPoint: .leading, endPoint: .trailing)
-                    .opacity(0.95)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 20))
+            // Crown in the top-right corner, outside text stacking so it doesn’t affect layout
+            .overlay(alignment: .topTrailing) {
+                if showCrown {
+                    Image(systemName: "crown.fill")
+                        .foregroundColor(.yellow)
+                        .font(.system(size: 16, weight: .bold))
+                        .padding(12)
+                }
+            }
         }
+        // Make the tappable area match the rounded rectangle even if the icon overflows
+        .contentShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 }

@@ -45,7 +45,7 @@ struct ContentView: View {
                 }
 
             case .gameOver:
-                GameOverView_Placeholder()
+                GameOverView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
 
             case .paywall:

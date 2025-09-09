@@ -9,9 +9,6 @@
   "truthOrDare": {
     "text": "OBBLIGO VERITA' O DEBITO: Se scegli Debito, eviti la penalità ma ti viene assegnato un debito che potrà essere riscattato in qualsiasi momento da chi dirige il gioco (es. \"Vai a prendermi da bere\" o \"Posta una storia imbarazzante\").. Decidete in senso orario partendo dal giocatore corrente."
   },
-  "wouldYouRather": {
-      "text": "Tutti i giocatori devono scegliere tra due opzioni, alzando la mano per la prima opzione o tenendola abbassata per la seconda. Chi si trova in minoranza deve fare una penalità!"
-    },
     "chatDetective": {
     "text": "{player} è il detective di WhatsApp! Tutti aprite WhatsApp e cercate una parola che {player} sceglierà. Chi non trova la parola nei propri messaggi o si rifiuta di leggere il messaggio trovato, deve fare una penitenza!"
   },

@@ -24,3 +24,30 @@
 "room.roulette.subtitle" = "Random mix of all modes.";
 "room.games.title" = "Games";
 "room.games.subtitle" = "Hub for mini-games and special variants.";
+
+"room.party.title"    = "CHILLING";
+"room.dark.title"     = "DARK ROOM";
+"room.partner.title"  = "PARTNER";
+"room.roulette.title" = "ROULETTE";
+"room.red.title"      = "RED ROOM";
+"room.games.title"    = "GAMES";
+
+"room.party.subtitle"    = "Light, social, perfect to warm up.";
+"room.dark.subtitle"     = "Drama, secrets, fears: confess freely.";
+"room.partner.subtitle"  = "Challenges for couples: chemistry and spice.";
+"room.roulette.subtitle" = "Casual mix of all modes.";
+"room.red.subtitle"      = "Spicy and provocative, play with consent.";
+"room.games.subtitle"    = "Dedicated mini-games.";
+
+"premium.banner.title"   = "PREMIUM";
+"premium.banner.subtitle"= "Unlock all modes!";
+"playerSetup.title" = "Add players and let’s start the party!";
+"continue" = "Continue";
+"playing.counter" = "%d/%d";
+"tod.dare" = "DARE";
+"tod.truth" = "TRUTH";
+"tod.done" = "DONE";
+"gameOver.part1" = "GAME";
+"gameOver.part2" = "OVER!";
+"onboarding.skip" = "Skip";
+"playing.counter" = "%d/%d";

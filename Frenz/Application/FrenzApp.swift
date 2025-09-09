@@ -16,6 +16,7 @@ struct FrenzApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(gameVM) // se vuoi passarlo globalmente
+                .environment(\.font, .custom("TrebuchetMS", size: 16))
         }
     }
 }

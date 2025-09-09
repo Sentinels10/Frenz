@@ -12,7 +12,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
 
                 // (qui potresti mettere un collage di sticker/immagini)
                 Text(vm.obIntroTitle)
-                    .font(.system(size: 26, weight: .heavy))
+                    .font(.rammetto(size: 26))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
@@ -40,7 +40,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
                         .padding(.horizontal, 24)
                 }
 
-                Button("Salta") { vm.obSkip() }
+                Button(String(localized: "onboarding.skip")) { vm.obSkip() }
                     .foregroundColor(.white.opacity(0.8))
                     .font(.system(size: 14, weight: .semibold))
                     .padding(.top, 6)

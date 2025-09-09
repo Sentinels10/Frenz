@@ -21,15 +21,41 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
                 Spacer()
 
                 // counter in basso come Playing
-                Text("\(vm.currentStep)/\(vm.totalSteps)")
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(counterColor)
-                    .padding(.bottom, 20)
+                Text(String.localizedStringWithFormat(
+                    NSLocalizedString("playing.counter", comment: ""),
+                    vm.currentStep, vm.totalSteps
+                ))
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(counterColor)
+                .padding(.bottom, 20)
             }
         }
         .navigationBarHidden(true)
     }
-
+    
+    private func roomBackground(room: GameRoom) -> LinearGradient {
+        switch room {
+        case .party:
+            return LinearGradient(colors: [Color(hex: 0x7D3CFF), Color(hex: 0x2C0066)],
+                                  startPoint: .top, endPoint: .bottom)
+        case .redRoom:
+            return LinearGradient(colors: [Color(hex: 0xE61111), Color(hex: 0x5A0013)],
+                                  startPoint: .top, endPoint: .bottom)
+        case .darkRoom:
+            return LinearGradient(colors: [Color(hex: 0x1C1C1C), Color.black],
+                                  startPoint: .top, endPoint: .bottom)
+        case .partner:
+            return LinearGradient(colors: [Color.pink, Color.red.opacity(0.7)],
+                                  startPoint: .top, endPoint: .bottom)
+        case .roulette:
+            return LinearGradient(colors: [Color.purple, Color.pink],
+                                  startPoint: .top, endPoint: .bottom)
+        case .games:
+            return LinearGradient(colors: [Color.gray, Color.black],
+                                  startPoint: .top, endPoint: .bottom)
+        }
+    }
+    
     // MARK: - Header
     private var header: some View {
         ZStack {
@@ -71,7 +97,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
 
             VStack(spacing: 14) {
                 Button(action: { vm.todChooseDare() }) {
-                    Text(NSLocalizedString("OBBLIGO", comment: ""))
+                    Text(String(localized: "tod.dare"))
                         .font(.system(size: 22, weight: .heavy))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -82,7 +108,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
                 .padding(.horizontal, 24)
 
                 Button(action: { vm.todChooseTruth() }) {
-                    Text(NSLocalizedString("VERITÀ", comment: ""))
+                    Text(String(localized: "tod.truth"))
                         .font(.system(size: 22, weight: .heavy))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
@@ -113,7 +139,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
             }
 
             Button(action: { vm.todNext() }) {
-                Text(NSLocalizedString("FATTO", comment: ""))
+                Text(String(localized: "tod.done"))
                     .font(.system(size: 17, weight: .bold))
                     .foregroundColor(vm.todIsShowingTruth ? .black : .white)
                     .padding(.horizontal, 22).padding(.vertical, 10)
@@ -127,15 +153,22 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
     // MARK: - Background
     private var background: LinearGradient {
         if vm.todIsChoosePhase {
-            // ⬇️ QUI prende il gradiente della stanza corrente
-            return gradientForRoom(vm.currentRoom)
+            // schermata di scelta (usa i colori della stanza)
+            if let room = vm.currentRoom {
+                return roomBackground(room: room)
+            }
+            return LinearGradient(colors: [Color.red, Color.black],
+                                  startPoint: .top, endPoint: .bottom)
         }
         if vm.todIsShowingTruth {
-            // sfondo chiaro
-            return LinearGradient(colors: [Color.white, Color.white.opacity(0.96)],
-                                  startPoint: .top, endPoint: .bottom)
+            // sfondo chiaro con gradiente più scuro in alto
+            return LinearGradient(colors: [
+                Color.white.opacity(0.85),   // parte alta un po’ più scura
+                Color.white.opacity(0.95),
+                Color.white
+            ], startPoint: .top, endPoint: .bottom)
         } else {
-            // sfondo scuro violaceo
+            // sfondo scuro violaceo per obbligo
             return LinearGradient(colors: [Color(hex: 0x2B0B58), Color(hex: 0x0D0718)],
                                   startPoint: .top, endPoint: .bottom)
         }

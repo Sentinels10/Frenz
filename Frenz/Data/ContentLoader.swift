@@ -252,6 +252,31 @@ struct ContentLoader {
     // =====================================================================
 
     private static func buildSpecial(from dict: [String: Any], id: String, room: GameRoom) -> SpecialGameContent? {
+        
+        // Caso “Questo o Quello” (top-level)
+        if id == "questoOQuello" {
+            guard let qoq = dict["questoOQuello"] as? [String: Any] else { return nil }
+            let title = "Questo o Quello"
+            let description = qoq["text"] as? String
+
+            func arr(_ k: String) -> [String] { qoq[k] as? [String] ?? [] }
+
+            let pool: [String]
+            switch room {
+            case .redRoom:  pool = arr("redRoom")
+            case .darkRoom: pool = arr("darkRoom")
+            case .party,
+                 .partner:  pool = arr("party")
+            case .roulette: pool = arr("party") + arr("redRoom") + arr("darkRoom")
+            case .games:    pool = []
+            }
+
+            let fallback = arr("party") + arr("redRoom") + arr("darkRoom")
+            if let action = (pool.isEmpty ? fallback.randomElement() : pool.randomElement()) {
+                return SpecialGameContent(title: title, description: description, action: action, timerSeconds: nil)
+            }
+            return nil
+        }
 
         // Caso “Questo o Quello” (top-level)
         if id == "questoOQuello" {
