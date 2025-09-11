@@ -548,7 +548,7 @@ final class GameViewModel: ObservableObject,
     // ============================================================
     // MARK: OnboardingRouting
     // ============================================================
-    var obIntroTitle: String    { "Sfide, mini giochi, segreti,\ngossip, drama e HOT…" }
+    var obIntroTitle: String    { "Sfide, mini giochi, segreti, gossip, drama e HOT…" }
     var obIntroSubtitle: String { "Tantissimi giochi a tema e sfide sempre nuove ad ogni partita, senza mai ripetersi." }
     var obStartTitle: String    { "GIOCHIAMO" }
 

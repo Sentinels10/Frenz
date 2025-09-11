@@ -81,11 +81,12 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 6) {
 
-                        // Banner PREMIUM — stile simile a prima (gradiente blu/viola/rosa)
-                        PremiumBannerCard {
-                            // apri paywall “virtualmente” selezionando una stanza premium:
-                            // il VM intercetta e porta al paywall se non sbloccato.
-                            vm.select(room: .redRoom)
+                        // Banner PREMIUM — visibile solo se NON premium
+                        if !vm.premiumUnlocked {
+                            PremiumBannerCard {
+                                // Apri direttamente il paywall (oppure seleziona una stanza premium, entrambi portano al paywall)
+                                vm.openPaywall()
+                            }
                         }
 
                         ForEach(rooms, id: \.self) { room in
@@ -95,6 +96,7 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                                 iconAsset: leadingIcon(for: room).asset,
                                 iconSystem: leadingIcon(for: room).system,
                                 gradient: cardGradient(for: room),
+                                iconSize: iconSize(for: room),
                                 showCrown: vm.isRoomPremium(room) && !vm.premiumUnlocked
                             ) {
                                 vm.select(room: room)
@@ -141,7 +143,7 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                 .padding(.horizontal, 20)
                 .padding(.vertical, 10)
                 .onTapGesture { vm.openPlayerSetup() }
-                .padding(.bottom, 2)
+                .padding(.bottom, -6)
             }
         }
     }
@@ -172,12 +174,21 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
 
     private func leadingIcon(for room: GameRoom) -> (asset: String, system: String) {
         switch room {
-        case .party:    return ("ic_room_cloud", "cloud.fill")
+        case .party:    return ("sticker_clouds", "cloud.fill")
         case .darkRoom: return ("ic_room_lock", "lock.fill")
         case .partner:  return ("ic_room_heart", "heart.fill")
         case .roulette: return ("ic_room_roulette", "circle.grid.3x3.fill")
         case .redRoom:  return ("ic_room_lips", "face.smiling.fill")
         case .games:    return ("ic_room_games", "gamecontroller.fill")
+        }
+    }
+
+    private func iconSize(for room: GameRoom) -> CGFloat {
+        switch room {
+        case .roulette:
+            return 100 // slightly smaller than default to reduce the roulette icon
+        default:
+            return 112
         }
     }
 
@@ -270,6 +281,7 @@ private struct RoomCard: View {
     let iconAsset: String
     let iconSystem: String
     let gradient: [Color]
+    let iconSize: CGFloat
     let showCrown: Bool
     let action: () -> Void
 
@@ -285,7 +297,7 @@ private struct RoomCard: View {
                 // Big icon that slightly overflows the card bounds
                 assetOrSymbol(iconAsset, system: iconSystem)
                     .scaledToFit()
-                    .frame(width: 112, height: 112)
+                    .frame(width: iconSize, height: iconSize)
                     .offset(x: -10) // pushes a bit outside the left edge
                     .shadow(color: .black.opacity(0.25), radius: 8, x: 0, y: 4)
 
