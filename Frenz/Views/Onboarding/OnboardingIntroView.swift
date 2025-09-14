@@ -5,64 +5,75 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
     @ObservedObject var vm: VM
 
     var body: some View {
-        ZStack {
-            bg.ignoresSafeArea()
+        GeometryReader { proxy in
+            ZStack {
+                bg.ignoresSafeArea()
 
-            VStack(spacing: 22) {
-                Spacer(minLength: 8)
+                VStack(spacing: 22) {
+                    Spacer(minLength: 8)
 
-                // collage di card + sticker
-                stickerWall
-                    .frame(height: 320)
-                    .padding(.horizontal, 12)
+                    // Collage responsive: max 380 pt or 42% of available height
+                    let collageH = min(380, proxy.size.height * 0.42)
 
-                Spacer(minLength: 8)
+                    stickerWall
+                        .frame(height: collageH)
+                        .padding(.horizontal, 12)
+                        .offset(y: 24)
 
-                Text(vm.obIntroTitle)
-                    .font(.rammetto(size: 26))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    Spacer(minLength: 8)
 
-                Text(vm.obIntroSubtitle)
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundColor(.white.opacity(0.85))
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 28)
-
-                Spacer()
-
-                Button(action: { vm.obStart() }) {
-                    Text(vm.obStartTitle)
-                        .font(.rammetto(size: 20))
+                    Text(vm.obIntroTitle)
+                        .font(.rammetto(size: 21))
                         .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 16)
-                        .background(
-                            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                                .fill(Color.white.opacity(0.10))
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 22, style: .continuous)
-                                .stroke(
-                                    LinearGradient(colors: [
-                                        Color(hex: 0xFF5F6D), // pink
-                                        Color(hex: 0xFFC371), // orange
-                                        Color(hex: 0x62FF8E)  // green
-                                    ], startPoint: .leading, endPoint: .trailing),
-                                    lineWidth: 3
-                                )
-                        )
-                        .shadow(color: Color.black.opacity(0.45), radius: 20, x: 0, y: 12)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .layoutPriority(2)
                         .padding(.horizontal, 24)
+
+                    Text(vm.obIntroSubtitle)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundColor(.white.opacity(0.85))
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .layoutPriority(1)
+                        .padding(.horizontal, 28)
+
+                    Spacer()
+
+                    Button(action: { vm.obStart() }) {
+                        Text(vm.obStartTitle)
+                            .font(.rammetto(size: 20))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 16)
+                            .background(
+                                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                                    .fill(Color.white.opacity(0.10))
+                            )
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 22, style: .continuous)
+                                    .stroke(
+                                        LinearGradient(colors: [
+                                            Color(hex: 0xFF5F6D), // pink
+                                            Color(hex: 0xFFC371), // orange
+                                            Color(hex: 0x62FF8E)  // green
+                                        ], startPoint: .leading, endPoint: .trailing),
+                                        lineWidth: 3
+                                    )
+                            )
+                            .shadow(color: Color.black.opacity(0.45), radius: 20, x: 0, y: 12)
+                            .padding(.horizontal, 24)
+                    }
+
+                    Button(String(localized: "onboarding.skip")) { vm.obSkip() }
+                        .foregroundColor(.white.opacity(0.8))
+                        .font(.system(size: 14, weight: .semibold))
+                        .padding(.top, 6)
+
+                    Spacer(minLength: 16)
                 }
-
-                Button(String(localized: "onboarding.skip")) { vm.obSkip() }
-                    .foregroundColor(.white.opacity(0.8))
-                    .font(.system(size: 14, weight: .semibold))
-                    .padding(.top, 6)
-
-                Spacer(minLength: 16)
             }
         }
         .navigationBarHidden(true)
@@ -92,6 +103,18 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
     }
 
     @ViewBuilder
+    private func sticker(_ name: String,
+                         fallbackEmoji: String,
+                         size: CGFloat,
+                         rotation: Angle = .degrees(0),
+                         x: CGFloat,
+                         y: CGFloat) -> some View {
+        icon(name, fallbackEmoji: fallbackEmoji, size: size)
+            .rotationEffect(rotation)
+            .offset(x: x, y: y)
+    }
+
+    @ViewBuilder
     private func card(text: String,
                       colors: [Color],
                       textSize: CGFloat = 18,
@@ -117,11 +140,11 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
 
             if let l = leadingIcon {
                 icon(l.name, fallbackEmoji: l.emoji, size: l.size)
-                    .offset(x: -size.width * 0.36 + l.dx, y: l.dy)
+                    .offset(x: -size.width * 0.52 + l.dx, y: l.dy)
             }
             if let r = trailingIcon {
                 icon(r.name, fallbackEmoji: r.emoji, size: r.size)
-                    .offset(x:  size.width * 0.36 + r.dx, y: r.dy)
+                    .offset(x:  size.width * 0.52 + r.dx, y: r.dy)
             }
         }
         .frame(width: size.width, height: size.height)
@@ -134,51 +157,60 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
             let w = geo.size.width
             let h = geo.size.height
             ZStack {
-                // 1) 1v1! (in alto, leggermente a sinistra)
+                // 1) 1v1! (in alto, centrata leggermente a destra)
                 card(
-                    text: "1v1!",
+                    text: String(localized: "onboarding.intro.tile.1v1"),
                     colors: [Color(hex: 0xF869FF), Color(hex: 0xA030FF)],
                     textSize: 16,
-                    rotation: .degrees(10),
-                    size: .init(width: w * 0.44, height: h * 0.22),
-                    offset: .init(width:  w * 0.14, height: -h * 0.32),
-                    leadingIcon: ("sticker_clouds", "☁️", h * 0.20, -10, 6)
+                    rotation: .degrees(-5),
+                    size: .init(width: w * 0.34, height: h * 0.20),
+                    offset: .init(width: w * 0.42, height: -h * 0.15)
                 )
 
-                // 2) Preferiresti? (sotto la prima, verso sinistra)
+                // 2) Preferiresti? (centrata, più grande)
                 card(
-                    text: "PREFERIRESTI?",
+                    text: String(localized: "onboarding.intro.tile.wyr"),
                     colors: [Color(hex: 0xFF5E57), Color(hex: 0xE43A2E)],
                     textSize: 18,
-                    rotation: .degrees(-10),
-                    size: .init(width: w * 0.76, height: h * 0.30),
-                    offset: .init(width: -w * 0.16, height: -h * 0.12),
-                    leadingIcon: ("sticker_flame", "🔥", h * 0.16, -10, -2),
-                    trailingIcon: ("sticker_banana", "🍌", h * 0.24, 10, -2)
+                    rotation: .degrees(10),
+                    size: .init(width: w * 0.65, height: h * 0.24),
+                    offset: .init(width: 0, height:  h * 0.15)
                 )
 
-                // 3) Obbligo o verità? (centrata più in basso, ruotata in senso opposto)
+                // 3) Obbligo o verità? (subito sotto, centrata)
                 card(
-                    text: "OBBLIGO\nO VERITÀ?",
+                    text: String(localized: "onboarding.intro.tile.tod"),
                     colors: [Color(hex: 0x7F66FF), Color(hex: 0x5A33FF)],
                     textSize: 18,
-                    rotation: .degrees(12),
-                    size: .init(width: w * 0.64, height: h * 0.32),
-                    offset: .init(width:  w * 0.12, height:  h * 0.02),
-                    trailingIcon: ("sticker_devil", "😈", h * 0.22, 8, -2)
+                    rotation: .degrees(-15),
+                    size: .init(width: w * 0.56, height: h * 0.28),
+                    offset: .init(width:  w * 0.40, height: h * 0.36)
                 )
 
-                // 4) Non ho mai… (in basso a sinistra)
+                // 4) Non ho mai… (più in basso, leggermente a sinistra)
                 card(
-                    text: "NON\nHO MAI…",
+                    text: String(localized: "onboarding.intro.tile.nhie"),
                     colors: [Color(hex: 0xFF9C33), Color(hex: 0xFF6A00)],
                     textSize: 18,
-                    rotation: .degrees(-7),
-                    size: .init(width: w * 0.66, height: h * 0.30),
-                    offset: .init(width: -w * 0.20, height:  h * 0.18),
-                    leadingIcon: ("sticker_angry", "😤", h * 0.20, -8, -6),
-                    trailingIcon: ("sticker_bra", "💗", h * 0.18, 2, 6)
+                    rotation: .degrees(12),
+                    size: .init(width: w * 0.62, height: h * 0.24),
+                    offset: .init(width: -w * 0.01, height: h * 0.58)
                 )
+
+                // ===== Standalone stickers (independent from the tiles) =====
+                // Top-left clouds
+                sticker("sticker_clouds", fallbackEmoji: "☁️", size: h * 0.19, rotation: .degrees(0), x: -w * 0.30, y: -h * 0.28)
+                // Small flame near WYR left edge
+                sticker("sticker_flame", fallbackEmoji: "🔥", size: h * 0.12, rotation: .degrees(0), x: -w * 0.32, y:  -h * 0.02)
+                // Banana on the right of WYR
+                sticker("sticker_banana", fallbackEmoji: "🍌", size: h * 0.20, rotation: .degrees(12), x:  w * 0.30, y: -h * 0.04)
+                
+                // Devil head to the right of ToD card
+                sticker("sticker_devil", fallbackEmoji: "😈", size: h * 0.20, rotation: .degrees(0), x:  w * 0.38, y:  h * 0.32)
+                // Angry face near NHIE left
+                sticker("sticker_angry", fallbackEmoji: "😤", size: h * 0.18, rotation: .degrees(0), x: -w * 0.31, y:  h * 0.52)
+                // Bra to the lower-right area
+                sticker("sticker_bra", fallbackEmoji: "💗", size: h * 0.18, rotation: .degrees(-8), x:  w * 0.34, y:  h * 0.40)
             }
         }
     }

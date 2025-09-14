@@ -1,30 +1,48 @@
+/* =========================================================
+   Localizable.strings (en) — sections by view
+   ========================================================= */
+
+/* ===== Global / Shared ===== */
 "appName" = "FRIENZ";
 "appDescription" = "This club is run by an AI. She will craft ever-new, unexpected challenges.";
 "startButton" = "START";
 "changeLanguage" = "Change language";
 "languageSelectTitle" = "Choose your language";
+
+/* ===== Language Selection View ===== */
+"languageSelectTitle" = "Choose your language";
 "close" = "Close";
+"playerInputPlaceholder" = "Player name";
+
+/* ===== Player Setup View ===== */
 "playerInputPlaceholder" = "Player name";
 "addPlayerLabel" = "Add player";
 "backButton" = "Back";
 "notEnoughPlayersError" = "Add at least two players";
 "roomSelectionTitle" = "Choose a room";
+
+/* ===== Room Selection View ===== */
+"roomSelectionTitle" = "Choose a room";
 "continue" = "Continue";
 
+/* Rooms — Titles & Subtitles (standard case) */
 "room.party.title" = "Party";
 "room.red.title" = "Red Room";
 "room.dark.title" = "Dark Room";
 "room.partner.title" = "Partner";
 "room.roulette.title" = "Roulette";
 
-"room.party.subtitle" = "Light, social, perfect to warm up.";
-"room.red.subtitle" = "Spicy & provocative—play with consent.";
-"room.dark.subtitle" = "Drama, secrets, fears—confess freely.";
-"room.partner.subtitle" = "For couples: chemistry & fun.";
-"room.roulette.subtitle" = "Random mix of all modes.";
+"room.party.subtitle" = "Light, social, to warm up the night.";
+"room.red.subtitle" = "Spicy and provocative—play with consent.";
+"room.dark.subtitle" = "Drama, secrets, fears: confess with no filters.";
+"room.partner.subtitle" = "Challenges for couples: chemistry and spice.";
+"room.roulette.subtitle" = "Random mix of every mode.";
 "room.games.title" = "Games";
-"room.games.subtitle" = "Hub for mini-games and special variants.";
+"room.games.subtitle" = "Hub for minigames and special variants.";
+"roomSelection.title" = "Choose the room";
+"roomSelection.addPlayers" = "Add players";
 
+/* Rooms — Alternate labels (UPPER style) */
 "room.party.title"    = "CHILLING";
 "room.dark.title"     = "DARK ROOM";
 "room.partner.title"  = "PARTNER";
@@ -32,22 +50,71 @@
 "room.red.title"      = "RED ROOM";
 "room.games.title"    = "GAMES";
 
-"room.party.subtitle"    = "Light, social, perfect to warm up.";
-"room.dark.subtitle"     = "Drama, secrets, fears: confess freely.";
+"room.party.subtitle"    = "Light, social, to warm up the night.";
+"room.dark.subtitle"     = "Drama, secrets, fears: confess with no filters.";
 "room.partner.subtitle"  = "Challenges for couples: chemistry and spice.";
-"room.roulette.subtitle" = "Casual mix of all modes.";
-"room.red.subtitle"      = "Spicy and provocative, play with consent.";
+"room.roulette.subtitle" = "Random mix of every mode.";
+"room.red.subtitle"      = "Spicy and provocative—play with consent.";
 "room.games.subtitle"    = "Dedicated mini-games.";
 
-"premium.banner.title"   = "PREMIUM";
-"premium.banner.subtitle"= "Unlock all modes!";
-"playerSetup.title" = "Add players and let’s start the party!";
-"continue" = "Continue";
+/* ===== Premium Banner (Room Selection) ===== */
+"premium.banner.title"    = "PREMIUM";
+"premium.banner.subtitle" = "Unlock all modes!";
+"playerSetup.title"       = "Add players and let’s start the party!";
+"continue"                = "Continue";
+"playing.counter"         = "%d/%d";
+
+/* ===== Playing View ===== */
 "playing.counter" = "%d/%d";
-"tod.dare" = "DARE";
+"tod.dare"  = "DARE";
 "tod.truth" = "TRUTH";
-"tod.done" = "DONE";
+"tod.done"  = "DONE";
+"gameOver.part1" = "GAME";
+
+/* ===== Game Over View ===== */
 "gameOver.part1" = "GAME";
 "gameOver.part2" = "OVER!";
 "onboarding.skip" = "Skip";
+
+/* ===== Onboarding View ===== */
+"onboarding.skip" = "Skip";
 "playing.counter" = "%d/%d";
+"onboarding.intro.tile.1v1" = "1v1!";
+"onboarding.intro.tile.wyr" = "WOULD YOU RATHER?";
+"onboarding.intro.tile.tod" = "TRUTH\nOR DARE?";
+"onboarding.intro.tile.nhie" = "NEVER\nHAVE I EVER…";
+
+/* ===== Paywall View ===== */
+"paywall.title"        = "Unlock for Free";
+"paywall.bullet.1"     = "Access to all modes";
+"paywall.bullet.2"     = "New content regularly";
+"paywall.bullet.3"     = "Cancel anytime.";
+"paywall.trialLabel"   = "Unsure? Activate the free trial";
+"paywall.priceFooter"  = "For 3 days, then only $0.99 per week";
+"paywall.continue"     = "CONTINUE";
+"paywall.restore"      = "Restore";
+"paywall.terms"        = "Terms";
+"paywall.privacy"      = "Privacy";
+
+/* Onboarding - Intro */
+"onboarding.intro.title"    = "Challenges, mini games, secrets, gossip, drama & HOT…";
+"onboarding.intro.subtitle" = "Loads of themed games and ever-new challenges every round, never repeating.";
+"onboarding.start"          = "LET’S PLAY";
+
+/* Onboarding - Who */
+"onboarding.who.title"      = "Who’s playing?";
+"onboarding.who.opt.girlz"  = "Girlz only";
+"onboarding.who.opt.boyz"   = "Boyz";
+"onboarding.who.opt.mix"    = "Mix";
+
+/* Onboarding - Mood */
+"onboarding.mood.title"       = "You’re in the mood for…";
+"onboarding.mood.opt.easy"    = "Easy & goofy night";
+"onboarding.mood.opt.party"   = "Go wild!";
+"onboarding.mood.opt.sexy"    = "Crazy & sexy games";
+"onboarding.mood.opt.secrets" = "Secrets & confessions";
+
+/* ===== Truth or Dare View ===== */
+"tod.title"         = "TRUTH OR DARE?";
+"tod.prompt.truth"  = "TRUTH!";
+"tod.prompt.dare"   = "DARE!";

@@ -533,14 +533,20 @@ final class GameViewModel: ObservableObject,
     // MARK: PaywallRouting (stub)
     // ============================================================
     @Published var isTrialEnabled: Bool = true
-    var paywallTitle: String { "Sblocca Gratis" }
-    var paywallBullets: [String] { ["Accesso a tutte le modalità", "Nuovi contenuti regolarmente", "Cancellazione in ogni momento."] }
-    var paywallTrialLabel: String { "Dubbi? Attivate la prova gratis" }
-    var paywallPriceFooter: String { "Per 3 giorni, poi soli $0,99 a settimana" }
-    var paywallContinueTitle: String { "CONTINUA" }
-    var paywallRestoreTitle: String { "Ripristina" }
-    var paywallTermsTitle: String { "Condizioni" }
-    var paywallPrivacyTitle: String { "Privacy" }
+    var paywallTitle: String { String(localized: "paywall.title", locale: .init(identifier: language)) }
+    var paywallBullets: [String] {
+        [
+            String(localized: "paywall.bullet.1", locale: .init(identifier: language)),
+            String(localized: "paywall.bullet.2", locale: .init(identifier: language)),
+            String(localized: "paywall.bullet.3", locale: .init(identifier: language))
+        ]
+    }
+    var paywallTrialLabel: String { String(localized: "paywall.trialLabel", locale: .init(identifier: language)) }
+    var paywallPriceFooter: String { String(localized: "paywall.priceFooter", locale: .init(identifier: language)) }
+    var paywallContinueTitle: String { String(localized: "paywall.continue", locale: .init(identifier: language)) }
+    var paywallRestoreTitle: String { String(localized: "paywall.restore", locale: .init(identifier: language)) }
+    var paywallTermsTitle: String { String(localized: "paywall.terms", locale: .init(identifier: language)) }
+    var paywallPrivacyTitle: String { String(localized: "paywall.privacy", locale: .init(identifier: language)) }
     func paywallPurchase() { gameState = .roomSelection }
     func paywallRestore() { }
     func paywallClose() { gameState = .roomSelection }
@@ -548,15 +554,28 @@ final class GameViewModel: ObservableObject,
     // ============================================================
     // MARK: OnboardingRouting
     // ============================================================
-    var obIntroTitle: String    { "Sfide, mini giochi, segreti, gossip, drama e HOT…" }
-    var obIntroSubtitle: String { "Tantissimi giochi a tema e sfide sempre nuove ad ogni partita, senza mai ripetersi." }
-    var obStartTitle: String    { "GIOCHIAMO" }
+    var obIntroTitle: String    { String(localized: "onboarding.intro.title",    locale: .init(identifier: language)) }
+    var obIntroSubtitle: String { String(localized: "onboarding.intro.subtitle", locale: .init(identifier: language)) }
+    var obStartTitle: String    { String(localized: "onboarding.start",          locale: .init(identifier: language)) }
 
-    var obWhoTitle: String { "Chi gioca?" }
-    var obWhoOptions: [String] { ["Solo girlz", "Boyz", "Mix"] }
+    var obWhoTitle: String { String(localized: "onboarding.who.title", locale: .init(identifier: language)) }
+    var obWhoOptions: [String] {
+        [
+            String(localized: "onboarding.who.opt.girlz", locale: .init(identifier: language)),
+            String(localized: "onboarding.who.opt.boyz",  locale: .init(identifier: language)),
+            String(localized: "onboarding.who.opt.mix",   locale: .init(identifier: language))
+        ]
+    }
 
-    var obMoodTitle: String { "Siete in vena di…" }
-    var obMoodOptions: [String] { ["Serata easy e stupida", "Spaccarci!", "Giochi folli e sexy", "Segreti e confessioni"] }
+    var obMoodTitle: String { String(localized: "onboarding.mood.title", locale: .init(identifier: language)) }
+    var obMoodOptions: [String] {
+        [
+            String(localized: "onboarding.mood.opt.easy",    locale: .init(identifier: language)),
+            String(localized: "onboarding.mood.opt.party",   locale: .init(identifier: language)),
+            String(localized: "onboarding.mood.opt.sexy",    locale: .init(identifier: language)),
+            String(localized: "onboarding.mood.opt.secrets", locale: .init(identifier: language))
+        ]
+    }
 
     func obSkip() { finishOnboarding() }
     func obStart() { gameState = .onboardingWho }
@@ -579,7 +598,7 @@ final class GameViewModel: ObservableObject,
     var todIsShowingTruth: Bool { todActive && todPhase == .truth }
     var todIsShowingDare: Bool { todActive && todPhase == .dare }
 
-    var todTitle: String { "OBBLIGO O VERITÀ?" }
+    var todTitle: String { String(localized: "tod.title", locale: .init(identifier: language)) }
     var todCurrentPlayerName: String? {
         guard todActive, todCursor < todOrder.count else { return nil }
         let idx = todOrder[todCursor]
@@ -587,8 +606,8 @@ final class GameViewModel: ObservableObject,
     }
     var todPromptTitle: String {
         switch todPhase {
-        case .truth: return "VERITÀ!"
-        case .dare:  return "OBBLIGO!"
+        case .truth: return String(localized: "tod.prompt.truth", locale: .init(identifier: language))
+        case .dare:  return String(localized: "tod.prompt.dare",  locale: .init(identifier: language))
         case .choose: return ""
         }
     }

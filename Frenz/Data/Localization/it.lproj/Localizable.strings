@@ -1,16 +1,28 @@
+/* =========================================================
+   Localizable.strings (it) — sections by view
+   ========================================================= */
+
+/* ===== Global / Shared ===== */
 "appName" = "FRIENZ";
 "appDescription" = "Questo club è gestito da un’AI. Lei formulerà domande sempre nuove e inaspettate.";
 "startButton" = "INIZIA";
 "changeLanguage" = "Cambia lingua";
 "languageSelectTitle" = "Scegli la lingua";
+/* ===== Language Selection View ===== */
+"languageSelectTitle" = "Scegli la lingua";
 "close" = "Chiudi";
+"playerInputPlaceholder" = "Nome giocatore";
+/* ===== Player Setup View ===== */
 "playerInputPlaceholder" = "Nome giocatore";
 "addPlayerLabel" = "Aggiungi giocatore";
 "backButton" = "Indietro";
 "notEnoughPlayersError" = "Aggiungi almeno due giocatori";
 "roomSelectionTitle" = "Scegli la stanza";
+/* ===== Room Selection View ===== */
+"roomSelectionTitle" = "Scegli la stanza";
 "continue" = "Avanti";
 
+/* Rooms — Titles & Subtitles (standard case) */
 "room.party.title" = "Party";
 "room.red.title" = "Red Room";
 "room.dark.title" = "Dark Room";
@@ -27,6 +39,7 @@
 "roomSelection.title" = "Scegli la stanza";
 "roomSelection.addPlayers" = "Aggiungi giocatori";
 
+/* Rooms — Alternate labels (UPPER style) */
 "room.party.title"    = "CHILLING";
 "room.dark.title"     = "DARK ROOM";
 "room.partner.title"  = "PARTNER";
@@ -41,15 +54,60 @@
 "room.red.subtitle"      = "Piccante e provocante, gioca con il consenso.";
 "room.games.subtitle"    = "Mini-giochi dedicati.";
 
+/* ===== Premium Banner (Room Selection) ===== */
 "premium.banner.title"   = "PREMIUM";
 "premium.banner.subtitle"= "Sblocca tutte le modalità!";
 "playerSetup.title" = "Aggiungete i giocatori e diamo inizio alla festa!";
 "continue" = "Continua";
 "playing.counter" = "%d/%d";
+/* ===== Playing View ===== */
+"playing.counter" = "%d/%d";
 "tod.dare" = "OBBLIGO";
 "tod.truth" = "VERITÀ";
 "tod.done" = "FATTO";
 "gameOver.part1" = "PARTITA";
+/* ===== Game Over View ===== */
+"gameOver.part1" = "PARTITA";
 "gameOver.part2" = "FINITA!";
 "onboarding.skip" = "Salta";
+/* ===== Onboarding View ===== */
+"onboarding.skip" = "Salta";
 "playing.counter" = "%d/%d";
+"onboarding.intro.tile.1v1" = "1v1!";
+"onboarding.intro.tile.wyr" = "PREFERIRESTI?";
+"onboarding.intro.tile.tod" = "OBBLIGO\nO VERITÀ?";
+"onboarding.intro.tile.nhie" = "NON\nHO MAI…";
+/* ===== Paywall View ===== */
+"paywall.title"        = "Sblocca Gratis";
+"paywall.bullet.1"     = "Accesso a tutte le modalità";
+"paywall.bullet.2"     = "Nuovi contenuti regolarmente";
+"paywall.bullet.3"     = "Cancellazione in ogni momento.";
+"paywall.trialLabel"   = "Dubbi? Attivate la prova gratis";
+"paywall.priceFooter"  = "Per 3 giorni, poi soli $0,99 a settimana";
+"paywall.continue"     = "CONTINUA";
+"paywall.restore"      = "Ripristina";
+"paywall.terms"        = "Condizioni";
+"paywall.privacy"      = "Privacy";
+
+/* Onboarding - Intro */
+"onboarding.intro.title"    = "Sfide, mini giochi, segreti, gossip, drama e HOT…";
+"onboarding.intro.subtitle" = "Tantissimi giochi a tema e sfide sempre nuove ad ogni partita, senza mai ripetersi.";
+"onboarding.start"          = "GIOCHIAMO";
+
+/* Onboarding - Who */
+"onboarding.who.title"      = "Chi gioca?";
+"onboarding.who.opt.girlz"  = "Solo girlz";
+"onboarding.who.opt.boyz"   = "Boyz";
+"onboarding.who.opt.mix"    = "Mix";
+
+/* Onboarding - Mood */
+"onboarding.mood.title"       = "Siete in vena di…";
+"onboarding.mood.opt.easy"    = "Serata easy e stupida";
+"onboarding.mood.opt.party"   = "Spaccarci!";
+"onboarding.mood.opt.sexy"    = "Giochi folli e sexy";
+"onboarding.mood.opt.secrets" = "Segreti e confessioni";
+
+/* ===== Truth or Dare View ===== */
+"tod.title"          = "OBBLIGO O VERITÀ?";
+"tod.prompt.truth"   = "VERITÀ!";
+"tod.prompt.dare"    = "OBBLIGO!";
