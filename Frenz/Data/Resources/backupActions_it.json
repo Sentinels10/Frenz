@@ -16,6 +16,36 @@
   "text": "Tutti ricevono {count} penalità! 🎉"
 },
 
+"timerChallenge": {
+  "text": "Clicca il timer per iniziare la sfida!",
+  "party": [
+    "Hai venti secondi per nominare 5 cocktail alcolici. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 giochi da fare a una festa. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 canzoni da ballare a una festa. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 drink analcolici. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 tipi di balli. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 serie TV popolari. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 snack da festa. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 celebrità che vorresti incontrare. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 app social che usi. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 film comici. Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
+  ],
+  "redRoom": [
+    "Hai venti secondi per nominare 5 posizioni sessuali. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 zone erogene. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 categorie di porno. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 giochi di ruolo piccanti. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 sex toys. Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
+  ],
+  "darkRoom": [
+    "Hai venti secondi per nominare 5 paure che hai. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 bugie che hai detto. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 rimpianti della tua vita. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per elencare 5 cose che non sopporti delle persone. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+    "Hai venti secondi per nominare 5 segreti che non hai mai confessato (senza rivelarli). Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
+  ]
+},
+
 "questoOQuello": {
     "text": "Tutti votano per alzata di mano. Chi è in minoranza fa 3 penalità!",
     "redRoom": [
@@ -68,35 +98,6 @@
     ]
   },
 
-"timerChallenge": {
-  "text": "Clicca il timer per iniziare la sfida!",
-  "party": [
-    "Hai venti secondi per nominare 5 cocktail alcolici. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 giochi da fare a una festa. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 canzoni da ballare a una festa. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 drink analcolici. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 tipi di balli. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 serie TV popolari. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 snack da festa. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 celebrità che vorresti incontrare. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 app social che usi. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 film comici. Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
-  ],
-  "redRoom": [
-    "Hai venti secondi per nominare 5 posizioni sessuali. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 zone erogene. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 categorie di porno. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 giochi di ruolo piccanti. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 sex toys. Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
-  ],
-  "darkRoom": [
-    "Hai venti secondi per nominare 5 paure che hai. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 bugie che hai detto. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 rimpianti della tua vita. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per elencare 5 cose che non sopporti delle persone. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-    "Hai venti secondi per nominare 5 segreti che non hai mai confessato (senza rivelarli). Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
-  ]
-},
 
 "nonHoMai": {
     "text": "Completa la frase \"Io non ho mai...\". Chi l'ha fatto paga 3 penalità!"
@@ -263,7 +264,7 @@
           "Tutti quelli che hanno mai finto un orgasmo devono fare 4 penalità",
           "Tutti quelli che hanno mai googlato un ex dopo la rottura devono fare 2 penalità",
           "Tutti quelli che hanno mai baciato qualcuno dello stesso sesso devono fare 3 penalità",
-          "Tutti quelli che hanno un vibratore o sex toy a casa devono fare 3 penalità"
+          "Tutti quelli che hanno un vibratore o sex toy a casa devono fare 3 penalità"nuova
         ],
         "darkRoom": [
           "Tutti quelli che hanno mai tradito la fiducia di un amico devono fare 3 penalità",

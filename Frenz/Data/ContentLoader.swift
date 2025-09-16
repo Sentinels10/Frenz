@@ -253,51 +253,57 @@ struct ContentLoader {
 
     private static func buildSpecial(from dict: [String: Any], id: String, room: GameRoom) -> SpecialGameContent? {
         
-        // Caso “Questo o Quello” (top-level)
+        // Caso “Questo o Quello” (tollerante: top-level o specialGames, alias stanza)
         if id == "questoOQuello" {
-            guard let qoq = dict["questoOQuello"] as? [String: Any] else { return nil }
+            // accetta sia top-level che sotto specialGames
+            let qoqNode: [String: Any]? = {
+                if let top = dict["questoOQuello"] as? [String: Any] { return top }
+                if let sg  = dict["specialGames"] as? [String: Any],
+                   let sub = sg["questoOQuello"] as? [String: Any] { return sub }
+                return nil
+            }()
+
+            guard let qoq = qoqNode else { return nil }
+
             let title = "Questo o Quello"
             let description = qoq["text"] as? String
 
-            func arr(_ k: String) -> [String] { qoq[k] as? [String] ?? [] }
-
-            let pool: [String]
-            switch room {
-            case .redRoom:  pool = arr("redRoom")
-            case .darkRoom: pool = arr("darkRoom")
-            case .party,
-                 .partner:  pool = arr("party")
-            case .roulette: pool = arr("party") + arr("redRoom") + arr("darkRoom")
-            case .games:    pool = []
+            // array helper con alias stanza
+            func arrAny(_ keys: [String]) -> [String] {
+                for k in keys {
+                    if let a = qoq[k] as? [String], !a.isEmpty { return a }
+                }
+                return []
             }
 
-            let fallback = arr("party") + arr("redRoom") + arr("darkRoom")
+            // pool per stanza con alias (es. partner→coppie)
+            let pool: [String]
+            switch room {
+            case .party:
+                pool = arrAny(["party"])
+            case .redRoom:
+                pool = arrAny(["redRoom","redroom"])
+            case .darkRoom:
+                pool = arrAny(["darkRoom","darkroom"])
+            case .partner:
+                // preferisci "coppie", fallback a party
+                let coppie = arrAny(["coppie","partner"])
+                pool = !coppie.isEmpty ? coppie : arrAny(["party"])
+            case .roulette:
+                pool = arrAny(["party"]) + arrAny(["redRoom","redroom"]) + arrAny(["darkRoom","darkroom"]) + arrAny(["coppie","partner"])
+            case .games:
+                pool = []
+            }
+
+            // fallback totale se la stanza è vuota
+            let fallback = arrAny(["party"]) + arrAny(["redRoom","redroom"]) + arrAny(["darkRoom","darkroom"]) + arrAny(["coppie","partner"])
             if let action = (pool.isEmpty ? fallback.randomElement() : pool.randomElement()) {
                 return SpecialGameContent(title: title, description: description, action: action, timerSeconds: nil)
             }
             return nil
         }
 
-        // Caso “Questo o Quello” (top-level)
-        if id == "questoOQuello" {
-            guard let qoq = dict["questoOQuello"] as? [String: Any] else { return nil }
-            let title = "Questo o Quello"
-            let description = qoq["text"] as? String
-            func arr(_ k: String) -> [String] { qoq[k] as? [String] ?? [] }
-            let pool: [String]
-            switch room {
-            case .redRoom:  pool = arr("redRoom")
-            case .darkRoom: pool = arr("darkRoom")
-            case .party,
-                 .partner:  pool = arr("party")
-            case .roulette: pool = arr("party") + arr("redRoom") + arr("darkRoom")
-            case .games:    pool = []
-            }
-            if let action = (pool.isEmpty ? (arr("party")+arr("redRoom")+arr("darkRoom")).randomElement() : pool.randomElement()) {
-                return SpecialGameContent(title: title, description: description, action: action, timerSeconds: nil)
-            }
-            return nil
-        }
+
 
         // Would You Rather (azioni top-level + descrizione in specialGames)
         if id == "wouldYouRather" {

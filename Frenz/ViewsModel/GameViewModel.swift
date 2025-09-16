@@ -96,22 +96,6 @@ final class GameViewModel: ObservableObject,
     let MAX_ACTIONS_PER_MATCH = 50
     private let MIN_SPACING_BETWEEN_SPECIAL = 3
 
-    private var commonSpecialGames: [String] {
-        ["truthOrDare", "wouldYouRather", "questoOQuello", "timerChallenge"]
-    }
-    private var roomSpecificSpecialGames: [GameRoom: [String]] {
-        [
-            .redRoom:    ["infamata","tuttoHaUnPrezzo","tuttiQuelliChe","penitenzaRandom"],
-            .darkRoom:   ["pointFinger","nonHoMai","chiEPiuProbabile"],
-            .party:      ["chatDetective","penitenzeGruppo","happyHour","newRule"],
-            .partner:    ["oneVsOne"],
-            .roulette:   [
-                "infamata","pointFinger","chatDetective","tuttoHaUnPrezzo","tuttiQuelliChe",
-                "penitenzeGruppo","nonHoMai","chiEPiuProbabile","happyHour","oneVsOne","penitenzaRandom","newRule"
-            ],
-            .games: []
-        ]
-    }
 
     // ============================================================
     // MARK: Truth or Dare (round per tutti)
@@ -676,7 +660,7 @@ final class GameViewModel: ObservableObject,
     private func injectSpecialGames(into base: [GameAction], for room: GameRoom) -> [GameAction] {
         guard !base.isEmpty else { return base }
         var deck = base
-        var valid = commonSpecialGames + (roomSpecificSpecialGames[room] ?? [])
+        var valid = SpecialGamesProvider.allFor(room: room)
         valid.shuffle()
 
         let numSpecials = min(10, valid.count)
@@ -706,7 +690,7 @@ final class GameViewModel: ObservableObject,
                                timerSeconds: content.timerSeconds),
                     at: safeIndex
                 )
-            } else if let mapped = mapSpecialIDToGameType(gid),
+            } else if let mapped = SpecialGamesProvider.mapToGameType(gid),
                       let one = try? ContentLoader.loadGameDeck(lang: language, game: mapped).randomElement() {
                 deck.insert(GameAction(text: one.text,
                                        room: room.rawValue,
@@ -723,16 +707,6 @@ final class GameViewModel: ObservableObject,
         return deck
     }
 
-    private func mapSpecialIDToGameType(_ id: String) -> GameType? {
-        switch id {
-        case "truthOrDare":     return .truthOrDare
-        case "wouldYouRather":  return .wouldYouRather
-        case "nonHoMai":        return .neverHaveIEver
-        case "tuttoHaUnPrezzo": return .priceGame
-        case "timerChallenge":  return .miniChallenges
-        default:                return nil
-        }
-    }
 
     // MARK: Truth or Dare helpers
     private func ensureTodPrepared() {
