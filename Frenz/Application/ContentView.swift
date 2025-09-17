@@ -53,11 +53,10 @@ struct ContentView: View {
                 // PaywallView rimosso: reindirizzo alla selezione stanze
                 RoomSelectionView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
-            
+
             case .loading:
                 LoadingView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
-
             }
         }
         .onAppear { gameVM.subscriptionManager = subscriptionManager }
@@ -95,5 +94,6 @@ private struct PlaceholderScreen: View {
 #Preview {
     ContentView()
         .environmentObject(GameViewModel())
+        .environmentObject(SubscriptionManager()) // necessario per le preview
         .preferredColorScheme(.dark)
 }
