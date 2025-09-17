@@ -53,7 +53,6 @@ public protocol RoomSelectionRouting: ObservableObject {
     // Azioni/Hook UI
     func select(room: GameRoom)
     func openSettings()
-    func openPaywall()
     func addPlayers()
     func isRoomLocked(_ room: GameRoom) -> Bool
     func showsCrown(_ room: GameRoom) -> Bool
@@ -138,27 +137,6 @@ public protocol TruthOrDareRouting: ObservableObject {
     func todNext()       // termina la visualizzazione, passa al prossimo giocatore / chiude il round
 }
 
-// MARK: - Paywall
-public protocol PaywallRouting: ObservableObject {
-    // Stato
-    var isTrialEnabled: Bool { get set }
-
-    // Testi
-    var paywallTitle: String { get }            // "Sblocca Gratis"
-    var paywallBullets: [String] { get }        // 3 bullet
-    var paywallTrialLabel: String { get }       // "Dubbi? Attivate la prova gratis"
-    var paywallPriceFooter: String { get }      // "Per 3 giorni, poi soli ..."
-    var paywallContinueTitle: String { get }    // "CONTINUA"
-    var paywallRestoreTitle: String { get }     // "Ripristina"
-    var paywallTermsTitle: String { get }       // "Condizioni"
-    var paywallPrivacyTitle: String { get }     // "Privacy"
-
-    // Azioni
-    func paywallPurchase()
-    func paywallRestore()
-    func paywallClose()
-}
-
 // MARK: - Onboarding
 public protocol OnboardingRouting: ObservableObject {
     // Testi (puoi poi localizzare)
@@ -178,5 +156,3 @@ public protocol OnboardingRouting: ObservableObject {
     func obSelectWho(_ index: Int)
     func obSelectMood(_ index: Int)
 }
-
-

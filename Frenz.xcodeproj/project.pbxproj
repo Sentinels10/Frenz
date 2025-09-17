@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D695FEE72E7AC38300E1D590 /* SuperwallKit in Frameworks */ = {isa = PBXBuildFile; productRef = D695FEE62E7AC38300E1D590 /* SuperwallKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		D63816DC2E5F41E70017A5DB /* Frenz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frenz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D695FEE72E7AC38300E1D590 /* SuperwallKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 			);
 			name = Frenz;
 			packageProductDependencies = (
+				D695FEE62E7AC38300E1D590 /* SuperwallKit */,
 			);
 			productName = Frenz;
 			productReference = D63816DC2E5F41E70017A5DB /* Frenz.app */;
@@ -108,6 +114,9 @@
 			);
 			mainGroup = D63816D32E5F41E70017A5DB;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				D695FEE52E7AC38300E1D590 /* XCRemoteSwiftPackageReference "Superwall-iOS" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D63816DD2E5F41E70017A5DB /* Products */;
 			projectDirPath = "";
@@ -338,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D695FEE52E7AC38300E1D590 /* XCRemoteSwiftPackageReference "Superwall-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/superwall/Superwall-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D695FEE62E7AC38300E1D590 /* SuperwallKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D695FEE52E7AC38300E1D590 /* XCRemoteSwiftPackageReference "Superwall-iOS" */;
+			productName = SuperwallKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D63816D42E5F41E70017A5DB /* Project object */;
 }

@@ -21,7 +21,7 @@ final class GameViewModel: ObservableObject,
     // Routing (NO WelcomeRouting)
     LanguageSelectionRouting, PlayerSetupRouting,
     RoomSelectionRouting, GameSelectionRouting,
-    PlayingRouting, PaywallRouting, OnboardingRouting,
+    PlayingRouting, OnboardingRouting,
     TruthOrDareRouting
 {
     // ============================================================
@@ -36,7 +36,9 @@ final class GameViewModel: ObservableObject,
     }
     
     func togglePremium() {
-        premiumUnlocked.toggle()
+        #if DEBUG
+        subscriptionManager?.toggleForTesting()
+        #endif
     }
     
     // MARK: Loading (splash tra stanza e partita)
@@ -110,20 +112,15 @@ final class GameViewModel: ObservableObject,
     private var todDares:  [String] = []
 
     // ============================================================
-    // MARK: Premium
+    // MARK: Premium (via SubscriptionManager)
     // ============================================================
-    private let premiumKey = "premium.unlocked"
-
-    @Published var premiumUnlocked: Bool {
-        didSet { UserDefaults.standard.set(premiumUnlocked, forKey: premiumKey) }
-    }
-    private var pendingRoomSelection: GameRoom?
+    @Published var subscriptionManager: SubscriptionManager?
+    var premiumUnlocked: Bool { subscriptionManager?.isPro ?? false }
 
     // ============================================================
     // MARK: Init
     // ============================================================
     init() {
-        self.premiumUnlocked = UserDefaults.standard.bool(forKey: premiumKey)
         if !["it","en","fr","de"].contains(language) { language = "it" }
         if !UserDefaults.standard.bool(forKey: onboardingKey) {
             gameState = .onboardingIntro
@@ -226,10 +223,8 @@ final class GameViewModel: ObservableObject,
     }
 
     func select(room: GameRoom) {
-        // paywall se serve
+        // Se la stanza è premium e l'utente non è PRO, non procedere (il gate è gestito dalla View con Superwall)
         if isRoomPremium(room) && !premiumUnlocked {
-            pendingRoomSelection = room
-            gameState = .paywall
             return
         }
         // altrimenti avvia schermata di loading
@@ -299,21 +294,6 @@ final class GameViewModel: ObservableObject,
                 self.gameState = .playing
             }
         }
-    }
-
-    // Paywall flow
-    func completePremiumPurchase() {
-        premiumUnlocked = true
-        if let r = pendingRoomSelection {
-            pendingRoomSelection = nil
-            select(room: r)
-        } else {
-            gameState = .roomSelection
-        }
-    }
-    func cancelPremiumFlow() {
-        pendingRoomSelection = nil
-        gameState = .roomSelection
     }
 
     func openSettings() { }
@@ -513,27 +493,6 @@ final class GameViewModel: ObservableObject,
     var totalSteps: Int { MAX_ACTIONS_PER_MATCH }
     func backToRooms() { gameState = .roomSelection }
 
-    // ============================================================
-    // MARK: PaywallRouting (stub)
-    // ============================================================
-    @Published var isTrialEnabled: Bool = true
-    var paywallTitle: String { String(localized: "paywall.title", locale: .init(identifier: language)) }
-    var paywallBullets: [String] {
-        [
-            String(localized: "paywall.bullet.1", locale: .init(identifier: language)),
-            String(localized: "paywall.bullet.2", locale: .init(identifier: language)),
-            String(localized: "paywall.bullet.3", locale: .init(identifier: language))
-        ]
-    }
-    var paywallTrialLabel: String { String(localized: "paywall.trialLabel", locale: .init(identifier: language)) }
-    var paywallPriceFooter: String { String(localized: "paywall.priceFooter", locale: .init(identifier: language)) }
-    var paywallContinueTitle: String { String(localized: "paywall.continue", locale: .init(identifier: language)) }
-    var paywallRestoreTitle: String { String(localized: "paywall.restore", locale: .init(identifier: language)) }
-    var paywallTermsTitle: String { String(localized: "paywall.terms", locale: .init(identifier: language)) }
-    var paywallPrivacyTitle: String { String(localized: "paywall.privacy", locale: .init(identifier: language)) }
-    func paywallPurchase() { gameState = .roomSelection }
-    func paywallRestore() { }
-    func paywallClose() { gameState = .roomSelection }
 
     // ============================================================
     // MARK: OnboardingRouting

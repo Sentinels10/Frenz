@@ -1,4 +1,5 @@
 import SwiftUI
+import SuperwallKit
 
 struct PlayerSetupView<VM: PlayerSetupRouting>: View {
     @ObservedObject var vm: VM
@@ -78,7 +79,11 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                 Spacer(minLength: 6)
 
                 // CTA continua
-                Button(action: { vm.startGame() }) {
+                Button(action: {
+                    Superwall.shared.register(placement: "after_player_setup_continue") {
+                        vm.startGame()
+                    }
+                }) {
                     Text(continueTitle)
                         .font(.rammetto(size: 18))
                         .foregroundColor(.white)

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var gameVM: GameViewModel
+    @EnvironmentObject private var subscriptionManager: SubscriptionManager
 
     var body: some View {
         ZStack {
@@ -49,7 +50,8 @@ struct ContentView: View {
                     .routeTransition(trigger: gameVM.gameState)
 
             case .paywall:
-                PaywallView(vm: gameVM)
+                // PaywallView rimosso: reindirizzo alla selezione stanze
+                RoomSelectionView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
             
             case .loading:
@@ -58,6 +60,7 @@ struct ContentView: View {
 
             }
         }
+        .onAppear { gameVM.subscriptionManager = subscriptionManager }
     }
 }
 
@@ -74,7 +77,6 @@ private extension View {
 private struct GameSelectionView_Placeholder: View { var body: some View { PlaceholderScreen(title: "Game Selection") } }
 private struct PlayingView_Placeholder: View       { var body: some View { PlaceholderScreen(title: "Playing") } }
 private struct GameOverView_Placeholder: View      { var body: some View { PlaceholderScreen(title: "Game Over") } }
-private struct PaywallView_Placeholder: View       { var body: some View { PlaceholderScreen(title: "Paywall") } }
 
 private struct PlaceholderScreen: View {
     let title: String

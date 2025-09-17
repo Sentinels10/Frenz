@@ -1,4 +1,6 @@
+
 import SwiftUI
+import SuperwallKit
 
 #if canImport(UIKit)
 import UIKit
@@ -84,8 +86,8 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                         // Banner PREMIUM — visibile solo se NON premium
                         if !vm.premiumUnlocked {
                             PremiumBannerCard {
-                                // Apri direttamente il paywall (oppure seleziona una stanza premium, entrambi portano al paywall)
-                                vm.openPaywall()
+                                // Mostra il paywall Superwall per l'upgrade premium
+                                Superwall.shared.register(placement: "room_selection_premium_gate") { }
                             }
                         }
 
@@ -99,7 +101,14 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                                 iconSize: iconSize(for: room),
                                 showCrown: vm.isRoomPremium(room) && !vm.premiumUnlocked
                             ) {
-                                vm.select(room: room)
+                                if vm.isRoomPremium(room) && !vm.premiumUnlocked {
+                                    // Gate: mostra il paywall e, se sbloccato, prosegui con la selezione
+                                    Superwall.shared.register(placement: "room_selection_premium_gate") {
+                                        vm.select(room: room)
+                                    }
+                                } else {
+                                    vm.select(room: room)
+                                }
                             }
                         }
                     }
