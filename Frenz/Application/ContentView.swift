@@ -60,6 +60,18 @@ struct ContentView: View {
             }
         }
         .onAppear { gameVM.subscriptionManager = subscriptionManager }
+        .onChange(of: gameVM.requestedPaywallPlacement) { placement in
+            guard let placement else { return }
+            // Chiede a SubscriptionManager di presentare il paywall per questo placement
+            subscriptionManager.showPaywall(placement: placement)
+                // reset trigger
+                gameVM.requestedPaywallPlacement = nil
+                // se era il placement post partita, rientra alle stanze
+                if placement == GameViewModel.PaywallPlacement.afterGameOver {
+                    gameVM.backToRooms()
+                }
+            
+        }
     }
 }
 

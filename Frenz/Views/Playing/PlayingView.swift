@@ -58,11 +58,9 @@ struct PlayingView<VM: PlayingRouting>: View {
             HStack {
                 Button(action: { vm.backToRooms() }) {
                     Image(systemName: "chevron.left")
-                        .font(.system(size: 18, weight: .bold))
+                        .font(.system(size: 16, weight: .bold))
                         .foregroundColor(.white)
-                        .padding(8)
-                        .background(Color.white.opacity(0.18))
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(10)
                 }
                 Spacer()
             }

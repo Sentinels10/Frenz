@@ -17,6 +17,7 @@ enum GameState: Equatable {
     case loading
 }
 
+@MainActor
 final class GameViewModel: ObservableObject,
     // Routing (NO WelcomeRouting)
     LanguageSelectionRouting, PlayerSetupRouting,
@@ -35,9 +36,10 @@ final class GameViewModel: ObservableObject,
         didSet { UserDefaults.standard.set(language, forKey: "app.language") }
     }
     
+    @MainActor
     func togglePremium() {
         #if DEBUG
-        subscriptionManager?.toggleForTesting()
+        subscriptionManager?.debugTogglePro()
         #endif
     }
     
@@ -116,6 +118,16 @@ final class GameViewModel: ObservableObject,
     // ============================================================
     @Published var subscriptionManager: SubscriptionManager?
     var premiumUnlocked: Bool { subscriptionManager?.isPro ?? false }
+
+    // Identificatori placement Superwall
+    struct PaywallPlacement {
+        static let afterPlayerSetup = "after_player_setup_continue"
+        static let roomSelectionGate = "room_selection_premium_gate"
+        static let afterGameOver = "after_game_over_continue"
+    }
+
+    // Quando valorizzato, la View deve presentare il paywall corrispondente
+    @Published var requestedPaywallPlacement: String? = nil
 
     // ============================================================
     // MARK: Init
@@ -225,6 +237,8 @@ final class GameViewModel: ObservableObject,
     func select(room: GameRoom) {
         // Se la stanza è premium e l'utente non è PRO, non procedere (il gate è gestito dalla View con Superwall)
         if isRoomPremium(room) && !premiumUnlocked {
+            // Chiedi al layer di presentazione (View) di mostrare il paywall corretto
+            requestedPaywallPlacement = PaywallPlacement.roomSelectionGate
             return
         }
         // altrimenti avvia schermata di loading
@@ -297,7 +311,10 @@ final class GameViewModel: ObservableObject,
     }
 
     func openSettings() { }
-    func openPaywall() { gameState = .paywall }
+    func openPaywall() {
+        // Legacy shim: usiamo Superwall. Di default mostra il paywall post player setup.
+        requestedPaywallPlacement = PaywallPlacement.afterPlayerSetup
+    }
     func addPlayers() { gameState = .playerSetup }
     func isRoomLocked(_ room: GameRoom) -> Bool { room == .darkRoom }
     func showsCrown(_ room: GameRoom) -> Bool { room == .darkRoom || room == .partner || room == .roulette || room == .redRoom }
@@ -492,6 +509,15 @@ final class GameViewModel: ObservableObject,
     var currentStep: Int { min(currentIndex + 1, MAX_ACTIONS_PER_MATCH) }
     var totalSteps: Int { MAX_ACTIONS_PER_MATCH }
     func backToRooms() { gameState = .roomSelection }
+
+    /// Chiamato dal pulsante "Partita finita" in GameOverView
+    func continueFromGameOver() {
+        if premiumUnlocked {
+            backToRooms()
+        } else {
+            requestedPaywallPlacement = PaywallPlacement.afterGameOver
+        }
+    }
 
 
     // ============================================================
@@ -734,5 +760,39 @@ final class GameViewModel: ObservableObject,
             s = s.replacingOccurrences(of: "{count}", with: String(Int.random(in: 1...5)))
         }
         return s
+    }
+}
+
+extension GameViewModel {
+    // MARK: - Helper per il layer di UI (Superwall)
+    func requestPaywallAfterPlayerSetup() {
+        requestedPaywallPlacement = PaywallPlacement.afterPlayerSetup
+    }
+    func requestPaywallForRoomGate() {
+        requestedPaywallPlacement = PaywallPlacement.roomSelectionGate
+    }
+    func requestPaywallAfterGameOver() {
+        requestedPaywallPlacement = PaywallPlacement.afterGameOver
+    }
+
+    /// Resetta la richiesta di paywall una volta che la View lo ha presentato/gestito
+    func clearRequestedPaywall() {
+        requestedPaywallPlacement = nil
+    }
+
+    /// Da chiamare quando il paywall viene chiuso.
+    /// - Parameter didPurchase: `true` se è stato effettuato un acquisto/restore che abilita PRO.
+    func paywallDismissed(didPurchase: Bool) {
+        if didPurchase {
+            // Chiedi al SubscriptionManager di riallineare lo stato PRO
+            subscriptionManager?.refreshEntitlements()
+        }
+        // In ogni caso, rimuovi la richiesta corrente
+        requestedPaywallPlacement = nil
+
+        // Se l'acquisto è avvenuto dopo game over, puoi tornare subito alle stanze sbloccate.
+        if didPurchase, gameState == .gameOver {
+            backToRooms()
+        }
     }
 }

@@ -1,4 +1,3 @@
-
 import SwiftUI
 import SuperwallKit
 
@@ -30,6 +29,7 @@ private func assetOrSymbol(_ assetName: String, system symbolName: String) -> so
 // MARK: - View
 struct RoomSelectionView<VM: RoomSelectionRouting>: View {
     @ObservedObject var vm: VM
+    @EnvironmentObject private var subscriptionManager: SubscriptionManager
 
     private let rooms: [GameRoom] = [.party, .darkRoom, .partner, .roulette, .redRoom]
 
@@ -71,9 +71,14 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                             .padding(10)
                     }
                     // 🔑 bottone toggle premium (solo per debug/test)
-                    Button(action: { vm.togglePremium() }) {
-                        Image(systemName: vm.premiumUnlocked ? "crown.fill" : "lock.fill")
-                            .foregroundColor(vm.premiumUnlocked ? .yellow : .white)
+                    Button(action: {
+                        #if DEBUG
+                        subscriptionManager.debugTogglePro()
+                        #endif
+                    }) {
+                        let isPro = subscriptionManager.isPro
+                        Image(systemName: isPro ? "crown.fill" : "lock.fill")
+                            .foregroundColor(isPro ? .yellow : .white)
                             .padding(8)
                     }
                 }
@@ -84,7 +89,7 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                     VStack(spacing: 6) {
 
                         // Banner PREMIUM — visibile solo se NON premium
-                        if !vm.premiumUnlocked {
+                        if !subscriptionManager.isPro {
                             PremiumBannerCard {
                                 // Mostra il paywall Superwall per l'upgrade premium
                                 Superwall.shared.register(placement: "room_selection_premium_gate") { }
@@ -99,12 +104,15 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                                 iconSystem: leadingIcon(for: room).system,
                                 gradient: cardGradient(for: room),
                                 iconSize: iconSize(for: room),
-                                showCrown: vm.isRoomPremium(room) && !vm.premiumUnlocked
+                                showCrown: vm.isRoomPremium(room) && !subscriptionManager.isPro
                             ) {
-                                if vm.isRoomPremium(room) && !vm.premiumUnlocked {
-                                    // Gate: mostra il paywall e, se sbloccato, prosegui con la selezione
+                                if vm.isRoomPremium(room) && !subscriptionManager.isPro {
+                                    // Gate: mostra il paywall
+                                    print("[RoomSelection] present paywall for premium room: \(room) — isPro=\(subscriptionManager.isPro)")
                                     Superwall.shared.register(placement: "room_selection_premium_gate") {
-                                        vm.select(room: room)
+                                        // In caso di Non-Gated, potresti voler proseguire
+                                        // Qui NON selezioniamo automaticamente la stanza,
+                                        // perché vogliamo che l’accesso resti gated.
                                     }
                                 } else {
                                     vm.select(room: room)

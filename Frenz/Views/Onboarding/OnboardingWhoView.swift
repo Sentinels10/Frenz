@@ -3,6 +3,7 @@ import UIKit
 
 struct OnboardingWhoView<VM: OnboardingRouting>: View {
     @ObservedObject var vm: VM
+    @Environment(\.dismiss) private var dismiss
     private let cardHeight: CGFloat = 84
     private let horizontalPad: CGFloat = 22
 
@@ -147,7 +148,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
 
     private var header: some View {
         HStack {
-            Button(action: { vm.obSkip() }) {
+            Button(action: { dismiss() }) {
                 Image(systemName: "chevron.left")
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(.white)

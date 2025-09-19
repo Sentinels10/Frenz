@@ -128,7 +128,7 @@ struct GameOverView<VM: PlayingRouting>: View {
             }
         }
         .contentShape(Rectangle())                 // per il tap su tutta la schermata
-        .onTapGesture { vm.backToRooms() }         // tap = torna alle stanze
+        .onTapGesture { vm.requestPaywallAfterGameOver() } // tap = nuovo Superwall-aware flow
         .onAppear { float = true }
     }
     // MARK: - Helpers (asset-safe stickers + float animation)

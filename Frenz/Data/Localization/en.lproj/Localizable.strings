@@ -118,3 +118,7 @@
 "tod.title"         = "TRUTH OR DARE?";
 "tod.prompt.truth"  = "TRUTH!";
 "tod.prompt.dare"   = "DARE!";
+
+/* ===== loading view ===== */
+"loading.title" = "Ready? let us cook…";
+"loading.fallback" = "Getting the party ready…";

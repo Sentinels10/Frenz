@@ -9,6 +9,7 @@ public struct AppLanguage: Identifiable, Equatable {
 
 
 // MARK: - Language Selection
+@MainActor
 public protocol LanguageSelectionRouting: ObservableObject {
     var availableLanguages: [AppLanguage] { get }
     var title: String { get }
@@ -19,6 +20,7 @@ public protocol LanguageSelectionRouting: ObservableObject {
 }
 
 // MARK: - Player Setup
+@MainActor
 public protocol PlayerSetupRouting: ObservableObject {
     // Dati
     var inputPlayers: [PlayerInput] { get }
@@ -36,6 +38,7 @@ public protocol PlayerSetupRouting: ObservableObject {
 }
 
 // MARK: - Room Selection (NUOVO: estetica tipo screenshot)
+@MainActor
 public protocol RoomSelectionRouting: ObservableObject {
     func togglePremium()                // la View chiede al VM di cambiare stato
     var premiumUnlocked: Bool { get }
@@ -65,6 +68,7 @@ public protocol RoomSelectionRouting: ObservableObject {
 }
 
 // MARK: - Game Selection (hub “Giochi”)
+@MainActor
 public protocol GameSelectionRouting: ObservableObject {
     var availableGames: [GameType] { get }
     var gameSelectionTitle: String { get }
@@ -80,6 +84,7 @@ public protocol GameSelectionRouting: ObservableObject {
 }
 
 // MARK: - Playing
+@MainActor
 public protocol PlayingRouting: ObservableObject {
     // Stato corrente
     var language: String { get }
@@ -115,9 +120,11 @@ public protocol PlayingRouting: ObservableObject {
     func skip()
     func startTimer()
     func endMatch()
+    func requestPaywallAfterGameOver()
 }
 
 // MARK: - Truth or Dare (Obbligo o Verità)
+@MainActor
 public protocol TruthOrDareRouting: ObservableObject {
     // Stato
     var isTruthOrDareRound: Bool { get }
@@ -138,6 +145,7 @@ public protocol TruthOrDareRouting: ObservableObject {
 }
 
 // MARK: - Onboarding
+@MainActor
 public protocol OnboardingRouting: ObservableObject {
     // Testi (puoi poi localizzare)
     var obIntroTitle: String { get }

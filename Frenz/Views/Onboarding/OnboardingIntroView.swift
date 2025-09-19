@@ -199,18 +199,18 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
 
                 // ===== Standalone stickers (independent from the tiles) =====
                 // Top-left clouds
-                sticker("sticker_clouds", fallbackEmoji: "☁️", size: h * 0.19, rotation: .degrees(0), x: -w * 0.30, y: -h * 0.28)
+                sticker("sticker_clouds", fallbackEmoji: "☁️", size: h * 0.25, rotation: .degrees(0), x:  w * 0.14, y:  h * 0.40)
                 // Small flame near WYR left edge
-                sticker("sticker_flame", fallbackEmoji: "🔥", size: h * 0.12, rotation: .degrees(0), x: -w * 0.32, y:  -h * 0.02)
+                sticker("sticker_flame", fallbackEmoji: "🔥", size: h * 0.18, rotation: .degrees(0), x: -w * 0.30, y:  -h * 0.02)
                 // Banana on the right of WYR
                 sticker("sticker_banana", fallbackEmoji: "🍌", size: h * 0.20, rotation: .degrees(12), x:  w * 0.30, y: -h * 0.04)
                 
                 // Devil head to the right of ToD card
-                sticker("sticker_devil", fallbackEmoji: "😈", size: h * 0.20, rotation: .degrees(0), x:  w * 0.38, y:  h * 0.32)
+                sticker("sticker_devil", fallbackEmoji: "😈", size: h * 0.22, rotation: .degrees(0), x:  w * 0.62, y:  h * 0.32)
                 // Angry face near NHIE left
-                sticker("sticker_angry", fallbackEmoji: "😤", size: h * 0.18, rotation: .degrees(0), x: -w * 0.31, y:  h * 0.52)
+                sticker("sticker_angry", fallbackEmoji: "😤", size: h * 0.21, rotation: .degrees(0), x: -w * 0.29, y:  h * 0.52)
                 // Bra to the lower-right area
-                sticker("sticker_bra", fallbackEmoji: "💗", size: h * 0.18, rotation: .degrees(-8), x:  w * 0.34, y:  h * 0.40)
+                sticker("sticker_bra", fallbackEmoji: "💗", size: h * 0.22, rotation: .degrees(-8), x:  w * 0.25, y:  h * 0.68)
             }
         }
     }

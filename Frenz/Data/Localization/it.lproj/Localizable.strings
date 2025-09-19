@@ -111,3 +111,7 @@
 "tod.title"          = "OBBLIGO O VERITÀ?";
 "tod.prompt.truth"   = "VERITÀ!";
 "tod.prompt.dare"    = "OBBLIGO!";
+
+/* ===== loading view ===== */
+"loading.title" = "Pronti? lasciaci cucinare…";
+"loading.fallback" = "Prepariamo la serata…";
