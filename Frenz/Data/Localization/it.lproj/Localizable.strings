@@ -101,11 +101,10 @@
 "onboarding.who.opt.mix"    = "Mix";
 
 /* Onboarding - Mood */
-"onboarding.mood.title"       = "Siete in vena di…";
-"onboarding.mood.opt.easy"    = "Serata easy e stupida";
-"onboarding.mood.opt.party"   = "Spaccarci!";
-"onboarding.mood.opt.sexy"    = "Giochi folli e sexy";
-"onboarding.mood.opt.secrets" = "Segreti e confessioni";
+"onboarding.mood.title"       = "Che mood diamo alla festa?";
+"onboarding.mood.opt.easy" = "Easy e divertente";
+"onboarding.mood.opt.sexy"     = "Sexy";
+"onboarding.mood.opt.secrets"    = "Crazy";
 
 /* ===== Truth or Dare View ===== */
 "tod.title"          = "OBBLIGO O VERITÀ?";

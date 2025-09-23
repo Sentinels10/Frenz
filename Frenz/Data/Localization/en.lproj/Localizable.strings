@@ -108,11 +108,10 @@
 "onboarding.who.opt.mix"    = "Mix";
 
 /* Onboarding - Mood */
-"onboarding.mood.title"       = "You’re in the mood for…";
-"onboarding.mood.opt.easy"    = "Easy & goofy night";
-"onboarding.mood.opt.party"   = "Go wild!";
-"onboarding.mood.opt.sexy"    = "Crazy & sexy games";
-"onboarding.mood.opt.secrets" = "Secrets & confessions";
+"onboarding.mood.title"       = "What mood should we give to the party?";
+"onboarding.mood.opt.easy" = "Easy and fun";
+"onboarding.mood.opt.sexy"     = "Sexy";
+"onboarding.mood.opt.secrets"    = "Crazy";
 
 /* ===== Truth or Dare View ===== */
 "tod.title"         = "TRUTH OR DARE?";

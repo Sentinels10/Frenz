@@ -3,8 +3,8 @@ import UIKit
 
 struct OnboardingWhoView<VM: OnboardingRouting>: View {
     @ObservedObject var vm: VM
-    @Environment(\.dismiss) private var dismiss
-    private let cardHeight: CGFloat = 84
+
+    private let cardHeight: CGFloat = 104
     private let horizontalPad: CGFloat = 22
 
     // Fallback-safe asset loader (returns nil if the asset is missing or the name is wrong)
@@ -23,7 +23,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                 header
 
                 Text(vm.obWhoTitle)
-                    .font(.rammetto(size: 28))
+                    .font(.rammetto(size: 23))
                     .foregroundColor(.white)
                     .padding(.top, 4)
 
@@ -76,6 +76,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                                         Spacer()
                                         Text(title)
                                             .font(.trebuchet(size: 26))
+                                            .fontWeight(.bold)
                                             .foregroundColor(.white)
                                             .shadow(color: .black.opacity(0.28), radius: 3, x: 0, y: 2)
                                             .padding(.horizontal, 22)
@@ -85,17 +86,25 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                                 .frame(width: UIScreen.main.bounds.width - horizontalPad * 2, height: cardHeight)
                                 .background(
                                     RoundedRectangle(cornerRadius: 22)
-                                        .fill(i == 0
-                                              ? LinearGradient(colors: [
-                                                    Color(hex: 0xFF5EB5),
-                                                    Color(hex: 0xFF6AB0),
-                                                    Color(hex: 0xF76BD5)
-                                                ], startPoint: .leading, endPoint: .trailing)
-                                              : LinearGradient(colors: [
-                                                    Color(hex: 0xFFB64D),
-                                                    Color(hex: 0xFF6E7F),
-                                                    Color(hex: 0x6FC3FF)
-                                                ], startPoint: .leading, endPoint: .trailing))
+                                        .fill(
+                                            i == 0
+                                            ? LinearGradient(
+                                                colors: [
+                                                    Color(hex: 0xF0007C), // from
+                                                    Color(hex: 0xFF7ACF)  // to
+                                                ],
+                                                startPoint: .bottom,
+                                                endPoint: .top
+                                            )
+                                            : LinearGradient(
+                                                colors: [
+                                                    Color(hex: 0xFFB62E), // from
+                                                    Color(hex: 0xFF680A)  // to
+                                                ],
+                                                startPoint: .bottom,
+                                                endPoint: .top
+                                            )
+                                        )
                                 )
                                 .clipShape(RoundedRectangle(cornerRadius: 22))
                                 .contentShape(RoundedRectangle(cornerRadius: 22))
@@ -109,6 +118,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                                     Spacer()
                                     Text(title)
                                         .font(.trebuchet(size: 26))
+                                        .fontWeight(.bold)
                                         .foregroundColor(.white)
                                         .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 1)
                                     Spacer()
@@ -117,10 +127,10 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                                 .background(
                                     RoundedRectangle(cornerRadius: 22)
                                         .fill(LinearGradient(colors: [
-                                            Color(hex: 0xFF4D96),
-                                            Color(hex: 0xFFB86E),
-                                            Color(hex: 0x5ED3FF),
-                                            Color(hex: 0x7CF2C7)
+                                            Color(hex: 0xFF1919), // rosso
+                                            Color(hex: 0xFF58EF), // rosa
+                                            Color(hex: 0xFFE252), // giallo
+                                            Color(hex: 0x57EFFF)  // azzurro
                                         ], startPoint: .leading, endPoint: .trailing))
                                 )
                                 .clipShape(RoundedRectangle(cornerRadius: 22))
@@ -138,7 +148,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                 Spacer()
 
                 Button(String(localized: "onboarding.skip")) { vm.obSkip() }
-                    .foregroundColor(.white.opacity(0.9))
+                    .foregroundColor(.white.opacity(0.2))
                     .font(.system(size: 14, weight: .semibold))
                     .padding(.bottom, 12)
             }
@@ -148,14 +158,15 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
 
     private var header: some View {
         HStack {
-            Button(action: { dismiss() }) {
+            Button(action: { vm.goBack() }) {
                 Image(systemName: "chevron.left")
-                    .font(.system(size: 18, weight: .bold))
+                    .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
+                    .padding(10)
             }
             Spacer()
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, 8)
         .padding(.top, 10)
     }
 

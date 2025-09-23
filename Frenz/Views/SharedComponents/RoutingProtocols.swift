@@ -163,4 +163,5 @@ public protocol OnboardingRouting: ObservableObject {
     func obStart()
     func obSelectWho(_ index: Int)
     func obSelectMood(_ index: Int)
+    func goBack()
 }

@@ -226,8 +226,24 @@ final class GameViewModel: ObservableObject,
         return isRoomPremium(room)                 // reindirizza al metodo nuovo
     }
 
-    func goBack() {                                // richiesto dal protocollo
-        gameState = .playerSetup                   // stesso comportamento di goBackToPlayerSetup()
+    func goBack() {
+        switch gameState {
+        // Onboarding
+        case .onboardingMood:    gameState = .onboardingWho
+        case .onboardingWho:     gameState = .onboardingIntro
+
+        // Flusso principale
+        case .gameSelection:     gameState = .roomSelection
+        case .roomSelection:     gameState = .playerSetup
+        case .languageSelection: gameState = .playerSetup
+
+        // Durante/after match
+        case .playing:           gameState = .roomSelection
+        case .gameOver:          gameState = .roomSelection
+
+        // Altri stati: niente
+        default:                 break
+        }
     }
 
     func openPlayerSetup() {                       // richiesto dal protocollo
@@ -540,7 +556,6 @@ final class GameViewModel: ObservableObject,
     var obMoodOptions: [String] {
         [
             String(localized: "onboarding.mood.opt.easy",    locale: .init(identifier: language)),
-            String(localized: "onboarding.mood.opt.party",   locale: .init(identifier: language)),
             String(localized: "onboarding.mood.opt.sexy",    locale: .init(identifier: language)),
             String(localized: "onboarding.mood.opt.secrets", locale: .init(identifier: language))
         ]

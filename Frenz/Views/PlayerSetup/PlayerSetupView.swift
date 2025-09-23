@@ -16,12 +16,12 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
 
                 // Titolo grande multi-line
                 Text(titleText)
-                    .font(.rammetto(size: 26))
+                    .font(.rammetto(size: 23))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 24)
                     .padding(.top, 6)
-                    .lineSpacing(6)
+                    .lineSpacing(3)
                     .shadow(color: .black.opacity(0.35), radius: 6, x: 0, y: 3)
 
                 // Lista input
@@ -78,33 +78,38 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
 
                 Spacer(minLength: 6)
 
-                // CTA continua
-                Button(action: {
-                    Superwall.shared.register(placement: "after_player_setup_continue") {
-                        vm.startGame()
-                    }
-                }) {
-                    Text(continueTitle)
-                        .font(.rammetto(size: 18))
-                        .foregroundColor(.white)
+                // CTA continua — footer sottile con separatore
+                VStack(spacing: 0) {
+                    // sottile riga divisoria
+                    Rectangle()
+                        .fill(Color.white.opacity(0.15))
+                        .frame(height: 1)
                         .frame(maxWidth: .infinity)
-                        .padding(.vertical, 16)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .fill(Color.white.opacity(0.06))
-                        )
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(LinearGradient(colors: [Color(hex: 0xFF3B30),
-                                                                Color(hex: 0x00E676)],
-                                                       startPoint: .topLeading, endPoint: .bottomTrailing),
-                                        lineWidth: 3)
-                        )
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 12)
-                        .opacity(canContinue ? 1.0 : 0.5)
+
+                    Button(action: {
+                        Superwall.shared.register(placement: "after_player_setup_continue") {
+                            vm.startGame()
+                        }
+                    }) {
+                        Text(continueTitle)
+                            .font(.rammetto(size: 18))
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 14) // un po' meno alto per un footer più sottile
+                            .background(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color(hex: 0x210041)) // colore interno richiesto
+                            )
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 22)
+                                    .strokeBorder(LinearGradient.frenzRainbow(), lineWidth: 3)
+                            )
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 8) // meno padding per ridurre lo spessore del footer
+                            .opacity(canContinue ? 1.0 : 0.5)
+                    }
+                    .disabled(!canContinue)
                 }
-                .disabled(!canContinue)
             }
         }
         .navigationBarHidden(true)

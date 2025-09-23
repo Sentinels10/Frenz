@@ -23,7 +23,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
                     Spacer(minLength: 8)
 
                     Text(vm.obIntroTitle)
-                        .font(.rammetto(size: 21))
+                        .font(.rammetto(size: 23))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
@@ -32,7 +32,8 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
                         .padding(.horizontal, 24)
 
                     Text(vm.obIntroSubtitle)
-                        .font(.system(size: 14, weight: .semibold))
+                        .font(.system(size: 16, weight: .semibold))
+                        .lineSpacing(5)
                         .foregroundColor(.white.opacity(0.85))
                         .multilineTextAlignment(.center)
                         .lineLimit(nil)
@@ -50,25 +51,18 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
                             .padding(.vertical, 16)
                             .background(
                                 RoundedRectangle(cornerRadius: 22, style: .continuous)
-                                    .fill(Color.white.opacity(0.10))
+                                    .fill(Color(hex: 0x210041))
                             )
                             .overlay(
-                                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                                    .stroke(
-                                        LinearGradient(colors: [
-                                            Color(hex: 0xFF5F6D), // pink
-                                            Color(hex: 0xFFC371), // orange
-                                            Color(hex: 0x62FF8E)  // green
-                                        ], startPoint: .leading, endPoint: .trailing),
-                                        lineWidth: 3
-                                    )
+                                RoundedRectangle(cornerRadius: 22)
+                                    .strokeBorder(LinearGradient.frenzRainbow(), lineWidth: 3)
                             )
                             .shadow(color: Color.black.opacity(0.45), radius: 20, x: 0, y: 12)
                             .padding(.horizontal, 24)
                     }
 
                     Button(String(localized: "onboarding.skip")) { vm.obSkip() }
-                        .foregroundColor(.white.opacity(0.8))
+                        .foregroundColor(.white.opacity(0.2))
                         .font(.system(size: 14, weight: .semibold))
                         .padding(.top, 6)
 

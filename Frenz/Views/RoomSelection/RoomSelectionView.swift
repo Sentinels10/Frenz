@@ -124,17 +124,10 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                     .padding(.vertical, 2)
                 }
 
-                // ===== Footer: linea arcobaleno + call-to-action piatto =====
                 // Divider arcobaleno (separato dal footer)
-                LinearGradient(
-                    colors: [
-                        Color(red: 0.27, green: 0.95, blue: 0.56),
-                        Color(red: 0.53, green: 0.27, blue: 0.95)
-                    ],
-                    startPoint: .leading, endPoint: .trailing
-                )
-                .frame(height: 2)
-                .padding(.horizontal, -16) // to visually go edge-to-edge with content padding
+                LinearGradient.frenzRainbow()
+                    .frame(height: 2)
+                    .padding(.horizontal, -16) // per andare otticamente edge-to-edge
                 
                 // Footer “piatto”, senza capsule né sfondi colorati
                 HStack(spacing: 12) {
@@ -212,15 +205,15 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
     private func cardGradient(for room: GameRoom) -> [Color] {
         switch room {
         case .party:
-            return [Color(red: 0.18, green: 0.46, blue: 0.92), Color(red: 0.28, green: 0.56, blue: 0.98), Color(red: 0.45, green: 0.70, blue: 1.00), Color(red: 0.70, green: 0.88, blue: 1.00)]
-        case .darkRoom:
-            return [Color(red: 0.10, green: 0.05, blue: 0.18), Color(red: 0.16, green: 0.08, blue: 0.28), Color(red: 0.24, green: 0.12, blue: 0.36)]
-        case .partner:
-            return [Color(red: 0.78, green: 0.18, blue: 0.18), Color(red: 0.86, green: 0.25, blue: 0.22), Color(red: 0.94, green: 0.39, blue: 0.31), Color(red: 0.99, green: 0.58, blue: 0.52)]
+            return [Color(hex: 0x1900b1), Color(hex: 0x5df1ff)]
         case .roulette:
-            return [Color(red: 0.58, green: 0.31, blue: 0.78), Color(red: 0.73, green: 0.40, blue: 0.87), Color(red: 0.86, green: 0.49, blue: 0.93), Color(red: 0.99, green: 0.64, blue: 0.98)]
+            return [Color(hex: 0x1b0015), Color(hex: 0xf600fb)]
+        case .partner:
+            return [Color(hex: 0x20000a), Color(hex: 0xa8023d)]
+        case .darkRoom:
+            return [Color(hex: 0x010002), Color(hex: 0x3f008c)]
         case .redRoom:
-            return [Color(red: 0.62, green: 0.08, blue: 0.08), Color(red: 0.78, green: 0.16, blue: 0.14), Color(red: 0.92, green: 0.29, blue: 0.23), Color(red: 0.99, green: 0.52, blue: 0.40)]
+            return [Color(hex: 0x1b0000), Color(hex: 0xfb0000)]
         case .games:
             return [Color.purple, Color.pink, Color.orange]
         }
@@ -240,11 +233,10 @@ private struct PremiumBannerCard: View {
                     .fill(
                         LinearGradient(
                             colors: [
-                                Color(red: 0.45, green: 0.85, blue: 1.00), // cyan
-                                Color(red: 0.55, green: 0.65, blue: 1.00), // blue
-                                Color(red: 0.66, green: 0.50, blue: 1.00), // violet
-                                Color(red: 1.00, green: 0.50, blue: 0.85), // pink
-                                Color(red: 1.00, green: 0.70, blue: 0.40)  // orange
+                                Color(hex: 0x57e5ff),
+                                Color(hex: 0xff58ef),
+                                Color(hex: 0xffe252),
+                                Color(hex: 0xff1919)
                             ],
                             startPoint: .leading, endPoint: .trailing
                         )
@@ -255,10 +247,11 @@ private struct PremiumBannerCard: View {
                 HStack {
                     VStack(alignment: .leading, spacing: 4) {
                         Text(String(localized: "premium.banner.title"))
-                            .font(.rammetto(size: 20))
+                            .font(.rammetto(size: 26))
                             .foregroundColor(.white)
                         Text(String(localized: "premium.banner.subtitle"))
                             .font(.trebuchet(size: 13))
+                            .fontWeight(.bold)
                             .foregroundColor(.white.opacity(0.95))
                             .lineLimit(2)
                     }
@@ -326,6 +319,7 @@ private struct RoomCard: View {
                             .foregroundColor(.white)
                         Text(subtitle)
                             .font(.trebuchet(size: 13))
+                            .fontWeight(.bold)
                             .foregroundColor(.white.opacity(0.9))
                             .lineLimit(2)
                     }

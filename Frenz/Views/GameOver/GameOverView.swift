@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import StoreKit
 
 /// Mostra la schermata di fine partita con grafica e CTA.
 /// Il VM deve esporre almeno `backToRooms()` (già presente in GameViewModel).
@@ -129,8 +130,30 @@ struct GameOverView<VM: PlayingRouting>: View {
         }
         .contentShape(Rectangle())                 // per il tap su tutta la schermata
         .onTapGesture { vm.requestPaywallAfterGameOver() } // tap = nuovo Superwall-aware flow
-        .onAppear { float = true }
+        .onAppear {
+            float = true
+            // Mostra il popup di rating subito sopra al GameOver (con un piccolo delay per sicurezza)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                requestAppReview()
+            }
+        }
     }
+    // Chiede il popup nativo di rating sopra il GameOver
+    private func requestAppReview() {
+        guard let scene = UIApplication.shared.connectedScenes
+            .first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene else { return }
+
+        if #available(iOS 18.0, *) {
+            // StoreKit 2 (iOS 18+) — async API
+            Task {
+                try? await AppStore.requestReview(in: scene)
+            }
+        } else {
+            // Fallback to StoreKit 1 on older iOS
+            SKStoreReviewController.requestReview(in: scene)
+        }
+    }
+
     // MARK: - Helpers (asset-safe stickers + float animation)
     private func sticker(_ name: String,
                          width: CGFloat,
