@@ -144,12 +144,7 @@ final class GameViewModel: ObservableObject,
     // ============================================================
     // MARK: LanguageSelectionRouting
     // ============================================================
-    var availableLanguages: [AppLanguage] {
-        [.init(id: "it", name: "Italiano", flag: "🇮🇹"),
-         .init(id: "en", name: "English",  flag: "🇬🇧"),
-         .init(id: "fr", name: "Français", flag: "🇫🇷"),
-         .init(id: "de", name: "Deutsch",  flag: "🇩🇪")]
-    }
+    var availableLanguages: [FrenzAppLanguage] { [.it, .en, .fr, .de] }
     var title: String      { String(localized: "languageSelectTitle", locale: .init(identifier: language)) }
     var closeTitle: String { String(localized: "close",               locale: .init(identifier: language)) }
     func selectLanguage(_ code: String) { language = code }

@@ -11,12 +11,13 @@ public struct AppLanguage: Identifiable, Equatable {
 // MARK: - Language Selection
 @MainActor
 public protocol LanguageSelectionRouting: ObservableObject {
-    var availableLanguages: [AppLanguage] { get }
+    var availableLanguages: [FrenzAppLanguage] { get }
     var title: String { get }
     var closeTitle: String { get }
     var language: String { get }
     func selectLanguage(_ code: String)
     func closeLanguageSelector()
+    func goBack()
 }
 
 // MARK: - Player Setup

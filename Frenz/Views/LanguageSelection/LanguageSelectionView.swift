@@ -3,6 +3,7 @@ import SwiftUI
 
 struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
     @ObservedObject var vm: ViewModel
+    @EnvironmentObject private var lang: LanguageManager
 
     var body: some View {
         ZStack {
@@ -14,6 +15,7 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
                 footer
             }
         }
+        .id(lang.selected.rawValue)
     }
 
     private var header: some View {
@@ -32,12 +34,16 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
     private var list: some View {
         ScrollView {
             LazyVStack(spacing: 12) {
-                ForEach(vm.availableLanguages) { lang in
+                ForEach(vm.availableLanguages) { langItem in
                     LanguageRow(
-                        lang: lang,
-                        isSelected: lang.id == vm.language
+                        lang: langItem,
+                        isSelected: langItem.id == lang.selected.rawValue
                     ) {
-                        vm.selectLanguage(lang.id)
+                        // Aggiorna subito il LanguageManager globale (con animazione) e poi delega al VM
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            lang.selected = .init(rawValue: langItem.id) ?? .system
+                        }
+                        vm.selectLanguage(langItem.id)
                     }
                 }
             }
@@ -48,7 +54,7 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
 
     private var footer: some View {
         VStack {
-            Button(action: { vm.closeLanguageSelector() }) {
+            Button(action: { vm.goBack() }) {
                 Text(vm.closeTitle)
                     .font(.system(size: 17, weight: .semibold))
                     .frame(maxWidth: .infinity)
@@ -64,8 +70,9 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
     }
 
     private var currentLanguageSubtitle: String {
-        let flag = languageFlag(vm.language)
-        return "\(flag) \(vm.language.uppercased())"
+        let code = lang.selected.rawValue
+        let flag = languageFlag(code)
+        return "\(flag) \(code.uppercased())"
     }
 
     private func languageFlag(_ code: String) -> String {
@@ -81,7 +88,7 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
 
 // MARK: - Singola riga
 private struct LanguageRow: View {
-    let lang: AppLanguage
+    let lang: FrenzAppLanguage
     let isSelected: Bool
     let onTap: () -> Void
 

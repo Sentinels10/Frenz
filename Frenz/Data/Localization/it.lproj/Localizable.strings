@@ -112,5 +112,5 @@
 "tod.prompt.dare"    = "OBBLIGO!";
 
 /* ===== loading view ===== */
-"loading.title" = "Pronti? lasciaci cucinare…";
+"loading.title" = "Pronti? \nlasciaci cucinare…";
 "loading.fallback" = "Prepariamo la serata…";

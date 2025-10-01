@@ -7,6 +7,7 @@ import StoreKit
 struct GameOverView<VM: PlayingRouting>: View {
     @ObservedObject var vm: VM
     @State private var float = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ZStack {
@@ -115,13 +116,13 @@ struct GameOverView<VM: PlayingRouting>: View {
 
             // Testo centrale
             VStack(spacing: 18) {
-                Text(String(localized: "gameOver.part1"))
+                Text("gameOver.part1")
                     .font(.rammetto(size: 54))
                     .kerning(1)
                     .foregroundStyle(.white)
                     .shadow(color: .black.opacity(0.35), radius: 8, y: 6)
 
-                Text(String(localized: "gameOver.part2"))
+                Text("gameOver.part2")
                     .font(.rammetto(size: 54))
                     .kerning(1)
                     .foregroundStyle(.white)

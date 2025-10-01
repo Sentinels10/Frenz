@@ -3,10 +3,10 @@ import UIKit
 
 struct OnboardingWhoView<VM: OnboardingRouting>: View {
     @ObservedObject var vm: VM
-
+    
     private let cardHeight: CGFloat = 104
     private let horizontalPad: CGFloat = 22
-
+    
     // Fallback-safe asset loader (returns nil if the asset is missing or the name is wrong)
     private func asset(_ name: String) -> Image? {
         if let ui = UIImage(named: name) {
@@ -14,21 +14,21 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
         }
         return nil
     }
-
+    
     var body: some View {
         ZStack {
             bg.ignoresSafeArea()
-
+            
             VStack(spacing: 22) {
                 header
-
+                
                 Text(vm.obWhoTitle)
                     .font(.rammetto(size: 23))
                     .foregroundColor(.white)
                     .padding(.top, 4)
-
+                
                 Spacer(minLength: 12)
-
+                
                 // NOTE: Asset names expected: ic_onb_who_girlz, ic_onb_who_boyz (no asset for Mix)
                 VStack(spacing: 10) {
                     ForEach(Array(vm.obWhoOptions.enumerated()), id: \.offset) { i, title in
@@ -46,7 +46,9 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                                                 x: i == 0 ? 30 : -30,
                                                 y: i == 0 ? 30 : 20
                                             )
+                                        
                                         Spacer(minLength: 0)
+                                        
                                         if i == 0 {
                                             (asset("who_girlz_right") ?? Image(systemName: "photo"))
                                                 .renderingMode(.original)
@@ -70,7 +72,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                                     .frame(height: cardHeight)
                                     .clipped()
                                     .allowsHitTesting(false)
-
+                                    
                                     // Title on top
                                     HStack {
                                         Spacer()
@@ -144,9 +146,13 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                         .buttonStyle(.plain)
                     }
                 }
-
+                
                 Spacer()
-
+                
+                // Indicatori di pagina
+                PageIndicator(currentPage: 1, totalPages: 3)
+                    .padding(.bottom, 8)
+                
                 Button(String(localized: "onboarding.skip")) { vm.obSkip() }
                     .foregroundColor(.white.opacity(0.2))
                     .font(.system(size: 14, weight: .semibold))
@@ -155,7 +161,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
         }
         .navigationBarHidden(true)
     }
-
+    
     private var header: some View {
         HStack {
             Button(action: { vm.goBack() }) {
@@ -169,9 +175,26 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
         .padding(.horizontal, 8)
         .padding(.top, 10)
     }
-
+    
     private var bg: LinearGradient {
         LinearGradient(colors: [Color(hex: 0x2B0B58), Color(hex: 0x18042F)],
-                       startPoint: .top, endPoint: .bottom)
+                      startPoint: .top, endPoint: .bottom)
+    }
+}
+
+// Componente per gli indicatori di pagina
+struct PageIndicator: View {
+    let currentPage: Int
+    let totalPages: Int
+    
+    var body: some View {
+        HStack(spacing: 8) {
+            ForEach(0..<totalPages, id: \.self) { index in
+                Circle()
+                    .fill(index == currentPage ? Color.white : Color.white.opacity(0.3))
+                    .frame(width: 8, height: 8)
+                    .animation(.easeInOut(duration: 0.3), value: currentPage)
+            }
+        }
     }
 }

@@ -119,5 +119,5 @@
 "tod.prompt.dare"   = "DARE!";
 
 /* ===== loading view ===== */
-"loading.title" = "Ready? let us cook…";
+"loading.title" = "Ready? \nlet us cook…";
 "loading.fallback" = "Getting the party ready…";

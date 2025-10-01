@@ -2,6 +2,7 @@ import SwiftUI
 
 struct LoadingView: View {
     @ObservedObject var vm: GameViewModel
+    @EnvironmentObject var languageManager: LanguageManager
 
     // MARK: - Asset-aware icon helpers (fallback to emoji if asset missing)
     @ViewBuilder
@@ -41,6 +42,7 @@ struct LoadingView: View {
                     .font(.rammetto(size: 30))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
+                    .lineSpacing(-6)
 
                 // Progress bar custom ~4s
                 progressBar
@@ -53,6 +55,8 @@ struct LoadingView: View {
             .padding(.horizontal, 24)
         }
         .navigationBarHidden(true)
+        .environment(\.locale, languageManager.locale)
+        .id(languageManager.locale.identifier)
     }
 
     private var progressBar: some View {
@@ -61,7 +65,7 @@ struct LoadingView: View {
                 .fill(Color.white.opacity(0.12))
                 .frame(height: 8)
             Capsule()
-                .fill(LinearGradient(colors: [.red, .orange, .blue], startPoint: .leading, endPoint: .trailing))
+                .fill(LinearGradient.frenzRainbow())
                 .frame(width: max(8, CGFloat(vm.loadingProgress) * UIScreen.main.bounds.width * 0.70), height: 8)
                 .animation(.linear(duration: 0.04), value: vm.loadingProgress)
         }
@@ -69,26 +73,33 @@ struct LoadingView: View {
     }
 
     private var carouselCard: some View {
-        RoundedRectangle(cornerRadius: 20)
-            .fill(Color.white.opacity(0.38))
-            .overlay(
-                Text(currentSnippet)
-                    .font(.system(size: 20, weight: .semibold))
-                    .multilineTextAlignment(.center)
-                    .foregroundColor(.white)
-                    .padding(20)
-            )
-            // Clouds sticker posizionato SOTTO la tile (sborda in basso)
-            .background(alignment: .bottom) {
-                icon("sticker_clouds", fallbackEmoji: "☁️", size: 160)
-                    .rotationEffect(.degrees(8))
-                    .opacity(0.95)
-                    .offset(x: 150, y: 84) // abbassato leggermente
-                    .allowsHitTesting(false)
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 160)
-            .shadow(color: .black.opacity(0.25), radius: 12, x: 0, y: 8)
+        ZStack {
+            // Material arrotondata con bordo soft
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(.ultraThinMaterial)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .stroke(Color.white.opacity(0.10), lineWidth: 1)
+                )
+
+            // Testo
+            Text(currentSnippet)
+                .font(.system(size: 20, weight: .semibold))
+                .multilineTextAlignment(.center)
+                .foregroundColor(.white)
+                .padding(20)
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 160)
+        // Sticker sotto la tile (non clippato)
+        .background(alignment: .bottom) {
+            icon("sticker_clouds", fallbackEmoji: "☁️", size: 160)
+                .rotationEffect(.degrees(8))
+                .opacity(0.95)
+                .offset(x: 150, y: 84)
+                .allowsHitTesting(false)
+        }
+        .shadow(color: .black.opacity(0.25), radius: 12, x: 0, y: 8)
     }
 
     private var currentSnippet: String {
@@ -101,11 +112,12 @@ struct LoadingView: View {
         GeometryReader { geo in
             ZStack {
                 // Bottom-left: collar/lock
+                // Bottom-left: collar/lock
                 icon("sticker_collar_lock", fallbackEmoji: "🔒", size: 92)
                     .rotationEffect(.degrees(-12))
                     .opacity(0.95)
                     .position(x: 64,
-                              y: geo.size.height * 0.66) // abbassato un po'
+                              y: geo.size.height * 0.75) // prima era ~0.66
 
                 // Bottom center: bra
                 icon("sticker_bra", fallbackEmoji: "💗", size: 120)

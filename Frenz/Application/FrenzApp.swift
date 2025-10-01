@@ -6,6 +6,7 @@ struct FrenzApp: App {
     // Inizializzo il GameViewModel una sola volta qui
     @StateObject private var gameVM = GameViewModel()
     @StateObject private var subscriptionManager = SubscriptionManager()
+    @StateObject private var languageManager = LanguageManager()
     
     init() {
         // Superwall configuration — replace with your actual Public API Key from the dashboard
@@ -24,6 +25,9 @@ struct FrenzApp: App {
             ContentView()
                 .environmentObject(gameVM) // se vuoi passarlo globalmente
                 .environmentObject(subscriptionManager)
+                .environmentObject(languageManager)
+                .environment(\.locale, languageManager.locale)
+                .id(languageManager.locale.identifier)
                 .environment(\.font, .custom("TrebuchetMS", size: 16))
                 .onAppear {
                     gameVM.subscriptionManager = subscriptionManager
