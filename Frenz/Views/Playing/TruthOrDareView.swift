@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
     @ObservedObject var vm: VM
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ZStack {
@@ -22,7 +23,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
 
                 // counter in basso come Playing
                 Text(String.localizedStringWithFormat(
-                    NSLocalizedString("playing.counter", comment: ""),
+                    String.frenzLocalized("playing.counter", locale: locale),
                     vm.currentStep, vm.totalSteps
                 ))
                 .font(.system(size: 14, weight: .semibold))
@@ -97,7 +98,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
 
             VStack(spacing: 14) {
                 Button(action: { vm.todChooseDare() }) {
-                    Text(String(localized: "tod.dare"))
+                    Text(String.frenzLocalized("tod.dare", locale: locale))
                         .font(.system(size: 22, weight: .heavy))
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity)
@@ -108,7 +109,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
                 .padding(.horizontal, 24)
 
                 Button(action: { vm.todChooseTruth() }) {
-                    Text(String(localized: "tod.truth"))
+                    Text(String.frenzLocalized("tod.truth", locale: locale))
                         .font(.system(size: 22, weight: .heavy))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity)
@@ -139,7 +140,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
             }
 
             Button(action: { vm.todNext() }) {
-                Text(String(localized: "tod.done"))
+                Text(String.frenzLocalized("tod.done", locale: locale))
                     .font(.system(size: 17, weight: .bold))
                     .foregroundColor(vm.todIsShowingTruth ? .black : .white)
                     .padding(.horizontal, 22).padding(.vertical, 10)

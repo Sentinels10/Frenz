@@ -17,11 +17,15 @@ private func assetOrSymbol(_ assetName: String, system symbolName: String) -> so
         Image(systemName: symbolName)
             .resizable()
             .renderingMode(.template)
+            .frame(width: 28, height: 28)
+            .font(.system(size: 20, weight: .regular))
     }
     #else
     Image(systemName: symbolName)
         .resizable()
         .renderingMode(.template)
+        .frame(width: 28, height: 28)
+        .font(.system(size: 20, weight: .regular))
     #endif
 }
 
@@ -58,7 +62,7 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
 
                     Spacer()
 
-                    Text(String(localized: "roomSelection.title"))
+                    Text(vm.roomSelectionTitle)
                         .font(.rammetto(size: 24))
                         .foregroundColor(.white)
 
@@ -70,17 +74,6 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                             .foregroundColor(.white)
                             .padding(10)
                     }
-                    // 🔑 bottone toggle premium (solo per debug/test)
-                    Button(action: {
-                        #if DEBUG
-                        subscriptionManager.debugTogglePro()
-                        #endif
-                    }) {
-                        let isPro = subscriptionManager.isPro
-                        Image(systemName: isPro ? "crown.fill" : "lock.fill")
-                            .foregroundColor(isPro ? .yellow : .white)
-                            .padding(8)
-                    }
                 }
                 .padding(.horizontal, 18)
                 .padding(.top, 8)
@@ -91,15 +84,14 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                         // Banner PREMIUM — visibile solo se NON premium
                         if !subscriptionManager.isPro {
                             PremiumBannerCard {
-                                // Mostra il paywall Superwall per l'upgrade premium
-                                Superwall.shared.register(placement: "room_selection_premium_gate") { }
+                                subscriptionManager.showPaywall(placement: GameViewModel.PaywallPlacement.roomSelectionGate)
                             }
                         }
 
                         ForEach(rooms, id: \.self) { room in
                             RoomCard(
-                                title: title(for: room),
-                                subtitle: subtitle(for: room),
+                                title: vm.displayName(for: room),
+                                subtitle: vm.displaySubtitle(for: room),
                                 iconAsset: leadingIcon(for: room).asset,
                                 iconSystem: leadingIcon(for: room).system,
                                 gradient: cardGradient(for: room),
@@ -107,13 +99,7 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                                 showCrown: vm.isRoomPremium(room) && !subscriptionManager.isPro
                             ) {
                                 if vm.isRoomPremium(room) && !subscriptionManager.isPro {
-                                    // Gate: mostra il paywall
-                                    print("[RoomSelection] present paywall for premium room: \(room) — isPro=\(subscriptionManager.isPro)")
-                                    Superwall.shared.register(placement: "room_selection_premium_gate") {
-                                        // In caso di Non-Gated, potresti voler proseguire
-                                        // Qui NON selezioniamo automaticamente la stanza,
-                                        // perché vogliamo che l’accesso resti gated.
-                                    }
+                                    subscriptionManager.showPaywall(placement: GameViewModel.PaywallPlacement.roomSelectionGate)
                                 } else {
                                     vm.select(room: room)
                                 }
@@ -124,63 +110,42 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                     .padding(.vertical, 2)
                 }
 
-                // Divider arcobaleno (separato dal footer)
-                LinearGradient.frenzRainbow()
-                    .frame(height: 2)
-                    .padding(.horizontal, -16) // per andare otticamente edge-to-edge
-                
-                // Footer “piatto”, senza capsule né sfondi colorati
-                HStack(spacing: 12) {
-                    assetOrSymbol("ic_addplayers_left", system: "person.2.fill")
-                        .scaledToFit()
-                        .frame(width: 22, height: 22)
-                        .foregroundColor(.white)
-                    
-                    Spacer(minLength: 0)
-                    
-                    Text(String(localized: "roomSelection.addPlayers"))
-                        .foregroundColor(.white)
-                        .font(.rammetto(size: 18))
-                    
-                    Spacer(minLength: 0)
-                    
-                    assetOrSymbol("ic_addplayers_plus", system: "plus.circle.fill")
-                        .scaledToFit()
-                        .frame(width: 22, height: 22)
-                        .foregroundColor(.white)
+                // Divider arcobaleno attaccato al footer (nessuno spazio intermedio)
+                VStack(spacing: 8) {
+                    LinearGradient.frenzRainbow()
+                        .frame(height: 2)
+                        .padding(.horizontal, -16) // edge-to-edge
+
+                    // Footer “piatto”, senza capsule né sfondi colorati
+                    HStack(spacing: 12) {
+                        assetOrSymbol("ic_addplayers_left", system: "person.2.fill")
+                            .scaledToFit()
+                            .frame(width: 22, height: 22)
+                            .foregroundColor(.white)
+
+                        Spacer(minLength: 0)
+
+                        Text(vm.roomSelectionAddPlayersTitle)
+                            .foregroundColor(.white)
+                            .font(.rammetto(size: 15))
+
+                        Spacer(minLength: 0)
+
+                        assetOrSymbol("ic_addplayers_plus", system: "plus.circle.fill")
+                            .scaledToFit()
+                            .frame(width: 22, height: 22)
+                            .foregroundColor(.white)
+                    }
+                    .contentShape(Rectangle())
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 10)
+                    .onTapGesture { vm.openPlayerSetup() }
                 }
-                .contentShape(Rectangle())
-                .padding(.horizontal, 20)
-                .padding(.vertical, 10)
-                .onTapGesture { vm.openPlayerSetup() }
-                .padding(.bottom, -6)
             }
         }
     }
 
     // MARK: - Presentazione (testi, icone, gradienti)
-
-    private func title(for room: GameRoom) -> String {
-        switch room {
-        case .party:    return String(localized: "room.party.title")
-        case .darkRoom: return String(localized: "room.dark.title")
-        case .partner:  return String(localized: "room.partner.title")
-        case .roulette: return String(localized: "room.roulette.title")
-        case .redRoom:  return String(localized: "room.red.title")
-        case .games:    return String(localized: "room.games.title")
-        }
-    }
-
-    private func subtitle(for room: GameRoom) -> String {
-        switch room {
-        case .party:    return String(localized: "room.party.subtitle")
-        case .darkRoom: return String(localized: "room.dark.subtitle")
-        case .partner:  return String(localized: "room.partner.subtitle")
-        case .roulette: return String(localized: "room.roulette.subtitle")
-        case .redRoom:  return String(localized: "room.red.subtitle")
-        case .games:    return String(localized: "room.games.subtitle")
-        }
-    }
 
     private func leadingIcon(for room: GameRoom) -> (asset: String, system: String) {
         switch room {
@@ -224,6 +189,7 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
 
 private struct PremiumBannerCard: View {
     let action: () -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         Button(action: action) {
@@ -245,15 +211,17 @@ private struct PremiumBannerCard: View {
 
                 // Text left-aligned, above the left sticker
                 HStack {
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(String(localized: "premium.banner.title"))
-                            .font(.rammetto(size: 26))
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(String.frenzLocalized("premium.banner.title", locale: locale))
+                            .font(.rammetto(size: 36))
                             .foregroundColor(.white)
-                        Text(String(localized: "premium.banner.subtitle"))
+                        Text(String.frenzLocalized("premium.banner.subtitle", locale: locale))
                             .font(.trebuchet(size: 13))
-                            .fontWeight(.bold)
+                            .lineSpacing(0)
+                            .multilineTextAlignment(.leading)
                             .foregroundColor(.white.opacity(0.95))
                             .lineLimit(2)
+                            .padding(.top, -2)
                     }
                     .padding(.leading, 16)
                     .padding(.trailing, 100) // leave room for right sticker
@@ -265,8 +233,8 @@ private struct PremiumBannerCard: View {
                 // Left sprinkles sticker — overflowing like other icons
                 assetOrSymbol("ic_premium_sparkles", system: "sparkles")
                     .scaledToFit()
-                    .frame(width: 112, height: 112)
-                    .offset(x: -10, y: 12)
+                    .frame(width: 128, height: 128)
+                    .offset(x: -12, y: 12)
                     .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
                     .allowsHitTesting(false)
 
@@ -319,8 +287,9 @@ private struct RoomCard: View {
                             .foregroundColor(.white)
                         Text(subtitle)
                             .font(.trebuchet(size: 13))
-                            .fontWeight(.bold)
                             .foregroundColor(.white.opacity(0.9))
+                            .multilineTextAlignment(.leading)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                             .lineLimit(2)
                     }
                     .padding(.leading, 98) // space reserved for the icon

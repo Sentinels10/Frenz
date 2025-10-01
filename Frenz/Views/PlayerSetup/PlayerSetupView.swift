@@ -15,7 +15,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                 header
 
                 // Titolo grande multi-line
-                Text(titleText)
+                Text(vm.playerSetupTitle)
                     .font(.rammetto(size: 23))
                     .foregroundColor(.white)
                     .multilineTextAlignment(.center)
@@ -32,6 +32,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                                 id: p.id,
                                 text: p.name,
                                 placeholder: vm.playerInputPlaceholder,
+                                isDuplicate: isDuplicateName(p.name),
                                 onChange: { vm.updatePlayerName(id: p.id, name: $0) },
                                 onRemove: {
                                     withAnimation(.spring(response: 0.25)) {
@@ -87,11 +88,16 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                         .frame(maxWidth: .infinity)
 
                     Button(action: {
+                        guard SubscriptionManager.paywallsEnabled else {
+                            vm.startGame()
+                            return
+                        }
+
                         Superwall.shared.register(placement: "after_player_setup_continue") {
                             vm.startGame()
                         }
                     }) {
-                        Text(continueTitle)
+                        Text(vm.continueTitle)
                             .font(.rammetto(size: 18))
                             .foregroundColor(.white)
                             .frame(maxWidth: .infinity)
@@ -134,21 +140,35 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
 
 
     // MARK: - Computed
+    // Normalizza i nomi per i confronti (spazi/maiuscole)
+    private func normalized(_ s: String) -> String {
+        s.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+    }
+
+    // Set delle chiavi (nomi normalizzati) che compaiono più di una volta
+    private var duplicateNameKeys: Set<String> {
+        var freq: [String: Int] = [:]
+        for p in vm.inputPlayers {
+            let key = normalized(p.name)
+            guard !key.isEmpty else { continue }
+            freq[key, default: 0] += 1
+        }
+        return Set(freq.filter { $0.value > 1 }.map { $0.key })
+    }
+
+    private func isDuplicateName(_ raw: String) -> Bool {
+        let key = normalized(raw)
+        return !key.isEmpty && duplicateNameKeys.contains(key)
+    }
+
     private var canContinue: Bool {
-        vm.inputPlayers
-            .map { $0.name.trimmingCharacters(in: .whitespacesAndNewlines) }
+        let filled = vm.inputPlayers
+            .map { normalized($0.name) }
             .filter { !$0.isEmpty }
-            .count >= 2
-    }
 
-    // Localizzazione “CONTINUA”
-    private var continueTitle: String {
-        String(localized: "continue").uppercased()
-    }
-
-    // Titolo grande (metti la tua chiave se ce l’hai)
-    private var titleText: String {
-        String(localized: "playerSetup.title")
+        let unique = Set(filled)
+        // Almeno 2 nomi non vuoti, nessun duplicato
+        return filled.count >= 2 && duplicateNameKeys.isEmpty && unique.count == filled.count
     }
 }
 
@@ -157,6 +177,7 @@ private struct PlayerFieldRow: View {
     let id: Int
     @State var text: String
     let placeholder: String
+    let isDuplicate: Bool
     let onChange: (String) -> Void
     let onRemove: () -> Void
 
@@ -188,7 +209,7 @@ private struct PlayerFieldRow: View {
                         .padding(.vertical, 14)
                 }
 
-                // bottone “X” interno
+                // bottone "X" interno
                 Button(action: onRemove) {
                     Image(systemName: "xmark")
                         .font(.system(size: 16, weight: .bold))
@@ -200,8 +221,17 @@ private struct PlayerFieldRow: View {
         }
         .frame(height: 56)
         .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.white.opacity(0.14), lineWidth: 1)
+            Group {
+                if isDuplicate {
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.red.opacity(0.95), lineWidth: 2)
+                        .shadow(color: Color.red.opacity(0.6), radius: 6, x: 0, y: 0)
+                        .animation(.easeInOut(duration: 0.2), value: isDuplicate)
+                } else {
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.white.opacity(0.14), lineWidth: 1)
+                }
+            }
         )
     }
 }

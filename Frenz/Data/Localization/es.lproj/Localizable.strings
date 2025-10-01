@@ -1,0 +1,101 @@
+/* Global / Shared */
+"appName" = "FRIENZ";
+"appDescription" = "Este club está dirigido por una IA. Creará retos siempre nuevos e inesperados.";
+"startButton" = "EMPEZAR";
+"changeLanguage" = "Cambiar idioma";
+"languageSelectTitle" = "Elige tu idioma";
+"language.system" = "Automático";
+"close" = "Cerrar";
+
+/* Player Setup */
+"playerInputPlaceholder" = "Nombre del jugador";
+"addPlayerLabel" = "Añadir jugador";
+"backButton" = "Atrás";
+"notEnoughPlayersError" = "Añade al menos dos jugadores";
+"playerSetup.title" = "¡Añade a los jugadores y que empiece la fiesta!";
+
+/* Room Selection */
+"roomSelectionTitle" = "Elige una sala";
+"roomSelection.title" = "Elige la sala";
+"roomSelection.addPlayers" = "Añadir jugadores";
+"continue" = "Continuar";
+
+"room.party.title" = "CHILLING";
+"room.dark.title" = "DARK ROOM";
+"room.partner.title" = "PAREJAS";
+"room.roulette.title" = "RULETA";
+"room.red.title" = "RED ROOM";
+"room.games.title" = "JUEGOS";
+
+"room.party.subtitle" = "Ligero y social, para animar la noche.";
+"room.dark.subtitle" = "Drama, secretos y miedos: confiésalo sin filtros.";
+"room.partner.subtitle" = "Retos para parejas: complicidad y picante.";
+"room.roulette.subtitle" = "Mezcla aleatoria de todos los modos.";
+"room.red.subtitle" = "Picante y provocador: juega con consentimiento.";
+"room.games.subtitle" = "Minijuegos especiales.";
+
+/* Premium */
+"premium.banner.title" = "PREMIUM";
+"premium.banner.subtitle" = "¡Desbloquea todos los modos!";
+"paywall.title" = "Desbloquéalo gratis";
+"paywall.bullet.1" = "Acceso a todos los modos";
+"paywall.bullet.2" = "Contenido nuevo periódicamente";
+"paywall.bullet.3" = "Cancela cuando quieras.";
+"paywall.trialLabel" = "¿Tienes dudas? Activa la prueba gratuita";
+"paywall.priceFooter" = "3 días gratis y después solo 0,99 $ por semana";
+"paywall.continue" = "CONTINUAR";
+"paywall.restore" = "Restaurar";
+"paywall.terms" = "Condiciones";
+"paywall.privacy" = "Privacidad";
+
+/* Onboarding */
+"onboarding.skip" = "Saltar";
+"onboarding.intro.tile.1v1" = "¡1v1!";
+"onboarding.intro.tile.wyr" = "¿QUÉ PREFIERES?";
+"onboarding.intro.tile.tod" = "¿VERDAD\nO RETO?";
+"onboarding.intro.tile.nhie" = "YO\nNUNCA…";
+"onboarding.intro.title" = "Retos, minijuegos, secretos, cotilleos, drama y HOT…";
+"onboarding.intro.subtitle" = "Muchísimos juegos temáticos y retos nuevos en cada partida, sin repeticiones.";
+"onboarding.start" = "A JUGAR";
+"onboarding.who.title" = "¿Quién juega?";
+"onboarding.who.opt.girlz" = "Solo chicas";
+"onboarding.who.opt.boyz" = "Chicos";
+"onboarding.who.opt.mix" = "Mixto";
+"onboarding.mood.title" = "¿Qué ambiente le damos a la fiesta?";
+"onboarding.mood.opt.easy" = "Fácil y divertido";
+"onboarding.mood.opt.sexy" = "Sexy";
+"onboarding.mood.opt.secrets" = "Alocado";
+
+/* Playing */
+"playing" = "Partida";
+"playing.counter" = "%d/%d";
+"next" = "Siguiente";
+"skip" = "Saltar";
+"end" = "Terminar";
+"startTimer" = "Iniciar temporizador";
+"tod.title" = "¿VERDAD O RETO?";
+"tod.dare" = "RETO";
+"tod.truth" = "VERDAD";
+"tod.done" = "HECHO";
+"tod.prompt.truth" = "¡VERDAD!";
+"tod.prompt.dare" = "¡RETO!";
+
+/* Loading / Game Over */
+"loading.title" = "¿Listos? \ndéjanos cocinar…";
+"loading.fallback" = "Preparando la fiesta…";
+"gameOver.part1" = "PARTIDA";
+"gameOver.part2" = "TERMINADA";
+
+/* Game Selection */
+"gameSelectionTitle" = "Elige un juego";
+"startMatch" = "Empezar partida";
+"game.truthOrDare.title" = "Verdad o reto";
+"game.truthOrDare.subtitle" = "Elige entre responder con sinceridad o superar un reto.";
+"game.wyr.title" = "¿Qué prefieres?";
+"game.wyr.subtitle" = "Decisiones imposibles y debates instantáneos.";
+"game.nhie.title" = "Yo nunca";
+"game.nhie.subtitle" = "Confesiones, secretos y momentos embarazosos.";
+"game.price.title" = "Todo tiene un precio";
+"game.price.subtitle" = "¿Cuánto estás dispuesto a arriesgar para evitar la penalización?";
+"game.minich.title" = "Minirretos";
+"game.minich.subtitle" = "Pruebas rápidas, temporizadores y retos para hacer al momento.";

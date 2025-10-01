@@ -34,12 +34,14 @@ struct ContentLoader {
 
     static func loadSpecial(lang: String? = nil, id: String, room: GameRoom) -> SpecialGameContent? {
         guard let dict = (try? loadMergedDict(lang: lang)) else { return nil }
-        return buildSpecial(from: dict, id: id, room: room)
+        let titleLanguage = languageCandidates(for: lang).first ?? "en"
+        return buildSpecial(from: dict, id: id, room: room, titleLanguage: titleLanguage)
     }
 
     static func specialMeta(lang: String? = nil, id: String) -> (title: String, description: String?)? {
         guard let dict = (try? loadMergedDict(lang: lang)) else { return nil }
-        return buildSpecialMeta(from: dict, id: id)
+        let titleLanguage = languageCandidates(for: lang).first ?? "en"
+        return buildSpecialMeta(from: dict, id: id, titleLanguage: titleLanguage)
     }
 
     /// NUOVO: ritorna le liste di VERITÀ e OBBLIGHI per la stanza richiesta
@@ -94,24 +96,27 @@ struct ContentLoader {
     // =====================================================================
 
     private static func languageCandidates(for lang: String?) -> [String] {
-        let appLang = lang ?? UserDefaults.standard.string(forKey: "app.language")
-        let deviceLang = Locale.preferredLanguages.first ?? Locale.current.identifier
-
-        func normalize(_ code: String) -> String {
-            let lower = code.lowercased()
-            if let dash = lower.firstIndex(of: "-") {
-                return String(lower[..<dash])
-            }
-            return lower
+        var list: [String] = []
+        if let lang {
+            list.append(normalizeLanguageCode(lang))
+        } else if let stored = UserDefaults.standard.string(forKey: "appLanguage"),
+                  let selected = FrenzAppLanguage(rawValue: stored) {
+            list.append(LanguageManager.resolvedLanguageCode(for: selected))
+        } else if let legacy = UserDefaults.standard.string(forKey: "app.language") {
+            list.append(normalizeLanguageCode(legacy))
         }
 
-        var list: [String] = []
-        if let a = appLang { list.append(normalize(a)) }
-        list.append(normalize(deviceLang))
+        list.append(LanguageManager.resolvedLanguageCode(for: .system))
         list.append("en")
+        list.append("it")
 
         var seen = Set<String>()
         return list.filter { seen.insert($0).inserted }
+    }
+
+    private static func normalizeLanguageCode(_ code: String) -> String {
+        let lower = code.lowercased().replacingOccurrences(of: "_", with: "-")
+        return lower.split(separator: "-").first.map(String.init) ?? "en"
     }
 
     private static func loadMergedDict(lang: String?) throws -> [String: Any] {
@@ -132,7 +137,6 @@ struct ContentLoader {
                 let obj = try JSONSerialization.jsonObject(with: data, options: [])
                 return obj as? [String: Any]
             } catch {
-                print("[ContentLoader] decode error for \(name): \(error)")
                 return nil
             }
         }
@@ -251,7 +255,7 @@ struct ContentLoader {
     // MARK: - Special games in stanza (titolo/descrizione/azione)
     // =====================================================================
 
-    private static func buildSpecial(from dict: [String: Any], id: String, room: GameRoom) -> SpecialGameContent? {
+    private static func buildSpecial(from dict: [String: Any], id: String, room: GameRoom, titleLanguage: String) -> SpecialGameContent? {
         
         // Caso “Questo o Quello” (tollerante: top-level o specialGames, alias stanza)
         if id == "questoOQuello" {
@@ -265,7 +269,7 @@ struct ContentLoader {
 
             guard let qoq = qoqNode else { return nil }
 
-            let title = "Questo o Quello"
+            let title = gameTitle(id: id, lang: titleLanguage)
             let description = qoq["text"] as? String
 
             // array helper con alias stanza
@@ -307,7 +311,7 @@ struct ContentLoader {
 
         // Would You Rather (azioni top-level + descrizione in specialGames)
         if id == "wouldYouRather" {
-            let title = "Preferiresti"
+            let title = gameTitle(id: id, lang: titleLanguage)
             let desc  = (dict["specialGames"] as? [String: Any])?["wouldYouRather"] as? [String: Any]
             let description = desc?["text"] as? String
             let pool = wouldYouRatherPool(dict: dict, room: room)
@@ -319,7 +323,7 @@ struct ContentLoader {
 
         // Truth or Dare (prende una frase tra truth/dare) — resta compatibile col tuo schema
         if id == "truthOrDare" {
-            let title = "Obbligo o Verità"
+            let title = gameTitle(id: id, lang: titleLanguage)
             let descriptionNew = (dict["specialGames"] as? [String: Any])?["truthOrDare"].flatMap { $0 as? [String: Any] }?["text"] as? String
             let descriptionOld = (dict["truthDareGame"] as? [String: Any])?["text"] as? String
             let description = descriptionNew ?? descriptionOld
@@ -334,7 +338,7 @@ struct ContentLoader {
         guard let sg = dict["specialGames"] as? [String: Any],
               let node = sg[id] as? [String: Any] else { return nil }
 
-        let title = gameTitle(id: id)
+        let title = gameTitle(id: id, lang: titleLanguage)
         let description = node["text"] as? String
         let timerSec = (id == "timerChallenge") ? 15 : nil
 
@@ -348,24 +352,24 @@ struct ContentLoader {
         return nil
     }
 
-    private static func buildSpecialMeta(from dict: [String: Any], id: String) -> (title: String, description: String?)? {
+    private static func buildSpecialMeta(from dict: [String: Any], id: String, titleLanguage: String) -> (title: String, description: String?)? {
         if id == "questoOQuello" {
             let desc = (dict["questoOQuello"] as? [String: Any])?["text"] as? String
-            return ("Questo o Quello", desc)
+            return (gameTitle(id: id, lang: titleLanguage), desc)
         }
         if id == "wouldYouRather" {
             let desc = (dict["specialGames"] as? [String: Any])?["wouldYouRather"] as? [String: Any]
-            return ("Preferiresti", (desc?["text"] as? String))
+            return (gameTitle(id: id, lang: titleLanguage), (desc?["text"] as? String))
         }
         if id == "truthOrDare" {
             // meta opzionale sia nello schema nuovo che nel vecchio
             let descNew = (dict["specialGames"] as? [String: Any])?["truthOrDare"].flatMap { $0 as? [String: Any] }?["text"] as? String
             let descOld = (dict["truthDareGame"] as? [String: Any])?["text"] as? String
-            return ("Obbligo o Verità", descNew ?? descOld)
+            return (gameTitle(id: id, lang: titleLanguage), descNew ?? descOld)
         }
         if let sg = dict["specialGames"] as? [String: Any],
            let node = sg[id] as? [String: Any] {
-            let title = gameTitle(id: id)
+            let title = gameTitle(id: id, lang: titleLanguage)
             let desc  = node["text"] as? String
             return (title, desc)
         }
@@ -450,25 +454,48 @@ struct ContentLoader {
         }
     }
 
-    private static func gameTitle(id: String) -> String {
+    private static func gameTitle(id: String, lang: String? = nil) -> String {
+        let code = normalizeLanguageCode(lang ?? "en")
+        if code == "it" {
+            switch id {
+            case "questoOQuello":   return "Questo o Quello"
+            case "tuttiQuelliChe":  return "Tutti quelli che..."
+            case "nonHoMai":        return "Non ho mai"
+            case "tuttoHaUnPrezzo": return "Tutto ha un prezzo"
+            case "timerChallenge":  return "Mini-sfida (Timer)"
+            case "penitenzaRandom": return "Penitenza random"
+            case "penitenzeGruppo": return "Penitenze di gruppo"
+            case "chiEPiuProbabile":return "Chi è più probabile..."
+            case "pointFinger":     return "Punta il dito"
+            case "infamata":        return "Infamata"
+            case "chatDetective":   return "Chat Detective"
+            case "happyHour":       return "Happy Hour"
+            case "newRule":         return "Nuova regola"
+            case "oneVsOne":        return "1 vs 1"
+            case "truthOrDare":     return "Obbligo o Verità"
+            case "wouldYouRather":  return "Preferiresti"
+            default:                return "Mini-gioco"
+            }
+        }
+
         switch id {
-        case "questoOQuello":   return "Questo o Quello"
-        case "tuttiQuelliChe":  return "Tutti quelli che…"
-        case "nonHoMai":        return "Non ho mai"
-        case "tuttoHaUnPrezzo": return "Tutto ha un prezzo"
-        case "timerChallenge":  return "Mini-sfida (Timer)"
-        case "penitenzaRandom": return "Penitenza random"
-        case "penitenzeGruppo": return "Penitenze di gruppo"
-        case "chiEPiuProbabile":return "Chi è più probabile…"
-        case "pointFinger":     return "Punta il dito"
-        case "infamata":        return "Infamata"
+        case "questoOQuello":   return "This or That"
+        case "tuttiQuelliChe":  return "Everyone Who..."
+        case "nonHoMai":        return "Never Have I Ever"
+        case "tuttoHaUnPrezzo": return "Everything Has a Price"
+        case "timerChallenge":  return "Mini Challenge (Timer)"
+        case "penitenzaRandom": return "Random Penalty"
+        case "penitenzeGruppo": return "Group Penalties"
+        case "chiEPiuProbabile":return "Most Likely To..."
+        case "pointFinger":     return "Point the Finger"
+        case "infamata":        return "Callout"
         case "chatDetective":   return "Chat Detective"
         case "happyHour":       return "Happy Hour"
-        case "newRule":         return "Nuova regola"
+        case "newRule":         return "New Rule"
         case "oneVsOne":        return "1 vs 1"
-        case "truthOrDare":     return "Obbligo o Verità"
-        case "wouldYouRather":  return "Preferiresti"
-        default:                return "Mini-gioco"
+        case "truthOrDare":     return "Truth or Dare"
+        case "wouldYouRather":  return "Would You Rather"
+        default:                return "Mini Game"
         }
     }
 

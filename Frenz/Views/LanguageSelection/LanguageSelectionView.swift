@@ -3,6 +3,7 @@ import SwiftUI
 
 struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
     @ObservedObject var vm: ViewModel
+    @EnvironmentObject private var lang: LanguageManager
 
     var body: some View {
         ZStack {
@@ -14,6 +15,7 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
                 footer
             }
         }
+        .id(lang.selected.rawValue)
     }
 
     private var header: some View {
@@ -32,12 +34,16 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
     private var list: some View {
         ScrollView {
             LazyVStack(spacing: 12) {
-                ForEach(vm.availableLanguages) { lang in
+                ForEach(vm.availableLanguages) { langItem in
                     LanguageRow(
-                        lang: lang,
-                        isSelected: lang.id == vm.language
+                        lang: langItem,
+                        title: title(for: langItem),
+                        isSelected: langItem == lang.selected,
+                        resolvedCode: resolvedCode(for: langItem)
                     ) {
-                        vm.selectLanguage(lang.id)
+                        withAnimation(.easeInOut(duration: 0.2)) {
+                            vm.selectLanguage(langItem.id)
+                        }
                     }
                 }
             }
@@ -48,7 +54,7 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
 
     private var footer: some View {
         VStack {
-            Button(action: { vm.closeLanguageSelector() }) {
+            Button(action: { vm.goBack() }) {
                 Text(vm.closeTitle)
                     .font(.system(size: 17, weight: .semibold))
                     .frame(maxWidth: .infinity)
@@ -64,25 +70,30 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
     }
 
     private var currentLanguageSubtitle: String {
-        let flag = languageFlag(vm.language)
-        return "\(flag) \(vm.language.uppercased())"
+        if lang.selected == .system {
+            return "\(lang.selected.flag) \(title(for: .system)) · \(lang.resolvedLanguageCode.uppercased())"
+        }
+        return "\(lang.selected.flag) \(title(for: lang.selected))"
     }
 
-    private func languageFlag(_ code: String) -> String {
-        switch code {
-        case "it": return "🇮🇹"
-        case "en": return "🇬🇧"
-        case "fr": return "🇫🇷"
-        case "de": return "🇩🇪"
-        default:   return "🌐"
+    private func title(for langItem: FrenzAppLanguage) -> String {
+        if langItem == .system {
+            return String.frenzLocalized("language.system", locale: lang.locale)
         }
+        return langItem.name
+    }
+
+    private func resolvedCode(for langItem: FrenzAppLanguage) -> String {
+        LanguageManager.resolvedLanguageCode(for: langItem).uppercased()
     }
 }
 
 // MARK: - Singola riga
 private struct LanguageRow: View {
-    let lang: AppLanguage
+    let lang: FrenzAppLanguage
+    let title: String
     let isSelected: Bool
+    let resolvedCode: String
     let onTap: () -> Void
 
     var body: some View {
@@ -92,10 +103,10 @@ private struct LanguageRow: View {
                     .font(.system(size: 24))
 
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(lang.name)
+                    Text(title)
                         .foregroundColor(.white)
                         .font(.system(size: 17, weight: .semibold))
-                    Text(lang.id.uppercased())
+                    Text(lang == .system ? resolvedCode : lang.id.uppercased())
                         .foregroundColor(.white.opacity(0.5))
                         .font(.system(size: 12))
                 }

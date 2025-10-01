@@ -6,7 +6,6 @@ enum GameState: Equatable {
     case onboardingIntro
     case onboardingWho
     case onboardingMood
-
     case languageSelection
     case playerSetup
     case roomSelection
@@ -25,15 +24,30 @@ final class GameViewModel: ObservableObject,
     PlayingRouting, OnboardingRouting,
     TruthOrDareRouting
 {
+    
     // ============================================================
     // MARK: Base / Persistenza
     // ============================================================
     @Published var gameState: GameState = .playerSetup
     private let onboardingKey = "onboarding.seen"
 
-    @Published var language: String = UserDefaults.standard.string(forKey: "app.language")
-        ?? Locale.current.language.languageCode?.identifier ?? "it" {
-        didSet { UserDefaults.standard.set(language, forKey: "app.language") }
+    var languageManager: LanguageManager? {
+        didSet {
+            languageCancellable = languageManager?.$locale.sink { [weak self] _ in
+                self?.objectWillChange.send()
+            }
+            objectWillChange.send()
+        }
+    }
+
+    private var languageCancellable: AnyCancellable?
+    
+    var language: String {
+        languageManager?.resolvedLanguageCode ?? LanguageManager.resolvedLanguageCode(for: .system)
+    }
+
+    private var currentLocale: Locale {
+        languageManager?.locale ?? .current
     }
     
     @MainActor
@@ -44,34 +58,34 @@ final class GameViewModel: ObservableObject,
     }
     
     // MARK: Loading (splash tra stanza e partita)
-    @Published var loadingProgress: Double = 0        // 0...1
-    @Published var loadingSnippets: [String] = []     // frasi che ruotano
+    @Published var loadingProgress: Double = 0 // 0...1
+    @Published var loadingSnippets: [String] = [] // frasi che ruotano
     @Published var carouselIndex: Int = 0
-
     private var loadingTimerCancellable: AnyCancellable?
     private var carouselTimerCancellable: AnyCancellable?
-
+    
     // ============================================================
     // MARK: Player setup
     // ============================================================
     @Published var inputPlayers: [PlayerInput] = [PlayerInput(id: 1, name: "")]
-
     @Published private(set) var players: [String] = []
     private var playerOrder: [Int] = []
     private var playerCursor: Int = 0
-
+    
     // PlayerB per azione
     private var secondaryByIndex: [Int: Int] = [:]
+    
     private var currentMainPlayerIndex: Int? {
         guard !players.isEmpty, !playerOrder.isEmpty else { return nil }
         return playerOrder[playerCursor % playerOrder.count]
     }
+    
     var currentSecondaryPlayerName: String? {
         guard let sec = secondaryByIndex[currentIndex],
               players.indices.contains(sec) else { return nil }
         return players[sec]
     }
-
+    
     // ============================================================
     // MARK: Room/Game correnti
     // ============================================================
@@ -79,7 +93,7 @@ final class GameViewModel: ObservableObject,
     @Published var selectedGame: GameType? = nil
     @Published var currentRoom: GameRoom? = nil
     @Published var currentGame: GameType? = nil
-
+    
     // Deck
     @Published private var actions: [GameAction] = []
     @Published private(set) var isLoadingActions: Bool = false
@@ -95,92 +109,96 @@ final class GameViewModel: ObservableObject,
             }
         }
     }
-
+    
     // Limiti e mapping
     let MAX_ACTIONS_PER_MATCH = 50
     private let MIN_SPACING_BETWEEN_SPECIAL = 3
-
-
+    
     // ============================================================
     // MARK: Truth or Dare (round per tutti)
     // ============================================================
     private enum TODPhase { case choose, truth, dare }
     @Published private var todActive: Bool = false
     @Published private var todPhase: TODPhase = .choose
-    private var todOrder: [Int] = []   // indici dei giocatori per il giro
+    private var todOrder: [Int] = [] // indici dei giocatori per il giro
     private var todCursor: Int = 0
     @Published private var todText: String? = nil
     private var todTruths: [String] = []
-    private var todDares:  [String] = []
-
+    private var todDares: [String] = []
+    
     // ============================================================
     // MARK: Premium (via SubscriptionManager)
     // ============================================================
     @Published var subscriptionManager: SubscriptionManager?
-    var premiumUnlocked: Bool { subscriptionManager?.isPro ?? false }
-
+    var premiumUnlocked: Bool {
+        !SubscriptionManager.paywallsEnabled || (subscriptionManager?.isPro ?? false)
+    }
+    
     // Identificatori placement Superwall
     struct PaywallPlacement {
         static let afterPlayerSetup = "after_player_setup_continue"
         static let roomSelectionGate = "room_selection_premium_gate"
         static let afterGameOver = "after_game_over_continue"
     }
-
+    
     // Quando valorizzato, la View deve presentare il paywall corrispondente
     @Published var requestedPaywallPlacement: String? = nil
-
+    
     // ============================================================
     // MARK: Init
     // ============================================================
     init() {
-        if !["it","en","fr","de"].contains(language) { language = "it" }
         if !UserDefaults.standard.bool(forKey: onboardingKey) {
             gameState = .onboardingIntro
         } else {
             gameState = .playerSetup
         }
     }
-
+    
     // ============================================================
     // MARK: LanguageSelectionRouting
     // ============================================================
-    var availableLanguages: [AppLanguage] {
-        [.init(id: "it", name: "Italiano", flag: "🇮🇹"),
-         .init(id: "en", name: "English",  flag: "🇬🇧"),
-         .init(id: "fr", name: "Français", flag: "🇫🇷"),
-         .init(id: "de", name: "Deutsch",  flag: "🇩🇪")]
+    var availableLanguages: [FrenzAppLanguage] { LanguageManager.selectableLanguages }
+    var title: String { String.frenzLocalized("languageSelectTitle", locale: currentLocale) }
+    var closeTitle: String { String.frenzLocalized("close", locale: currentLocale) }
+    
+    func selectLanguage(_ code: String) {
+        guard let lang = FrenzAppLanguage.allCases.first(where: { $0.id == code }) else { return }
+        languageManager?.selected = lang
     }
-    var title: String      { String(localized: "languageSelectTitle", locale: .init(identifier: language)) }
-    var closeTitle: String { String(localized: "close",               locale: .init(identifier: language)) }
-    func selectLanguage(_ code: String) { language = code }
+    
     func closeLanguageSelector() { gameState = .playerSetup }
-
+    
     // Bootstrap opzionale per Truth or Dare
     func todChoosePhaseBootstrapIfNeeded() {
         guard isTruthOrDareRound else { return }
         ensureTodPrepared()
     }
-
+    
     // ============================================================
     // MARK: PlayerSetupRouting
     // ============================================================
-    var playerInputPlaceholder: String { String(localized: "playerInputPlaceholder", locale: .init(identifier: language)) }
-    var addPlayerLabel: String        { String(localized: "addPlayerLabel",        locale: .init(identifier: language)) }
-    var backButtonTitle: String       { String(localized: "backButton",            locale: .init(identifier: language)) }
-
+    var playerSetupTitle: String { String.frenzLocalized("playerSetup.title", locale: currentLocale) }
+    var playerInputPlaceholder: String { String.frenzLocalized("playerInputPlaceholder", locale: currentLocale) }
+    var addPlayerLabel: String { String.frenzLocalized("addPlayerLabel", locale: currentLocale) }
+    var backButtonTitle: String { String.frenzLocalized("backButton", locale: currentLocale) }
+    
     func addPlayerInput() {
         guard inputPlayers.count < 15 else { return }
         let nextId = (inputPlayers.map(\.id).max() ?? 0) + 1
         inputPlayers.append(.init(id: nextId, name: ""))
     }
+    
     func updatePlayerName(id: Int, name: String) {
         guard let idx = inputPlayers.firstIndex(where: { $0.id == id }) else { return }
         inputPlayers[idx].name = name
     }
+    
     func removePlayerInput(id: Int) {
         guard inputPlayers.count > 1 else { return }
         inputPlayers.removeAll { $0.id == id }
     }
+    
     func startGame() {
         let clean = inputPlayers.map { $0.name.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty }
         guard clean.count >= 2 else { return }
@@ -188,113 +206,103 @@ final class GameViewModel: ObservableObject,
         reseedPlayerOrder()
         gameState = .roomSelection
     }
+    
     func openLanguageSelector() { gameState = .languageSelection }
-
+    
     // ============================================================
     // MARK: RoomSelectionRouting
     // ============================================================
     var availableRooms: [GameRoom] { [.party, .darkRoom, .partner, .roulette, .redRoom, .games] }
-    var roomSelectionTitle: String { String(localized: "roomSelectionTitle", locale: .init(identifier: language)) }
-    var continueTitle: String      { String(localized: "continue",           locale: .init(identifier: language)) }
-
+    var roomSelectionTitle: String { String.frenzLocalized("roomSelectionTitle", locale: currentLocale) }
+    var roomSelectionAddPlayersTitle: String { String.frenzLocalized("roomSelection.addPlayers", locale: currentLocale) }
+    var continueTitle: String { String.frenzLocalized("continue", locale: currentLocale) }
+    
     func displayName(for room: GameRoom) -> String {
         switch room {
-        case .party:    return String(localized: "room.party.title",    locale: .init(identifier: language))
-        case .redRoom:  return String(localized: "room.red.title",      locale: .init(identifier: language))
-        case .darkRoom: return String(localized: "room.dark.title",     locale: .init(identifier: language))
-        case .partner:  return String(localized: "room.partner.title",  locale: .init(identifier: language))
-        case .roulette: return String(localized: "room.roulette.title", locale: .init(identifier: language))
-        case .games:    return String(localized: "room.games.title",    locale: .init(identifier: language))
+        case .party: return String.frenzLocalized("room.party.title", locale: currentLocale)
+        case .redRoom: return String.frenzLocalized("room.red.title", locale: currentLocale)
+        case .darkRoom: return String.frenzLocalized("room.dark.title", locale: currentLocale)
+        case .partner: return String.frenzLocalized("room.partner.title", locale: currentLocale)
+        case .roulette: return String.frenzLocalized("room.roulette.title", locale: currentLocale)
+        case .games: return String.frenzLocalized("room.games.title", locale: currentLocale)
         }
     }
+    
     func displaySubtitle(for room: GameRoom) -> String {
         switch room {
-        case .party:    return String(localized: "room.party.subtitle",    locale: .init(identifier: language))
-        case .redRoom:  return String(localized: "room.red.subtitle",      locale: .init(identifier: language))
-        case .darkRoom: return String(localized: "room.dark.subtitle",     locale: .init(identifier: language))
-        case .partner:  return String(localized: "room.partner.subtitle",  locale: .init(identifier: language))
-        case .roulette: return String(localized: "room.roulette.subtitle", locale: .init(identifier: language))
-        case .games:    return String(localized: "room.games.subtitle",    locale: .init(identifier: language))
+        case .party: return String.frenzLocalized("room.party.subtitle", locale: currentLocale)
+        case .redRoom: return String.frenzLocalized("room.red.subtitle", locale: currentLocale)
+        case .darkRoom: return String.frenzLocalized("room.dark.subtitle", locale: currentLocale)
+        case .partner: return String.frenzLocalized("room.partner.subtitle", locale: currentLocale)
+        case .roulette: return String.frenzLocalized("room.roulette.subtitle", locale: currentLocale)
+        case .games: return String.frenzLocalized("room.games.subtitle", locale: currentLocale)
         }
     }
-
-    // 🔁 RINOMINATO: era `isPremium(_:)`
+    
     func isRoomPremium(_ room: GameRoom) -> Bool { room != .party }
     
-    // MARK: - RoomSelectionRouting shims (per compatibilità con la View/protocollo attuale)
-    func isPremium(_ room: GameRoom) -> Bool {    // il protocollo si aspetta questo nome
-        return isRoomPremium(room)                 // reindirizza al metodo nuovo
+    func isPremium(_ room: GameRoom) -> Bool {
+        return isRoomPremium(room)
     }
-
+    
     func goBack() {
         switch gameState {
-        // Onboarding
-        case .onboardingMood:    gameState = .onboardingWho
-        case .onboardingWho:     gameState = .onboardingIntro
-
-        // Flusso principale
-        case .gameSelection:     gameState = .roomSelection
-        case .roomSelection:     gameState = .playerSetup
+        case .onboardingMood: gameState = .onboardingWho
+        case .onboardingWho: gameState = .onboardingIntro
+        case .gameSelection: gameState = .roomSelection
+        case .roomSelection: gameState = .playerSetup
         case .languageSelection: gameState = .playerSetup
-
-        // Durante/after match
-        case .playing:           gameState = .roomSelection
-        case .gameOver:          gameState = .roomSelection
-
-        // Altri stati: niente
-        default:                 break
+        case .playing: gameState = .roomSelection
+        case .gameOver: gameState = .roomSelection
+        default: break
         }
     }
-
-    func openPlayerSetup() {                       // richiesto dal protocollo
+    
+    func openPlayerSetup() {
         gameState = .playerSetup
     }
-
+    
     func select(room: GameRoom) {
-        // Se la stanza è premium e l'utente non è PRO, non procedere (il gate è gestito dalla View con Superwall)
         if isRoomPremium(room) && !premiumUnlocked {
-            // Chiedi al layer di presentazione (View) di mostrare il paywall corretto
             requestedPaywallPlacement = PaywallPlacement.roomSelectionGate
             return
         }
-        // altrimenti avvia schermata di loading
         startLoadingAndEnter(room: room)
     }
     
-    // Avvia schermata di loading e prepara deck/snippets
     func startLoadingAndEnter(room: GameRoom) {
         currentRoom = room
         currentGame = nil
-
-        // reset stato loading
         loadingProgress = 0
         loadingSnippets = []
         carouselIndex = 0
         gameState = .loading
-
-        // Pre-carica 3-4 frasi casuali della stanza per il carosello
+        let lang = language
+        
         DispatchQueue.global(qos: .userInitiated).async {
-            let deck = (try? ContentLoader.loadRoomDeck(room: room)) ?? []
-            let texts = deck.map { $0.text }.shuffled().prefix(4)
+            let deck = (try? ContentLoader.loadRoomDeck(lang: lang, room: room)) ?? []
+            let texts = deck
+                .map(\.text)
+                .filter(Self.isSafeLoadingSnippet)
+                .shuffled()
+                .prefix(4)
             DispatchQueue.main.async {
                 self.loadingSnippets = Array(texts)
             }
         }
-
-        // Timer progress bar (~4s)
+        
         loadingTimerCancellable?.cancel()
         loadingTimerCancellable = Timer.publish(every: 0.04, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in
                 guard let self else { return }
-                self.loadingProgress += 0.01            // 0.04s * 100 step ≈ 4s
+                self.loadingProgress += 0.01
                 if self.loadingProgress >= 1.0 {
                     self.loadingTimerCancellable?.cancel()
                     self.finishLoadingAndStartMatch()
                 }
             }
-
-        // Timer carosello (cambia frase ogni ~1.2s)
+        
         carouselTimerCancellable?.cancel()
         carouselTimerCancellable = Timer.publish(every: 1.2, on: .main, in: .common)
             .autoconnect()
@@ -304,39 +312,58 @@ final class GameViewModel: ObservableObject,
             }
     }
 
-    // Quando il loading termina, prepara il deck e vai in playing
+    private nonisolated static func isSafeLoadingSnippet(_ text: String) -> Bool {
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return false }
+
+        // Il carosello mostra testo grezzo: escludi placeholder e note tra parentesi.
+        return trimmed.rangeOfCharacter(from: CharacterSet(charactersIn: "()[]{}")) == nil
+    }
+    
     private func finishLoadingAndStartMatch() {
         carouselTimerCancellable?.cancel()
-
+        let room = currentRoom
+        let game = currentGame
+        let lang = language
+        let maxActions = MAX_ACTIONS_PER_MATCH
+        let minSpecialSpacing = MIN_SPACING_BETWEEN_SPECIAL
         DispatchQueue.global(qos: .userInitiated).async {
             var deck: [GameAction] = []
-            if let r = self.currentRoom, r != .games {
-                deck = (try? ContentLoader.loadRoomDeck(room: r)) ?? []
-                deck = self.injectSpecialGames(into: deck, for: r)
-            } else if let g = self.currentGame {
-                deck = (try? ContentLoader.loadGameDeck(game: g)) ?? []
+            if let r = room, r != .games {
+                deck = (try? ContentLoader.loadRoomDeck(lang: lang, room: r)) ?? []
+                deck = Self.injectSpecialGames(
+                    into: deck,
+                    for: r,
+                    lang: lang,
+                    maxActions: maxActions,
+                    minSpacingBetweenSpecial: minSpecialSpacing
+                )
+            } else if let g = game {
+                deck = (try? ContentLoader.loadGameDeck(lang: lang, game: g)) ?? []
             }
-            if deck.count > self.MAX_ACTIONS_PER_MATCH {
-                deck = Array(deck.prefix(self.MAX_ACTIONS_PER_MATCH))
+            
+            if deck.count > maxActions {
+                deck = Array(deck.prefix(maxActions))
             }
+            
             DispatchQueue.main.async {
                 self.resetDeck(with: deck)
                 self.gameState = .playing
             }
         }
     }
-
+    
     func openSettings() { }
     func openPaywall() {
-        // Legacy shim: usiamo Superwall. Di default mostra il paywall post player setup.
         requestedPaywallPlacement = PaywallPlacement.afterPlayerSetup
     }
+    
     func addPlayers() { gameState = .playerSetup }
     func isRoomLocked(_ room: GameRoom) -> Bool { room == .darkRoom }
     func showsCrown(_ room: GameRoom) -> Bool { room == .darkRoom || room == .partner || room == .roulette || room == .redRoom }
     func progressForParty() -> (current: Int, total: Int)? { (2, 5) }
     func goBackToPlayerSetup() { gameState = .playerSetup }
-
+    
     func enterGameSelection() {
         guard let selectedRoom else { return }
         currentRoom = selectedRoom
@@ -350,33 +377,36 @@ final class GameViewModel: ObservableObject,
             gameState = .playing
         }
     }
-
+    
     // ============================================================
     // MARK: GameSelectionRouting
     // ============================================================
     var availableGames: [GameType] { [.truthOrDare, .wouldYouRather, .neverHaveIEver, .priceGame, .miniChallenges] }
-    var gameSelectionTitle: String { String(localized: "gameSelectionTitle", locale: .init(identifier: language)) }
-    var startMatchTitle: String    { String(localized: "startMatch",         locale: .init(identifier: language)) }
-
+    var gameSelectionTitle: String { String.frenzLocalized("gameSelectionTitle", locale: currentLocale) }
+    var startMatchTitle: String { String.frenzLocalized("startMatch", locale: currentLocale) }
+    
     func displayName(for game: GameType) -> String {
         switch game {
-        case .truthOrDare:    return String(localized: "game.truthOrDare.title",   locale: .init(identifier: language))
-        case .wouldYouRather: return String(localized: "game.wyr.title",           locale: .init(identifier: language))
-        case .neverHaveIEver: return String(localized: "game.nhie.title",          locale: .init(identifier: language))
-        case .priceGame:      return String(localized: "game.price.title",         locale: .init(identifier: language))
-        case .miniChallenges: return String(localized: "game.minich.title",        locale: .init(identifier: language))
+        case .truthOrDare: return String.frenzLocalized("game.truthOrDare.title", locale: currentLocale)
+        case .wouldYouRather: return String.frenzLocalized("game.wyr.title", locale: currentLocale)
+        case .neverHaveIEver: return String.frenzLocalized("game.nhie.title", locale: currentLocale)
+        case .priceGame: return String.frenzLocalized("game.price.title", locale: currentLocale)
+        case .miniChallenges: return String.frenzLocalized("game.minich.title", locale: currentLocale)
         }
     }
+    
     func displaySubtitle(for game: GameType) -> String {
         switch game {
-        case .truthOrDare:    return String(localized: "game.truthOrDare.subtitle",   locale: .init(identifier: language))
-        case .wouldYouRather: return String(localized: "game.wyr.subtitle",           locale: .init(identifier: language))
-        case .neverHaveIEver: return String(localized: "game.nhie.subtitle",          locale: .init(identifier: language))
-        case .priceGame:      return String(localized: "game.price.subtitle",         locale: .init(identifier: language))
-        case .miniChallenges: return String(localized: "game.minich.subtitle",        locale: .init(identifier: language))
+        case .truthOrDare: return String.frenzLocalized("game.truthOrDare.subtitle", locale: currentLocale)
+        case .wouldYouRather: return String.frenzLocalized("game.wyr.subtitle", locale: currentLocale)
+        case .neverHaveIEver: return String.frenzLocalized("game.nhie.subtitle", locale: currentLocale)
+        case .priceGame: return String.frenzLocalized("game.price.subtitle", locale: currentLocale)
+        case .miniChallenges: return String.frenzLocalized("game.minich.subtitle", locale: currentLocale)
         }
     }
+    
     func goBackToRoomSelection() { selectedGame = nil; currentGame = nil; gameState = .roomSelection }
+    
     func beginPlaying() {
         guard selectedRoom == .games, let picked = selectedGame else { return }
         currentRoom = .games
@@ -385,62 +415,65 @@ final class GameViewModel: ObservableObject,
         reseedPlayerOrder()
         gameState = .playing
     }
-
+    
     // ============================================================
     // MARK: PlayingRouting
     // ============================================================
     var playingTitle: String {
         if let game = currentGame { return displayName(for: game) }
         if let room = currentRoom { return displayName(for: room) }
-        return String(localized: "playing", locale: .init(identifier: language))
+        return String.frenzLocalized("playing", locale: currentLocale)
     }
-    var nextTitle: String       { String(localized: "next",       locale: .init(identifier: language)) }
-    var skipTitle: String       { String(localized: "skip",       locale: .init(identifier: language)) }
-    var endTitle: String        { String(localized: "end",        locale: .init(identifier: language)) }
-    var startTimerTitle: String { String(localized: "startTimer", locale: .init(identifier: language)) }
-
+    
+    var nextTitle: String { String.frenzLocalized("next", locale: currentLocale) }
+    var skipTitle: String { String.frenzLocalized("skip", locale: currentLocale) }
+    var endTitle: String { String.frenzLocalized("end", locale: currentLocale) }
+    var startTimerTitle: String { String.frenzLocalized("startTimer", locale: currentLocale) }
+    var gameOverPart1: String { String.frenzLocalized("gameOver.part1", locale: currentLocale) }
+    var gameOverPart2: String { String.frenzLocalized("gameOver.part2", locale: currentLocale) }
     var currentPlayerNameTitle: String? { currentPlayerName }
+    
     private var currentPlayerName: String? {
         guard let idx = currentMainPlayerIndex, players.indices.contains(idx) else { return nil }
         return players[idx]
     }
-
+    
     var currentSpecialTitle: String? {
         guard currentIndex < actions.count, let gid = actions[currentIndex].game else { return nil }
-        return ContentLoader.specialMeta(id: gid)?.title
+        return ContentLoader.specialMeta(lang: language, id: gid)?.title
     }
+    
     var currentSpecialDescription: String? {
         guard currentIndex < actions.count, let gid = actions[currentIndex].game else { return nil }
-        return ContentLoader.specialMeta(id: gid)?.description
+        return ContentLoader.specialMeta(lang: language, id: gid)?.description
     }
+    
     var isSpecialCurrent: Bool {
         guard currentIndex < actions.count else { return false }
         return actions[currentIndex].game != nil
     }
-
+    
     var currentActionText: String? {
         guard currentIndex < actions.count else { return nil }
         return actions[currentIndex].text
     }
+    
     var currentPenalty: Int? {
         guard currentIndex < actions.count else { return nil }
         return actions[currentIndex].penalty
     }
-
+    
     var currentRenderedActionText: String? {
         guard var s = currentActionText else { return nil }
-
         ensureSecondaryForCurrentIndexIfNeeded(in: s)
         let main = currentPlayerName ?? ""
-        let sec  = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
-
+        let sec = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
         s = s.replacingOccurrences(of: "{player}", with: main)
-             .replacingOccurrences(of: "{PLAYER}", with: main.uppercased())
-             .replacingOccurrences(of: "{playerB}", with: sec)
-             .replacingOccurrences(of: "{PLAYERB}", with: sec.uppercased())
-             .replacingOccurrences(of: "{player2}", with: sec)
-             .replacingOccurrences(of: "{PLAYER2}", with: sec.uppercased())
-
+            .replacingOccurrences(of: "{PLAYER}", with: main.uppercased())
+            .replacingOccurrences(of: "{playerB}", with: sec)
+            .replacingOccurrences(of: "{PLAYERB}", with: sec.uppercased())
+            .replacingOccurrences(of: "{player2}", with: sec)
+            .replacingOccurrences(of: "{PLAYER2}", with: sec.uppercased())
         if let p = currentPenalty {
             s = s.replacingOccurrences(of: "{penalty}", with: String(p))
         }
@@ -449,27 +482,37 @@ final class GameViewModel: ObservableObject,
         }
         return s
     }
-
+    
     var hasMoreActions: Bool { currentIndex < actions.count }
-
+    
     func onPlayingAppear() {
         guard actions.isEmpty else { return }
         isLoadingActions = true
         let room = self.currentRoom
         let game = self.currentGame
-
+        let lang = language
+        let maxActions = MAX_ACTIONS_PER_MATCH
+        let minSpecialSpacing = MIN_SPACING_BETWEEN_SPECIAL
         DispatchQueue.global(qos: .userInitiated).async {
             do {
                 var deck: [GameAction] = []
                 if let r = room, r != .games {
-                    deck = try ContentLoader.loadRoomDeck(room: r)
-                    deck = self.injectSpecialGames(into: deck, for: r)
+                    deck = try ContentLoader.loadRoomDeck(lang: lang, room: r)
+                    deck = Self.injectSpecialGames(
+                        into: deck,
+                        for: r,
+                        lang: lang,
+                        maxActions: maxActions,
+                        minSpacingBetweenSpecial: minSpecialSpacing
+                    )
                 } else if let g = game {
-                    deck = try ContentLoader.loadGameDeck(game: g)
+                    deck = try ContentLoader.loadGameDeck(lang: lang, game: g)
                 }
-                if deck.count > self.MAX_ACTIONS_PER_MATCH {
-                    deck = Array(deck.prefix(self.MAX_ACTIONS_PER_MATCH))
+                
+                if deck.count > maxActions {
+                    deck = Array(deck.prefix(maxActions))
                 }
+                
                 DispatchQueue.main.async {
                     self.resetDeck(with: deck)
                     self.isLoadingActions = false
@@ -478,24 +521,18 @@ final class GameViewModel: ObservableObject,
                 DispatchQueue.main.async {
                     self.resetDeck(with: [])
                     self.isLoadingActions = false
-                    print("[ERROR] Content load failed: \(error)")
                 }
             }
         }
     }
-
+    
     func goNext() {
         guard !actions.isEmpty else { return }
-
-        // Blocca l'avanzamento solo se siamo su una carta TruthOrDare *e* il round ToD è attivo
         if todActive && isTruthOrDareRound { return }
-
         let next = currentIndex + 1
         advancePlayer()
-
         if next < actions.count && next < MAX_ACTIONS_PER_MATCH {
             currentIndex = next
-            // Failsafe: se la prossima non è ToD, spegni qualsiasi stato residuo di ToD
             if !isTruthOrDareRound {
                 todActive = false
                 todText = nil
@@ -505,13 +542,13 @@ final class GameViewModel: ObservableObject,
             gameState = .gameOver
         }
     }
+    
     func skip() { goNext() }
+    
     func startTimer() {
-        if currentIndex < actions.count {
-            let sec = actions[currentIndex].timerSeconds ?? 15
-            print("[DEBUG] Start timer: \(sec)s")
-        }
+        guard currentIndex < actions.count else { return }
     }
+    
     func endMatch() {
         actions.removeAll(); currentIndex = 0
         currentGame = nil; currentRoom = nil
@@ -520,13 +557,11 @@ final class GameViewModel: ObservableObject,
         todActive = false; todText = nil; todTruths.removeAll(); todDares.removeAll()
         gameState = .gameOver
     }
-
-    // Header/counter per PlayingView
+    
     var currentStep: Int { min(currentIndex + 1, MAX_ACTIONS_PER_MATCH) }
     var totalSteps: Int { MAX_ACTIONS_PER_MATCH }
     func backToRooms() { gameState = .roomSelection }
-
-    /// Chiamato dal pulsante "Partita finita" in GameOverView
+    
     func continueFromGameOver() {
         if premiumUnlocked {
             backToRooms()
@@ -534,90 +569,91 @@ final class GameViewModel: ObservableObject,
             requestedPaywallPlacement = PaywallPlacement.afterGameOver
         }
     }
-
-
+    
     // ============================================================
     // MARK: OnboardingRouting
     // ============================================================
-    var obIntroTitle: String    { String(localized: "onboarding.intro.title",    locale: .init(identifier: language)) }
-    var obIntroSubtitle: String { String(localized: "onboarding.intro.subtitle", locale: .init(identifier: language)) }
-    var obStartTitle: String    { String(localized: "onboarding.start",          locale: .init(identifier: language)) }
-
-    var obWhoTitle: String { String(localized: "onboarding.who.title", locale: .init(identifier: language)) }
+    var obIntroTitle: String { String.frenzLocalized("onboarding.intro.title", locale: currentLocale) }
+    var obIntroSubtitle: String { String.frenzLocalized("onboarding.intro.subtitle", locale: currentLocale) }
+    var obStartTitle: String { String.frenzLocalized("onboarding.start", locale: currentLocale) }
+    var obWhoTitle: String { String.frenzLocalized("onboarding.who.title", locale: currentLocale) }
     var obWhoOptions: [String] {
         [
-            String(localized: "onboarding.who.opt.girlz", locale: .init(identifier: language)),
-            String(localized: "onboarding.who.opt.boyz",  locale: .init(identifier: language)),
-            String(localized: "onboarding.who.opt.mix",   locale: .init(identifier: language))
+            String.frenzLocalized("onboarding.who.opt.girlz", locale: currentLocale),
+            String.frenzLocalized("onboarding.who.opt.boyz", locale: currentLocale),
+            String.frenzLocalized("onboarding.who.opt.mix", locale: currentLocale)
         ]
     }
-
-    var obMoodTitle: String { String(localized: "onboarding.mood.title", locale: .init(identifier: language)) }
+    var obMoodTitle: String { String.frenzLocalized("onboarding.mood.title", locale: currentLocale) }
     var obMoodOptions: [String] {
         [
-            String(localized: "onboarding.mood.opt.easy",    locale: .init(identifier: language)),
-            String(localized: "onboarding.mood.opt.sexy",    locale: .init(identifier: language)),
-            String(localized: "onboarding.mood.opt.secrets", locale: .init(identifier: language))
+            String.frenzLocalized("onboarding.mood.opt.easy", locale: currentLocale),
+            String.frenzLocalized("onboarding.mood.opt.sexy", locale: currentLocale),
+            String.frenzLocalized("onboarding.mood.opt.secrets", locale: currentLocale)
         ]
     }
-
+    
     func obSkip() { finishOnboarding() }
     func obStart() { gameState = .onboardingWho }
     func obSelectWho(_ index: Int) { gameState = .onboardingMood }
     func obSelectMood(_ index: Int) { finishOnboarding() }
-
+    
     private func finishOnboarding() {
         UserDefaults.standard.set(true, forKey: onboardingKey)
         gameState = .playerSetup
     }
-
+    
     // ============================================================
-    // MARK: TruthOrDareRouting (implementazione)
+    // MARK: TruthOrDareRouting
     // ============================================================
     var isTruthOrDareRound: Bool {
         guard currentIndex < actions.count else { return false }
         return actions[currentIndex].game == "truthOrDare"
     }
+    
     var todIsChoosePhase: Bool { todActive && todPhase == .choose }
     var todIsShowingTruth: Bool { todActive && todPhase == .truth }
     var todIsShowingDare: Bool { todActive && todPhase == .dare }
-
-    var todTitle: String { String(localized: "tod.title", locale: .init(identifier: language)) }
+    var todTitle: String { String.frenzLocalized("tod.title", locale: currentLocale) }
+    
     var todCurrentPlayerName: String? {
         guard todActive, todCursor < todOrder.count else { return nil }
         let idx = todOrder[todCursor]
         return players.indices.contains(idx) ? players[idx] : nil
     }
+    
     var todPromptTitle: String {
         switch todPhase {
-        case .truth: return String(localized: "tod.prompt.truth", locale: .init(identifier: language))
-        case .dare:  return String(localized: "tod.prompt.dare",  locale: .init(identifier: language))
+        case .truth: return String.frenzLocalized("tod.prompt.truth", locale: currentLocale)
+        case .dare: return String.frenzLocalized("tod.prompt.dare", locale: currentLocale)
         case .choose: return ""
         }
     }
+    
     var todPromptText: String? { todText }
-
+    
     func todChooseTruth() {
         ensureTodPrepared()
         todPhase = .truth
         todText = renderTODPrompt(pickFrom: todTruths)
     }
+    
     func todChooseDare() {
         ensureTodPrepared()
         todPhase = .dare
         todText = renderTODPrompt(pickFrom: todDares)
     }
+    
     func todNext() {
-        // passa al prossimo giocatore oppure chiudi round e avanza il deck
         todPhase = .choose
         todText = nil
         todCursor += 1
         if todCursor >= todOrder.count {
             todActive = false
-            goNext() // avanza nel mazzo normale
+            goNext()
         }
     }
-
+    
     // ============================================================
     // MARK: Helpers
     // ============================================================
@@ -628,7 +664,7 @@ final class GameViewModel: ObservableObject,
         todActive = false; todText = nil; todTruths.removeAll(); todDares.removeAll()
         if !players.isEmpty { reseedPlayerOrder() }
     }
-
+    
     private func reseedPlayerOrder() {
         let clean = players.map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty }
         guard clean.count >= 2 else { return }
@@ -636,43 +672,47 @@ final class GameViewModel: ObservableObject,
         playerOrder = Array(players.indices).shuffled()
         playerCursor = Int.random(in: 0..<playerOrder.count)
     }
-
+    
     private func advancePlayer() {
-        guard !playerOrder.isEmpty else { return }
-        playerCursor = (playerCursor + 1) % playerOrder.count
+        playerCursor += 1
     }
-
+    
     private func ensureSecondaryForCurrentIndexIfNeeded(in text: String) {
-        let needsB = text.localizedCaseInsensitiveContains("{playerb}") ||
-                     text.localizedCaseInsensitiveContains("{player2}")
-        guard needsB, secondaryByIndex[currentIndex] == nil,
-              let mainIdx = currentMainPlayerIndex else { return }
-        let candidates = players.indices.filter { $0 != mainIdx }
-        guard !candidates.isEmpty else { return }
-        secondaryByIndex[currentIndex] = candidates.randomElement()
+        let needsSec = text.contains("{playerB}") || text.contains("{PLAYERB}") ||
+                       text.contains("{player2}") || text.contains("{PLAYER2}")
+        guard needsSec, secondaryByIndex[currentIndex] == nil else { return }
+        guard let main = currentMainPlayerIndex else { return }
+        let others = players.indices.filter { $0 != main }
+        if let picked = others.randomElement() {
+            secondaryByIndex[currentIndex] = picked
+        }
     }
-
+    
     private func otherRandomPlayerName(excluding name: String) -> String? {
         let pool = players.filter { $0 != name }
         return pool.randomElement()
     }
-
-    private func injectSpecialGames(into base: [GameAction], for room: GameRoom) -> [GameAction] {
+    
+    nonisolated private static func injectSpecialGames(
+        into base: [GameAction],
+        for room: GameRoom,
+        lang: String,
+        maxActions: Int,
+        minSpacingBetweenSpecial: Int
+    ) -> [GameAction] {
         guard !base.isEmpty else { return base }
         var deck = base
         var valid = SpecialGamesProvider.allFor(room: room)
         valid.shuffle()
-
         let numSpecials = min(10, valid.count)
         let startPos = 5
-        let endPos = max(startPos + 1, min(MAX_ACTIONS_PER_MATCH - 2, deck.count - 1))
+        let endPos = max(startPos + 1, min(maxActions - 2, deck.count - 1))
         let available = max(1, endPos - startPos)
-        let interval = max(MIN_SPACING_BETWEEN_SPECIAL, available / max(1, numSpecials))
-
+        let interval = max(minSpacingBetweenSpecial, available / max(1, numSpecials))
         var positions: [Int] = []
         for i in 0..<numSpecials {
             let basePos = startPos + i * interval
-            let maxOffset = max(0, min(interval - MIN_SPACING_BETWEEN_SPECIAL, 3))
+            let maxOffset = (interval > minSpacingBetweenSpecial) ? (interval - minSpacingBetweenSpecial) : 0
             let randomOffset = (maxOffset > 0) ? Int.random(in: 0...maxOffset) : 0
             positions.append(min(endPos, basePos + randomOffset))
         }
@@ -680,40 +720,35 @@ final class GameViewModel: ObservableObject,
         for (i, pos) in positions.enumerated() {
             let gid = valid[i % valid.count]
             let safeIndex = min(max(0, pos), deck.count)
-
-            if let content = ContentLoader.loadSpecial(lang: language, id: gid, room: room) {
+            if let content = ContentLoader.loadSpecial(lang: lang, id: gid, room: room) {
                 deck.insert(
                     GameAction(text: content.action,
-                               room: room.rawValue,
-                               game: gid,
-                               penalty: nil,
-                               timerSeconds: content.timerSeconds),
+                              room: room.rawValue,
+                              game: gid,
+                              penalty: nil,
+                              timerSeconds: content.timerSeconds),
                     at: safeIndex
                 )
             } else if let mapped = SpecialGamesProvider.mapToGameType(gid),
-                      let one = try? ContentLoader.loadGameDeck(lang: language, game: mapped).randomElement() {
+                      let one = try? ContentLoader.loadGameDeck(lang: lang, game: mapped).randomElement() {
                 deck.insert(GameAction(text: one.text,
-                                       room: room.rawValue,
-                                       game: gid,
-                                       penalty: one.penalty,
-                                       timerSeconds: one.timerSeconds),
-                            at: safeIndex)
+                                      room: room.rawValue,
+                                      game: gid,
+                                      penalty: one.penalty,
+                                      timerSeconds: one.timerSeconds),
+                           at: safeIndex)
             } else {
                 deck.insert(GameAction(text: gid, room: room.rawValue, game: gid, penalty: nil, timerSeconds: nil), at: safeIndex)
             }
         }
-
-        if deck.count > MAX_ACTIONS_PER_MATCH { deck = Array(deck.prefix(MAX_ACTIONS_PER_MATCH)) }
+        if deck.count > maxActions { deck = Array(deck.prefix(maxActions)) }
         return deck
     }
-
-
+    
     // MARK: Truth or Dare helpers
     private func ensureTodPrepared() {
         guard isTruthOrDareRound else { return }
-
         if !todActive {
-            // ordine: giocatore corrente, poi gli altri
             todOrder = []
             if let main = currentMainPlayerIndex {
                 todOrder.append(main)
@@ -726,48 +761,46 @@ final class GameViewModel: ObservableObject,
             todPhase = .choose
             todActive = true
         }
-
+        
+        let lang = language
         if let r = currentRoom,
-           let td = try? ContentLoader.loadTruthOrDare(lang: language, room: r) {
+           let td = try? ContentLoader.loadTruthOrDare(lang: lang, room: r) {
             todTruths = td.truths.shuffled()
-            todDares  = td.dares.shuffled()
+            todDares = td.dares.shuffled()
         }
     }
-
+    
     private func loadTruthOrDareContent() {
+        let lang = language
         if let r = currentRoom,
-           let td = try? ContentLoader.loadTruthOrDare(room: r) {
+           let td = try? ContentLoader.loadTruthOrDare(lang: lang, room: r) {
             todTruths = td.truths.shuffled()
-            todDares  = td.dares.shuffled()
+            todDares = td.dares.shuffled()
             return
         }
-        // fallback: usa deck del gioco o frasi base
-        if let deck = try? ContentLoader.loadGameDeck(game: .truthOrDare) {
+        
+        if let deck = try? ContentLoader.loadGameDeck(lang: lang, game: .truthOrDare) {
             let all = deck.map { $0.text }
             todTruths = all.shuffled()
-            todDares  = all.shuffled()
+            todDares = all.shuffled()
         } else {
             todTruths = ["Hai mai mentito oggi?", "Qual è il tuo segreto più buffo?"]
-            todDares  = ["Fai 10 flessioni", "Parla con accento strano per 1 turno"]
+            todDares = ["Fai 10 flessioni", "Parla con accento strano per 1 turno"]
         }
     }
-
+    
     private func renderTODPrompt(pickFrom source: [String]) -> String {
         let base = source.randomElement() ?? ""
         var s = base
-
         ensureSecondaryForCurrentIndexIfNeeded(in: s)
-
         let main = todCurrentPlayerName ?? currentPlayerName ?? ""
-        let sec  = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
-
+        let sec = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
         s = s.replacingOccurrences(of: "{player}", with: main)
             .replacingOccurrences(of: "{PLAYER}", with: main.uppercased())
             .replacingOccurrences(of: "{playerB}", with: sec)
             .replacingOccurrences(of: "{PLAYERB}", with: sec.uppercased())
             .replacingOccurrences(of: "{player2}", with: sec)
             .replacingOccurrences(of: "{PLAYER2}", with: sec.uppercased())
-
         if let p = currentPenalty {
             s = s.replacingOccurrences(of: "{penalty}", with: String(p))
         }
@@ -783,29 +816,24 @@ extension GameViewModel {
     func requestPaywallAfterPlayerSetup() {
         requestedPaywallPlacement = PaywallPlacement.afterPlayerSetup
     }
+    
     func requestPaywallForRoomGate() {
         requestedPaywallPlacement = PaywallPlacement.roomSelectionGate
     }
+    
     func requestPaywallAfterGameOver() {
         requestedPaywallPlacement = PaywallPlacement.afterGameOver
     }
-
-    /// Resetta la richiesta di paywall una volta che la View lo ha presentato/gestito
+    
     func clearRequestedPaywall() {
         requestedPaywallPlacement = nil
     }
-
-    /// Da chiamare quando il paywall viene chiuso.
-    /// - Parameter didPurchase: `true` se è stato effettuato un acquisto/restore che abilita PRO.
+    
     func paywallDismissed(didPurchase: Bool) {
         if didPurchase {
-            // Chiedi al SubscriptionManager di riallineare lo stato PRO
             subscriptionManager?.refreshEntitlements()
         }
-        // In ogni caso, rimuovi la richiesta corrente
         requestedPaywallPlacement = nil
-
-        // Se l'acquisto è avvenuto dopo game over, puoi tornare subito alle stanze sbloccate.
         if didPurchase, gameState == .gameOver {
             backToRooms()
         }

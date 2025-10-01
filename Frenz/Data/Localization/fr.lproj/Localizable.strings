@@ -1,0 +1,145 @@
+/* =========================================================
+   Localizable.strings (fr) - sections by view
+   ========================================================= */
+
+/* ===== Global / Shared ===== */
+"appName" = "FRIENZ";
+"appDescription" = "Ce club est géré par une IA. Elle créera des défis toujours nouveaux et inattendus.";
+"startButton" = "COMMENCER";
+"changeLanguage" = "Changer de langue";
+"languageSelectTitle" = "Choisis ta langue";
+"language.system" = "Automatique";
+
+/* ===== Language Selection View ===== */
+"languageSelectTitle" = "Choisis ta langue";
+"close" = "Fermer";
+"playerInputPlaceholder" = "Nom du joueur";
+
+/* ===== Player Setup View ===== */
+"playerInputPlaceholder" = "Nom du joueur";
+"addPlayerLabel" = "Ajouter un joueur";
+"backButton" = "Retour";
+"notEnoughPlayersError" = "Ajoute au moins deux joueurs";
+"roomSelectionTitle" = "Choisis une salle";
+
+/* ===== Room Selection View ===== */
+"roomSelectionTitle" = "Choisis une salle";
+"continue" = "Continuer";
+
+/* Rooms - Titles & Subtitles (standard case) */
+"room.party.title" = "Party";
+"room.red.title" = "Red Room";
+"room.dark.title" = "Dark Room";
+"room.partner.title" = "Partner";
+"room.roulette.title" = "Roulette";
+
+"room.party.subtitle" = "Légère et sociale, pour lancer la soirée.";
+"room.red.subtitle" = "Épicée et provocante, joue avec consentement.";
+"room.dark.subtitle" = "Drama, secrets, peurs : avoue sans filtre.";
+"room.partner.subtitle" = "Défis pour couples : complicité et piquant.";
+"room.roulette.subtitle" = "Mélange aléatoire de tous les modes.";
+"room.games.title" = "Jeux";
+"room.games.subtitle" = "Hub de mini-jeux et de variantes spéciales.";
+"roomSelection.title" = "Choisis la salle";
+"roomSelection.addPlayers" = "Ajouter des joueurs";
+
+/* Rooms - Alternate labels (UPPER style) */
+"room.party.title"    = "CHILLING";
+"room.dark.title"     = "DARK ROOM";
+"room.partner.title"  = "PARTNER";
+"room.roulette.title" = "ROULETTE";
+"room.red.title"      = "RED ROOM";
+"room.games.title"    = "JEUX";
+
+"room.party.subtitle"    = "Légère et sociale, pour lancer la soirée.";
+"room.dark.subtitle"     = "Drama, secrets, peurs : avoue sans filtre.";
+"room.partner.subtitle"  = "Défis pour couples : complicité et piquant.";
+"room.roulette.subtitle" = "Mélange aléatoire de tous les modes.";
+"room.red.subtitle"      = "Épicée et provocante, joue avec consentement.";
+"room.games.subtitle"    = "Mini-jeux dédiés.";
+
+/* ===== Premium Banner (Room Selection) ===== */
+"premium.banner.title"    = "PREMIUM";
+"premium.banner.subtitle" = "Débloque tous les modes !";
+"playerSetup.title"       = "Ajoutez les joueurs et lancez la soirée !";
+"continue"                = "Continuer";
+"playing.counter"         = "%d/%d";
+
+/* ===== Playing View ===== */
+"playing.counter" = "%d/%d";
+"tod.dare"  = "ACTION";
+"tod.truth" = "VÉRITÉ";
+"tod.done"  = "FAIT";
+"gameOver.part1" = "PARTIE";
+
+/* ===== Game Over View ===== */
+"gameOver.part1" = "PARTIE";
+"gameOver.part2" = "TERMINÉE !";
+"onboarding.skip" = "Passer";
+
+/* ===== Onboarding View ===== */
+"onboarding.skip" = "Passer";
+"playing.counter" = "%d/%d";
+"onboarding.intro.tile.1v1" = "1v1 !";
+"onboarding.intro.tile.wyr" = "TU PRÉFÈRES ?";
+"onboarding.intro.tile.tod" = "ACTION\nOU VÉRITÉ ?";
+"onboarding.intro.tile.nhie" = "JE N'AI\nJAMAIS...";
+
+/* ===== Paywall View ===== */
+"paywall.title"        = "Débloque gratuitement";
+"paywall.bullet.1"     = "Accès à tous les modes";
+"paywall.bullet.2"     = "Nouveau contenu régulièrement";
+"paywall.bullet.3"     = "Annulation à tout moment.";
+"paywall.trialLabel"   = "Un doute ? Active l'essai gratuit";
+"paywall.priceFooter"  = "Pendant 3 jours, puis seulement 0,99 $ par semaine";
+"paywall.continue"     = "CONTINUER";
+"paywall.restore"      = "Restaurer";
+"paywall.terms"        = "Conditions";
+"paywall.privacy"      = "Confidentialité";
+
+/* Onboarding - Intro */
+"onboarding.intro.title"    = "Défis, mini-jeux, secrets, gossip, drama & HOT...";
+"onboarding.intro.subtitle" = "Plein de jeux thématiques et de défis toujours nouveaux à chaque manche, sans répétition.";
+"onboarding.start"          = "ON JOUE";
+
+/* Onboarding - Who */
+"onboarding.who.title"      = "Qui joue ?";
+"onboarding.who.opt.girlz"  = "Girlz only";
+"onboarding.who.opt.boyz"   = "Boyz";
+"onboarding.who.opt.mix"    = "Mix";
+
+/* Onboarding - Mood */
+"onboarding.mood.title"       = "Quel mood on donne à la soirée ?";
+"onboarding.mood.opt.easy" = "Easy et fun";
+"onboarding.mood.opt.sexy"     = "Sexy";
+"onboarding.mood.opt.secrets"    = "Crazy";
+
+/* ===== Truth or Dare View ===== */
+"tod.title"         = "ACTION OU VÉRITÉ ?";
+"tod.prompt.truth"  = "VÉRITÉ !";
+"tod.prompt.dare"   = "ACTION !";
+
+/* ===== loading view ===== */
+"loading.title" = "Prêts ? \nlaisse-nous cuisiner...";
+"loading.fallback" = "On prépare la soirée...";
+
+/* ===== Game Selection ===== */
+"gameSelectionTitle" = "Choisis un jeu";
+"startMatch" = "Commencer la partie";
+"game.truthOrDare.title" = "Action ou Vérité";
+"game.truthOrDare.subtitle" = "Choisis de répondre sincèrement ou de relever un défi.";
+"game.wyr.title" = "Tu préfères ?";
+"game.wyr.subtitle" = "Des choix impossibles et des débats instantanés.";
+"game.nhie.title" = "Je n'ai jamais";
+"game.nhie.subtitle" = "Confessions, secrets et moments gênants.";
+"game.price.title" = "Tout a un prix";
+"game.price.subtitle" = "Jusqu'où es-tu prêt à aller pour éviter la pénalité ?";
+"game.minich.title" = "Mini-défis";
+"game.minich.subtitle" = "Épreuves rapides, timers et défis à faire tout de suite.";
+
+/* ===== Playing Controls ===== */
+"playing" = "Partie";
+"next" = "Suivant";
+"skip" = "Passer";
+"end" = "Fin";
+"startTimer" = "Lancer le timer";

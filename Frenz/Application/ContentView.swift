@@ -32,7 +32,7 @@ struct ContentView: View {
                     .routeTransition(trigger: gameVM.gameState)
 
             case .gameSelection:
-                GameSelectionView_Placeholder()
+                GameSelectionView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
 
             case .playing:
@@ -50,7 +50,6 @@ struct ContentView: View {
                     .routeTransition(trigger: gameVM.gameState)
 
             case .paywall:
-                // PaywallView rimosso: reindirizzo alla selezione stanze
                 RoomSelectionView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
 
@@ -60,17 +59,13 @@ struct ContentView: View {
             }
         }
         .onAppear { gameVM.subscriptionManager = subscriptionManager }
-        .onChange(of: gameVM.requestedPaywallPlacement) { placement in
+        .onChange(of: gameVM.requestedPaywallPlacement) { _, placement in
             guard let placement else { return }
-            // Chiede a SubscriptionManager di presentare il paywall per questo placement
             subscriptionManager.showPaywall(placement: placement)
-                // reset trigger
-                gameVM.requestedPaywallPlacement = nil
-                // se era il placement post partita, rientra alle stanze
-                if placement == GameViewModel.PaywallPlacement.afterGameOver {
-                    gameVM.backToRooms()
-                }
-            
+            gameVM.requestedPaywallPlacement = nil
+            if placement == GameViewModel.PaywallPlacement.afterGameOver {
+                gameVM.backToRooms()
+            }
         }
     }
 }
@@ -84,28 +79,25 @@ private extension View {
     }
 }
 
-// MARK: - PLACEHOLDERS (se ti servono ancora)
-private struct GameSelectionView_Placeholder: View { var body: some View { PlaceholderScreen(title: "Game Selection") } }
-private struct PlayingView_Placeholder: View       { var body: some View { PlaceholderScreen(title: "Playing") } }
-private struct GameOverView_Placeholder: View      { var body: some View { PlaceholderScreen(title: "Game Over") } }
-
-private struct PlaceholderScreen: View {
-    let title: String
-    var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
-            VStack(spacing: 10) {
-                Text(title).foregroundColor(.white).font(.system(size: 24, weight: .bold))
-                Text("Sostituisci con la view reale").foregroundColor(.white.opacity(0.6)).font(.system(size: 14))
-            }
-            .padding()
-        }
-    }
+#Preview {
+    ContentViewPreview()
 }
 
-#Preview {
-    ContentView()
-        .environmentObject(GameViewModel())
-        .environmentObject(SubscriptionManager()) // necessario per le preview
-        .preferredColorScheme(.dark)
+private struct ContentViewPreview: View {
+    @StateObject private var languageManager = LanguageManager()
+    @StateObject private var subscriptionManager = SubscriptionManager()
+    @StateObject private var gameVM = GameViewModel()
+
+    var body: some View {
+        ContentView()
+            .environmentObject(gameVM)
+            .environmentObject(subscriptionManager)
+            .environmentObject(languageManager)
+            .environment(\.locale, languageManager.locale)
+            .preferredColorScheme(.dark)
+            .onAppear {
+                gameVM.languageManager = languageManager
+                gameVM.subscriptionManager = subscriptionManager
+            }
+    }
 }

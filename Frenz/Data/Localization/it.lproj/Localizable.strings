@@ -8,6 +8,7 @@
 "startButton" = "INIZIA";
 "changeLanguage" = "Cambia lingua";
 "languageSelectTitle" = "Scegli la lingua";
+"language.system" = "Automatico";
 /* ===== Language Selection View ===== */
 "languageSelectTitle" = "Scegli la lingua";
 "close" = "Chiudi";
@@ -112,5 +113,26 @@
 "tod.prompt.dare"    = "OBBLIGO!";
 
 /* ===== loading view ===== */
-"loading.title" = "Pronti? lasciaci cucinare…";
+"loading.title" = "Pronti? \nlasciaci cucinare…";
 "loading.fallback" = "Prepariamo la serata…";
+
+/* ===== Game Selection ===== */
+"gameSelectionTitle" = "Scegli il gioco";
+"startMatch" = "Inizia partita";
+"game.truthOrDare.title" = "Obbligo o Verità";
+"game.truthOrDare.subtitle" = "Scegli se rispondere sinceramente o affrontare una sfida.";
+"game.wyr.title" = "Preferiresti?";
+"game.wyr.subtitle" = "Scelte impossibili e discussioni immediate.";
+"game.nhie.title" = "Non ho mai";
+"game.nhie.subtitle" = "Confessioni, segreti e momenti imbarazzanti.";
+"game.price.title" = "Tutto ha un prezzo";
+"game.price.subtitle" = "Quanto sei disposto a rischiare per evitare la penitenza?";
+"game.minich.title" = "Mini-sfide";
+"game.minich.subtitle" = "Prove rapide, timer e sfide da fare subito.";
+
+/* ===== Playing Controls ===== */
+"playing" = "Partita";
+"next" = "Avanti";
+"skip" = "Salta";
+"end" = "Fine";
+"startTimer" = "Avvia timer";

@@ -11,12 +11,13 @@ public struct AppLanguage: Identifiable, Equatable {
 // MARK: - Language Selection
 @MainActor
 public protocol LanguageSelectionRouting: ObservableObject {
-    var availableLanguages: [AppLanguage] { get }
+    var availableLanguages: [FrenzAppLanguage] { get }
     var title: String { get }
     var closeTitle: String { get }
     var language: String { get }
     func selectLanguage(_ code: String)
     func closeLanguageSelector()
+    func goBack()
 }
 
 // MARK: - Player Setup
@@ -25,9 +26,11 @@ public protocol PlayerSetupRouting: ObservableObject {
     // Dati
     var inputPlayers: [PlayerInput] { get }
     // Testi
+    var playerSetupTitle: String { get }
     var playerInputPlaceholder: String { get }
     var addPlayerLabel: String { get }
     var backButtonTitle: String { get }
+    var continueTitle: String { get }
     // Azioni
     func addPlayerInput()
     func updatePlayerName(id: Int, name: String)
@@ -48,6 +51,7 @@ public protocol RoomSelectionRouting: ObservableObject {
     func openPlayerSetup()
     var availableRooms: [GameRoom] { get }
     var roomSelectionTitle: String { get }
+    var roomSelectionAddPlayersTitle: String { get }
     var continueTitle: String { get }
 
     func displayName(for room: GameRoom) -> String
@@ -102,6 +106,8 @@ public protocol PlayingRouting: ObservableObject {
     var skipTitle: String { get }
     var endTitle: String { get }
     var startTimerTitle: String { get }
+    var gameOverPart1: String { get }
+    var gameOverPart2: String { get }
 
     // Contenuto azione
     var currentPlayerNameTitle: String? { get }     // Nome giocatore sopra, centrato

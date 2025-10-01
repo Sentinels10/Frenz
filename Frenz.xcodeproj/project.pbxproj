@@ -111,6 +111,8 @@
 				en,
 				Base,
 				it,
+				fr,
+				es,
 			);
 			mainGroup = D63816D32E5F41E70017A5DB;
 			minimizedProjectReferenceProxies = 1;
@@ -274,6 +276,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FP667FMR7C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Frenz/Info.plist;
@@ -303,6 +306,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FP667FMR7C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Frenz/Info.plist;
@@ -354,7 +358,7 @@
 			repositoryURL = "https://github.com/superwall/Superwall-iOS";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.8.1;
+				minimumVersion = 4.12.11;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

@@ -8,6 +8,7 @@
 "startButton" = "START";
 "changeLanguage" = "Change language";
 "languageSelectTitle" = "Choose your language";
+"language.system" = "Automatic";
 
 /* ===== Language Selection View ===== */
 "languageSelectTitle" = "Choose your language";
@@ -119,5 +120,26 @@
 "tod.prompt.dare"   = "DARE!";
 
 /* ===== loading view ===== */
-"loading.title" = "Ready? let us cook…";
+"loading.title" = "Ready? \nlet us cook…";
 "loading.fallback" = "Getting the party ready…";
+
+/* ===== Game Selection ===== */
+"gameSelectionTitle" = "Choose a game";
+"startMatch" = "Start match";
+"game.truthOrDare.title" = "Truth or Dare";
+"game.truthOrDare.subtitle" = "Choose whether to answer honestly or take on a dare.";
+"game.wyr.title" = "Would You Rather?";
+"game.wyr.subtitle" = "Impossible choices and instant debates.";
+"game.nhie.title" = "Never Have I Ever";
+"game.nhie.subtitle" = "Confessions, secrets, and embarrassing moments.";
+"game.price.title" = "Everything Has a Price";
+"game.price.subtitle" = "How much are you willing to risk to avoid the penalty?";
+"game.minich.title" = "Mini Challenges";
+"game.minich.subtitle" = "Quick tasks, timers, and challenges to do right away.";
+
+/* ===== Playing Controls ===== */
+"playing" = "Match";
+"next" = "Next";
+"skip" = "Skip";
+"end" = "End";
+"startTimer" = "Start timer";

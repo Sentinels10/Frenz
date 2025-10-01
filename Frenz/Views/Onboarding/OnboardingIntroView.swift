@@ -3,6 +3,7 @@ import UIKit
 
 struct OnboardingIntroView<VM: OnboardingRouting>: View {
     @ObservedObject var vm: VM
+    @Environment(\.locale) private var locale
 
     var body: some View {
         GeometryReader { proxy in
@@ -61,7 +62,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
                             .padding(.horizontal, 24)
                     }
 
-                    Button(String(localized: "onboarding.skip")) { vm.obSkip() }
+                    Button(String.frenzLocalized("onboarding.skip", locale: locale)) { vm.obSkip() }
                         .foregroundColor(.white.opacity(0.2))
                         .font(.system(size: 14, weight: .semibold))
                         .padding(.top, 6)
@@ -153,7 +154,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
             ZStack {
                 // 1) 1v1! (in alto, centrata leggermente a destra)
                 card(
-                    text: String(localized: "onboarding.intro.tile.1v1"),
+                    text: String.frenzLocalized("onboarding.intro.tile.1v1", locale: locale),
                     colors: [Color(hex: 0xF869FF), Color(hex: 0xA030FF)],
                     textSize: 16,
                     rotation: .degrees(-5),
@@ -163,7 +164,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
 
                 // 2) Preferiresti? (centrata, più grande)
                 card(
-                    text: String(localized: "onboarding.intro.tile.wyr"),
+                    text: String.frenzLocalized("onboarding.intro.tile.wyr", locale: locale),
                     colors: [Color(hex: 0xFF5E57), Color(hex: 0xE43A2E)],
                     textSize: 18,
                     rotation: .degrees(10),
@@ -173,7 +174,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
 
                 // 3) Obbligo o verità? (subito sotto, centrata)
                 card(
-                    text: String(localized: "onboarding.intro.tile.tod"),
+                    text: String.frenzLocalized("onboarding.intro.tile.tod", locale: locale),
                     colors: [Color(hex: 0x7F66FF), Color(hex: 0x5A33FF)],
                     textSize: 18,
                     rotation: .degrees(-15),
@@ -183,7 +184,7 @@ struct OnboardingIntroView<VM: OnboardingRouting>: View {
 
                 // 4) Non ho mai… (più in basso, leggermente a sinistra)
                 card(
-                    text: String(localized: "onboarding.intro.tile.nhie"),
+                    text: String.frenzLocalized("onboarding.intro.tile.nhie", locale: locale),
                     colors: [Color(hex: 0xFF9C33), Color(hex: 0xFF6A00)],
                     textSize: 18,
                     rotation: .degrees(12),

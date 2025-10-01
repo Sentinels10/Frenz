@@ -1,6 +1,6 @@
 import Foundation
 
-public enum GameRoom: String, CaseIterable, Identifiable, Codable, Equatable {
+public enum GameRoom: String, CaseIterable, Identifiable, Codable, Equatable, Sendable {
     case party    = "party"
     case redRoom  = "redroom"
     case darkRoom = "darkroom"

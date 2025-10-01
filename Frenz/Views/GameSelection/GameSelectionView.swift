@@ -89,7 +89,6 @@ private struct GameCard: View {
     var body: some View {
         Button(action: onTap) {
             HStack(spacing: 14) {
-                // Placeholder icona (sostituisci con asset tuoi)
                 ZStack {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color.white.opacity(0.10))
