@@ -1,5 +1,4 @@
 import SwiftUI
-import SuperwallKit
 
 struct PlayerSetupView<VM: PlayerSetupRouting>: View {
     @ObservedObject var vm: VM
@@ -87,16 +86,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                         .frame(height: 1)
                         .frame(maxWidth: .infinity)
 
-                    Button(action: {
-                        guard SubscriptionManager.paywallsEnabled else {
-                            vm.startGame()
-                            return
-                        }
-
-                        Superwall.shared.register(placement: "after_player_setup_continue") {
-                            vm.startGame()
-                        }
-                    }) {
+                    Button(action: vm.startGame) {
                         Text(vm.continueTitle)
                             .font(.rammetto(size: 18))
                             .foregroundColor(.white)

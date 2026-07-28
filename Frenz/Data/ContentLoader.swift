@@ -164,7 +164,7 @@ struct ContentLoader {
         case .darkRoom: return items(from: "darkRoom").shuffled()
         case .partner:  return items(from: "coppie").shuffled()       // mappavi "coppie" nel tuo JSON
         case .roulette:
-            let combined = items(from: "party") + items(from: "redRoom") + items(from: "darkRoom") + items(from: "coppie")
+            let combined = items(from: "party") + items(from: "redRoom") + items(from: "darkRoom")
             return combined.shuffled()
         case .games:    return []
         }
@@ -294,13 +294,14 @@ struct ContentLoader {
                 let coppie = arrAny(["coppie","partner"])
                 pool = !coppie.isEmpty ? coppie : arrAny(["party"])
             case .roulette:
-                pool = arrAny(["party"]) + arrAny(["redRoom","redroom"]) + arrAny(["darkRoom","darkroom"]) + arrAny(["coppie","partner"])
+                pool = arrAny(["party"]) + arrAny(["redRoom","redroom"]) + arrAny(["darkRoom","darkroom"])
             case .games:
                 pool = []
             }
 
             // fallback totale se la stanza è vuota
-            let fallback = arrAny(["party"]) + arrAny(["redRoom","redroom"]) + arrAny(["darkRoom","darkroom"]) + arrAny(["coppie","partner"])
+            let fallback = arrAny(["party"]) + arrAny(["redRoom","redroom"]) + arrAny(["darkRoom","darkroom"])
+                + (room == .roulette ? [] : arrAny(["coppie","partner"]))
             if let action = (pool.isEmpty ? fallback.randomElement() : pool.randomElement()) {
                 return SpecialGameContent(title: title, description: description, action: action, timerSeconds: nil)
             }
@@ -391,7 +392,9 @@ struct ContentLoader {
             case .party:    return items(wyr["party"])
             case .redRoom:  return items(wyr["redRoom"])
             case .darkRoom: return items(wyr["darkRoom"])
-            case .partner:  return items(wyr["party"])
+            case .partner:
+                let partnerItems = items(wyr["coppie"])
+                return partnerItems.isEmpty ? items(wyr["party"]) : partnerItems
             case .roulette: return items(wyr["party"]) + items(wyr["redRoom"]) + items(wyr["darkRoom"])
             case .games:    return []
             }
@@ -409,7 +412,9 @@ struct ContentLoader {
                 case .party:    pool = (map["party"] as? [String]) ?? []
                 case .redRoom:  pool = (map["redRoom"] as? [String]) ?? []
                 case .darkRoom: pool = (map["darkRoom"] as? [String]) ?? []
-                case .partner:  pool = (map["party"] as? [String]) ?? []
+                case .partner:
+                    let partnerPool = (map["coppie"] as? [String]) ?? []
+                    pool = partnerPool.isEmpty ? ((map["party"] as? [String]) ?? []) : partnerPool
                 case .roulette: pool = ((map["party"] as? [String]) ?? []) + ((map["redRoom"] as? [String]) ?? []) + ((map["darkRoom"] as? [String]) ?? [])
                 case .games:    pool = []
                 }
@@ -436,7 +441,7 @@ struct ContentLoader {
         case .darkRoom: return arr("darkRoom").isEmpty ? (arr("all")+arr("common")) : arr("darkRoom")
         case .partner:  return arr("coppie").isEmpty ? (arr("party").isEmpty ? (arr("all")+arr("common")) : arr("party")) : arr("coppie")
         case .roulette:
-            let merged = arr("party") + arr("redRoom") + arr("darkRoom") + arr("coppie") + arr("all") + arr("common")
+            let merged = arr("party") + arr("redRoom") + arr("darkRoom") + arr("all") + arr("common")
             return merged
         case .games:    return []
         }
@@ -449,7 +454,7 @@ struct ContentLoader {
         case .redRoom:  return arr("redRoom")
         case .darkRoom: return arr("darkRoom")
         case .partner:  return arr("coppie").isEmpty ? arr("party") : arr("coppie")
-        case .roulette: return arr("party") + arr("redRoom") + arr("darkRoom") + arr("coppie")
+        case .roulette: return arr("party") + arr("redRoom") + arr("darkRoom")
         case .games:    return []
         }
     }

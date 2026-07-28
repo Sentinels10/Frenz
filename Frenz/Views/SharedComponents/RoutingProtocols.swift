@@ -43,9 +43,6 @@ public protocol PlayerSetupRouting: ObservableObject {
 // MARK: - Room Selection (NUOVO: estetica tipo screenshot)
 @MainActor
 public protocol RoomSelectionRouting: ObservableObject {
-    func togglePremium()                // la View chiede al VM di cambiare stato
-    var premiumUnlocked: Bool { get }
-    func isRoomPremium(_ room: GameRoom) -> Bool
     func openLanguageSelector()
     func goBack()
     func openPlayerSetup()
@@ -126,7 +123,7 @@ public protocol PlayingRouting: ObservableObject {
     func skip()
     func startTimer()
     func endMatch()
-    func requestPaywallAfterGameOver()
+    func continueFromGameOver()
 }
 
 // MARK: - Truth or Dare (Obbligo o Verità)

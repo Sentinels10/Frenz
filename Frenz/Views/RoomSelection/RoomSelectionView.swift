@@ -1,5 +1,4 @@
 import SwiftUI
-import SuperwallKit
 
 #if canImport(UIKit)
 import UIKit
@@ -33,8 +32,9 @@ private func assetOrSymbol(_ assetName: String, system symbolName: String) -> so
 // MARK: - View
 struct RoomSelectionView<VM: RoomSelectionRouting>: View {
     @ObservedObject var vm: VM
-    @EnvironmentObject private var subscriptionManager: SubscriptionManager
 
+    // `.games` resta implementata nel codice, ma non viene proposta tra le
+    // stanze selezionabili finché non si deciderà di riattivarla.
     private let rooms: [GameRoom] = [.party, .darkRoom, .partner, .roulette, .redRoom]
 
     var body: some View {
@@ -81,13 +81,6 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                 ScrollView(showsIndicators: false) {
                     VStack(spacing: 6) {
 
-                        // Banner PREMIUM — visibile solo se NON premium
-                        if !subscriptionManager.isPro {
-                            PremiumBannerCard {
-                                subscriptionManager.showPaywall(placement: GameViewModel.PaywallPlacement.roomSelectionGate)
-                            }
-                        }
-
                         ForEach(rooms, id: \.self) { room in
                             RoomCard(
                                 title: vm.displayName(for: room),
@@ -95,14 +88,9 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                                 iconAsset: leadingIcon(for: room).asset,
                                 iconSystem: leadingIcon(for: room).system,
                                 gradient: cardGradient(for: room),
-                                iconSize: iconSize(for: room),
-                                showCrown: vm.isRoomPremium(room) && !subscriptionManager.isPro
+                                iconSize: iconSize(for: room)
                             ) {
-                                if vm.isRoomPremium(room) && !subscriptionManager.isPro {
-                                    subscriptionManager.showPaywall(placement: GameViewModel.PaywallPlacement.roomSelectionGate)
-                                } else {
-                                    vm.select(room: room)
-                                }
+                                vm.select(room: room)
                             }
                         }
                     }
@@ -187,72 +175,6 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
 
 // MARK: - UI Components
 
-private struct PremiumBannerCard: View {
-    let action: () -> Void
-    @Environment(\.locale) private var locale
-
-    var body: some View {
-        Button(action: action) {
-            ZStack(alignment: .leading) {
-                // Card background at same height as other buttons (icons can overflow)
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(
-                        LinearGradient(
-                            colors: [
-                                Color(hex: 0x57e5ff),
-                                Color(hex: 0xff58ef),
-                                Color(hex: 0xffe252),
-                                Color(hex: 0xff1919)
-                            ],
-                            startPoint: .leading, endPoint: .trailing
-                        )
-                    )
-                    .frame(height: 96)
-
-                // Text left-aligned, above the left sticker
-                HStack {
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text(String.frenzLocalized("premium.banner.title", locale: locale))
-                            .font(.rammetto(size: 36))
-                            .foregroundColor(.white)
-                        Text(String.frenzLocalized("premium.banner.subtitle", locale: locale))
-                            .font(.trebuchet(size: 13))
-                            .lineSpacing(0)
-                            .multilineTextAlignment(.leading)
-                            .foregroundColor(.white.opacity(0.95))
-                            .lineLimit(2)
-                            .padding(.top, -2)
-                    }
-                    .padding(.leading, 16)
-                    .padding(.trailing, 100) // leave room for right sticker
-
-                    Spacer(minLength: 0)
-                }
-                .frame(height: 96)
-
-                // Left sprinkles sticker — overflowing like other icons
-                assetOrSymbol("ic_premium_sparkles", system: "sparkles")
-                    .scaledToFit()
-                    .frame(width: 128, height: 128)
-                    .offset(x: -12, y: 12)
-                    .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
-                    .allowsHitTesting(false)
-
-                // Right crown-with-glasses sticker — overflowing
-                assetOrSymbol("ic_premium_crown_glasses", system: "crown.fill")
-                    .scaledToFit()
-                    .frame(width: 112, height: 112)
-                    .offset(x: 10)
-                    .shadow(color: .black.opacity(0.18), radius: 8, x: 0, y: 4)
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .padding(.trailing, 8)
-                    .allowsHitTesting(false)
-            }
-            .contentShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-        }
-    }
-}
-
 private struct RoomCard: View {
     let title: String
     let subtitle: String
@@ -260,7 +182,6 @@ private struct RoomCard: View {
     let iconSystem: String
     let gradient: [Color]
     let iconSize: CGFloat
-    let showCrown: Bool
     let action: () -> Void
 
     var body: some View {
@@ -298,15 +219,6 @@ private struct RoomCard: View {
                     Spacer(minLength: 0)
                 }
                 .frame(height: 96)
-            }
-            // Crown in the top-right corner, outside text stacking so it doesn’t affect layout
-            .overlay(alignment: .topTrailing) {
-                if showCrown {
-                    Image(systemName: "crown.fill")
-                        .foregroundColor(.yellow)
-                        .font(.system(size: 16, weight: .bold))
-                        .padding(12)
-                }
             }
         }
         // Make the tappable area match the rounded rectangle even if the icon overflows

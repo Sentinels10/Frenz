@@ -10,7 +10,7 @@ enum SpecialGameID: String, CaseIterable {
 
 struct SpecialGamesProvider {
     static let common: [String] = [
-        "truthOrDare","wouldYouRather","questoOQuello","timerChallenge",
+        "truthOrDare","wouldYouRather","questoOQuello",
         "tuttoHaUnPrezzo","tuttiQuelliChe","penitenzaRandom",
         "nonHoMai","chiEPiuProbabile","penitenzeGruppo","happyHour"
     ]
@@ -20,7 +20,7 @@ struct SpecialGamesProvider {
         .darkRoom: ["pointFinger"],
         .party:    ["chatDetective","newRule"],
         .partner:  ["oneVsOne"],
-        .roulette: ["infamata","pointFinger","chatDetective","newRule","oneVsOne"],
+        .roulette: ["infamata","pointFinger","chatDetective","newRule"],
         .games:    []
     ]
 

@@ -12,7 +12,6 @@ enum GameState: Equatable {
     case gameSelection
     case playing
     case gameOver
-    case paywall
     case loading
 }
 
@@ -48,13 +47,6 @@ final class GameViewModel: ObservableObject,
 
     private var currentLocale: Locale {
         languageManager?.locale ?? .current
-    }
-    
-    @MainActor
-    func togglePremium() {
-        #if DEBUG
-        subscriptionManager?.debugTogglePro()
-        #endif
     }
     
     // MARK: Loading (splash tra stanza e partita)
@@ -125,24 +117,6 @@ final class GameViewModel: ObservableObject,
     @Published private var todText: String? = nil
     private var todTruths: [String] = []
     private var todDares: [String] = []
-    
-    // ============================================================
-    // MARK: Premium (via SubscriptionManager)
-    // ============================================================
-    @Published var subscriptionManager: SubscriptionManager?
-    var premiumUnlocked: Bool {
-        !SubscriptionManager.paywallsEnabled || (subscriptionManager?.isPro ?? false)
-    }
-    
-    // Identificatori placement Superwall
-    struct PaywallPlacement {
-        static let afterPlayerSetup = "after_player_setup_continue"
-        static let roomSelectionGate = "room_selection_premium_gate"
-        static let afterGameOver = "after_game_over_continue"
-    }
-    
-    // Quando valorizzato, la View deve presentare il paywall corrispondente
-    @Published var requestedPaywallPlacement: String? = nil
     
     // ============================================================
     // MARK: Init
@@ -239,12 +213,6 @@ final class GameViewModel: ObservableObject,
         }
     }
     
-    func isRoomPremium(_ room: GameRoom) -> Bool { room != .party }
-    
-    func isPremium(_ room: GameRoom) -> Bool {
-        return isRoomPremium(room)
-    }
-    
     func goBack() {
         switch gameState {
         case .onboardingMood: gameState = .onboardingWho
@@ -263,10 +231,6 @@ final class GameViewModel: ObservableObject,
     }
     
     func select(room: GameRoom) {
-        if isRoomPremium(room) && !premiumUnlocked {
-            requestedPaywallPlacement = PaywallPlacement.roomSelectionGate
-            return
-        }
         startLoadingAndEnter(room: room)
     }
     
@@ -354,9 +318,6 @@ final class GameViewModel: ObservableObject,
     }
     
     func openSettings() { }
-    func openPaywall() {
-        requestedPaywallPlacement = PaywallPlacement.afterPlayerSetup
-    }
     
     func addPlayers() { gameState = .playerSetup }
     func isRoomLocked(_ room: GameRoom) -> Bool { room == .darkRoom }
@@ -381,7 +342,7 @@ final class GameViewModel: ObservableObject,
     // ============================================================
     // MARK: GameSelectionRouting
     // ============================================================
-    var availableGames: [GameType] { [.truthOrDare, .wouldYouRather, .neverHaveIEver, .priceGame, .miniChallenges] }
+    var availableGames: [GameType] { [.truthOrDare, .wouldYouRather, .neverHaveIEver, .priceGame] }
     var gameSelectionTitle: String { String.frenzLocalized("gameSelectionTitle", locale: currentLocale) }
     var startMatchTitle: String { String.frenzLocalized("startMatch", locale: currentLocale) }
     
@@ -563,11 +524,7 @@ final class GameViewModel: ObservableObject,
     func backToRooms() { gameState = .roomSelection }
     
     func continueFromGameOver() {
-        if premiumUnlocked {
-            backToRooms()
-        } else {
-            requestedPaywallPlacement = PaywallPlacement.afterGameOver
-        }
+        backToRooms()
     }
     
     // ============================================================
@@ -808,34 +765,5 @@ final class GameViewModel: ObservableObject,
             s = s.replacingOccurrences(of: "{count}", with: String(Int.random(in: 1...5)))
         }
         return s
-    }
-}
-
-extension GameViewModel {
-    // MARK: - Helper per il layer di UI (Superwall)
-    func requestPaywallAfterPlayerSetup() {
-        requestedPaywallPlacement = PaywallPlacement.afterPlayerSetup
-    }
-    
-    func requestPaywallForRoomGate() {
-        requestedPaywallPlacement = PaywallPlacement.roomSelectionGate
-    }
-    
-    func requestPaywallAfterGameOver() {
-        requestedPaywallPlacement = PaywallPlacement.afterGameOver
-    }
-    
-    func clearRequestedPaywall() {
-        requestedPaywallPlacement = nil
-    }
-    
-    func paywallDismissed(didPurchase: Bool) {
-        if didPurchase {
-            subscriptionManager?.refreshEntitlements()
-        }
-        requestedPaywallPlacement = nil
-        if didPurchase, gameState == .gameOver {
-            backToRooms()
-        }
     }
 }

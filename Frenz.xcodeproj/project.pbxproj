@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		D695FEE72E7AC38300E1D590 /* SuperwallKit in Frameworks */ = {isa = PBXBuildFile; productRef = D695FEE62E7AC38300E1D590 /* SuperwallKit */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		D63816DC2E5F41E70017A5DB /* Frenz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frenz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -18,6 +14,47 @@
 		D6CEE9762E70145900A7ED07 /* Exceptions for "Frenz" folder in "Frenz" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				"Assets/Bacio.png",
+				"Assets/ChatGPT Image 11 apr 2025, 19_12_04.png",
+				"Assets/ChatGPT Image 11 apr 2025, 19_21_37.png",
+				"Assets/ChatGPT Image 11 apr 2025, 19_23_32.png",
+				"Assets/ChatGPT Image 11 apr 2025, 20_41_15.png",
+				"Assets/ChatGPT Image 12 mag 2025, 21_34_55.png",
+				"Assets/ChatGPT Image 13 apr 2025, 14_23_03.png",
+				"Assets/ChatGPT Image 13 apr 2025, 18_41_06.png",
+				"Assets/ChatGPT Image 13 apr 2025, 20_50_07.png",
+				"Assets/ChatGPT Image 14 apr 2025, 20_30_46.png",
+				"Assets/ChatGPT Image 14 apr 2025, 20_49_38.png",
+				"Assets/ChatGPT Image 14 apr 2025, 20_57_58.png",
+				"Assets/ChatGPT Image 15 apr 2025, 19_19_41.png",
+				"Assets/ChatGPT Image 17 apr 2025, 21_29_40.png",
+				"Assets/ChatGPT Image 17 apr 2025, 21_29_43.png",
+				"Assets/ChatGPT Image 18 apr 2025, 20_15_23.png",
+				"Assets/ChatGPT Image 18 apr 2025, 20_20_09.png",
+				"Assets/ChatGPT Image 18 apr 2025, 20_30_28.png",
+				"Assets/ChatGPT Image 18 apr 2025, 20_32_53.png",
+				"Assets/ChatGPT Image 18 apr 2025, 20_45_29.png",
+				"Assets/ChatGPT Image 18 apr 2025, 21_02_13.png",
+				"Assets/ChatGPT Image 18 apr 2025, 21_18_02.png",
+				"Assets/ChatGPT Image 22 apr 2025, 19_55_39.png",
+				"Assets/ChatGPT Image 24 apr 2025, 21_26_42.png",
+				"Assets/ChatGPT Image 25 apr 2025, 15_12_12.png",
+				"Assets/ChatGPT Image 25 apr 2025, 15_29_23.png",
+				"Assets/ChatGPT Image 25 apr 2025, 15_43_51.png",
+				"Assets/ChatGPT Image 25 apr 2025, 16_20_53.png",
+				"Assets/ChatGPT Image 26 apr 2025, 00_09_08.png",
+				"Assets/ChatGPT Image 26 apr 2025, 12_57_53.png",
+				"Assets/ChatGPT Image 27 mag 2025, 21_49_43.png",
+				"Assets/ChatGPT Image 3 mag 2025, 18_41_46.png",
+				"Assets/Cielo sereno con nuvole soffici.png",
+				"Assets/Collana choker in pelle nera con punte.png",
+				"Assets/Scorpione d_oro su sfondo trasparente.png",
+				Assets/bocca_frienz.png,
+				Assets/ic_premium_crown_glasses.png,
+				Assets/ic_premium_sparkles.png,
+				Assets/ic_room_roulette_2.png,
+				Assets/lucchetto.psd,
+				Assets/noun-lock-7773507.svg,
 				Info.plist,
 			);
 			target = D63816DB2E5F41E70017A5DB /* Frenz */;
@@ -40,7 +77,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D695FEE72E7AC38300E1D590 /* SuperwallKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +119,6 @@
 			);
 			name = Frenz;
 			packageProductDependencies = (
-				D695FEE62E7AC38300E1D590 /* SuperwallKit */,
 			);
 			productName = Frenz;
 			productReference = D63816DC2E5F41E70017A5DB /* Frenz.app */;
@@ -116,9 +151,6 @@
 			);
 			mainGroup = D63816D32E5F41E70017A5DB;
 			minimizedProjectReferenceProxies = 1;
-			packageReferences = (
-				D695FEE52E7AC38300E1D590 /* XCRemoteSwiftPackageReference "Superwall-iOS" */,
-			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D63816DD2E5F41E70017A5DB /* Products */;
 			projectDirPath = "";
@@ -351,25 +383,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		D695FEE52E7AC38300E1D590 /* XCRemoteSwiftPackageReference "Superwall-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/superwall/Superwall-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.12.11;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		D695FEE62E7AC38300E1D590 /* SuperwallKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D695FEE52E7AC38300E1D590 /* XCRemoteSwiftPackageReference "Superwall-iOS" */;
-			productName = SuperwallKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D63816D42E5F41E70017A5DB /* Project object */;
 }

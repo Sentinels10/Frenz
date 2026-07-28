@@ -130,15 +130,32 @@ struct GameOverView<VM: PlayingRouting>: View {
             }
         }
         .contentShape(Rectangle())                 // per il tap su tutta la schermata
-        .onTapGesture { vm.requestPaywallAfterGameOver() } // tap = nuovo Superwall-aware flow
+        .onTapGesture { vm.continueFromGameOver() }
         .onAppear {
             float = true
-            // Mostra il popup di rating subito sopra al GameOver (con un piccolo delay per sicurezza)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-                requestAppReview()
-            }
+            registerCompletedMatchAndRequestReviewIfAppropriate()
         }
     }
+
+    /// Evita di richiedere una recensione dopo ogni partita. La richiesta viene
+    /// effettuata una sola volta per versione, dopo che l'utente ha concluso
+    /// almeno tre partite.
+    private func registerCompletedMatchAndRequestReviewIfAppropriate() {
+        let defaults = UserDefaults.standard
+        let completedMatchesKey = "review.completedMatches"
+        let completedMatches = defaults.integer(forKey: completedMatchesKey) + 1
+        defaults.set(completedMatches, forKey: completedMatchesKey)
+
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "unknown"
+        let requestedKey = "review.requested.\(version)"
+        guard completedMatches >= 3, !defaults.bool(forKey: requestedKey) else { return }
+
+        defaults.set(true, forKey: requestedKey)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            requestAppReview()
+        }
+    }
+
     // Chiede il popup nativo di rating sopra il GameOver
     private func requestAppReview() {
         guard let scene = UIApplication.shared.connectedScenes
