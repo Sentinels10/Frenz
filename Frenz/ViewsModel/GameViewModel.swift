@@ -7,6 +7,8 @@ enum GameState: Equatable {
     case onboardingWho
     case onboardingMood
     case languageSelection
+    case privacyPolicy
+    case termsOfUse
     case playerSetup
     case roomSelection
     case gameSelection
@@ -66,6 +68,7 @@ final class GameViewModel: ObservableObject,
     
     // PlayerB per azione
     private var secondaryByIndex: [Int: Int] = [:]
+    private var renderedActionByIndex: [Int: String] = [:]
     
     private var currentMainPlayerIndex: Int? {
         guard !players.isEmpty, !playerOrder.isEmpty else { return nil }
@@ -182,6 +185,8 @@ final class GameViewModel: ObservableObject,
     }
     
     func openLanguageSelector() { gameState = .languageSelection }
+    func openPrivacyPolicy() { gameState = .privacyPolicy }
+    func openTermsOfUse() { gameState = .termsOfUse }
     
     // ============================================================
     // MARK: RoomSelectionRouting
@@ -220,6 +225,7 @@ final class GameViewModel: ObservableObject,
         case .gameSelection: gameState = .roomSelection
         case .roomSelection: gameState = .playerSetup
         case .languageSelection: gameState = .playerSetup
+        case .privacyPolicy, .termsOfUse: gameState = .languageSelection
         case .playing: gameState = .roomSelection
         case .gameOver: gameState = .roomSelection
         default: break
@@ -425,23 +431,24 @@ final class GameViewModel: ObservableObject,
     }
     
     var currentRenderedActionText: String? {
-        guard var s = currentActionText else { return nil }
-        ensureSecondaryForCurrentIndexIfNeeded(in: s)
+        if let rendered = renderedActionByIndex[currentIndex] { return rendered }
+        guard let text = currentActionText else { return nil }
         let main = currentPlayerName ?? ""
-        let sec = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
-        s = s.replacingOccurrences(of: "{player}", with: main)
-            .replacingOccurrences(of: "{PLAYER}", with: main.uppercased())
-            .replacingOccurrences(of: "{playerB}", with: sec)
-            .replacingOccurrences(of: "{PLAYERB}", with: sec.uppercased())
-            .replacingOccurrences(of: "{player2}", with: sec)
-            .replacingOccurrences(of: "{PLAYER2}", with: sec.uppercased())
-        if let p = currentPenalty {
-            s = s.replacingOccurrences(of: "{penalty}", with: String(p))
+        let otherIndices = players.indices.filter { $0 != currentMainPlayerIndex }.shuffled()
+        if let secondary = otherIndices.first {
+            secondaryByIndex[currentIndex] = secondary
         }
-        if s.contains("{count}") {
-            s = s.replacingOccurrences(of: "{count}", with: String(Int.random(in: 1...5)))
-        }
-        return s
+        let rendered = ActionTextRenderer.render(
+            text,
+            mainPlayer: main,
+            otherPlayers: otherIndices.map { players[$0] },
+            includeMainForAnonymousPlayers: actions[currentIndex].game == "penitenzeGruppo",
+            language: language,
+            penalty: currentPenalty,
+            count: Int.random(in: 1...5)
+        )
+        renderedActionByIndex[currentIndex] = rendered
+        return rendered
     }
     
     var hasMoreActions: Bool { currentIndex < actions.count }
@@ -514,7 +521,7 @@ final class GameViewModel: ObservableObject,
         actions.removeAll(); currentIndex = 0
         currentGame = nil; currentRoom = nil
         players.removeAll(); playerOrder.removeAll(); playerCursor = 0
-        secondaryByIndex.removeAll()
+        secondaryByIndex.removeAll(); renderedActionByIndex.removeAll()
         todActive = false; todText = nil; todTruths.removeAll(); todDares.removeAll()
         gameState = .gameOver
     }
@@ -617,7 +624,7 @@ final class GameViewModel: ObservableObject,
     private func resetDeck(with new: [GameAction]) {
         actions = new
         currentIndex = 0
-        secondaryByIndex.removeAll()
+        secondaryByIndex.removeAll(); renderedActionByIndex.removeAll()
         todActive = false; todText = nil; todTruths.removeAll(); todDares.removeAll()
         if !players.isEmpty { reseedPlayerOrder() }
     }
@@ -632,22 +639,6 @@ final class GameViewModel: ObservableObject,
     
     private func advancePlayer() {
         playerCursor += 1
-    }
-    
-    private func ensureSecondaryForCurrentIndexIfNeeded(in text: String) {
-        let needsSec = text.contains("{playerB}") || text.contains("{PLAYERB}") ||
-                       text.contains("{player2}") || text.contains("{PLAYER2}")
-        guard needsSec, secondaryByIndex[currentIndex] == nil else { return }
-        guard let main = currentMainPlayerIndex else { return }
-        let others = players.indices.filter { $0 != main }
-        if let picked = others.randomElement() {
-            secondaryByIndex[currentIndex] = picked
-        }
-    }
-    
-    private func otherRandomPlayerName(excluding name: String) -> String? {
-        let pool = players.filter { $0 != name }
-        return pool.randomElement()
     }
     
     nonisolated private static func injectSpecialGames(
@@ -748,22 +739,17 @@ final class GameViewModel: ObservableObject,
     
     private func renderTODPrompt(pickFrom source: [String]) -> String {
         let base = source.randomElement() ?? ""
-        var s = base
-        ensureSecondaryForCurrentIndexIfNeeded(in: s)
         let main = todCurrentPlayerName ?? currentPlayerName ?? ""
-        let sec = currentSecondaryPlayerName ?? otherRandomPlayerName(excluding: main) ?? ""
-        s = s.replacingOccurrences(of: "{player}", with: main)
-            .replacingOccurrences(of: "{PLAYER}", with: main.uppercased())
-            .replacingOccurrences(of: "{playerB}", with: sec)
-            .replacingOccurrences(of: "{PLAYERB}", with: sec.uppercased())
-            .replacingOccurrences(of: "{player2}", with: sec)
-            .replacingOccurrences(of: "{PLAYER2}", with: sec.uppercased())
-        if let p = currentPenalty {
-            s = s.replacingOccurrences(of: "{penalty}", with: String(p))
-        }
-        if s.contains("{count}") {
-            s = s.replacingOccurrences(of: "{count}", with: String(Int.random(in: 1...5)))
-        }
-        return s
+        let currentTODIndex = todActive && todCursor < todOrder.count ? todOrder[todCursor] : currentMainPlayerIndex
+        let others = players.indices.filter { $0 != currentTODIndex }.shuffled().map { players[$0] }
+        return ActionTextRenderer.render(
+            base,
+            mainPlayer: main,
+            otherPlayers: others,
+            includeMainForAnonymousPlayers: false,
+            language: language,
+            penalty: currentPenalty,
+            count: Int.random(in: 1...5)
+        )
     }
 }

@@ -5,6 +5,8 @@
 "changeLanguage" = "Cambiar idioma";
 "languageSelectTitle" = "Elige tu idioma";
 "language.system" = "Automático";
+"legal.privacy" = "Política de privacidad";
+"legal.terms" = "Términos de uso";
 "close" = "Cerrar";
 
 /* Player Setup */

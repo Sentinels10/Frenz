@@ -9,37 +9,22 @@
 "changeLanguage" = "Change language";
 "languageSelectTitle" = "Choose your language";
 "language.system" = "Automatic";
+"legal.privacy" = "Privacy Policy";
+"legal.terms" = "Terms of Use";
 
 /* ===== Language Selection View ===== */
-"languageSelectTitle" = "Choose your language";
 "close" = "Close";
-"playerInputPlaceholder" = "Player name";
 
 /* ===== Player Setup View ===== */
 "playerInputPlaceholder" = "Player name";
 "addPlayerLabel" = "Add player";
 "backButton" = "Back";
 "notEnoughPlayersError" = "Add at least two players";
-"roomSelectionTitle" = "Choose a room";
 
 /* ===== Room Selection View ===== */
 "roomSelectionTitle" = "Choose a room";
-"continue" = "Continue";
 
 /* Rooms — Titles & Subtitles (standard case) */
-"room.party.title" = "Party";
-"room.red.title" = "Red Room";
-"room.dark.title" = "Dark Room";
-"room.partner.title" = "Partner";
-"room.roulette.title" = "Roulette";
-
-"room.party.subtitle" = "Light, social, to warm up the night.";
-"room.red.subtitle" = "Spicy and provocative—play with consent.";
-"room.dark.subtitle" = "Drama, secrets, fears: confess with no filters.";
-"room.partner.subtitle" = "Challenges for couples: chemistry and spice.";
-"room.roulette.subtitle" = "Random mix of every mode.";
-"room.games.title" = "Games";
-"room.games.subtitle" = "Hub for minigames and special variants.";
 "roomSelection.title" = "Choose the room";
 "roomSelection.addPlayers" = "Add players";
 
@@ -66,20 +51,15 @@
 "playing.counter"         = "%d/%d";
 
 /* ===== Playing View ===== */
-"playing.counter" = "%d/%d";
 "tod.dare"  = "DARE";
 "tod.truth" = "TRUTH";
 "tod.done"  = "DONE";
-"gameOver.part1" = "GAME";
-
 /* ===== Game Over View ===== */
 "gameOver.part1" = "GAME";
 "gameOver.part2" = "OVER!";
-"onboarding.skip" = "Skip";
 
 /* ===== Onboarding View ===== */
 "onboarding.skip" = "Skip";
-"playing.counter" = "%d/%d";
 "onboarding.intro.tile.1v1" = "1v1!";
 "onboarding.intro.tile.wyr" = "WOULD YOU RATHER?";
 "onboarding.intro.tile.tod" = "TRUTH\nOR DARE?";

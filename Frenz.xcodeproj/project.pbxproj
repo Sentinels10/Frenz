@@ -14,7 +14,9 @@
 		D6CEE9762E70145900A7ED07 /* Exceptions for "Frenz" folder in "Frenz" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				"Assets/Bacio.png",
+				Assets/Bacio.png,
+				Assets/bocca_frienz.png,
+				"Assets/ChatGPT Image 3 mag 2025, 18_41_46.png",
 				"Assets/ChatGPT Image 11 apr 2025, 19_12_04.png",
 				"Assets/ChatGPT Image 11 apr 2025, 19_21_37.png",
 				"Assets/ChatGPT Image 11 apr 2025, 19_23_32.png",
@@ -45,16 +47,14 @@
 				"Assets/ChatGPT Image 26 apr 2025, 00_09_08.png",
 				"Assets/ChatGPT Image 26 apr 2025, 12_57_53.png",
 				"Assets/ChatGPT Image 27 mag 2025, 21_49_43.png",
-				"Assets/ChatGPT Image 3 mag 2025, 18_41_46.png",
 				"Assets/Cielo sereno con nuvole soffici.png",
 				"Assets/Collana choker in pelle nera con punte.png",
-				"Assets/Scorpione d_oro su sfondo trasparente.png",
-				Assets/bocca_frienz.png,
 				Assets/ic_premium_crown_glasses.png,
 				Assets/ic_premium_sparkles.png,
 				Assets/ic_room_roulette_2.png,
 				Assets/lucchetto.psd,
-				Assets/noun-lock-7773507.svg,
+				"Assets/noun-lock-7773507.svg",
+				"Assets/Scorpione d_oro su sfondo trasparente.png",
 				Info.plist,
 			);
 			target = D63816DB2E5F41E70017A5DB /* Frenz */;

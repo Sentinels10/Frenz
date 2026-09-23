@@ -17,6 +17,8 @@ public protocol LanguageSelectionRouting: ObservableObject {
     var language: String { get }
     func selectLanguage(_ code: String)
     func closeLanguageSelector()
+    func openPrivacyPolicy()
+    func openTermsOfUse()
     func goBack()
 }
 

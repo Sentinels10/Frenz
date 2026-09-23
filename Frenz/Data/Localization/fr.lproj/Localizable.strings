@@ -9,37 +9,22 @@
 "changeLanguage" = "Changer de langue";
 "languageSelectTitle" = "Choisis ta langue";
 "language.system" = "Automatique";
+"legal.privacy" = "Politique de confidentialité";
+"legal.terms" = "Conditions d’utilisation";
 
 /* ===== Language Selection View ===== */
-"languageSelectTitle" = "Choisis ta langue";
 "close" = "Fermer";
-"playerInputPlaceholder" = "Nom du joueur";
 
 /* ===== Player Setup View ===== */
 "playerInputPlaceholder" = "Nom du joueur";
 "addPlayerLabel" = "Ajouter un joueur";
 "backButton" = "Retour";
 "notEnoughPlayersError" = "Ajoute au moins deux joueurs";
-"roomSelectionTitle" = "Choisis une salle";
 
 /* ===== Room Selection View ===== */
 "roomSelectionTitle" = "Choisis une salle";
-"continue" = "Continuer";
 
 /* Rooms - Titles & Subtitles (standard case) */
-"room.party.title" = "Party";
-"room.red.title" = "Red Room";
-"room.dark.title" = "Dark Room";
-"room.partner.title" = "Partner";
-"room.roulette.title" = "Roulette";
-
-"room.party.subtitle" = "Légère et sociale, pour lancer la soirée.";
-"room.red.subtitle" = "Épicée et provocante, joue avec consentement.";
-"room.dark.subtitle" = "Drama, secrets, peurs : avoue sans filtre.";
-"room.partner.subtitle" = "Défis pour couples : complicité et piquant.";
-"room.roulette.subtitle" = "Mélange aléatoire de tous les modes.";
-"room.games.title" = "Jeux";
-"room.games.subtitle" = "Hub de mini-jeux et de variantes spéciales.";
 "roomSelection.title" = "Choisis la salle";
 "roomSelection.addPlayers" = "Ajouter des joueurs";
 
@@ -66,20 +51,15 @@
 "playing.counter"         = "%d/%d";
 
 /* ===== Playing View ===== */
-"playing.counter" = "%d/%d";
 "tod.dare"  = "ACTION";
 "tod.truth" = "VÉRITÉ";
 "tod.done"  = "FAIT";
-"gameOver.part1" = "PARTIE";
-
 /* ===== Game Over View ===== */
 "gameOver.part1" = "PARTIE";
 "gameOver.part2" = "TERMINÉE !";
-"onboarding.skip" = "Passer";
 
 /* ===== Onboarding View ===== */
 "onboarding.skip" = "Passer";
-"playing.counter" = "%d/%d";
 "onboarding.intro.tile.1v1" = "1v1 !";
 "onboarding.intro.tile.wyr" = "TU PRÉFÈRES ?";
 "onboarding.intro.tile.tod" = "ACTION\nOU VÉRITÉ ?";

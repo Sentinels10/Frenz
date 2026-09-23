@@ -22,6 +22,14 @@ struct ContentView: View {
                 LanguageSelectionView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)
 
+            case .privacyPolicy:
+                LegalDocumentView(document: .privacyPolicy, vm: gameVM)
+                    .routeTransition(trigger: gameVM.gameState)
+
+            case .termsOfUse:
+                LegalDocumentView(document: .termsOfUse, vm: gameVM)
+                    .routeTransition(trigger: gameVM.gameState)
+
             case .playerSetup:
                 PlayerSetupView(vm: gameVM)
                     .routeTransition(trigger: gameVM.gameState)

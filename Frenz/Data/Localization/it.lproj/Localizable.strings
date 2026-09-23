@@ -9,34 +9,19 @@
 "changeLanguage" = "Cambia lingua";
 "languageSelectTitle" = "Scegli la lingua";
 "language.system" = "Automatico";
+"legal.privacy" = "Privacy Policy";
+"legal.terms" = "Termini di utilizzo";
 /* ===== Language Selection View ===== */
-"languageSelectTitle" = "Scegli la lingua";
 "close" = "Chiudi";
-"playerInputPlaceholder" = "Nome giocatore";
 /* ===== Player Setup View ===== */
 "playerInputPlaceholder" = "Nome giocatore";
 "addPlayerLabel" = "Aggiungi giocatore";
 "backButton" = "Indietro";
 "notEnoughPlayersError" = "Aggiungi almeno due giocatori";
-"roomSelectionTitle" = "Scegli la stanza";
 /* ===== Room Selection View ===== */
 "roomSelectionTitle" = "Scegli la stanza";
-"continue" = "Avanti";
 
 /* Rooms — Titles & Subtitles (standard case) */
-"room.party.title" = "Party";
-"room.red.title" = "Red Room";
-"room.dark.title" = "Dark Room";
-"room.partner.title" = "Partner";
-"room.roulette.title" = "Roulette";
-
-"room.party.subtitle" = "Leggera, sociale, per scaldare la serata.";
-"room.red.subtitle" = "Piccante e provocante, gioca con il consenso.";
-"room.dark.subtitle" = "Drama, segreti, paure: confessa senza filtri.";
-"room.partner.subtitle" = "Sfide per coppie: complicità e pepe.";
-"room.roulette.subtitle" = "Mix casuale di tutte le modalità.";
-"room.games.title" = "Giochi";
-"room.games.subtitle" = "Hub dei minigiochi e varianti speciali.";
 "roomSelection.title" = "Scegli la stanza";
 "roomSelection.addPlayers" = "Aggiungi giocatori";
 
@@ -62,18 +47,14 @@
 "continue" = "Continua";
 "playing.counter" = "%d/%d";
 /* ===== Playing View ===== */
-"playing.counter" = "%d/%d";
 "tod.dare" = "OBBLIGO";
 "tod.truth" = "VERITÀ";
 "tod.done" = "FATTO";
-"gameOver.part1" = "PARTITA";
 /* ===== Game Over View ===== */
 "gameOver.part1" = "PARTITA";
 "gameOver.part2" = "FINITA!";
-"onboarding.skip" = "Salta";
 /* ===== Onboarding View ===== */
 "onboarding.skip" = "Salta";
-"playing.counter" = "%d/%d";
 "onboarding.intro.tile.1v1" = "1v1!";
 "onboarding.intro.tile.wyr" = "PREFERIRESTI?";
 "onboarding.intro.tile.tod" = "OBBLIGO\nO VERITÀ?";

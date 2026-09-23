@@ -53,7 +53,19 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
     }
 
     private var footer: some View {
-        VStack {
+        VStack(spacing: 12) {
+            HStack(spacing: 18) {
+                Button(action: vm.openPrivacyPolicy) {
+                    Text(String.frenzLocalized("legal.privacy", locale: lang.locale))
+                }
+                Button(action: vm.openTermsOfUse) {
+                    Text(String.frenzLocalized("legal.terms", locale: lang.locale))
+                }
+            }
+            .font(.system(size: 13, weight: .medium))
+            .foregroundColor(.white.opacity(0.72))
+            .buttonStyle(.plain)
+
             Button(action: { vm.goBack() }) {
                 Text(vm.closeTitle)
                     .font(.system(size: 17, weight: .semibold))
@@ -64,7 +76,7 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
                     .cornerRadius(10)
             }
             .padding(.horizontal, 20)
-            .padding(.vertical, 20)
+            .padding(.bottom, 20)
         }
         .background(Color.black)
     }
