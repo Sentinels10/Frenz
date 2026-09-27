@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PlayerSetupView<VM: PlayerSetupRouting>: View {
     @ObservedObject var vm: VM
+    @State private var focusPlayerID: Int?
 
     var body: some View {
         ZStack {
@@ -32,8 +33,12 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                                 text: p.name,
                                 placeholder: vm.playerInputPlaceholder,
                                 isDuplicate: isDuplicateName(p.name),
+                                shouldFocus: focusPlayerID == p.id,
                                 onChange: { vm.updatePlayerName(id: p.id, name: $0) },
                                 onRemove: {
+                                    if focusPlayerID == p.id {
+                                        focusPlayerID = nil
+                                    }
                                     withAnimation(.spring(response: 0.25)) {
                                         vm.removePlayerInput(id: p.id)
                                     }
@@ -42,7 +47,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                         }
 
                         // Aggiungi un giocatore
-                        Button(action: { withAnimation(.spring(response: 0.25)) { vm.addPlayerInput() } }) {
+                        Button(action: addPlayerAndFocus) {
                             HStack(spacing: 10) {
                                 Text(vm.addPlayerLabel)
                                     .font(.rammetto(size: 15))
@@ -126,6 +131,16 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
         .padding(.top, 12)
         
     }
+
+    private func addPlayerAndFocus() {
+        guard vm.inputPlayers.count < 15 else { return }
+
+        let nextID = (vm.inputPlayers.map(\.id).max() ?? 0) + 1
+        focusPlayerID = nextID
+        withAnimation(.spring(response: 0.25)) {
+            vm.addPlayerInput()
+        }
+    }
     
 
 
@@ -168,8 +183,10 @@ private struct PlayerFieldRow: View {
     @State var text: String
     let placeholder: String
     let isDuplicate: Bool
+    let shouldFocus: Bool
     let onChange: (String) -> Void
     let onRemove: () -> Void
+    @FocusState private var isFocused: Bool
 
     var body: some View {
         ZStack {
@@ -191,6 +208,7 @@ private struct PlayerFieldRow: View {
                     }
                     TextField("", text: $text)
                         .onChange(of: text) { onChange(text) }   // compat iOS16/17
+                        .focused($isFocused)
                         .textInputAutocapitalization(.words)
                         .disableAutocorrection(true)
                         .foregroundColor(.white)
@@ -209,6 +227,12 @@ private struct PlayerFieldRow: View {
                 .padding(.trailing, 8)
             }
         }
+        .onAppear {
+            focusIfNeeded()
+        }
+        .onChange(of: shouldFocus) { _ in
+            focusIfNeeded()
+        }
         .frame(height: 56)
         .overlay(
             Group {
@@ -223,5 +247,13 @@ private struct PlayerFieldRow: View {
                 }
             }
         )
+    }
+
+    private func focusIfNeeded() {
+        guard shouldFocus else { return }
+
+        DispatchQueue.main.async {
+            isFocused = true
+        }
     }
 }

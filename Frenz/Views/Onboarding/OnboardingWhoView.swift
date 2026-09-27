@@ -26,7 +26,11 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                 Text(vm.obWhoTitle)
                     .font(.rammetto(size: 23))
                     .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
                     .padding(.top, 4)
+                    .frame(height: 58, alignment: .top)
                 
                 Spacer(minLength: 12)
                 

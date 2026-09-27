@@ -106,9 +106,10 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
 
                     // Footer “piatto”, senza capsule né sfondi colorati
                     HStack(spacing: 12) {
-                        assetOrSymbol("ic_addplayers_left", system: "person.2.fill")
+                        Image(systemName: "person.3.fill")
+                            .resizable()
                             .scaledToFit()
-                            .frame(width: 22, height: 22)
+                            .frame(width: 27, height: 27)
                             .foregroundColor(.white)
 
                         Spacer(minLength: 0)

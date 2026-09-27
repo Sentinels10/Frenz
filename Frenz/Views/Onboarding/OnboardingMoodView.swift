@@ -31,6 +31,7 @@ struct OnboardingMoodView<VM: OnboardingRouting>: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.horizontal, 28)
                     .padding(.top, 4)
+                    .frame(height: 58, alignment: .top)
                 
                 Spacer(minLength: 12)
                 
