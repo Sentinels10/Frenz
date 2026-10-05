@@ -177,8 +177,10 @@ final class GameViewModel: ObservableObject,
     }
     
     func startGame() {
-        let clean = inputPlayers.map { $0.name.trimmingCharacters(in: .whitespacesAndNewlines) }.filter { !$0.isEmpty }
-        guard clean.count >= 2 else { return }
+        let clean = inputPlayers.map { $0.name.trimmingCharacters(in: .whitespacesAndNewlines) }
+        guard clean.count >= 2,
+              clean.allSatisfy({ !$0.isEmpty }),
+              Set(clean.map { $0.lowercased() }).count == clean.count else { return }
         players = clean
         reseedPlayerOrder()
         gameState = .roomSelection

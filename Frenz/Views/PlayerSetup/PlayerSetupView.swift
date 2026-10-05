@@ -167,13 +167,12 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
     }
 
     private var canContinue: Bool {
-        let filled = vm.inputPlayers
+        let names = vm.inputPlayers
             .map { normalized($0.name) }
-            .filter { !$0.isEmpty }
 
-        let unique = Set(filled)
-        // Almeno 2 nomi non vuoti, nessun duplicato
-        return filled.count >= 2 && duplicateNameKeys.isEmpty && unique.count == filled.count
+        let unique = Set(names)
+        // Almeno 2 giocatori, tutti con un nome non vuoto e senza duplicati
+        return names.count >= 2 && names.allSatisfy { !$0.isEmpty } && unique.count == names.count
     }
 }
 
