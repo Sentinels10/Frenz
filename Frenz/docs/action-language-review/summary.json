@@ -1,0 +1,37 @@
+{
+  "complete": true,
+  "total_entries": 4294,
+  "total_texts": 17176,
+  "checked_entries": 4294,
+  "checked_texts": 17176,
+  "modified_entries": 3448,
+  "checked_unchanged_entries": 846,
+  "modified_texts_by_language": {
+    "it": 45,
+    "en": 1486,
+    "es": 2983,
+    "fr": 2669
+  },
+  "corrected_translations": 7138,
+  "remaining_entries": 0,
+  "states_by_language": {
+    "it": {
+      "VALIDATED": 45,
+      "CHECKED_UNCHANGED": 4249
+    },
+    "en": {
+      "VALIDATED": 1486,
+      "CHECKED_UNCHANGED": 2808
+    },
+    "es": {
+      "VALIDATED": 2983,
+      "CHECKED_UNCHANGED": 1311
+    },
+    "fr": {
+      "VALIDATED": 2669,
+      "CHECKED_UNCHANGED": 1625
+    }
+  },
+  "removed_entries": 43,
+  "historical_total_entries": 4337
+}

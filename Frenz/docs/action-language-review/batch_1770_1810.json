@@ -1,0 +1,12 @@
+{
+  "start": 1770, "end": 1810, "second_pass": true,
+  "edits": {
+    "1770": {"en": {"prefix": "Would you rather be chased by a hungry lion or locked for ten minutes in a cage with a mad ostrich?", "reason": "Preposizione mancante davanti alla durata."}},
+    "1772": {"es": {"prefix": "¿Preferirías lamer una barra de desodorante usada o el asiento del váter de un restaurante de comida rápida?", "reason": "Tavoletta del water: asiento, non tapa."}},
+    "1776": {"en": {"prefix": "Would you rather eat a piece of toast with live ants on it or drink juice that expired three weeks ago?", "reason": "Toast non numerabile; correzione del calco sulla scadenza."}},
+    "1793": {"fr": {"prefix": "Préférez-vous que tout le monde puisse lire vos pensées ou pouvoir lire vous-même celles des autres sans pouvoir les ignorer ?", "reason": "Ripara la sintassi e il soggetto della seconda alternativa."}},
+    "1794": {"fr": null},
+    "1797": {"fr": {"prefix": "Préférez-vous être tagué dans une vidéo virale pendant que vous dansez très mal ou pleurez en étant bourré ?", "reason": "Tagué rende essere taggato; ripara avverbio e sintassi."}},
+    "1805": {"es": {"prefix": "¿Prefieres que tu crush vea tus peores posts o que tus padres lean tu chat de grupo más cutre?", "reason": "Basura è un calco innaturale; posts preserva il contenuto originale."}}
+  }
+}

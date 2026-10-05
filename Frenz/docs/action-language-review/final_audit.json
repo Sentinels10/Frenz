@@ -1,0 +1,105 @@
+{
+  "completed_at": "2026-10-05T09:58:22.634888+00:00",
+  "status": "COMPLETED",
+  "summary": {
+    "complete": true,
+    "total_entries": 4294,
+    "total_texts": 17176,
+    "checked_entries": 4294,
+    "checked_texts": 17176,
+    "modified_entries": 3448,
+    "checked_unchanged_entries": 846,
+    "modified_texts_by_language": {
+      "it": 45,
+      "en": 1486,
+      "es": 2983,
+      "fr": 2669
+    },
+    "corrected_translations": 7138,
+    "remaining_entries": 0,
+    "states_by_language": {
+      "it": {
+        "VALIDATED": 45,
+        "CHECKED_UNCHANGED": 4249
+      },
+      "en": {
+        "VALIDATED": 1486,
+        "CHECKED_UNCHANGED": 2808
+      },
+      "es": {
+        "VALIDATED": 2983,
+        "CHECKED_UNCHANGED": 1311
+      },
+      "fr": {
+        "VALIDATED": 2669,
+        "CHECKED_UNCHANGED": 1625
+      }
+    },
+    "removed_entries": 43,
+    "historical_total_entries": 4337
+  },
+  "database_sha256": {
+    "it": "55d57c77e21704482e94fe7bf733a3959634cc8cb0a48c20c3830ca6131b60d5",
+    "en": "c22b2cea5618a3d91a251289dc9a96c53ca39135b18564fca9d39a8d810c0e48",
+    "es": "a0e56c07ea277ae272a25d4c91e4db770cd62a1802cded090f82ca0d161c3c60",
+    "fr": "ddaf1026b3f97a055ef2f57f2ab373383483d81987eeb97ba50ca9bb2454073a"
+  },
+  "checks": {
+    "all_records_and_languages_reviewed": true,
+    "no_missing_or_duplicate_ids": true,
+    "all_validated_revisions_applied": true,
+    "originals_preserved_in_report": true,
+    "numbers_and_placeholders_preserved_or_explicitly_restored": true,
+    "all_resume_batches_second_pass_reviewed": true,
+    "non_text_structure_unchanged_except_authorized_record_removals": true,
+    "canonical_ambiguities_reviewed_and_removed": true
+  },
+  "content_ambiguities_preserved": [],
+  "note": "Revisione completa. Tutti i record ambigui elencati in unresolved.json sono stati eliminati dai quattro database su richiesta dell’utente; copie recuperabili conservate.",
+  "content_ambiguities_removed": [
+    "/specialGames/timerChallenge/darkRoom/4",
+    "/specialGames/penitenzeGruppo/party/84",
+    "/specialGames/penitenzeGruppo/party/99",
+    "/specialGames/penitenzeGruppo/party/152",
+    "/specialGames/penitenzeGruppo/redRoom/25",
+    "/specialGames/penitenzeGruppo/redRoom/124",
+    "/specialGames/penitenzeGruppo/darkRoom/34",
+    "/specialGames/penitenzeGruppo/darkRoom/53",
+    "/specialGames/penitenzeGruppo/darkRoom/104",
+    "/truthDareGame/dare/party/54",
+    "/truthDareGame/dare/redRoom/1",
+    "/truthDareGame/dare/redRoom/16",
+    "/truthDareGame/dare/darkRoom/7",
+    "/wouldYouRather/coppie/50/text",
+    "/darkRoom/54/text",
+    "/redRoom/351/text",
+    "/darkRoom/153/text",
+    "/darkRoom/163/text",
+    "/darkRoom/165/text",
+    "/darkRoom/174/text",
+    "/darkRoom/232/text",
+    "/darkRoom/245/text",
+    "/clash/34/text",
+    "/clash/37/text",
+    "/clash/69/text",
+    "/party/2/text",
+    "/party/5/text",
+    "/party/10/text",
+    "/party/26/text",
+    "/party/33/text",
+    "/darkRoom/497/text",
+    "/darkRoom/498/text",
+    "/darkRoom/500/text",
+    "/darkRoom/502/text",
+    "/darkRoom/504/text",
+    "/darkRoom/506/text",
+    "/darkRoom/520/text",
+    "/party/108/text",
+    "/party/165/text",
+    "/party/281/text",
+    "/coppie/262/text",
+    "/coppie/416/text",
+    "/coppie/449/text"
+  ],
+  "removal_manifest": "removal_manifest.json"
+}

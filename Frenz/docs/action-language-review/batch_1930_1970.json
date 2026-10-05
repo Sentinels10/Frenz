@@ -1,0 +1,82 @@
+{
+ "start":1930,"end":1970,"second_pass":true,
+ "edits":{
+ "1931":{"es":{"prefix":"¿Preferirías ser obligado a confesar todos tus secretos al grupo o escuchar los suyos sin poder reaccionar?","reason":"Preserva ogni segreto e il plurale degli altri."}},
+ "1933":{
+ "en":{"prefix":"Would you rather be happy and alone or unhappy but surrounded by people?","reason":"Full of people è un calco innaturale."},
+ "es":{"prefix":"¿Preferirías ser feliz y estar solo o ser infeliz pero estar rodeado de gente?","reason":"Full of people è un calco; preserva la congiunzione."},
+ "fr":{"prefix":"Voudriez-vous être heureux et seul ou malheureux mais entouré de gens ?","reason":"Plein de gens è un calco innaturale."}},
+ "1937":{
+ "en":{"prefix":"Would you rather talk to your future self or your childhood self?","reason":"Bambino, non necessariamente neonato."},
+ "es":{"prefix":"¿Preferirías hablar con tu yo futuro o con tu yo de niño?","reason":"Non il proprio bambino, ma sé da bambino."},
+ "fr":{"prefix":"Tu préfères parler à ton moi futur ou à ton moi enfant ?","reason":"Bébé soi-même è un calco."}},
+ "1938":{
+ "en":{"prefix":"Would you rather have the power to erase memories but not know which ones are removed or keep them all with the pain included?","reason":"What are removed è sgrammaticato."},
+ "es":{"prefix":"¿Preferirías tener el poder de borrar recuerdos pero no saber cuáles se borran o mantenerlos todos con el dolor incluido?","reason":"Qué son removidos è sgrammaticato."},
+ "fr":{"prefix":"Préféreriez-vous avoir le pouvoir d'effacer les souvenirs sans savoir lesquels sont effacés ou les garder tous avec la douleur incluse ?","reason":"Corregge sintassi incoerente e calchi."}},
+ "1939":{
+ "en":{"prefix":"Would you rather be happy but alone or unhappy but surrounded by people?","reason":"Only invece di alone è un falso amico."},
+ "fr":{"prefix":"Voudriez-vous être heureux mais seul ou malheureux mais entouré de gens ?","reason":"Seulement invece di seul e concordanza errata."}},
+ "1941":{"fr":{"prefix":"Préférez-vous que vos parents voient vos conversations privées ou que vos amis lisent votre historique de recherche ?","reason":"Parallelismo sintattico dopo que."}},
+ "1942":{
+ "es":{"prefix":"¿Preferirías dejar que el grupo leyera tus conversaciones o tu historial?","reason":"Historial, non storia personale."},
+ "fr":{"prefix":"Préférez-vous laisser le groupe lire vos conversations ou votre historique ?","reason":"Historique, non histoire."}},
+ "1943":{
+ "en":{"prefix":"Would you rather your crush discover your secret or your most embarrassing flop?","reason":"Superlativo richiesto."},
+ "es":{"prefix":"¿Prefieres que tu crush descubra tu secreto o tu flop más vergonzoso?","reason":"Enamoramiento indica il sentimento, non la persona."},
+ "fr":{"prefix":"Préférez-vous que votre béguin découvre votre secret ou votre flop le plus embarrassant ?","reason":"Superlativo richiesto."}},
+ "1944":{
+ "en":{"prefix":"Would you rather get a drunk message from your ex or accidentally send one yourself?","reason":"One of you cambia l'oggetto del messaggio."},
+ "es":{"prefix":"¿Preferirías recibir un mensaje borracho de tu ex o mandar tú uno por accidente?","reason":"Uno de ustedes è un errore di traduzione."},
+ "fr":{"prefix":"Voudriez-vous recevoir un message de votre ex ivre ou en envoyer un vous-même par accident ?","reason":"L'un d'entre vous è un errore di traduzione."}},
+ "1945":{
+ "en":{"prefix":"Would you rather a friend betray you or an ex trash your reputation?","reason":"Tradire un amico non è cheat on; sniff è un falso amico."},
+ "es":{"prefix":"¿Prefieres que un amigo te traicione o que un ex te deje por los suelos?","reason":"Ripara la traduzione di tradire e sputtanare."},
+ "fr":{"prefix":"Tu préfères qu'un ami te trahisse ou qu'un ex te fasse une sale réputation ?","reason":"Renifler è un falso amico di sputtanare."}},
+ "1947":{
+ "es":{"prefix":"¿Preferirías conocer todos los secretos de los demás o que todos conocieran los tuyos?","reason":"Congiuntivo e plurale richiesti."},
+ "fr":{"prefix":"Voudriez-vous connaître tous les secrets des autres ou que tout le monde connaisse les vôtres ?","reason":"Congiuntivo richiesto."}},
+ "1950":{
+ "en":{"prefix":"Would you rather live your whole life with remorse or regrets?","reason":"Ripristina la distinzione rimorsi/rimpianti."},
+ "fr":{"prefix":"Voudriez-vous vivre toute votre vie avec des remords ou des regrets ?","reason":"Ripristina la distinzione rimorsi/rimpianti."}},
+ "1953":{
+ "en":{"prefix":"Would you rather not be able to trust anyone anymore or have no one want to trust you anymore?","reason":"Parallelismo sintattico e mai più."},
+ "es":{"prefix":"¿Preferirías no poder confiar en nadie nunca más o que nadie quisiera confiar en ti nunca más?","reason":"Parallelismo sintattico e mai più."},
+ "fr":{"prefix":"Tu préfères ne plus pouvoir faire confiance à personne ou que personne ne veuille plus te faire confiance ?","reason":"Parallelismo sintattico e mai più."}},
+ "1954":{"fr":{"prefix":"Voudriez-vous qu'on se souvienne de vous pour une énorme erreur ou qu'on ne se souvienne pas de vous du tout ?","reason":"Ripristina il passivo essere ricordato, non ricordare."}},
+ "1955":{
+ "es":{"prefix":"¿Preferirías vivir en un mundo donde nadie miente nunca o en uno donde nadie dice nunca la verdad?","reason":"Ni ha sostituito la scelta o; preserva mai."},
+ "fr":{"prefix":"Voudriez-vous vivre dans un monde où personne ne ment jamais ou où personne ne dit jamais la vérité ?","reason":"Se trouve è un falso amico di lies."}},
+ "1956":{
+ "en":{"prefix":"Would you rather have total success but no loved ones or have people who truly care about you but never achieve your goals?","reason":"Realizing yourself è un calco e affections non indica persone care."},
+ "es":{"prefix":"¿Preferirías tener éxito total pero sin seres queridos o tener vínculos de verdad pero sin llegar nunca a realizarte?","reason":"Darse cuenta è un falso amico; corregge affetti."},
+ "fr":{"prefix":"Préférez-vous avoir un succès total mais sans proches ou de vrais liens affectifs sans jamais vous réaliser ?","reason":"Corregge la seconda alternativa scomparsa."}},
+ "1957":{
+ "en":{"prefix":"Would you rather your dark secret come out now in this group or stay hidden but haunt you forever?","reason":"Go out e persecute sono calchi."},
+ "es":{"prefix":"¿Preferirías que tu oscuro secreto saliera ahora en este grupo o quedara oculto pero te persiguiera para siempre?","reason":"Congiuntivo coerente."},
+ "fr":{"prefix":"Préférez-vous que votre sombre secret soit révélé maintenant dans ce groupe ou qu'il reste caché mais vous hante pour toujours ?","reason":"Ripara sintassi dopo préférer."}},
+ "1960":{
+ "en":{"prefix":"Would you rather live with a doubt that will never be resolved or with a truth that you cannot change?","reason":"He cambia il soggetto e crea una frase incoerente."},
+ "es":{"prefix":"¿Preferirías vivir con una duda que nunca tendrá respuesta o con una verdad que no puedes cambiar?","reason":"Ripara la struttura del dubbio senza risposta."},
+ "fr":{"prefix":"Voudriez-vous vivre avec un doute qui n'aura jamais de réponse ou avec une vérité que vous ne pouvez pas changer ?","reason":"Il ne répondra jamais introduce un soggetto errato."}},
+ "1961":{
+ "en":{"prefix":"Would you rather your worst drunk video go viral or your worst selfie circulate?","reason":"Il selfie è il soggetto di circulate."},
+ "es":{"prefix":"¿Prefieres que tu peor vídeo borracho se vuelva viral o que circule tu peor selfie?","reason":"Congiuntivo nella seconda alternativa."},
+ "fr":{"prefix":"Préférez-vous que votre pire vidéo de vous ivre devienne virale ou que votre pire selfie circule ?","reason":"Il selfie è il soggetto di circule."}},
+ "1963":{
+ "en":{"prefix":"Would you rather sleep every night with a creepy doll in the room or with a cat staring at you without ever blinking?","reason":"Banging eyelids è una traduzione letterale errata."},
+ "es":{"prefix":"¿Preferirías dormir todas las noches con una muñeca espeluznante en la habitación o con un gato mirándote sin parpadear nunca?","reason":"Golpear párpados è una traduzione letterale errata."},
+ "fr":{"prefix":"Tu préfères dormir tous les soirs avec une poupée flippante dans la chambre ou avec un chat qui te regarde sans jamais cligner des yeux ?","reason":"Frapper paupières è una traduzione letterale errata."}},
+ "1965":{
+ "en":{"prefix":"Would you rather always hear footsteps behind you when you are alone or always see an extra shadow in the mirrors?","reason":"Hear footsteps rende sentire passi."},
+ "fr":{"prefix":"Voudriez-vous toujours entendre des pas derrière vous quand vous êtes seul ou toujours voir une ombre supplémentaire dans les miroirs ?","reason":"Ripristina passi e ripara la sintassi."}},
+ "1966":{
+ "en":{"prefix":"Would you rather spend a whole night in an abandoned cemetery or in a disused hospital?","reason":"Resigned è un falso amico di dismesso."},
+ "es":{"prefix":"¿Preferirías pasar toda una noche en un cementerio abandonado o en un hospital que ya no está en uso?","reason":"Resignado è un falso amico di dismesso."},
+ "fr":{"prefix":"Voudriez-vous passer toute une nuit dans un cimetière abandonné ou dans un hôpital désaffecté ?","reason":"Résigné è un falso amico di dismesso."}},
+ "1967":{
+ "en":{"prefix":"Would you rather have a silent clown as a roommate or a mime that follows you everywhere?","reason":"Ripristina coinquilino omesso."},
+ "es":{"prefix":"¿Preferirías tener como compañero de piso a un payaso silencioso o a un mimo que te sigue por todas partes?","reason":"Ripristina coinquilino omesso."},
+ "fr":{"prefix":"Voudriez-vous avoir comme colocataire un clown silencieux ou un mime qui vous suit partout ?","reason":"Ripristina coinquilino omesso."}}
+ }
+}

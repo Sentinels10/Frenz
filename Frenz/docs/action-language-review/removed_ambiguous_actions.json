@@ -1,0 +1,762 @@
+{
+  "created_at": "2026-10-05T09:52:11.377438+00:00",
+  "records": [
+    {
+      "historical_id": "/specialGames/timerChallenge/darkRoom/4",
+      "historical_index": 25,
+      "target": "/specialGames/timerChallenge/darkRoom/4",
+      "issue": "Contraddizione nel canonico: nominare segreti senza rivelarli.",
+      "records_by_language": {
+        "it": "Hai venti secondi per nominare 5 segreti che non hai mai confessato (senza rivelarli). Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
+        "en": "You have twenty seconds to name 5 secrets you have never confessed (without revealing them). If you refuse or don't make it in time, you pay 3 penalties",
+        "es": "Tienes veinte segundos para nombrar 5 secretos que nunca has confesado (sin revelarlos). Si te niegas o no lo haces a tiempo, recibes 3 penalizaciones",
+        "fr": "Vous avez vingt secondes pour nommer 5 secrets que vous n'avez jamais confessés (sans les révéler). Si vous refusez ou ne le faites pas à temps, vous payez 3 pénalités"
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/party/84",
+      "historical_index": 1071,
+      "target": "/specialGames/penitenzeGruppo/party/84",
+      "issue": "Ultimo contatto WhatsApp: non è specificato se ultimo aggiunto o ultima conversazione.",
+      "records_by_language": {
+        "it": "Chi ha come ultimo contatto WhatsApp una persona presente in questa stanza paga 3 penalità.",
+        "en": "Anyone whose last WhatsApp contact is someone in this room pays 3 penalties.",
+        "es": "Quien tiene como último contacto de WhatsApp a una persona presente en esta habitación paga 3 penalidades.",
+        "fr": "Toute personne dont le dernier contact WhatsApp est quelqu'un présent dans cette pièce paie 3 pénalités."
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/party/99",
+      "historical_index": 1086,
+      "target": "/specialGames/penitenzeGruppo/party/99",
+      "issue": "Relazione incomprensibile: qualcuno del partner di un amico.",
+      "records_by_language": {
+        "it": "I giocatori che hanno mai provato attrazione per qualcuno del partner di un amico ricevono 3 penalità.",
+        "en": "Players who have ever felt attraction for someone from a friend's partner receive 3 penalties.",
+        "es": "Los jugadores que alguna vez han sentido atracción por alguien de la pareja de un amigo reciben 3 penalidades.",
+        "fr": "Les joueurs qui ont déjà ressenti de l'attirance pour quelqu'un du partenaire d'un ami reçoivent 3 pénalités."
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/party/152",
+      "historical_index": 1139,
+      "target": "/specialGames/penitenzeGruppo/party/152",
+      "issue": "Fare una figura: manca il qualificativo e non si può scegliere tra bella e brutta figura.",
+      "records_by_language": {
+        "it": "Quelli e quelle che hanno mai fatto una figura davanti a un professore o capo si beccano 2 penalità",
+        "en": "Those and those who have ever made a figure before a professor or boss get 2 penalties",
+        "es": "Aquellos y aquellos que alguna vez han hecho una figura antes de un profesor o jefe reciben 2 penalidades",
+        "fr": "Ceux qui ont déjà fait une figure devant un professeur ou un patron reçoivent 2 pénalités"
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/redRoom/25",
+      "historical_index": 1194,
+      "target": "/specialGames/penitenzeGruppo/redRoom/25",
+      "issue": "Il canonico dice squartare: possibile refuso sessuale, ma correggerlo richiederebbe scegliere un altro significato.",
+      "records_by_language": {
+        "it": "A giro nominate metodi per far squartare una ragazza, inizia [player].",
+        "en": "Take turns naming methods to break a girl, starting with [player].",
+        "es": "Por turnos, nombrad métodos para romper a una chica; empieza [player].",
+        "fr": "À tour de rôle, nommez des méthodes pour briser une fille ; [player] commence."
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/redRoom/124",
+      "historical_index": 1293,
+      "target": "/specialGames/penitenzeGruppo/redRoom/124",
+      "issue": "Non è specificato se toccare con la lingua il proprio naso o quello altrui; corretti solo gli errori lessicali.",
+      "records_by_language": {
+        "it": "[player], [player] e [player] devono toccarsi la punta del naso con le lingue contemporaneamente. Chi rifiuta paga 5 penalità.",
+        "en": "[player], [player] and [player] must touch the tip of the nose with their tongues at the same time. Whoever refuses pays 5 penalties.",
+        "es": "[player], [player] y [player] deben tocar la punta de la nariz con las lenguas al mismo tiempo. Quien se niegue paga 5 penalidades.",
+        "fr": "[player], [player] et [player] doivent toucher l'extrémité du nez avec les langues en même temps. Celui qui refuse paie 5 pénalités."
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/darkRoom/34",
+      "historical_index": 1359,
+      "target": "/specialGames/penitenzeGruppo/darkRoom/34",
+      "issue": "Il canonico dice tua età, mentre la versione spagnola indica la propria: destinatario da chiarire.",
+      "records_by_language": {
+        "it": "4 penalità a chi ha mai mentito sulla tua età.",
+        "en": "4 penalties to those who have ever lied about your age.",
+        "es": "4 penalidades a quienes alguna vez han mentido sobre tu edad.",
+        "fr": "4 pénalités pour ceux qui ont déjà menti sur votre âge."
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/darkRoom/53",
+      "historical_index": 1378,
+      "target": "/specialGames/penitenzeGruppo/darkRoom/53",
+      "issue": "Il proprio peso può riferirsi al giudicante o al giudicato: mantenuta la formulazione senza scegliere.",
+      "records_by_language": {
+        "it": "Quelli e quelle che hanno mai giudicato qualcuno per il proprio peso ricevono 3 penalità.",
+        "en": "Those who have ever judged someone for their own weight receive 3 penalties.",
+        "es": "Aquellos que alguna vez han juzgado a alguien por su propio peso reciben 3 penalidades.",
+        "fr": "Ceux qui ont déjà jugé quelqu'un pour leur propre poids reçoivent trois pénalités."
+      }
+    },
+    {
+      "historical_id": "/specialGames/penitenzeGruppo/darkRoom/104",
+      "historical_index": 1429,
+      "target": "/specialGames/penitenzeGruppo/darkRoom/104",
+      "issue": "Nascondere soldi spesi male non chiarisce se nascondere la spesa o il denaro; corrette solo le traduzioni letterali errate.",
+      "records_by_language": {
+        "it": "Si beccano 2 penalità tutti quelli che hanno nascosto soldi spesi male.",
+        "en": "Everyone who has hidden money they spent badly gets 2 penalties.",
+        "es": "Todos los que han ocultado dinero mal gastado reciben 2 penalidades.",
+        "fr": "Tous ceux qui ont caché de l'argent mal dépensé reçoivent 2 pénalités."
+      }
+    },
+    {
+      "historical_id": "/truthDareGame/dare/party/54",
+      "historical_index": 1615,
+      "target": "/truthDareGame/dare/party/54",
+      "issue": "La durata di 20 secondi convive con finché qualcuno non indovina; non è esplicitato quale condizione prevalga.",
+      "records_by_language": {
+        "it": "Imita una celebrità per 20 secondi finché qualcuno non indovina.",
+        "en": "Imitate a celebrity for 20 seconds until someone guesses.",
+        "es": "Imita una celebridad durante 20 segundos hasta que alguien adivine.",
+        "fr": "Imitez une célébrité pendant 20 secondes jusqu'à ce que quelqu'un devine."
+      }
+    },
+    {
+      "historical_id": "/truthDareGame/dare/redRoom/1",
+      "historical_index": 1660,
+      "target": "/truthDareGame/dare/redRoom/1",
+      "issue": "Penalità a entrambi non specifica come gestire più giocatori che ridono.",
+      "records_by_language": {
+        "it": "Simula un pom*ino usando solo la lingua e lo sguardo. Se qualcuno ride… penalità a entrambi. Se non lo fai, 3 penalità.",
+        "en": "Simulate a blowjob using only your tongue and gaze. If anyone laughs... penalty to both. If you don't, 3 penalties.",
+        "es": "Simula una mamada usando sólo tu lengua y mirada. Si alguien se ríe... una penalización para ambos. Si no lo haces, 3 penalizaciones.",
+        "fr": "Simulez une pipe en utilisant seulement votre langue et le regard. Si quelqu'un rit... pénalité pour les deux. Sinon, trois pénalités."
+      }
+    },
+    {
+      "historical_id": "/truthDareGame/dare/redRoom/16",
+      "historical_index": 1675,
+      "target": "/truthDareGame/dare/redRoom/16",
+      "issue": "Se nessuno si eccita, paghi tu: il canonico non indica la quantità per questa conseguenza.",
+      "records_by_language": {
+        "it": "Simula un bacio a distanza con qualcuno… ma fallo lentamente. Se nessuno si eccita, paghi tu. Se ti tiri indietro… 3 penalità.",
+        "en": "Simulate a long-distance kiss with someone… but do it slowly. If no one gets turned on, you pay. If you back out… 3 penalties.",
+        "es": "Simula un beso de larga distancia con alguien... pero hazlo lentamente. Si nadie se excita, pagas. Si te alejas... 3 sanciones.",
+        "fr": "Simulez un baiser de longue distance avec quelqu'un... mais faites-le lentement. Si personne n'est excité, vous payez. Si vous reculez... Trois pénalités."
+      }
+    },
+    {
+      "historical_id": "/truthDareGame/dare/darkRoom/7",
+      "historical_index": 1686,
+      "target": "/truthDareGame/dare/darkRoom/7",
+      "issue": "Sbagliare bersaglio non ha un criterio definito nel canonico.",
+      "records_by_language": {
+        "it": "Gira tre volte su te stesso e punta qualcuno: “Hai un segreto, confessalo.” Se sbagli bersaglio… 2 penalità.",
+        "en": "Turn around three times and point at someone: “You have a secret, confess it.” If you miss the target... 2 penalties.",
+        "es": "Date la vuelta tres veces y apunta a alguien: Tienes un secreto, confiésalo. Si pierdes el objetivo... 2 sanciones.",
+        "fr": "Tournez trois fois sur vous-même et pointez quelqu'un : Vous avez un secret, confessez-le. Si vous manquez la cible... 2 pénalités."
+      }
+    },
+    {
+      "historical_id": "/wouldYouRather/coppie/50/text",
+      "historical_index": 2034,
+      "target": "/wouldYouRather/coppie/50",
+      "issue": "Ordinare nel canonico è ambiguo (riordinare oppure ordinare cibo). Le correzioni restano grammaticali senza decidere la meccanica. Non reinterpretare automaticamente.",
+      "records_by_language": {
+        "it": {
+          "text": "Preferiresti che il tuo partner fosse bravissimo a cucinare ma pessimo a ordinare o il contrario? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze."
+        },
+        "en": {
+          "text": "Would you rather your partner be very good at cooking but terrible at ordering or the other way around? Everyone votes at the same time; the minority receives 3 penalties."
+        },
+        "es": {
+          "text": "¿Prefieres que tu pareja sea muy buena cocinando pero pésima para ordenar o al revés? Voten todos al mismo tiempo; la minoría recibe 3 penalidades."
+        },
+        "fr": {
+          "text": "Préférez-vous que votre partenaire soit très bon pour cuisiner mais très mauvais pour commander ou l'inverse ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/54/text",
+      "historical_index": 2666,
+      "target": "/darkRoom/54",
+      "issue": "Distribuisci non indica la quantità; mantenuta senza inventare un numero.",
+      "records_by_language": {
+        "it": {
+          "text": "Racconta un tuo \"pensiero da film\". Se ci commuove, distribuisci. Se è cringe, fanne 2."
+        },
+        "en": {
+          "text": "Tell us one of your \"film thoughts\". If it moves us, distribute. If it's cringe, take 2 penalties."
+        },
+        "es": {
+          "text": "Cuéntanos uno de tus «pensamientos de película». Si nos emociona, reparte. Si da cringe, recibe 2 penalizaciones."
+        },
+        "fr": {
+          "text": "Racontez une de vos «pensées de film». Si ça nous émeut, distribuez. Si c'est gênant, prenez 2 pénalités."
+        }
+      }
+    },
+    {
+      "historical_id": "/redRoom/351/text",
+      "historical_index": 2554,
+      "target": "/redRoom/351",
+      "issue": "Se qualcuno l'ha provato paga non distingue con certezza se paga il giocatore del turno o chi l'ha provato. Mantenuto il pagante delle traduzioni preesistenti senza reinterpretare.",
+      "records_by_language": {
+        "it": {
+          "text": "Qual è il sex toy che non useresti mai? Se qualcuno del gruppo l'ha già provato paga 3 penalità."
+        },
+        "en": {
+          "text": "What is the sex toy you would never use? If someone in the group has already tried it, they pay 3 penalties."
+        },
+        "es": {
+          "text": "¿Cuál es el juguete sexual que nunca usarías? Si alguien del grupo ya lo ha probado, paga 3 penalizaciones."
+        },
+        "fr": {
+          "text": "Quel est le sextoy que tu n'utiliserais jamais ? Si quelqu'un du groupe l'a déjà essayé, il paie 3 pénalités."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/153/text",
+      "historical_index": 2765,
+      "target": "/darkRoom/153",
+      "issue": "Per non farlo con gli altri non chiarisce l'azione a cui si riferisce; preservata.",
+      "records_by_language": {
+        "it": {
+          "text": "Hai mai mantenuto il contatto con una persona solo \"per non farlo con gli altri\"? Se sì, distribuisci 3 penalità."
+        },
+        "en": {
+          "text": "Have you ever maintained contact with a person only \"so as not to do it with others\"? If yes, deal 3 penalties."
+        },
+        "es": {
+          "text": "¿Alguna vez has mantenido contacto con una persona sólo \"para no hacerlo con otros\"? Si es así, reparte 3 penalizaciones."
+        },
+        "fr": {
+          "text": "Avez-vous jamais maintenu le contact avec une personne seulement \"pour ne pas le faire avec les autres\" ? Si oui, offrez 3 pénalités."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/163/text",
+      "historical_index": 2775,
+      "target": "/darkRoom/163",
+      "issue": "Se la racconti paghi non chiarisce se sia una penalità aggiuntiva rispetto alle 3 già previste; mantenuta.",
+      "records_by_language": {
+        "it": {
+          "text": "Se almeno una volta hai goduto nel vedere qualcuno fallire… anche solo un po', ricevi 3 penalità, se la racconti paghi, ma puoi distribuirne una a chi vuoi."
+        },
+        "en": {
+          "text": "If at least once you enjoyed seeing someone fail... even just a little, you receive 3 penalties, if you tell it you pay, but you can distribute one to whoever you want."
+        },
+        "es": {
+          "text": "Si al menos una vez te gustó ver a alguien fracasar... incluso un poco, recibes 3 penalizaciones, si lo cuentas, pagas, pero puedes distribuir una a quien quieras."
+        },
+        "fr": {
+          "text": "Si au moins une fois vous avez aimé voir quelqu'un échouer... même un peu, vous recevez 3 pénalités, si vous le racontez, vous payez, mais vous pouvez en distribuer une à qui vous voulez."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/165/text",
+      "historical_index": 2777,
+      "target": "/darkRoom/165",
+      "issue": "Raddoppiano a 6 senza specificare esplicitamente la penalità iniziale; non aggiunto un valore base.",
+      "records_by_language": {
+        "it": {
+          "text": "Racconta una volta in cui hai fatto finta di ascoltare qualcuno mentre pensavi ad altro. Se era un amico… raddoppia le penalità: 6."
+        },
+        "en": {
+          "text": "Tell a story about a time you pretended to listen to someone while you were thinking about something else. If it was a friend... double the penalties: 6."
+        },
+        "es": {
+          "text": "Cuenta una historia sobre un tiempo que fingiste escuchar a alguien mientras estabas pensando en otra cosa. Si era un amigo... duplica las penalizaciones: 6."
+        },
+        "fr": {
+          "text": "Racontez une histoire sur une fois où vous avez fait semblant d'écouter quelqu'un pendant que vous pensiez à autre chose. Si c'était un ami, doublez les pénalités : 6."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/174/text",
+      "historical_index": 2786,
+      "target": "/darkRoom/174",
+      "issue": "Lui/lei ti segue non chiarisce il tipo di seguire; mantenuta l'ambiguità.",
+      "records_by_language": {
+        "it": {
+          "text": "Se c'è una persona qui dentro che hai \"giudicato in silenzio\" più volte… guardala negli occhi e paga 3 penalità, lui/lei ti segue."
+        },
+        "en": {
+          "text": "If there is a person in here who you have \"silently judged\" several times... look him/her in the eyes and pay 3 penalties, he/she follows you."
+        },
+        "es": {
+          "text": "Si hay una persona aquí que has \"juzgado silenciosamente\" varias veces... míralo a los ojos y paga 3 penalizaciones, te sigue."
+        },
+        "fr": {
+          "text": "S'il y a une personne ici que vous avez « jugée silencieusement » plusieurs fois... regardez cette personne dans les yeux et payez 3 pénalités, il vous suit."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/232/text",
+      "historical_index": 2844,
+      "target": "/darkRoom/232",
+      "issue": "Pagale non indica la quantità da pagare; preservata senza inventare un numero.",
+      "records_by_language": {
+        "it": {
+          "text": "Racconta la cosa più assurda che hai comprato e mai usato. Se qualcuno ne ha una peggiore… sei salvo. Altrimenti pagale tu."
+        },
+        "en": {
+          "text": "Tell us the craziest thing you've bought and never used. If anyone has a worse one… you're safe. Otherwise you take the penalties yourself."
+        },
+        "es": {
+          "text": "Cuéntanos lo más loco que has comprado y nunca has usado. Si alguien tiene algo peor... Estás a salvo. De lo contrario recíbelas tú."
+        },
+        "fr": {
+          "text": "Dis-nous la chose la plus folle que tu aies achetée et jamais utilisée. Si quelqu'un a quelque chose de pire... tu es sauvé. Sinon, tu les paies."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/245/text",
+      "historical_index": 2857,
+      "target": "/darkRoom/245",
+      "issue": "Se lo neghi oppure confermi non chiarisce del tutto il referente del comportamento nominato; preservato.",
+      "records_by_language": {
+        "it": {
+          "text": "Punta il dito su chi sembra geloso di un altro qui presente. Se lo neghi, paga 4 penalità. Se lo confermi, distribuisci 2."
+        },
+        "en": {
+          "text": "Point the finger at anyone who seems jealous of someone else here. If you deny it, pay 4 penalties. If you confirm, deal 2."
+        },
+        "es": {
+          "text": "Apunta con el dedo a alguien que parece celoso de alguien más aquí. Si lo niegas, paga 4 penalizaciones. Si lo confirmas, reparte 2."
+        },
+        "fr": {
+          "text": "Pointez le doigt sur quiconque semble jaloux de quelqu'un d'autre ici. Si vous niez, payez 4 pénalités. Si vous confirmez, distribuez-en 2."
+        }
+      }
+    },
+    {
+      "historical_id": "/clash/34/text",
+      "historical_index": 3235,
+      "target": "/clash/34",
+      "issue": "La sfida del cerchio con un dito non esplicita le regole; non aggiunte istruzioni.",
+      "records_by_language": {
+        "it": {
+          "text": "Sfida: Sfida di resistenza con un dito contro {playerB} (il gioco del cerchio con le dita). Il perdente fa 3 penalità"
+        },
+        "en": {
+          "text": "Challenge: One Finger Endurance Challenge vs. {playerB} (Finger Hoop Game). The loser gets 3 penalties"
+        },
+        "es": {
+          "text": "Desafío: Reto de resistencia con un dedo contra {playerB} (el juego del círculo con los dedos). El perdedor recibe 3 sanciones"
+        },
+        "fr": {
+          "text": "Défi : Défi d'endurance d'un doigt contre {playerB} (jeu de boucles de doigts). Le perdant obtient 3 pénalités"
+        }
+      }
+    },
+    {
+      "historical_id": "/clash/37/text",
+      "historical_index": 3238,
+      "target": "/clash/37",
+      "issue": "Il perdente di 5 round non esplicita se il formato sia al meglio di cinque; preservato.",
+      "records_by_language": {
+        "it": {
+          "text": "Sfida: Gioca a 'Pietra, Forbice, Carta' con {playerB}. Il perdente di 5 round fa 3 penalità"
+        },
+        "en": {
+          "text": "Challenge: Play 'Rock, Scissors, Paper' with {playerB}. The loser of 5 rounds gets 3 penalties"
+        },
+        "es": {
+          "text": "Desafío: Juega a 'Piedra, papel o tijera' con {playerB}. El perdedor de 5 rondas recibe 3 penalizaciones"
+        },
+        "fr": {
+          "text": "Défi : Joue à 'Pierre, feuille, ciseaux' avec {playerB}. Le perdant de 5 manches reçoit 3 pénalités"
+        }
+      }
+    },
+    {
+      "historical_id": "/clash/69/text",
+      "historical_index": 3270,
+      "target": "/clash/69",
+      "issue": "Il canonico usa Fate senza destinatario nominato; le traduzioni preesistenti includono {playerB}. Non aggiunto/eliminato automaticamente un destinatario.",
+      "records_by_language": {
+        "it": {
+          "text": "Sfida: Fate una battaglia di complimenti. A turno dite qualcosa di gentile all’altro. Il primo che non riesce fa 3 penalità"
+        },
+        "en": {
+          "text": "Challenge: You and {playerB} must have a compliment battle. Take turns saying something nice to each other. The first one who can't gets 3 penalties"
+        },
+        "es": {
+          "text": "Desafío: Tú y {playerB} deben hacer una batalla de cumplidos. Túrnense para decirse algo bonito. El primero que no pueda recibe 3 penalizaciones"
+        },
+        "fr": {
+          "text": "Défi : Toi et {playerB} devez faire une bataille de compliments. Dites à tour de rôle quelque chose de gentil à l'autre. Le premier qui n'y arrive pas reçoit 3 pénalités"
+        }
+      }
+    },
+    {
+      "historical_id": "/party/2/text",
+      "historical_index": 3371,
+      "target": "/party/2",
+      "issue": "Scambia penalità con qualcuno non esplicita la meccanica dello scambio; preservata.",
+      "records_by_language": {
+        "it": {
+          "text": "Scambia 2 penalità con chi ha la playlist più cringe nel telefono."
+        },
+        "en": {
+          "text": "Exchange 2 penalties with whoever has the cringiest playlist on their phone."
+        },
+        "es": {
+          "text": "Intercambia 2 penalizaciones con quien tenga la playlist más cringe en el teléfono."
+        },
+        "fr": {
+          "text": "Échangez 2 pénalités avec celui qui a la liste de lecture la plus ringarde sur son téléphone."
+        }
+      }
+    },
+    {
+      "historical_id": "/party/5/text",
+      "historical_index": 3374,
+      "target": "/party/5",
+      "issue": "Penitenza massima non specifica una quantità; non inventata.",
+      "records_by_language": {
+        "it": {
+          "text": "Fai finta di ricevere un messaggio hot da un ex e reagisci come faresti davvero. Se nessuno si scandalizza… Penitenza massima."
+        },
+        "en": {
+          "text": "Pretend you receive a hot message from an ex and react as you really would. If no one is scandalized... Maximum penance."
+        },
+        "es": {
+          "text": "Finge que recibes un mensaje subido de tono de un ex y reacciona como lo harías de verdad. Si nadie se escandaliza... Penitencia máxima."
+        },
+        "fr": {
+          "text": "Faites semblant de recevoir un message chaud d'un ex et réagissez comme vous le feriez vraiment. Si personne n'est scandalisé... Pénitence maximale."
+        }
+      }
+    },
+    {
+      "historical_id": "/party/10/text",
+      "historical_index": 3379,
+      "target": "/party/10",
+      "issue": "Scambia penalità con chi ha la memoria peggiore per i compleanni non esplicita la meccanica dello scambio; preservata.",
+      "records_by_language": {
+        "it": {
+          "text": "Scambia 3 penalità con chi, secondo te, ha la memoria peggiore per i compleanni."
+        },
+        "en": {
+          "text": "Exchange 3 penalties with whoever you think has the worst memory for birthdays."
+        },
+        "es": {
+          "text": "Intercambia 3 penalizaciones con quien creas que tiene la peor memoria para los cumpleaños."
+        },
+        "fr": {
+          "text": "Échange 3 pénalités avec celui qui, selon toi, oublie le plus les anniversaires."
+        }
+      }
+    },
+    {
+      "historical_id": "/party/26/text",
+      "historical_index": 3395,
+      "target": "/party/26",
+      "issue": "Scambia penalità con chi ha la collezione di sticker più imbarazzante non esplicita la meccanica dello scambio; preservata.",
+      "records_by_language": {
+        "it": {
+          "text": "Scambia 4 penalità con chi ha la collezione di sticker WhatsApp più imbarazzante."
+        },
+        "en": {
+          "text": "Exchange 4 penalties with the person who has the most embarrassing WhatsApp sticker collection."
+        },
+        "es": {
+          "text": "Intercambia 4 sanciones con la persona que tiene la colección de pegatinas WhatsApp más vergonzosa."
+        },
+        "fr": {
+          "text": "Échangez 4 pénalités avec la personne qui a la plus embarrassante collection d'autocollants WhatsApp."
+        }
+      }
+    },
+    {
+      "historical_id": "/party/33/text",
+      "historical_index": 3402,
+      "target": "/party/33",
+      "issue": "Scambia penalità con chi potrebbe imparare a fare un Reel migliore non esplicita la meccanica dello scambio; preservata.",
+      "records_by_language": {
+        "it": {
+          "text": "Scambia 3 penalità con chi potrebbe imparare a fare un Reel migliore di te."
+        },
+        "en": {
+          "text": "Exchange 3 penalties with someone who could learn to make a better Reel than you."
+        },
+        "es": {
+          "text": "Intercambia 3 penalizaciones con alguien que podría aprender a hacer un Reel mejor que tú."
+        },
+        "fr": {
+          "text": "Échange 3 pénalités avec quelqu'un qui pourrait apprendre à faire un meilleur Reel que toi."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/497/text",
+      "historical_index": 3109,
+      "target": "/darkRoom/497",
+      "issue": "Il record contiene soltanto una conseguenza se il gruppo ride, senza indicare l'azione iniziale. Non unito ad altri record.",
+      "records_by_language": {
+        "it": {
+          "text": "Se il gruppo ride, distribuisci 3 penalità, altrimenti le paghi tu."
+        },
+        "en": {
+          "text": "If the group laughs, distribute 3 penalties, otherwise you pay them."
+        },
+        "es": {
+          "text": "Si el grupo se ríe, distribuye 3 penalidades; de lo contrario, las pagas tú."
+        },
+        "fr": {
+          "text": "Si le groupe rit, distribuez 3 pénalités, sinon vous les payez."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/498/text",
+      "historical_index": 3110,
+      "target": "/darkRoom/498",
+      "issue": "Il record contiene soltanto una penalità se non lo fai, senza referente; non inventata un'azione.",
+      "records_by_language": {
+        "it": {
+          "text": "Ricevi 4 penalità se non lo fai."
+        },
+        "en": {
+          "text": "You get 4 penalties if you don't."
+        },
+        "es": {
+          "text": "Recibes 4 penalidades si no lo haces."
+        },
+        "fr": {
+          "text": "Vous obtenez 4 pénalités si vous ne le faites pas."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/500/text",
+      "historical_index": 3112,
+      "target": "/darkRoom/500",
+      "issue": "Il record contiene soltanto una penalità se non parli, senza una domanda; preservato.",
+      "records_by_language": {
+        "it": {
+          "text": "Ricevi 7 penalità se non parli."
+        },
+        "en": {
+          "text": "You get 7 penalties if you don't talk."
+        },
+        "es": {
+          "text": "Tienes 7 penalidades si no hablas."
+        },
+        "fr": {
+          "text": "Vous obtenez 7 pénalités si vous ne parlez pas."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/502/text",
+      "historical_index": 3114,
+      "target": "/darkRoom/502",
+      "issue": "Se lo fai ancora non ha referente nel record; non unito ad altri record.",
+      "records_by_language": {
+        "it": {
+          "text": "Paga 3 penalità. Se lo fai ancora, raddoppia a 6."
+        },
+        "en": {
+          "text": "Pay 3 penalties. If you do it again, double to 6."
+        },
+        "es": {
+          "text": "Paga 3 penalidades. Si lo haces de nuevo, duplica a 6."
+        },
+        "fr": {
+          "text": "Payez 3 pénalités. Si vous recommencez, doublez à 6."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/504/text",
+      "historical_index": 3116,
+      "target": "/darkRoom/504",
+      "issue": "Il record contiene soltanto penalità., senza azione o quantità; preservato.",
+      "records_by_language": {
+        "it": {
+          "text": "penalità."
+        },
+        "en": {
+          "text": "penalty."
+        },
+        "es": {
+          "text": "penalidad."
+        },
+        "fr": {
+          "text": "Une pénalité."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/506/text",
+      "historical_index": 3118,
+      "target": "/darkRoom/506",
+      "issue": "Se era Isola dei Famosi non ha referente nel record; non inventata un'azione.",
+      "records_by_language": {
+        "it": {
+          "text": "Se era Isola dei Famosi, raddoppia a 6."
+        },
+        "en": {
+          "text": "If it was Isola dei Famosi, double to 6."
+        },
+        "es": {
+          "text": "Si era Isola dei Famosi, duplica a 6."
+        },
+        "fr": {
+          "text": "Si c'était Isola dei Famosi, doublez à 6."
+        }
+      }
+    },
+    {
+      "historical_id": "/darkRoom/520/text",
+      "historical_index": 3132,
+      "target": "/darkRoom/520",
+      "issue": "Il canonico assegna 3 giorni invece di penalità. Giorni conservati: non reinterpretata l'unità.",
+      "records_by_language": {
+        "it": {
+          "text": "Confessa un libro o film che fai finta di aver visto solo per sembrare acculturato/a o paga 3 giorni."
+        },
+        "en": {
+          "text": "Confess a book or film you pretend to have read or seen just to seem cultured, or pay 3 days."
+        },
+        "es": {
+          "text": "Confiesa un libro o una película que finges haber leído o visto sólo para parecer culto/a, o paga 3 días."
+        },
+        "fr": {
+          "text": "Avouez un livre ou un film que vous faites semblant d'avoir lu ou vu juste pour paraître cultivé(e), ou payez 3 jours."
+        }
+      }
+    },
+    {
+      "historical_id": "/party/108/text",
+      "historical_index": 3477,
+      "target": "/party/108",
+      "issue": "Toppe fra virgolette potrebbe essere figurato; non reinterpretato.",
+      "records_by_language": {
+        "it": {
+          "text": "Distribuisci 4 penalità a chi, secondo te, ha più “toppe” nel guardaroba."
+        },
+        "en": {
+          "text": "Distribute 4 penalties to whoever, in your opinion, has the most \"patches\" in their wardrobe."
+        },
+        "es": {
+          "text": "Distribuye 4 penalizaciones a quien, en tu opinión, tenga más «parches» en el armario."
+        },
+        "fr": {
+          "text": "Distribuez 4 pénalités à quiconque, à votre avis, a le plus de \"patches\" dans sa garde-robe."
+        }
+      }
+    },
+    {
+      "historical_id": "/party/165/text",
+      "historical_index": 3534,
+      "target": "/party/165",
+      "issue": "Oppure 3 penalità ciascuno dopo il voto non specifica chi fallisce; non reinterpretato.",
+      "records_by_language": {
+        "it": {
+          "text": "Fai una sfilata di moda improvvisata insieme a {playerB}, il gruppo vota il migliore oppure 3 penalità ciascuno"
+        },
+        "en": {
+          "text": "Have an impromptu fashion show together with {playerB}, the group votes for the best or 3 penalties each"
+        },
+        "es": {
+          "text": "Haz un desfile de moda improvisado con {playerB}; el grupo vota por el mejor, o 3 sanciones cada uno."
+        },
+        "fr": {
+          "text": "Fais un défilé de mode improvisé avec {playerB} ; le groupe vote pour le meilleur, ou 3 pénalités chacun."
+        }
+      }
+    },
+    {
+      "historical_id": "/party/281/text",
+      "historical_index": 3650,
+      "target": "/party/281",
+      "issue": "Il canonico chiede una bugia ma il gruppo deve indovinare se sia vera o falsa. Non aggiunta una nuova regola per risolvere la contraddizione.",
+      "records_by_language": {
+        "it": {
+          "text": "Racconta una bugia sulla tua vita, il gruppo deve indovinare se è vera o falsa. Se indovinano, fai 2 penalità"
+        },
+        "en": {
+          "text": "Tell a lie about your life, the group has to guess whether it is true or false. If they guess correctly, you get 2 penalties"
+        },
+        "es": {
+          "text": "Cuenta una mentira sobre tu vida; el grupo debe adivinar si es verdadera o falsa. Si adivinan, recibes 2 sanciones."
+        },
+        "fr": {
+          "text": "Dites un mensonge sur votre vie, le groupe doit deviner si c'est vrai ou faux. S'ils devinent correctement, vous obtenez 2 pénalités"
+        }
+      }
+    },
+    {
+      "historical_id": "/coppie/262/text",
+      "historical_index": 4081,
+      "target": "/coppie/262",
+      "issue": "Raccontate un giocatore è incomprensibile: non sostituito con scegliete, perché cambierebbe una meccanica non certa. La traduzione francese omette quella prima istruzione, conservata poiché non traducibile con certezza.",
+      "records_by_language": {
+        "it": {
+          "text": "Raccontate un giocatore e raccontategli un dettaglio intimo della vostra coppia. Se vi rifiutate, entrambi 4 penalità."
+        },
+        "en": {
+          "text": "Tell a player and tell him an intimate detail of your couple. If you refuse, 4 penalties each."
+        },
+        "es": {
+          "text": "Dile a un jugador y dile un detalle íntimo de tu pareja. Si te niegas, 4 penalidades cada uno."
+        },
+        "fr": {
+          "text": "Dites-lui un détail intime de votre couple. Si vous refusez, 4 pénalités chacun."
+        }
+      }
+    },
+    {
+      "historical_id": "/coppie/416/text",
+      "historical_index": 4235,
+      "target": "/coppie/416",
+      "issue": "Senza dirtelo usa un destinatario riflessivo non coerente con la serie guardata in anticipo; non sostituito con il partner.",
+      "records_by_language": {
+        "it": {
+          "text": "Se hai mai guardato avanti una serie senza dirtelo, meriti 2 penalità."
+        },
+        "en": {
+          "text": "If you've ever watched ahead in a series without telling you, you deserve 2 penalties."
+        },
+        "es": {
+          "text": "Si alguna vez has visto capítulos de una serie por adelantado sin decírtelo, mereces 2 penalidades."
+        },
+        "fr": {
+          "text": "Si vous avez déjà regardé une série en avance sans vous le dire, vous méritez 2 pénalités."
+        }
+      }
+    },
+    {
+      "historical_id": "/coppie/449/text",
+      "historical_index": 4268,
+      "target": "/coppie/449",
+      "issue": "Paga e altrimenti pagale tu sembrano assegnare la penalità alla stessa persona in entrambe le condizioni. Non inventato un pagante diverso.",
+      "records_by_language": {
+        "it": {
+          "text": "Quanto è bravo/a a baciare da 1 a 10 basandoti sulla tua esperienza? Se il voto è 9 o 10, paga 5 penalità, altrimenti pagale tu."
+        },
+        "en": {
+          "text": "How good is your partner at kissing, from 1 to 10, based on your experience? If the score is 9 or 10, pay 5 penalties, otherwise you pay them."
+        },
+        "es": {
+          "text": "¿Qué nota del 1 al 10 le das a tu pareja besando, según tu experiencia? Si la nota es 9 o 10, paga 5 penalidades, de lo contrario las pagas tú."
+        },
+        "fr": {
+          "text": "Quelle note de 1 à 10 donnez-vous à votre partenaire pour ses baisers, d'après votre expérience ? Si la note est 9 ou 10, payez 5 pénalités, sinon c'est vous qui les payez."
+        }
+      }
+    }
+  ],
+  "recovery": "Insert each saved record back into its parent array in ascending historical index order, in each language. Original paths and complete records are preserved here."
+}

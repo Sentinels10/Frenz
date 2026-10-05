@@ -1,0 +1,4 @@
+{"start":3162,"end":3188,"recheck_only":true,"second_pass":true,"edits":{
+"3162":{"fr":{"replace":[["Si vous changeriez d'amis","Si vous êtes prêt à changer d'amis"]],"reason":"Si con condizionale improprio: formulazione naturale della disponibilità ipotetica, quantità identiche."}},
+"3187":{"fr":{"replace":[["Si vous accepteriez de coucher","Si vous êtes prêt à coucher"]],"reason":"Si con condizionale improprio: disponibilità ipotetica invariata."}}
+}}

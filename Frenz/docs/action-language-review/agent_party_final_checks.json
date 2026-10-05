@@ -1,0 +1,4 @@
+{"start":3201,"end":3719,"recheck_only":true,"second_pass":true,"corrections":[
+[3260,"es","Desafío: Tú y {playerB} deben hacer un reto de tiro con un objeto improvisado hacia un blanco. Quien consiga menos puntos recibe 4 penalizaciones.","Secondo controllo: lanzar restringeva il tiro a un lancio; mantenuto tiro generico canonico."],
+[3373,"fr","Imite l'agent d'entretien légendaire de ton lycée pendant 10 secondes. Si personne ne devine, 4 pénalités.","Secondo controllo: surveillant è sorvegliante scolastico; bidello è addetto manutenzione/pulizia."],
+[3687,"fr","Fais le tour de la pièce en sautant comme une grenouille ou 2 pénalités.","Secondo controllo: nella traduzione originale era omesso il giro completo della stanza."]],"restorations":[[3373,"fr","Numero4 riportato in lettere nell'originale."]]}

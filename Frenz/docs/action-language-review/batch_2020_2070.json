@@ -1,0 +1,92 @@
+{
+ "start":2020,"end":2070,"second_pass":true,
+ "edits":{
+ "2020":{
+ "en":{"prefix":"Would you rather spend a week tied together or completely ignore each other for seven days?","reason":"Ignore you non rende ignorarvi reciprocamente."},
+ "es":{"prefix":"¿Preferirías pasar una semana atados el uno al otro o ignoraros por completo durante siete días?","reason":"Legati insieme e ignorarvi, non ignorarti."},
+ "fr":{"prefix":"Voudriez-vous passer une semaine attachés l'un à l'autre ou vous ignorer complètement pendant sept jours ?","reason":"Ripristina legati omesso."}},
+ "2022":{
+ "en":{"prefix":"Would you rather live together but always sleep apart or live far apart but dream of each other every night?","reason":"Ripristina sognarvi, oggetto omesso."},
+ "es":{"prefix":"¿Preferirías vivir juntos pero siempre dormir separados o vivir lejos pero soñar el uno con el otro cada noche?","reason":"Ripristina sognarvi, oggetto omesso."},
+ "fr":{"prefix":"Voudriez-vous vivre ensemble mais toujours dormir séparément ou vivre loin l'un de l'autre mais rêver l'un de l'autre chaque nuit ?","reason":"Ripristina sognarvi, oggetto omesso."}},
+ "2023":{"es":{"prefix":"¿Preferirías que tu pareja olvidara tu cumpleaños o confundiera tu nombre mientras hacéis el amor?","reason":"Confundira è un refuso; soggetto plurale della coppia."}},
+ "2024":{
+ "es":{"prefix":"¿Prefieres que los padres de tu pareja os escuchen mientras hacéis el amor o que os sorprendan en el sofá?","reason":"Soggetto e destinatari errati nella traduzione."},
+ "fr":{"prefix":"Préférez-vous que les parents de votre partenaire vous écoutent pendant que vous faites l'amour ou vous surprennent sur le canapé ?","reason":"Surprennent concorda con i genitori."}},
+ "2025":{
+ "en":{"prefix":"Would you prefer a partner who always surprises you or someone who understands you without you saying anything?","reason":"Chi non parla è il giocatore."},
+ "es":{"prefix":"¿Preferirías un compañero que siempre te sorprenda o alguien que te entienda sin que tú digas nada?","reason":"Chi non parla è il giocatore."},
+ "fr":{"prefix":"Préférez-vous un partenaire qui vous surprend toujours ou quelqu'un qui vous comprend sans que vous disiez quoi que ce soit ?","reason":"Chi non parla è il giocatore."}},
+ "2026":{
+ "en":{"prefix":"Would you rather your partner prepare your breakfast every day or always let you fall asleep first?","reason":"Ripristina sempre nella seconda alternativa."},
+ "es":{"prefix":"¿Prefieres que tu pareja prepare tu desayuno todos los días o que siempre te deje dormir primero?","reason":"Ripristina sempre nella seconda alternativa."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire prépare votre petit-déjeuner tous les jours ou vous laisse toujours vous endormir en premier ?","reason":"Ripara sintassi e sempre omesso."}},
+ "2027":{
+ "en":{"prefix":"Would you rather argue over the remote control or over which restaurant to choose?","reason":"Litigare riguarda entrambe le alternative."},
+ "es":{"prefix":"¿Preferirías discutir por el mando a distancia o por qué restaurante elegir?","reason":"Litigare riguarda entrambe le alternative."},
+ "fr":{"prefix":"Vous préférez vous disputer pour la télécommande ou pour le choix du restaurant ?","reason":"Litigare riguarda entrambe le alternative."}},
+ "2028":{
+ "en":{"prefix":"Would you prefer to always sleep cuddled up tightly or each have your own untouchable side of the bed?","reason":"Ripara la sintassi della seconda alternativa."},
+ "es":{"prefix":"¿Prefieres dormir siempre bien abrazados o que cada uno tenga su lado intocable de la cama?","reason":"Ripristina abbracciati e ripara la seconda alternativa."},
+ "fr":{"prefix":"Préférez-vous toujours dormir serrés dans les bras l'un de l'autre ou avoir chacun votre côté intouchable du lit ?","reason":"Ripristina abbracciati e ripara la seconda alternativa."}},
+ "2033":{
+ "en":{"prefix":"Would you rather share the password of each account or never know your partner's phone code?","reason":"Telefono del partner, non del giocatore."},
+ "es":{"prefix":"¿Prefieres compartir la contraseña de cada cuenta o nunca conocer el código del teléfono de tu pareja?","reason":"Telefono del partner, non del giocatore."},
+ "fr":{"prefix":"Vous préférez partager le mot de passe de chaque compte ou ne jamais connaître le code du téléphone de votre partenaire ?","reason":"Telefono del partner, non del giocatore."}},
+ "2034":{
+ "en":{"prefix":"Would you rather your partner be very good at cooking but terrible at tidying up or the other way around?","reason":"Ordinare nel contesto domestico non è order; preserva pessimo."},
+ "es":{"prefix":"¿Prefieres que tu pareja sea muy buena cocinando pero pésima ordenando la casa o al revés?","reason":"Al revés rende il contrario; preserva pessimo."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire soit très doué pour cuisiner mais très mauvais pour ranger ou l'inverse ?","reason":"Commander è un falso amico di ordinare la casa."}},
+ "2035":{
+ "en":{"prefix":"Would you prefer to always be right but argue or be wrong and see your partner smile?","reason":"Discuss non rende discutere nel contesto; verbo mancante."},
+ "es":{"prefix":"¿Prefieres tener siempre razón pero discutir o equivocarte y ver a tu pareja sonreír?","reason":"Estar bien non rende avere ragione."},
+ "fr":{"prefix":"Préférez-vous toujours avoir raison mais vous disputer ou avoir tort et voir votre partenaire sourire ?","reason":"Mal non rende sbagliare e discuter non rende litigare."}},
+ "2038":{"en":{"prefix":"Would you prefer to always have sex on the bed or always try new places?","reason":"Relationships è un falso amico."}},
+ "2040":{
+ "en":{"prefix":"Would you prefer an evening of just foreplay or a quick but intense sex session?","reason":"Pull è un falso amico di tirata."},
+ "es":{"prefix":"¿Prefieres una velada sólo de preliminares o una sesión de sexo rápida pero intensa?","reason":"Gioco previo e tirada sono calchi; preserva solo."},
+ "fr":{"prefix":"Préférez-vous une soirée faite uniquement de préliminaires ou un rapport rapide mais intense ?","reason":"Traction è un falso amico; preserva solo."}},
+ "2041":{
+ "en":{"prefix":"Would you rather get a hot massage from your partner or give them one yourself?","reason":"Ripristina destinatario e tu."},
+ "es":{"prefix":"¿Preferirías recibir un masaje caliente de tu pareja o darle uno tú?","reason":"Ripristina destinatario e tu."},
+ "fr":{"prefix":"Vous préférez un massage chaud de votre partenaire ou lui en faire un vous-même ?","reason":"Ripristina destinatario e tu."}},
+ "2042":{
+ "en":{"prefix":"Would you rather try a new position every time or always stick to your favorite positions?","reason":"Preserva il plurale e sempre."},
+ "es":{"prefix":"¿Prefieres probar una nueva posición cada vez o quedaros siempre con vuestras favoritas?","reason":"Preserva il plurale e sempre; concordanza."},
+ "fr":{"prefix":"Voudriez-vous essayer une nouvelle position à chaque fois ou toujours rester sur vos positions préférées ?","reason":"Preserva il plurale e sempre; concordanza."}},
+ "2043":{
+ "es":{"prefix":"¿Preferirías recibir un sext sorpresa durante el día o un giro inesperado y erótico por la noche?","reason":"Toque non rende colpo di scena."},
+ "fr":{"prefix":"Préférez-vous recevoir un sext surprise pendant la journée ou un rebondissement coquin le soir ?","reason":"Torsion è un falso amico."}},
+ "2044":{"fr":{"prefix":"Préférez-vous que votre partenaire vous dise des cochonneries ou reste totalement silencieux ?","reason":"Parle mal non rende dirty talk; preserva totale."}},
+ "2045":{
+ "en":{"prefix":"Would you rather do it in a public place risking being seen or in an uncomfortable but safe place?","reason":"Articolo an richiesto."},
+ "fr":{"prefix":"Préférez-vous le faire dans un endroit public en risquant d'être vus ou dans un endroit inconfortable mais sûr ?","reason":"Preposizione mancante e plurale dei destinatari."}},
+ "2046":{
+ "en":{"prefix":"Would you rather your partner write you an intimate love letter or sing you a serenade?","reason":"Letter of intimate love è un calco."},
+ "es":{"prefix":"¿Prefieres que tu compañero te escriba una carta de amor íntima o te cante una serenata?","reason":"Intima concorda con carta."}},
+ "2048":{
+ "en":{"prefix":"Would you prefer a night of short but intense passion or a long and slow sex session?","reason":"Relationship è un falso amico."},
+ "fr":{"prefix":"Préférez-vous une nuit de passion courte mais intense ou un rapport sexuel long et lent ?","reason":"Relation non rende chiaramente rapporto sessuale."}},
+ "2054":{
+ "en":{"prefix":"Would you prefer sex in the shower or bathtub?","reason":"Relationship è un falso amico."},
+ "fr":{"prefix":"Préférez-vous un rapport sexuel dans la douche ou la baignoire ?","reason":"Relation non rende chiaramente rapporto sessuale."}},
+ "2056":{"es":{"prefix":"¿Preferirías tener un beso largo en el cuello o un mordisco suave en los labios?","reason":"Ripristina leggero omesso."}},
+ "2057":{"fr":{"prefix":"Préférez-vous que votre partenaire vous surprenne en lingerie sexy ou complètement nu ?","reason":"Congiuntivo e sintassi innaturale."}},
+ "2059":{
+ "en":{"prefix":"Would you rather receive a surprise hot photo or an unexpected dirty voice message?","reason":"Audio non numerabile e calco spicy audio."},
+ "fr":{"prefix":"Préférez-vous recevoir une photo chaude surprise ou un message vocal coquin inattendu ?","reason":"Son épicé è un calco."}},
+ "2060":{"fr":{"prefix":"Voudriez-vous avoir les yeux bandés pendant les préliminaires ou utiliser des menottes ?","reason":"Être bandé les yeux è sgrammaticato."}},
+ "2062":{
+ "en":{"prefix":"Would you rather have dirty talk whispered in your ear or get a hot message on your phone?","reason":"To your ear è un calco."},
+ "es":{"prefix":"¿Preferirías que te hablen sucio al oído o recibir un mensaje caliente en tu teléfono?","reason":"Ripristina ricevere, non parlare al proprio orecchio."},
+ "fr":{"prefix":"Préférez-vous qu'on vous dise des cochonneries à l'oreille ou recevoir un message chaud sur votre téléphone ?","reason":"Ripristina ricevere, non parlare al proprio orecchio."}},
+ "2065":{
+ "en":{"prefix":"Would you rather have a funny role-playing game in costume or a spontaneous moment with no clothes on?","reason":"Ripara la sintassi tra le alternative e il gioco di ruolo."},
+ "es":{"prefix":"¿Preferirías un juego de rol divertido con disfraces o un momento espontáneo sin nada puesto?","reason":"Ripara la sintassi tra le alternative e il gioco di ruolo."},
+ "fr":{"prefix":"Tu préfères un jeu de rôle drôle en costume ou un moment spontané sans rien sur toi ?","reason":"Ripara la sintassi tra le alternative e il gioco di ruolo."}},
+ "2068":{
+ "en":{"prefix":"Would you rather take a naked bath together or make out in a crowded place?","reason":"Lemonade è un falso amico di limonare; ripristina insieme."},
+ "es":{"prefix":"¿Preferirías bañaros desnudos o morrearos en un lugar lleno de gente?","reason":"Limonada è un falso amico di limonare."},
+ "fr":{"prefix":"Tu préfères prendre un bain nus ensemble ou vous rouler des pelles dans un endroit bondé ?","reason":"Limonade è un falso amico di limonare."}}
+ }
+}

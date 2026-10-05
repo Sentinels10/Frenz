@@ -1,0 +1,18 @@
+{
+ "start":2753,"end":3015,"recheck_only":true,"second_pass":true,
+ "edits":{
+  "2753":{
+   "en":{"replace":[["to make yourself more interesting","to feel more interesting"]],"reason":"Ripristinato sentirsi più interessante del canonico, distinto da rendersi più interessante."},
+   "es":{"text":"Si alguna vez has sentido que «competías» con un amigo para sentirte más interesante... recibe 3 penalizaciones.","reason":"Corretta la costruzione sentir como competir e ripristinato sentirsi più interessante."},
+   "fr":{"replace":[["pour vous rendre plus intéressant","pour vous sentir plus intéressant"]],"reason":"Ripristinato sentirsi, non rendersi, più interessante."}
+  },
+  "2849":{
+   "es":{"replace":[["secretos ocultos","esqueletos escondidos"]],"reason":"Ripristinata la metafora scherzosa degli scheletri, persa nella precedente correzione."},
+   "fr":{"replace":[["secrets cachés","squelettes cachés"]],"reason":"Ripristinata la metafora scherzosa degli scheletri, persa nella precedente correzione."}
+  },
+  "3014":{
+   "en":{"text":"Tell us about your worst \"main character moment\" gone wrong. If the group cracks up, you give out 6 penalties, otherwise you pay 8.","reason":"Momento da protagonista, non momento da celebrità. Reggenza tell e sintassi più immediate, condizioni e quantità identiche."},
+   "es":{"text":"Cuenta tu peor «momento de protagonista» que salió mal. Si el grupo se parte de risa, reparte 6 sanciones; si no, pagas 8.","reason":"Protagonista distinto da celebrità; eliminato il calco del desagüe e l'alternanza tu/usted. Meccanica invariata."}
+  }
+ }
+}

@@ -1,0 +1,92 @@
+{
+ "start":1970,"end":2020,"second_pass":true,
+ "edits":{
+ "1972":{
+ "en":{"prefix":"Would you rather always have the reputation of someone who exaggerates or someone who stays silent when they shouldn't?","reason":"What non indica una persona."},
+ "es":{"prefix":"¿Preferirías tener siempre la reputación de alguien que exagera o de alguien que se queda callado cuando no debería?","reason":"Lo que non indica una persona."},
+ "fr":{"prefix":"Préférez-vous toujours avoir la réputation de quelqu'un qui exagère ou de quelqu'un qui se tait quand il ne devrait pas ?","reason":"Ce qui non indica una persona."}},
+ "1973":{
+ "en":{"prefix":"Would you rather be remembered as a hero without deserving it or as a villain despite being innocent?","reason":"Ripara entrambe le alternative corrotte."},
+ "es":{"prefix":"¿Preferirías ser recordado como un héroe sin merecerlo o como un villano siendo inocente?","reason":"Penalidad introduce una penalità inesistente; ripara le alternative."},
+ "fr":{"prefix":"Préférez-vous qu'on se souvienne de vous comme d'un héros sans le mériter ou comme d'un méchant alors que vous êtes innocent ?","reason":"La traduzione precedente perdeva una delle alternative."}},
+ "1976":{"en":{"prefix":"Would you rather make everyone laugh when you don't want to or never be able to make people laugh when you want to?","reason":"It sostituisce impropriamente le persone e l'azione."}},
+ "1978":{
+ "en":{"prefix":"Would you rather find out that you are a character in a rigged reality show or that everyone around you is except you?","reason":"Reality show, non realtà; except you ripara la seconda alternativa."},
+ "es":{"prefix":"¿Preferirías descubrir que eres un personaje de un reality manipulado o que todos los que te rodean lo son excepto tú?","reason":"Reality, non realidad; ripara l'esclusione del giocatore."},
+ "fr":{"prefix":"Tu préfères découvrir que tu es un personnage d'une émission de téléréalité truquée ou que tous ceux qui t'entourent le sont sauf toi ?","reason":"Téléréalité, non réalité; ripara l'esclusione del giocatore."}},
+ "1981":{"es":{"prefix":"¿Preferirías vivir en un universo donde las redes sociales muestran tus pensamientos reales o donde se proyectan tus mentiras en público?","reason":"Donde relativo senza accento."}},
+ "1983":{"es":{"prefix":"¿Preferirías vivir en un mundo donde nadie duerme nunca o en uno donde todos duermen 20 horas al día?","reason":"Ni sostituisce erroneamente la scelta o."}},
+ "1984":{
+ "es":{"prefix":"¿Preferirías conocer todos los pensamientos eróticos de tu pareja... o que lea los tuyos?","reason":"Pensieri del partner, non partner che è pensiero."},
+ "fr":{"prefix":"Tu préfères connaître toutes les pensées coquines de ton partenaire... ou qu'il lise les tiennes ?","reason":"Pensieri del partner, non partner che ha caldo."}},
+ "1985":{
+ "es":{"prefix":"¿Prefieres que tu compañero nunca te diga cuándo está enfadado o que te lo diga... pero sólo con emojis?","reason":"Congiuntivo dopo que."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire ne vous dise jamais quand il est en colère ou qu'il vous le dise... mais seulement avec des emojis ?","reason":"Congiuntivo dopo que."}},
+ "1991":{"es":{"prefix":"¿Prefieres recibir una foto vergonzosa de tu pareja todos los días o enviar una tú?","reason":"Ripristina l'oggetto foto e il soggetto giocatore."}},
+ "1992":{
+ "es":{"prefix":"¿Prefieres que tu pareja sepa cada vez que te masturbas o verla hacerlo con la webcam abierta por accidente?","reason":"Infinito nella seconda alternativa."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire sache chaque fois que vous vous masturbez ou le voir le faire avec la webcam ouverte par accident ?","reason":"Infinito nella seconda alternativa."}},
+ "1993":{
+ "es":{"prefix":"¿Preferirías tener sexo solo en silencio para siempre o sólo con canciones horteras de los años 2000?","reason":"Basura 2000 è un calco."},
+ "fr":{"prefix":"Voudriez-vous faire l'amour seulement en silence pour toujours ou seulement avec des chansons kitsch des années 2000 ?","reason":"Ripristina trash omesso."}},
+ "1994":{"fr":{"prefix":"Tu préfères te disputer tous les week-ends ou ne pas vous parler du tout pendant un mois ?","reason":"Discuter non rende litigare; preserva non parlarvi."}},
+ "1995":{"fr":{"prefix":"Préférez-vous que votre partenaire lise dans vos pensées ou ne vous écoute jamais ?","reason":"Lire votre esprit è un calco."}},
+ "1996":{
+ "en":{"prefix":"Would you rather spend a week tied together or completely ignore each other for 7 days?","reason":"Bonded non rende essere legati fisicamente."},
+ "es":{"prefix":"¿Preferirías pasar una semana atados el uno al otro o ignoraros completamente durante 7 días?","reason":"Legati fisicamente, non uniti; preserva il soggetto."},
+ "fr":{"prefix":"Préférez-vous passer une semaine attachés l'un à l'autre ou vous ignorer complètement pendant 7 jours ?","reason":"Ripristina legati e completamente."}},
+ "1997":{
+ "es":{"prefix":"¿Prefieres que tu pareja te pida un descanso o le diga \"te amo\" a otra persona?","reason":"Le, non te: destinatario qualcun altro."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire vous demande une pause ou dise \"Je t'aime\" à quelqu'un d'autre ?","reason":"Congiuntivo e pronome naturale nella dichiarazione."}},
+ "1999":{
+ "es":{"prefix":"¿Preferirías recibir un regalo caro sin significado o uno ridículo pero lleno de recuerdos?","reason":"Ripristina uno e ma; sin sentido cambia la sfumatura."},
+ "fr":{"prefix":"Préférez-vous recevoir un cadeau cher sans signification ou un cadeau ridicule mais plein de souvenirs ?","reason":"Ripara la seconda alternativa corrotta."}},
+ "2002":{"es":{"prefix":"¿Preferirías que los padres de tu pareja os escucharan hacer el amor o que os pillaran en el sofá?","reason":"Soggetto e destinatario plurale; sintassi della seconda alternativa."}},
+ "2003":{"fr":{"prefix":"Préférez-vous un partenaire qui vous surprend toujours ou qui vous comprend sans que vous parliez ?","reason":"Senza che parli il giocatore, non il partner."}},
+ "2004":{
+ "en":{"prefix":"Would you rather your partner send you a dirty voice message or a hot photo?","reason":"Spinto non significa loud."},
+ "es":{"prefix":"¿Prefieres que tu pareja te envíe un audio subido de tono o una foto caliente?","reason":"Spinto non significa fuerte."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire vous envoie un message vocal coquin ou une photo hot ?","reason":"Ripristina la prima alternativa perduta."}},
+ "2005":{
+ "en":{"prefix":"Would you rather your partner accidentally call you by their ex's name or a colleague's?","reason":"The former è un calco ambiguo."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire vous appelle accidentellement par le nom de son ex ou d'un collègue ?","reason":"L'ancien è un calco ambiguo."}},
+ "2007":{
+ "en":{"prefix":"Would you rather know how many partners your partner has had or never know?","reason":"Never knew è incoerente con la scelta futura."},
+ "es":{"prefix":"¿Prefieres saber cuántas parejas ha tenido tu pareja o no saberlo nunca?","reason":"Socios è un falso amico e soggetto errato."},
+ "fr":{"prefix":"Vous préférez savoir combien de partenaires votre partenaire a eus ou ne jamais le savoir ?","reason":"Ripara la seconda alternativa e il tempo verbale."}},
+ "2008":{
+ "en":{"prefix":"Would you rather find out that your partner only watches hentai videos or only videos of people over 60?","reason":"Over 60 indica l'età, non quantità di video."},
+ "es":{"prefix":"¿Prefieres descubrir que tu pareja sólo mira vídeos hentai o sólo vídeos de personas de más de 60 años?","reason":"Over 60 indica l'età, non quantità di video."},
+ "fr":{"prefix":"Préférez-vous découvrir que votre partenaire regarde seulement des vidéos hentai ou seulement des vidéos de personnes de plus de 60 ans ?","reason":"Over 60 indica l'età, non quantità di video."}},
+ "2009":{
+ "en":{"prefix":"Would you rather your partner surprise you with an absurd Kamasutra position or with an unlikely place like on top of the washing machine?","reason":"On top preserva sopra la lavatrice, above è sospeso sopra."},
+ "es":{"prefix":"¿Prefieres que tu pareja te sorprenda con una posición absurda de Kamasutra o con un lugar improbable como encima de la lavadora?","reason":"Por encima suggerisce sopra senza contatto."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire vous surprenne avec une position absurde du Kamasutra ou avec un endroit improbable comme sur la machine à laver ?","reason":"Congiuntivo e posto sulla lavatrice."}},
+ "2010":{
+ "en":{"prefix":"Would you rather your partner never tell you when he's angry or only tell you with emojis?","reason":"Ripara il parallelismo delle alternative."},
+ "es":{"prefix":"¿Prefieres que tu compañero nunca te diga cuándo está enfadado o que te lo diga sólo con emojis?","reason":"Congiuntivo e solo omesso."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire ne vous dise jamais quand il est en colère ou qu'il vous le dise seulement avec des emojis ?","reason":"Congiuntivo e solo omesso."}},
+ "2011":{
+ "en":{"prefix":"Would you rather have a hot weekend with your ex for money or act as if nothing happened to test your partner's reaction?","reason":"Pretend anything è una traduzione errata di fingere di nulla."},
+ "es":{"prefix":"¿Preferirías tener un fin de semana caliente con tu ex por dinero o hacer como si nada para probar la reacción de tu pareja?","reason":"Fingir algo è una traduzione errata di fingere di nulla."},
+ "fr":{"prefix":"Voudriez-vous avoir un week-end chaud avec votre ex pour de l'argent ou faire comme si de rien n'était pour tester la réaction de votre partenaire ?","reason":"Faire semblant de quelque chose è una traduzione errata."}},
+ "2013":{
+ "es":{"prefix":"¿Prefieres que tu pareja nunca te busque para hacerlo o que te busque sólo para eso?","reason":"Ripara soggetto e solo omesso."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire ne vous cherche jamais pour le faire ou qu'il vous cherche seulement pour ça ?","reason":"Ripara la seconda alternativa che cambiava il senso."}},
+ "2016":{
+ "en":{"prefix":"Would you prefer to receive an embarrassing photo from your partner every day or have to send one yourself?","reason":"One of you è un errore e manca dover."},
+ "es":{"prefix":"¿Prefieres recibir una foto vergonzosa de tu pareja todos los días o tener que enviar una tú?","reason":"Uno de ustedes è un errore e manca dover."},
+ "fr":{"prefix":"Préférez-vous recevoir une photo embarrassante de votre partenaire tous les jours ou devoir en envoyer une vous-même ?","reason":"L'un d'entre vous è un errore e manca dover."}},
+ "2017":{
+ "en":{"prefix":"Would you prefer your partner to know every time you masturbate or see them doing it with the webcam accidentally turned on?","reason":"Ripristina farlo e webcam accesa."},
+ "es":{"prefix":"¿Prefieres que tu pareja sepa cada vez que te masturbas o verla hacerlo con la webcam encendida por accidente?","reason":"Ripristina farlo e webcam accesa."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire sache chaque fois que vous vous masturbez ou le voir le faire avec la webcam allumée par accident ?","reason":"Ripara la sintassi e ripristina farlo."}},
+ "2018":{
+ "en":{"prefix":"Would you rather do it only in silence forever or only with trashy songs from the 2000s?","reason":"Between 2000s è una traduzione errata e manca trash."},
+ "es":{"prefix":"¿Preferirías hacerlo sólo en silencio para siempre o sólo con canciones horteras de los años 2000?","reason":"Entre 2000 è una traduzione errata e manca trash."},
+ "fr":{"prefix":"Voudriez-vous le faire seulement en silence pour toujours ou seulement avec des chansons kitsch des années 2000 ?","reason":"Entre les années 2000 è una traduzione errata e manca trash."}},
+ "2019":{
+ "en":{"prefix":"Would you rather your partner read your mind or never listen to you?","reason":"Read you in thought è un calco."},
+ "fr":{"prefix":"Préférez-vous que votre partenaire lise dans vos pensées ou ne vous écoute jamais ?","reason":"Ripristina leggere nel pensiero."}}
+ }
+}

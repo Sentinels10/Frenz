@@ -1,0 +1,17 @@
+{
+ "start":1071,"end":1360,"recheck_only":true,"second_pass":true,
+ "corrections":[
+ [1071,"it","Chi ha come ultimo contatto WhatsApp una persona presente in questa stanza paga 3 penalità.","Preposizione mancante. Non si decide se ultimo significhi ultimo aggiunto o ultima chat."],
+ [1071,"en","Anyone whose last WhatsApp contact is someone in this room pays 3 penalties.","Sintassi sconnessa; mantenuta l'ambiguità di ultimo contatto."],
+ [1071,"es","Quien tiene como último contacto de WhatsApp a una persona presente en esta habitación paga 3 penalidades.","Preposizioni mancanti; mantenuta l'ambiguità di ultimo contatto."],
+ [1071,"fr","Toute personne dont le dernier contact WhatsApp est quelqu'un présent dans cette pièce paie 3 pénalités.","Sintassi sconnessa; mantenuta l'ambiguità di ultimo contatto."],
+ [1086,"en","Players who have ever felt attraction for someone from a friend's partner receive 3 penalties.","Felt attraction corregge tried attraction, senza reinterpretare la relazione incomprensibile."],
+ [1086,"es","Los jugadores que alguna vez han sentido atracción por alguien de la pareja de un amigo reciben 3 penalidades.","Sentir atracción, non probar atracción; relazione ambigua conservata."],
+ [1086,"fr","Les joueurs qui ont déjà ressenti de l'attirance pour quelqu'un du partenaire d'un ami reçoivent 3 pénalités.","Ripristinato provare attrazione, non tentare di attrarre. Relazione ambigua conservata."],
+ [1139,"fr","Ceux qui ont déjà fait une figure devant un professeur ou un patron reçoivent 2 pénalités","Riparato il soggetto della penalità e devant. Non si inventa il qualificativo della figura."],
+ [1194,"en","Take turns naming methods to break a girl, starting with [player].","Riparata sintassi dei turni; non reinterpretato il verbo oscuro del canonico."],
+ [1194,"es","Por turnos, nombrad métodos para romper a una chica; empieza [player].","Riparata sintassi dei turni; non reinterpretato il verbo oscuro del canonico."],
+ [1194,"fr","À tour de rôle, nommez des méthodes pour briser une fille ; [player] commence.","Riparata sintassi dei turni; non reinterpretato il verbo oscuro del canonico."],
+ [1359,"es","4 penalidades a quienes alguna vez han mentido sobre tu edad.","Allineato il possessivo alla tua età del canonico, senza correggere il possibile errore di contenuto del canonico."]
+ ]
+}

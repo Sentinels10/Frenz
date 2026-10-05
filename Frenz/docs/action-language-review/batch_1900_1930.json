@@ -1,0 +1,44 @@
+{
+ "start":1900,"end":1930,"second_pass":true,
+ "edits":{
+ "1901":{
+ "en":{"prefix":"Would you rather give up cuddles or the post-sex cigarette?","reason":"Post-relationship altera il senso e cuddle ha articolo errato."},
+ "es":{"prefix":"¿Preferirías renunciar a los mimos o al cigarro después del sexo?","reason":"Traduzione corrotta: entrambe le alternative parlavano di cigarro."},
+ "fr":{"prefix":"Tu préfères abandonner les câlins ou la cigarette après le sexe ?","reason":"Post-relation ambiguo: rapporto sessuale."}},
+ "1903":{
+ "en":{"prefix":"Would you rather never be able to have sex on vacation again or never do it at your house again?","reason":"Manca la negazione della seconda alternativa."},
+ "es":{"prefix":"¿Preferirías no volver a tener sexo de vacaciones o no volver a hacerlo en tu casa?","reason":"Manca la negazione della seconda alternativa."},
+ "fr":{"prefix":"Tu préfères ne plus jamais pouvoir faire l'amour en vacances ou ne plus jamais le faire chez toi ?","reason":"Manca la negazione della seconda alternativa."}},
+ "1904":{"en":{"prefix":"Would you rather do it dressed as a superhero or a Disney character?","reason":"Articoli mancanti."}},
+ "1905":{"en":{"prefix":"Would you rather have sex only in the kitchen or just in the garage?","reason":"Relationships è un falso amico di rapporti sessuali."}},
+ "1907":{"es":{"prefix":"¿Te gustaría hacerlo siempre con gafas de sol puestas o siempre con guantes de cocina?","reason":"Con gafas de sol en è una struttura inglese corrotta."}},
+ "1908":{
+ "en":{"prefix":"Would you rather have sex only standing up or only lying on the ground?","reason":"Relationships è un falso amico."},
+ "es":{"prefix":"¿Preferirías tener relaciones sólo de pie o sólo tumbado en el suelo?","reason":"Mentir è un falso amico di lying."},
+ "fr":{"prefix":"Préférez-vous avoir des rapports sexuels uniquement debout ou uniquement allongé sur le sol ?","reason":"Concordanza con il giocatore e preserva solo in entrambe le alternative."}},
+ "1911":{
+ "en":{"prefix":"Would you rather give up slow sex forever or give up fast sex forever?","reason":"Seconda alternativa corrotta."},
+ "es":{"prefix":"¿Preferirías renunciar al sexo lento para siempre o al sexo rápido para siempre?","reason":"Seconda alternativa corrotta."},
+ "fr":{"prefix":"Tu préfères abandonner le sexe lent pour toujours ou le sexe rapide pour toujours ?","reason":"Seconda alternativa erroneamente ripetuta."}},
+ "1912":{
+ "en":{"prefix":"Would you rather every sex session start with a joke or end with a serious handshake?","reason":"Relationship è un falso amico."},
+ "fr":{"prefix":"Tu préfères que chaque rapport sexuel commence par une blague ou finisse par une poignée de main sérieuse ?","reason":"Relation ambiguo: rapporto sessuale."}},
+ "1913":{"en":{"text":"Would you rather have sex only very early in the morning or only at 3:00 a.m.? Everyone votes at the same time; the minority receives 3 penalties.","reason":"Relationships è un falso amico; ripristina prestissimo."}},
+ "1914":{"fr":{"prefix":"Tu préfères savoir ce que tout le monde pense de toi... mais ne pas pouvoir répondre ?","reason":"Sintassi incoerente con l'infinito precedente."}},
+ "1915":{"es":{"prefix":"¿Preferirías despertarte todos los días con un secreto diferente que ocultar o una confesión que hacer?","reason":"Para esconderte modifica il soggetto da segreto a giocatore."}},
+ "1922":{"fr":{"prefix":"Voudriez-vous sacrifier un être cher pour sauver mille inconnus ou le contraire ?","reason":"Mille, non migliaia."}},
+ "1923":{
+ "it":{"prefix":"Preferiresti che ogni volta che piangi, qualcuno nel mondo muoia… o che ogni tua risata ferisca qualcuno?","reason":"Congiuntivo richiesto."},
+ "es":{"prefix":"¿Preferirías que cada vez que lloras, alguien en el mundo muera... o que cada risa tuya lastime a alguien?","reason":"Congiuntivo richiesto e calco risa que haces."},
+ "fr":{"prefix":"Préférez-vous que chaque fois que vous pleurez, quelqu'un dans le monde meure... ou que chacun de vos rires blesse quelqu'un ?","reason":"Congiuntivo richiesto e calco rire que vous faites."}},
+ "1924":{"fr":{"prefix":"Tu préfères te souvenir de chaque mensonge ou de chaque fois qu'on t'a menti ?","reason":"Passivo impossibile con mentir."}},
+ "1926":{"fr":{"prefix":"Préférez-vous que chacune de vos pensées se réalise ou que toutes les pensées des autres se déversent sur vous ?","reason":"Preserva ogni pensiero e riversarsi."}},
+ "1927":{
+ "es":{"prefix":"¿Preferirías morir como un héroe y ser olvidado o vivir como un cobarde y seguir siendo famoso?","reason":"Preposizioni mancanti."},
+ "fr":{"prefix":"Voudriez-vous mourir en héros et être oublié ou vivre en lâche et rester célèbre ?","reason":"Preposizioni mancanti."}},
+ "1928":{"fr":{"prefix":"Préféreriez-vous savoir que vous avez été choisi pour une expérience sociale ou que vous avez créé l'illusion ?","reason":"Sauriez-vous plutôt è un calco sgrammaticato."}},
+ "1929":{
+ "es":{"prefix":"¿Preferirías hablar con tu yo futuro o con tu yo de niño?","reason":"Hijo cambia il destinatario dal sé bambino al figlio."},
+ "fr":{"prefix":"Préférez-vous parler à votre moi futur ou à votre moi enfant ?","reason":"Enfant vous-même è un calco sgrammaticato."}}
+ }
+}

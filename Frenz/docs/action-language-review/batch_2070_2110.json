@@ -1,0 +1,60 @@
+{
+ "start":2070,"end":2110,"second_pass":true,
+ "edits":{
+ "2070":{
+ "es":{"prefix":"¿Preferirías tener los ojos vendados o que te hagan cosquillas con una pluma?","reason":"Vendado non specifica occhi e cosquillado è innaturale."},
+ "fr":{"prefix":"Voudriez-vous avoir les yeux bandés ou être chatouillé avec une plume ?","reason":"Être bandé ha altro significato; ripristina occhi bendati."}},
+ "2071":{"es":{"prefix":"¿Prefieres fingir que sois desconocidos en un bar o amantes en un hotel?","reason":"Ripristina fingere omesso."}},
+ "2074":{"es":{"prefix":"¿Preferirías recibir un lap dance o hacérselo tú a tu pareja?","reason":"Baile de regazo è un calco e con cambia il destinatario."}},
+ "2077":{
+ "en":{"prefix":"Would you rather get a striptease or do one yourself?","reason":"One of you è un calco corrotto."},
+ "es":{"prefix":"¿Preferirías recibir un striptease o hacer uno tú?","reason":"Uno de ustedes è un calco corrotto."}},
+ "2078":{
+ "en":{"prefix":"Would you rather explore new positions or have fun with sex toys and couple games?","reason":"Locations è un falso amico di posizioni."},
+ "es":{"prefix":"¿Prefieres explorar nuevas posiciones o divertirte con juguetes sexuales y juegos de pareja?","reason":"Lugares è un falso amico di posizioni."},
+ "fr":{"prefix":"Vous préférez explorer de nouvelles positions ou vous amuser avec des jouets sexuels et des jeux de couple ?","reason":"Endroits è un falso amico di posizioni."}},
+ "2079":{"fr":{"prefix":"Préférez-vous tourner un film chaud ensemble ou écrire votre histoire coquine ?","reason":"Histoire épicée è un calco."}},
+ "2080":{"fr":{"prefix":"Préférez-vous recevoir un murmure coquin à l'oreille ou un message chaud sur votre téléphone ?","reason":"Murmure épicé è un calco."}},
+ "2081":{"fr":{"prefix":"Préférez-vous le faire dans un lieu public en risquant d'être vus ou dans un lieu privé avec plus de liberté ?","reason":"Preposizione mancante e plurale della coppia."}},
+ "2082":{
+ "en":{"prefix":"Would you rather slowly undress each other or jump into a spontaneous shower together?","reason":"Preserva soggetto plurale della coppia."},
+ "es":{"prefix":"¿Preferirías desvestiros lentamente el uno al otro o lanzaros a una ducha improvisada?","reason":"Ripristina lentamente, reciprocità e soggetto plurale."},
+ "fr":{"prefix":"Vous préférez vous déshabiller lentement l'un l'autre ou vous jeter dans une douche improvisée ?","reason":"Ripristina lentamente e reciprocità."}},
+ "2085":{
+ "en":{"text":"Everyone wearing something black must take 2 penalties","reason":"Traduzione mancante, testo rimasto italiano."},
+ "es":{"text":"Todos los que lleven algo negro reciben 2 penalizaciones","reason":"Traduzione mancante, testo rimasto italiano."},
+ "fr":{"text":"Tous ceux qui portent quelque chose de noir reçoivent 2 pénalités","reason":"Traduzione mancante, testo rimasto italiano."}},
+ "2086":{"fr":{"text":"Les deux joueurs les plus grands doivent prendre 3 pénalités chacun","reason":"Hauts non si usa per l'altezza delle persone."}},
+ "2087":{"fr":{"text":"Tous ceux qui ont les cheveux longs reçoivent 2 pénalités","reason":"Peines indica pene giudiziarie e sintassi innaturale."}},
+ "2088":{
+ "en":{"text":"Anyone whose phone has less than 50% battery must take 3 penalties","reason":"Incur è inutilmente burocratico."},
+ "es":{"text":"Quien tenga el teléfono con menos del 50% de batería recibe 3 penalizaciones","reason":"Incurrir è inutilmente burocratico."},
+ "fr":{"text":"Quiconque a moins de 50% de batterie sur son téléphone reçoit 3 pénalités","reason":"De mancante davanti a batterie; encourir è burocratico."}},
+ "2089":{"fr":{"text":"Les personnes nées en été reçoivent 2 pénalités","reason":"Peines indica pene giudiziarie."}},
+ "2093":{"fr":{"text":"Tous les joueurs célibataires reçoivent 2 pénalités","reason":"Seuls non significa single."}},
+ "2095":{"fr":{"text":"Tous ceux nés dans un mois avec R reçoivent 2 pénalités","reason":"Peines indica pene giudiziarie."}},
+ "2096":{
+ "es":{"text":"Quien haya bebido café hoy recibe 2 penalizaciones","reason":"Multas indica multe monetarie."},
+ "fr":{"text":"Quiconque a bu du café aujourd'hui reçoit 2 pénalités","reason":"Peines indica pene giudiziarie."}},
+ "2097":{
+ "es":{"text":"Los jugadores con uñas de colores reciben 2 penalizaciones","reason":"Cara è un falso amico di face."},
+ "fr":{"text":"Les joueurs avec les ongles colorés reçoivent 2 pénalités","reason":"Visage è un falso amico di face."}},
+ "2098":{
+ "es":{"text":"Quien haya llegado el último hoy recibe 3 penalizaciones","reason":"Hoy, non ultimo giorno."},
+ "fr":{"text":"Quiconque est arrivé en dernier aujourd'hui reçoit 3 pénalités","reason":"Peines indica pene giudiziarie."}},
+ "2099":{"fr":{"text":"Tous ceux qui ont posté sur les médias sociaux aujourd'hui reçoivent 2 pénalités","reason":"Peines indica pene giudiziarie."}},
+ "2101":{
+ "en":{"text":"Anyone who is an only child must take 2 penalties","reason":"Make penalties può indicare assegnare, non ricevere."},
+ "es":{"text":"Cualquiera que sea hijo único recibe 2 penalizaciones","reason":"Solo niño non significa figlio unico."},
+ "fr":{"text":"Quiconque est enfant unique reçoit 2 pénalités","reason":"Imposer inverte la meccanica da ricevere ad assegnare."}},
+ "2102":{
+ "es":{"text":"Todos los que vieron Netflix esta semana reciben 3 penalizaciones","reason":"A non richiesto con Netflix; penas ha senso giudiziario."},
+ "fr":{"text":"Tous ceux qui ont regardé Netflix cette semaine reçoivent 3 pénalités","reason":"Peines indica pene giudiziarie."}},
+ "2105":{"es":{"text":"Todos los jugadores diestros reciben 2 penalizaciones","reason":"De derecha indica orientamento politico, non destrimani."}},
+ "2107":{
+ "es":{"text":"Los jugadores con el pelo teñido reciben 3 penalizaciones","reason":"Rostro al posto di capelli altera il soggetto."},
+ "fr":{"text":"Les joueurs aux cheveux teints reçoivent 3 pénalités","reason":"Visage è un falso amico di face."}},
+ "2108":{"fr":{"text":"Quiconque a fait du sport au cours de la dernière semaine reçoit 2 pénalités","reason":"Peines indica pene giudiziarie."}},
+ "2109":{"fr":{"text":"Tous ceux qui ont mangé des sucreries aujourd'hui doivent prendre 2 sanctions","reason":"Dolci include più dei soli bonbons."}}
+ }
+}

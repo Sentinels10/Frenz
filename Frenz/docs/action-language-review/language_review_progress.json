@@ -1,0 +1,325 @@
+{
+  "updated_at": "2026-10-05T09:58:22.634888+00:00",
+  "total_records": 4294,
+  "languages": [
+    "it",
+    "en",
+    "es",
+    "fr"
+  ],
+  "status": "COMPLETED",
+  "checked_records": 4294,
+  "validated_and_applied_records": 4294,
+  "modified_records": 3448,
+  "last_checked_index": 4336,
+  "last_checked_id": "/coppie/517/text",
+  "last_applied_index": 4336,
+  "current_batch": null,
+  "next_unchecked_index": 4337,
+  "problematic_ids_source": "unresolved.json",
+  "record_source": "review.json",
+  "recovery": "review.json records 0..1769 validated and applied; 1770..1899 checked with 211 pending changes, not yet applied. Summary predates final review batch. Preserve baseline and all existing edits.",
+  "resume": "COMPLETED: nessun record da riprendere. I 43 record ambigui sono stati eliminati su richiesta; storico e copie conservati in removal_manifest.json e removed_ambiguous_actions.json.",
+  "remaining_records": 0,
+  "completed_batches": [
+    {
+      "start": 1770,
+      "end_exclusive": 1810,
+      "decisions": "batch_1770_1810.json"
+    },
+    {
+      "start": 1810,
+      "end_exclusive": 1855,
+      "decisions": "batch_1810_1855.json"
+    },
+    {
+      "start": 1855,
+      "end_exclusive": 1900,
+      "decisions": "batch_1855_1900.json"
+    },
+    {
+      "start": 1900,
+      "end_exclusive": 1930,
+      "decisions": "batch_1900_1930.json"
+    },
+    {
+      "start": 1930,
+      "end_exclusive": 1970,
+      "decisions": "batch_1930_1970.json"
+    },
+    {
+      "start": 1970,
+      "end_exclusive": 2020,
+      "decisions": "batch_1970_2020.json"
+    },
+    {
+      "start": 2020,
+      "end_exclusive": 2070,
+      "decisions": "batch_2020_2070.json"
+    },
+    {
+      "start": 2070,
+      "end_exclusive": 2110,
+      "decisions": "batch_2070_2110.json"
+    },
+    {
+      "start": 2110,
+      "end_exclusive": 2170,
+      "decisions": "batch_2110_2170.json"
+    },
+    {
+      "start": 2170,
+      "end_exclusive": 2203,
+      "decisions": "batch_2170_2203.json"
+    },
+    {
+      "start": 2203,
+      "end_exclusive": 2220,
+      "decisions": "batch_2203_2220.json"
+    },
+    {
+      "start": 2020,
+      "end_exclusive": 2070,
+      "decisions": "batch_second_pass_2020_2070.json"
+    },
+    {
+      "start": 2220,
+      "end_exclusive": 2250,
+      "decisions": "batch_2220_2250.json"
+    },
+    {
+      "start": 2250,
+      "end_exclusive": 2290,
+      "decisions": "batch_2250_2290.json"
+    },
+    {
+      "start": 2290,
+      "end_exclusive": 2320,
+      "decisions": "batch_2290_2320.json"
+    },
+    {
+      "start": 2320,
+      "end_exclusive": 2360,
+      "decisions": "batch_2320_2360.json"
+    },
+    {
+      "start": 2360,
+      "end_exclusive": 2420,
+      "decisions": "batch_2360_2420.json"
+    },
+    {
+      "start": 2406,
+      "end_exclusive": 2407,
+      "decisions": "batch_second_pass_2406.json"
+    },
+    {
+      "start": 2420,
+      "end_exclusive": 2480,
+      "decisions": "batch_2420_2480.json"
+    },
+    {
+      "start": 2480,
+      "end_exclusive": 2545,
+      "decisions": "batch_2480_2545.json"
+    },
+    {
+      "start": 2545,
+      "end_exclusive": 2612,
+      "decisions": "batch_2545_2612.json"
+    },
+    {
+      "start": 2612,
+      "end_exclusive": 2662,
+      "decisions": "agent_dark_2612_2662.json"
+    },
+    {
+      "start": 2662,
+      "end_exclusive": 2712,
+      "decisions": "agent_dark_2662_2712.json"
+    },
+    {
+      "start": 3201,
+      "end_exclusive": 3276,
+      "decisions": "agent_party_3201_3276.json"
+    },
+    {
+      "start": 3276,
+      "end_exclusive": 3326,
+      "decisions": "agent_party_3276_3326.json"
+    },
+    {
+      "start": 3819,
+      "end_exclusive": 3899,
+      "decisions": "agent_coppie_3819_3899.json"
+    },
+    {
+      "start": 3899,
+      "end_exclusive": 3979,
+      "decisions": "agent_coppie_3899_3979.json"
+    },
+    {
+      "start": 3326,
+      "end_exclusive": 3369,
+      "decisions": "agent_party_3326_3369.json"
+    },
+    {
+      "start": 2712,
+      "end_exclusive": 2762,
+      "decisions": "agent_dark_2712_2762.json"
+    },
+    {
+      "start": 3979,
+      "end_exclusive": 4059,
+      "decisions": "agent_coppie_3979_4059.json"
+    },
+    {
+      "start": 1071,
+      "end_exclusive": 1360,
+      "decisions": "batch_ambiguities_second_pass.json"
+    },
+    {
+      "start": 3369,
+      "end_exclusive": 3419,
+      "decisions": "agent_party_3369_3419.json"
+    },
+    {
+      "start": 2762,
+      "end_exclusive": 2812,
+      "decisions": "agent_dark_2762_2812.json"
+    },
+    {
+      "start": 3101,
+      "end_exclusive": 3151,
+      "decisions": "batch_3101_3151.json"
+    },
+    {
+      "start": 2812,
+      "end_exclusive": 2862,
+      "decisions": "agent_dark_2812_2862.json"
+    },
+    {
+      "start": 3419,
+      "end_exclusive": 3494,
+      "decisions": "agent_party_3419_3494.json"
+    },
+    {
+      "start": 4059,
+      "end_exclusive": 4139,
+      "decisions": "agent_coppie_4059_4139.json"
+    },
+    {
+      "start": 3151,
+      "end_exclusive": 3201,
+      "decisions": "batch_3151_3201.json"
+    },
+    {
+      "start": 3162,
+      "end_exclusive": 3188,
+      "decisions": "batch_second_pass_3162_3187.json"
+    },
+    {
+      "start": 2862,
+      "end_exclusive": 2912,
+      "decisions": "agent_dark_2862_2912.json"
+    },
+    {
+      "start": 3719,
+      "end_exclusive": 3769,
+      "decisions": "batch_3719_3769.json"
+    },
+    {
+      "start": 3494,
+      "end_exclusive": 3569,
+      "decisions": "agent_party_3494_3569.json"
+    },
+    {
+      "start": 3569,
+      "end_exclusive": 3644,
+      "decisions": "agent_party_3569_3644.json"
+    },
+    {
+      "start": 4139,
+      "end_exclusive": 4239,
+      "decisions": "agent_coppie_4139_4239.json"
+    },
+    {
+      "start": 3769,
+      "end_exclusive": 3819,
+      "decisions": "batch_3769_3819.json"
+    },
+    {
+      "start": 2912,
+      "end_exclusive": 2962,
+      "decisions": "agent_dark_2912_2962.json"
+    },
+    {
+      "start": 2962,
+      "end_exclusive": 3012,
+      "decisions": "agent_dark_2962_3012.json"
+    },
+    {
+      "start": 3644,
+      "end_exclusive": 3719,
+      "decisions": "agent_party_3644_3719.json"
+    },
+    {
+      "start": 3201,
+      "end_exclusive": 3719,
+      "decisions": "agent_party_final_checks.json"
+    },
+    {
+      "start": 4239,
+      "end_exclusive": 4337,
+      "decisions": "agent_coppie_4239_4337.json"
+    },
+    {
+      "start": 4235,
+      "end_exclusive": 4236,
+      "decisions": "agent_coppie_4235_4236_recheck.json"
+    },
+    {
+      "start": 3101,
+      "end_exclusive": 3201,
+      "decisions": "agent_root_recheck_3101_3201.json"
+    },
+    {
+      "start": 3012,
+      "end_exclusive": 3062,
+      "decisions": "agent_dark_3012_3062.json"
+    },
+    {
+      "start": 3803,
+      "end_exclusive": 3804,
+      "decisions": "agent_root_3803_3804_recheck.json"
+    },
+    {
+      "start": 2545,
+      "end_exclusive": 2612,
+      "decisions": "agent_root_recheck_2545_2612.json"
+    },
+    {
+      "start": 3062,
+      "end_exclusive": 3101,
+      "decisions": "agent_dark_3062_3101.json"
+    },
+    {
+      "start": 2753,
+      "end_exclusive": 3015,
+      "decisions": "batch_precommit_final_recheck.json"
+    }
+  ],
+  "next_unchecked_id": null,
+  "problematic_ids": [],
+  "modified_texts_by_language": {
+    "it": 45,
+    "en": 1486,
+    "es": 2983,
+    "fr": 2669
+  },
+  "completed_at": "2026-10-05T09:58:22.634888+00:00",
+  "final_audit": "final_audit.json",
+  "historical_total_records": 4337,
+  "removed_records": 43,
+  "removed_texts": 172,
+  "index_space": "Retained-record count; review.json keeps historical IDs and indices. Use removal_manifest.json retained_id_mapping for current database paths."
+}

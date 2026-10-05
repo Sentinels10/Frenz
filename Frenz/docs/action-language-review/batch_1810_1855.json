@@ -1,0 +1,9 @@
+{
+ "start":1810,"end":1855,"second_pass":true,
+ "edits":{
+  "1812":{"es":{"prefix":"¿Preferirías viajar en el tiempo al pasado o al futuro?","reason":"Corregge la preposizione di destinazione."},"en":{"prefix":"Would you rather travel through time to the past or to the future?","reason":"In time in the past è un calco."}},
+  "1839":{"en":null,"es":null},
+  "1847":{"en":{"prefix":"Would you rather do it with the soundtrack of Peppa Pig or with football commentary in the background?","reason":"Telecronaca non numerabile; corregge il falso amico telescope."}},
+  "1851":{"es":{"prefix":"¿Preferirías gritar “MAMMAAA!” o “FORZA JUVE!” cada vez que te corres?","reason":"Venir non rende venire in senso sessuale."}}
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "start":2020,"end":2070,"second_pass":true,
+ "edits":{
+ "2034":{
+ "en":{"previous_prefix":"Would you rather your partner be very good at cooking but terrible at tidying up or the other way around?","prefix":"Would you rather your partner be very good at cooking but terrible at ordering or the other way around?","reason":"Corregge grammatica e pessimo; conserva l'ambiguità di ordinare nel canonico."},
+ "es":{"previous_prefix":"¿Prefieres que tu pareja sea muy buena cocinando pero pésima ordenando la casa o al revés?","prefix":"¿Prefieres que tu pareja sea muy buena cocinando pero pésima para ordenar o al revés?","reason":"Corregge pessimo e il contrario senza specificare cosa ordinare."},
+ "fr":{"previous_prefix":"Préférez-vous que votre partenaire soit très doué pour cuisiner mais très mauvais pour ranger ou l'inverse ?","prefix":"Préférez-vous que votre partenaire soit très bon pour cuisiner mais très mauvais pour commander ou l'inverse ?","reason":"Corregge grammatica; conserva l'interpretazione preesistente del verbo ambiguo ordinare."}},
+ "2062":{"en":{"previous_prefix":"Would you rather have dirty talk whispered in your ear or get a hot message on your phone?","prefix":"Would you rather hear dirty talk in your ear or get a hot message on your phone?","reason":"Corregge la preposizione senza introdurre il sussurro, non specificato nel canonico."}}
+ }
+}

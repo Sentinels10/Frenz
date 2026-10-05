@@ -1,7 +1,7 @@
 {
   "specialGames": {
     "pointFinger": {
-      "text": "{player} Deve scegliere una caratteristica (es. \"il più tirchio\", \"il più divertente\") e tutti indicheranno un giocatore. Chi riceve più voti fa una penalità!"
+      "text": "{player} deve scegliere una caratteristica (es. \"il più tirchio\", \"il più divertente\") e tutti indicheranno un giocatore. Chi riceve più voti fa una penalità!"
     },
     "infamata": {
       "text": "{player} ha a disposizione l'Infamata! Può usarla per assegnare una sua domanda o sfida a qualcun altro del gruppo (Dura tutta la partita)."
@@ -40,8 +40,7 @@
         "Hai venti secondi per nominare 5 paure che hai. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
         "Hai venti secondi per elencare 5 bugie che hai detto. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
         "Hai venti secondi per nominare 5 rimpianti della tua vita. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-        "Hai venti secondi per elencare 5 cose che non sopporti delle persone. Se ti rifiuti o non fai in tempo, paghi 3 penitenze",
-        "Hai venti secondi per nominare 5 segreti che non hai mai confessato (senza rivelarli). Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
+        "Hai venti secondi per elencare 5 cose che non sopporti delle persone. Se ti rifiuti o non fai in tempo, paghi 3 penitenze"
       ]
     },
     "questoOQuello": {
@@ -115,7 +114,7 @@
         "Porn amatoriale o professionale?",
         "Con lubrificante o senza?",
         "Sesso sul tavolo o sesso in doccia?",
-        "Vibrator silenzioso o vibratore rumoroso?",
+        "Vibratore silenzioso o vibratore rumoroso?",
         "Culo enorme o labbra enormi?",
         "Occhi bendati o bocca tappata?",
         "Sesso sul divano o sesso in auto?",
@@ -628,7 +627,7 @@
         "Chi è più probabile che rida al momento meno opportuno? Il più votato paga 2 penalità .",
         "Chi è più probabile che finisca in un video imbarazzante? Il più votato prende 3 penalità .",
         "Chi è più probabile che si ritrovi a dormire sul divano di qualcun altro? Il più votato prende 3 penalità .",
-        "Chi è più probabile che dica “mai più ” penalità . e poi esca di nuovo la sera dopo? Il più votato paga 3",
+        "Chi è più probabile che dica “mai più” e poi esca di nuovo la sera dopo? Il più votato paga 3 penalità.",
         "Chi è più probabile che sparisca nel nulla a metà serata? Il più votato prende 3 penalità .",
         "Chi è più probabile che diventi prima genitore? Il più votato prende 2 penalità .",
         "Chi è più probabile che si dimentichi di pagare le bollette? Il più votato prende 2 penalità .",
@@ -717,7 +716,7 @@
         "Chi è più probabile che urli il nome sbagliato a letto? Il più votato riceve 4 penalità .",
         "Chi è più probabile che si infortuni durante un rapporto? Il più votato paga 3 penalità .",
         "Chi è più probabile che scelga la peggior colonna sonora per un momento hot? Il più votato prende 2 penalità .",
-        "hi è più probabile che dimentichi un dettaglio fondamentale tipo i preservativi? Il più votato riceve 2 penalità .",
+        "Chi è più probabile che dimentichi un dettaglio fondamentale tipo i preservativi? Il più votato riceve 2 penalità .",
         "Chi è più probabile che si faccia beccare a letto dal partner del ragazzo/a? Il più votato paga 4 penalità .",
         "Chi è più probabile che venga sorpreso dai genitori nel mentre? Il più votato riceve 3 penalità .",
         "Chi è più probabile che venga scoperto a guardare video hot dai genitori? Il più votato prende 3 penalità .",
@@ -1085,19 +1084,19 @@
         "Tutti quelli che hanno cambiato giro di amici almeno una volta ricevono 3 penalità.",
         "Nominate il giocatore che diventa imbarazzante dopo 3 birre. Il nominato riceve 3 penalità.",
         "Nominate il belloccio del gruppo che riceverà 3 penalità.",
-        "Nominate il giocatore che non riesce a restare single per più di un mese che riceverà 2 penalità.",
+        "Nominate il giocatore che non riesce a restare single per più di un mese: riceverà 2 penalità.",
         "Il fissato di calcio del gruppo riceve 4 penalità.",
         "Tutti quelli a cui piace la pizza con ananas pagano 5 penalità.",
         "Distribuite 2 penalità al giocatore coi gusti peggiori in fatto di cibo.",
         "Ricevete una penalità per ogni allergia che avete.",
         "I fan di Dragonball, Game Of Thrones o Breaking Bad ricevono 3 penalità.",
-        "Tutti quelli che sono o sono stai abbonati a streamer su Twitch ricevono 2 penalità.",
+        "Tutti quelli che sono o sono stati abbonati a streamer su Twitch ricevono 2 penalità.",
         "I fan di film o fumetti Marvel e DC ricevono 2 penalità.",
         "Tutti quelli che pensano che il cioccolato Kinder sia il migliore sul mercato ricevono 3 penalità.",
         "I fumatori devono pagare 2 penalità.",
         "Quelli/quelle che si depilano ricevono 2 penalità.",
         "I pelati/rasati distribuiscono 4 penalità a piacere.",
-        "Il giocatore più alto e più basso del gruppo ricevono 1 penalità.",
+        "Il giocatore più alto e quello più basso del gruppo ricevono 1 penalità.",
         "Nominate il giocatore che fa le scoregge peggiori. Il nominato riceve 3 penalità.",
         "Quelli/quelle che hanno una macchina ricevono 2 penalità.",
         "I giocatori coi baﬃ distribuiscono 3 penalità.",
@@ -1137,7 +1136,6 @@
         "Chi ha più di 100 contatti su WhatsApp riceve 2 penalità.",
         "Chi ha bevuto più di 2 caffè oggi paga 3 penalità.",
         "I giocatori con un compleanno nei prossimi 3 mesi ricevono 3 penalità.",
-        "Chi ha l’ultimo contatto WhatsApp una persona presente in questa stanza paga 3 penalità.",
         "Chi ha fatto un acquisto online negli ultimi 3 giorni paga 3 penalità.",
         "Tutti i giocatori con un fratello o una sorella maggiore ricevono 2 penalità.",
         "Chi ha più del 50% di memoria occupata sul telefono riceve 3 penalità.",
@@ -1152,7 +1150,6 @@
         "Chi ha mai flirtato con qualcuno solo per ottenere qualcosa gratis riceve 3 penalità.",
         "Chi ha mai fatto uno screenshot di foto o messaggi privati per mostrarli ad amici paga 3 penalità.",
         "Chi ha mai fatto sesso in un luogo pubblico paga 3 penalità.",
-        "I giocatori che hanno mai provato attrazione per qualcuno del partner di un amico ricevono 3 penalità.",
         "Chi ha mai finto di non riconoscere qualcuno per evitare di parlarci paga 2 penalità.",
         "Chi ha mai fatto ghosting a qualcuno dopo un appuntamento riceve 3 penalità.",
         "Chi ha mai flirtato con un partner del proprio migliore amico paga 4 penalità.",
@@ -1205,7 +1202,6 @@
         "Tutti quelli che hanno mai fatto un trenino umano ricevono 3 penalità",
         "Tutti quelli che hanno salutato qualcuno pensando fosse un amico ma era un estraneo ricevono 2 penalità",
         "Tutti quelli che hanno mai fatto cadere il telefono in bagno ricevono 3 penalità",
-        "Quelli e quelle che hanno mai fatto una figura davanti a un professore o capo si beccano 2 penalità",
         "Coloro che hanno dimenticato un compleanno importante pagano 3 penalità",
         "Tutti quelli che hanno mai fatto un acquisto online di cui si sono pentiti ricevono 2 penalità",
         "Quelli e quelle che hanno mai risposto “arrivo” quando erano ancora a casa si beccano 2 penalità",
@@ -1225,7 +1221,7 @@
         "Tutti quelli che hanno mai inciampato davanti a tanta gente ricevono 2 penalità",
         "Quelli e quelle che hanno mai salutato qualcuno che non li aveva visti si beccano 2 penalità",
         "Coloro che hanno mai chiamato “mamma” un insegnante pagano 3 penalità",
-        "Quelli e quelle che hanno fatto una figuraccia durante una call di lavoro pensando di non essere sentiti ricevono 3 penalità .",
+        "Quelli e quelle che hanno fatto una figuraccia durante una call di lavoro pensando di non essere sentiti ricevono 3 penalità.",
         "Coloro che hanno mai sbagliato bagno entrando in quello opposto pagano 3 penalità",
         "Quelli e quelle che hanno mai tossito per coprire una scoreggia si beccano 2 penalità",
         "Quelli e quelle che hanno mai riso a un funerale si beccano 2 penalità",
@@ -1262,7 +1258,6 @@
         "3 penalità a chiunque abbia fatto sesso la sera del primo appuntamento.",
         "Tutti quelli che hanno il body count maggiore di 3 pagano 4 penalità.",
         "Quelli/e che hanno mai fatto edging ricevono 2 penalità.",
-        "A giro nominate metodi per far squartare una ragazza, inizia [player].",
         "Tutti quelli che hanno avuto un orgasmo oggi ricevono 3 penalità.",
         "3 penalità a tutti coloro che hanno mai avuto un rapporto con qualcuno dello stesso sesso.",
         "Tutti quelli che hanno fatto o ricevuto pissing ricevono 2 penalità.",
@@ -1274,7 +1269,7 @@
         "Quelli che hanno il pene più lungo di 15cm ricevono 3 penalità.",
         "Quelle che hanno una taglia di reggiseno dalla terza in su ricevono 3 penalità.",
         "I fidanzati ricevono 2 penalità.",
-        "3 penalità a tutti quelli che sanno coso sia il ‘cum swap’.",
+        "3 penalità a tutti quelli che sanno cosa sia il ‘cum swap’.",
         "[player] e [player] si scambiano la maglietta o ricevono 5 penalità ciascuno.",
         "2 penalità a tutti quelli che preferiscono fare sesso la mattina piuttosto che la sera.",
         "[player], [player] e [player] devono leccarsi la lingua a vicenda altrimenti ricevono 6 penalità ciascuno.",
@@ -1282,7 +1277,7 @@
         "Quelli/quelle che sono scappati di nascosto dopo una notte di sesso ricevono 3 penalità.",
         "Tutti coloro che hanno mai cercato ‘incesto’ su un sito porno ricevono 4 penalità.",
         "Riceve 2 penalità chi conosce la categoria ‘Futanari’.",
-        "3 penalità a coloro che hanno mai avuto una cotta per uno/a professore.",
+        "3 penalità a coloro che hanno mai avuto una cotta per un professore o una professoressa.",
         "Tutti quelli che hanno mai fatto sesso riparatore dopo aver litigato ricevono 4 penalità.",
         "Se [player] lecca il lobo a [player], tutti pagano 5 penalità.",
         "Quelli e quelle che hanno dato un nome alle loro parti intime ricevono 2 penalità.",
@@ -1297,7 +1292,7 @@
         "Quelli che hanno mai fatto sesso in vacanza ricevono 3 penalità.",
         "Quelli/quelle che hanno mai fatto sesso dopo una scena hot di un film ricevono 3 penalità.",
         "4 penalità a tutti coloro che hanno mai rotto un letto durante il sesso.",
-        "2 penalità ha chi ha mai ricevuto o fatto un footjob.",
+        "2 penalità a chi ha mai ricevuto o fatto un footjob.",
         "2 penalità a chi ha mai usato lubrificante aromatizzato.",
         "2 penalità a tutti coloro che hanno mai sputato durante un rapporto orale.",
         "Tutti quelli che hanno mai fatto sesso con qualcuno legato ricevono 2 penalità.",
@@ -1321,7 +1316,7 @@
         "Meglio stare sopra o sotto? Votate contemporaneamente. 2 penalità alla minoranza.",
         "Tutti quelli che hanno mai dato o ricevuto schiaffi sul culo durante il sesso ricevono 3 penalità.",
         "A turno ognuno nomina un/una pornostar, tutti quelli che lo/la conoscono ricevono 1 penalità.",
-        "3 penalità tutti coloro che hanno mai avuto un orgasmo usando l’immaginazione.",
+        "3 penalità a tutti coloro che hanno mai avuto un orgasmo usando l’immaginazione.",
         "Tutti quelli e quelle che hanno mai fatto sesso sotto effetto di sostanze ricevono 4 penalità.",
         "Sesso pazzo o sesso vanilla? Votate contemporaneamente. 2 penalità alla minoranza.",
         "Coloro che accendono LED a luci rosse nella stanza durante un rapporto, ricevono 3 penalità.",
@@ -1334,7 +1329,7 @@
         "Ricevono 2 penalità tutti quelli che hanno mai scoreggiato durante un rapporto.",
         "3 penalità a chiunque abbia mai usato specchi durante un rapporto.",
         "Tutti quelli che hanno mai fatto sesso in piedi ricevono 2 penalità.",
-        "Quelli che hanno mai fantasticato su qualcun’altro/a durante un rapporto, ricevono 3 penalità.",
+        "Quelli che hanno mai fantasticato su qualcun altro durante un rapporto, ricevono 3 penalità.",
         "3 penalità a chiunque abbia mai ricevuto un messaggio hot da una persona impegnata.",
         "Tutti quelli che hanno mai usato la fotocamera frontale durante il sesso ricevono 2 penalità.",
         "Se [player] fa un succhiotto sul collo di [player], entrambi si salvano. Se non lo fanno, pagano 3 penalità ciascuno.",
@@ -1361,16 +1356,15 @@
         "2 penalità a chiunque abbia mai fatto sesso in cucina.",
         "Se [player] non bacia il collo di [player] appassionatamente, tutti pagano 5 penalità.",
         "3 penalità a chiunque abbia mai letto un libro o fumetto pornografico.",
-        "[player], [player] e [player] devono toccarsi la punta del naso con le lingue contemporaneamente. Chi rifiuta paga 5 penalità.",
         "2 penalità a chiunque abbia mai sognato un’orgia con qualcuno qui presente.",
         "[player], [player] e [player] devono scambiarsi un bacio a catena per 10 secondi. Chi si ferma paga 4 penalità.",
         "[player], [player] e [player] devono toccarsi il sedere a vicenda. Chi si tira indietro paga 3 penalità.",
         "[player] si toglie la maglietta e si fa dare un bacio sul petto da [player]. Se non lo fa, entrambi pagano 4 penalità.",
         "[player], [player] e [player] devono toccare le parti intime degli altri (sopra i vestiti). Chi rifiuta paga 4 penalità.",
-        "[player] deve leccare [player] all’ombelico fino al collo. Se non lo fa, entrambi pagano 4 penalità.",
+        "[player] deve leccare [player] dall’ombelico fino al collo. Se non lo fa, entrambi pagano 4 penalità.",
         "[player] deve dare un morso leggero al labbro di [player]. Altrimenti entrambi ricevono 4 penalità.",
         "Se [player] non fa scivolare la mano sotto la maglia di [player], riceve 3 penalità.",
-        "3 penalità ha chi ha mai fatto sesso mentre guardava un porno.",
+        "3 penalità a chi ha mai fatto sesso mentre guardava un porno.",
         "Tutti quelli che amano le coccole dopo il sesso ricevono 2 penalità.",
         "Riceve 2 penalità chi fa l’amore non solo sesso.",
         "Tutti ricevono tante penalità quante il loro body count.",
@@ -1382,7 +1376,7 @@
         "[player] deve baciare la parte interna della coscia di [player]. Se non lo fa, entrambi ricevono 3 penalità.",
         "3 penalità a chiunque abbia mai mandato un nude su Snapchat.",
         "Quelli/quelle che pensano di essere più belli rispetto alla media ricevono 3 penalità.",
-        "3 penalità ha chi ha mai cercato su internet “porno coi nani”.",
+        "3 penalità a chi ha mai cercato su internet “porno coi nani”.",
         "Quelli e quelle che hanno mai provato attrazione sessuale per qualcuno del loro stesso sesso ricevono 2 penalità.",
         "Tutti quelli che hanno mai riso guardando un porno strano ricevono 2 penalità.",
         "3 penalità a chiunque abbia mai fatto sesso davanti a un reality show.",
@@ -1424,12 +1418,11 @@
         "3 penalità a chi ha mai manipolato un amico, anche se per una giusta causa.",
         "Quelli che hanno fatto finta di adorare il partner di un amico quando in realtà non lo sopportavano, ricevono 3 penalità.",
         "Quelli e quelle che hanno un account fake sui social, ricevono 2 penalità.",
-        "Quelli che hanno mai chiesto consigli d’amore ad un intelligenza artificiale ricevono 3 penalità.",
+        "Quelli che hanno mai chiesto consigli d’amore a un’intelligenza artificiale ricevono 3 penalità.",
         "3 penalità a chi ha paura dei ragni.",
         "Tutti quelli che credono nell’oroscopo ricevono 2 penalità.",
         "Quelli e quelle che hanno mai odiato qualcuno ricevono 3 penalità.",
         "Coloro che si rifarebbero esteticamente una parte del corpo ricevono 2 penalità.",
-        "4 penalità a chi ha mai mentito sulla tua età.",
         "3 penalità a tutti quelli che hanno mai tolto e rimesso il follow solo per farsi notare.",
         "Tutti quelli che hanno archiviato le foto con l’ex ma non le hanno mai cancellate ricevono 4 penalità.",
         "4 penalità a quelli che hanno promesso: “ti ridò i soldi domani” e poi hanno fatto finta di niente.",
@@ -1448,7 +1441,6 @@
         "[player] e [player] devono ammettere un segreto che hanno tenuto nascosto al gruppo: se evitano pagano 4 penalità ciascuno.",
         "Ricevono 3 penalità coloro che hanno fatto finta di ridere a una battuta solo per non sembrare stronzi.",
         "Tutti quelli che hanno mai nascosto un problema di salute mentale ricevono 2 penalità.",
-        "Quelli e quelle che hanno mai giudicato qualcuno per il proprio peso ricevono 3 penalità.",
         "Tutti quelli che hanno mai preso in giro qualcuno per il lavoro che fa ricevono 2 penalità.",
         "Tutti quelli che hanno mai nascosto di avere problemi economici ricevono 2 penalità.",
         "2 penalità a tutti quelli che si sono mai vergognati dei propri gusti musicali.",
@@ -1499,7 +1491,6 @@
         "Coloro che hanno spiato le storie di qualcuno ossessivamente ricevono 2 penalità.",
         "Tutti quelli che hanno mai fatto finta di non sapere un gossip che invece conoscevano, ricevono 2 penalità.",
         "Chi ha ancora le foto con l’ex in galleria paga 3 penalità.",
-        "Si beccano 2 penalità tutti quelli che hanno nascosto soldi spesi male.",
         "Chiunque abbia screennato chat altrui per ridere con altri, riceve 3 penalità.",
         "Coloro che hanno avuto un sogno erotico su un amico presente devono distribuire 3 penalità.",
         "Chiunque abbia mentito sulla propria età almeno una volta riceve 2 penalità.",
@@ -1516,7 +1507,7 @@
         "[player] deve distribuire 3 penalità a chi pensa che assomigli di più a [player].",
         "[player] e [player] devono nominare insieme un vizio che li accomuna. Se non lo fanno, 3 penalità a testa.",
         "[player] e [player] devono dire chi tra loro ha più segreti. Se non parlano, 2 penalità ciascuno.",
-        "Votate chi tra [player] o [player] chi dei due è più geloso; il nominato riceve 2 penalità.",
+        "Votate chi tra [player] e [player] è più geloso; il nominato riceve 2 penalità.",
         "Scegliete tra [player] e [player] chi ha inventato più scuse per uscire con amici. Il prescelto riceve 3 penalità.",
         "Tutti decidono: [player] o [player] chi ha problemi con relazioni tossiche. Il nominato paga 2 penalità.",
         "Tra [player] e [player] votate chi ci sa fare meglio quando flirta. Chi perde riceve 2 penalità."
@@ -1705,7 +1696,6 @@
         "Bevi da un bicchiere con le mani legate dietro la schiena.",
         "Gli altri giocatori scelgono una posa yoga da farti fare.",
         "Mangia una fetta di limone o cipolla.",
-        "Imita una celebrità per 20 secondi finché qualcuno non indovina.",
         "Lecca il pomello di una porta.",
         "Annusa i piedi di un giocatore a tua scelta.",
         "Mima un film per 20 secondi.",
@@ -1752,7 +1742,6 @@
       ],
       "redRoom": [
         "Lecca lentamente l’orecchio del giocatore alla tua sinistra. Se ti tiri indietro… 4 penalità.",
-        "Simula un pom*ino usando solo la lingua e lo sguardo. Se qualcuno ride… penalità a entrambi. Se non lo fai, 3 penalità.",
         "Accarezza le cosce di un giocatore scelto dal gruppo. Se ti rifiuti, paga 3 penalità.",
         "Siediti sulle ginocchia di un altro giocatore e sussurra qualcosa di indecente. Se non lo fai, 3 penalità.",
         "Leva un indumento (a scelta). Se non te la senti… 4 penalità.",
@@ -1767,7 +1756,6 @@
         "Fingi di fare un’audizione per un video OnlyF*ns. 30 secondi. Se ti blocchi… 2 penalità.",
         "Striscia verso un giocatore a tua scelta come se lo stessi “cacciando”. Se ti rifiuti… 3 penalità.",
         "Strofina la punta del naso contro il collo di qualcuno. Se non lo fai, 2 penalità.",
-        "Simula un bacio a distanza con qualcuno… ma fallo lentamente. Se nessuno si eccita, paghi tu. Se ti tiri indietro… 3 penalità.",
         "Abbraccia qualcuno da dietro e sussurra “cosa ti farei ora” (anche inventato). Se ti rifiuti… 4 penalità.",
         "Spoglia lentamente il giocatore alla tua sinistra… solo con lo sguardo. Se non lo fai, 2 penalità.",
         "Gira su te stesso lentamente come in uno spogliarello immaginario. Se il gruppo fischia poco… 1 penalità. Se non lo fai, 3."
@@ -1780,7 +1768,6 @@
         "Disegna sulla pelle di qualcuno una tua paura, col dito. Se ti rifiuti… 3 penalità.",
         "Racconta una bugia che dici spesso, ma fingila come se fosse vera. Se non lo fai, 2 penalità.",
         "Chiudi gli occhi. Gli altri ti danno un oggetto e devi dire a cosa ti fa pensare. Se rifiuti, 3 penalità.",
-        "Gira tre volte su te stesso e punta qualcuno: “Hai un segreto, confessalo.” Se sbagli bersaglio… 2 penalità.",
         "Fai una scenetta tragica sul tema: “Non sono come gli altri…”. Se ti blocchi, 2 penalità.",
         "Parla con un oggetto e raccontagli una tua ossessione. Se non lo fai, 3 penalità.",
         "Scrivi mentalmente un messaggio che non manderai mai. Poi leggi ad alta voce le prime 3 parole. Se ti rifiuti, 2 penalità.",
@@ -2216,7 +2203,7 @@
         "text": "Preferiresti usare solo sex toys a forma di animali o parlare con voce da cartone animato durante ogni rapporto? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze."
       },
       {
-        "text": "Preferiresti farlo con qualcuno vestito da clown o da una persona che ride istericamente? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze."
+        "text": "Preferiresti farlo con qualcuno vestito da clown o con una persona che ride istericamente? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze."
       },
       {
         "text": "Preferiresti urlare “MAMMAAA!” o “FORZA JUVE!” ogni volta che vieni? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze."
@@ -2303,7 +2290,7 @@
         "text": "Preferiresti ricevere una nota vocale hot da un numero sconosciuto o per sbaglio da un genitore? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze."
       },
       {
-        "text": "Preferiresti farlo in ascensore rischiando di essere beccato o in una sala di uncinema? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze."
+        "text": "Preferiresti farlo in ascensore rischiando di essere beccato o in una sala di un cinema? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze."
       },
       {
         "text": "Preferiresti guardare video solamente Futa o GILF per il resto della tua vita? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze."
@@ -2437,7 +2424,7 @@
         "text": "Preferiresti sacrificare una persona amata per salvare mille sconosciuti o il contrario?"
       },
       {
-        "text": "Preferiresti che ogni volta che piangi, qualcuno nel mondo muore… o che ogni tua risata ferisca qualcuno?"
+        "text": "Preferiresti che ogni volta che piangi, qualcuno nel mondo muoia… o che ogni tua risata ferisca qualcuno?"
       },
       {
         "text": "Preferiresti ricordare ogni bugia detta o ogni volta che ti hanno mentito?"
@@ -2770,9 +2757,6 @@
       },
       {
         "text": "Preferiresti condividere la password di ogni account o non sapere mai il codice del suo telefono? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze."
-      },
-      {
-        "text": "Preferiresti che il tuo partner fosse bravissimo a cucinare ma pessimo a ordinare o il contrario? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze."
       },
       {
         "text": "Preferiresti avere sempre ragione ma discutere o sbagliare e vedere il tuo partner sorridere? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze."
@@ -4337,9 +4321,6 @@
       "text": "Qual è il luogo più strano dove hai fantasticato di fare sesso? Se la risposta è troppo comune, per esempio spiaggia o cinema, ricevi 3 penalità."
     },
     {
-      "text": "Qual è il sex toy che non useresti mai? Se qualcuno del gruppo l'ha già provato paga 3 penalità."
-    },
-    {
       "text": "Crea un cocktail afrodisiaco, quali ingredienti useresti e come lo chiameresti? Una risposta noiosa vale 3 penalità. Gli altri giocatori votano."
     },
     {
@@ -4675,9 +4656,6 @@
       "text": "Dai un titolo da reality trash a una tua giornata recente. Se piace, distribuisci 3 penalità."
     },
     {
-      "text": "Racconta un tuo \"pensiero da film\". Se ci commuove, distribuisci. Se è cringe, fanne 2."
-    },
-    {
       "text": "Hai mai fatto qualcosa per rovinare un momento perfetto? Se sì, 4 penalità."
     },
     {
@@ -4972,9 +4950,6 @@
       "text": "Se hai mai provato piacere nel sapere che una cosa bella non era successa a qualcuno che invidiavi… paga 5 penalità. E fai pace con te stesso."
     },
     {
-      "text": "Hai mai mantenuto il contatto con una persona solo \"per non farlo con gli altri\"? Se sì, distribuisci 3 penalità."
-    },
-    {
       "text": "Se hai mai fatto l'amico/a ma speravi che fallisse… 5 penalità e confessione pubblica."
     },
     {
@@ -5002,13 +4977,7 @@
       "text": "Dai una penalità a chi, secondo te, cerca costantemente l'attenzione… ma fa finta di niente."
     },
     {
-      "text": "Se almeno una volta hai goduto nel vedere qualcuno fallire… anche solo un po', ricevi 3 penalità, se la racconti paghi, ma puoi distribuirne una a chi vuoi."
-    },
-    {
       "text": "Se hai mai sabotato un'amicizia solo perché ti sentivi escluso… beccati 5 penalità."
-    },
-    {
-      "text": "Racconta una volta in cui hai fatto finta di ascoltare qualcuno mentre pensavi ad altro. Se era un amico… raddoppia le penalità: 6."
     },
     {
       "text": "Se hai mai raccontato qualcosa di privato di un altro… per sentirti più vicino al gruppo, paga 4 penalità."
@@ -5033,9 +5002,6 @@
     },
     {
       "text": "Se hai mai sperato che qualcuno fallisse per sentirti meglio… paga 5 penalità."
-    },
-    {
-      "text": "Se c'è una persona qui dentro che hai \"giudicato in silenzio\" più volte… guardala negli occhi e paga 3 penalità, lui/lei ti segue."
     },
     {
       "text": "Secondo te chi non si è mai fatto problemi a usare gli altri? Nomina il giocatore e distribuiscigli 3 penalità, se ti rifiuti, pagale."
@@ -5209,9 +5175,6 @@
       "text": "Se hai mai guardato un live Twitch per ore senza sapere chi fosse… 2 penalità. Se hai anche donato… 4."
     },
     {
-      "text": "Racconta la cosa più assurda che hai comprato e mai usato. Se qualcuno ne ha una peggiore… sei salvo. Altrimenti pagale tu."
-    },
-    {
       "text": "Se hai mai mentito sul \"mi ero dimenticato di rispondere\", ricevi 3 penalità. Se lo fai sempre… aggiungine 2."
     },
     {
@@ -5246,9 +5209,6 @@
     },
     {
       "text": "Qual è stato il momento in cui hai sabotato una tua chance solo per paura di vincere? Racconta o ricevi 6 penalità."
-    },
-    {
-      "text": "Punta il dito su chi sembra geloso di un altro qui presente. Se lo neghi, paga 4 penalità. Se lo confermi, distribuisci 2."
     },
     {
       "text": "Rivela l'acquisto online più inutile che hai fatto per sentirti meno solo. Se è patetico, il gruppo decide: 3 penalità o nessuna."
@@ -6004,34 +5964,16 @@
       "text": "Di' il segreto più imbarazzante legato a un tuo momento \"da influencer\". Se il gruppo resta scioccato, distribuisci 10 penalità. Se stai zitto, paghi 10."
     },
     {
-      "text": "Se il gruppo ride, distribuisci 3 penalità, altrimenti le paghi tu."
-    },
-    {
-      "text": "Ricevi 4 penalità se non lo fai."
-    },
-    {
       "text": "Paga 4 penalità."
     },
     {
-      "text": "Ricevi 7 penalità se non parli."
-    },
-    {
-      "text": "Capito! Mi hai fatto notare che alcune sfide sembrano ripetersi nei temi o nelle Di’ il commento più velenoso che hai sentito su un amico qui presente. Racconta o paga 4 penalità. Se hai mai finto di ridere a una battuta schifosa per non fare brutta figura, confessa. Paga 3 penalità."
-    },
-    {
-      "text": "Paga 3 penalità. Se lo fai ancora, raddoppia a 6."
+      "text": "Di’ il commento più velenoso che hai sentito su un amico qui presente. Racconta o paga 4 penalità. Se hai mai finto di ridere a una battuta schifosa per non fare brutta figura, confessa. Paga 3 penalità."
     },
     {
       "text": "Paga 7 penalità se stai zitto."
     },
     {
-      "text": "penalità."
-    },
-    {
-      "text": "Distribuisci 3 penalità o paga 4 se tiri indietro."
-    },
-    {
-      "text": "Se era Isola dei Famosi, raddoppia a 6."
+      "text": "Distribuisci 3 penalità o paga 4 se ti tiri indietro."
     },
     {
       "text": "Se almeno una volta hai avuto un pensiero cattivo su qualcuno dei giocatori ricevi 3 penalità."
@@ -6040,7 +5982,7 @@
       "text": "Distribuisci 3 penalità se nomini qualcosa che fai in pubblico solo per ricevere attenzioni. Confessa o pagale tu."
     },
     {
-      "text": "4 penalità se hai mai portato avanti un amicizia senza saper nemmeno tu il perché."
+      "text": "4 penalità se hai mai portato avanti un'amicizia senza saper nemmeno tu il perché."
     },
     {
       "text": "Se mostri la sezione “Nascosti” della galleria del telefono distribuisci 6 penalità."
@@ -6071,9 +6013,6 @@
     },
     {
       "text": "Raccontaci un ricordo tenero che non hai mai detto agli altri giocatori. Se lo fai distribuisci 3 penalità, se ti vergogni pagane 2."
-    },
-    {
-      "text": "Confessa un libro o film che fai finta di aver visto solo per sembrare acculturato/a o paga 3 giorni."
     },
     {
       "text": "Racconta una verità scomoda che riguarda la tua famiglia o paga 5 penalità."
@@ -6112,7 +6051,7 @@
       "text": "Di’ l’ultima volta che hai aperto una chat vecchia solo per crogiolarti nel dramma. Paga 3 penalità o confessa e facci soffrire con te."
     },
     {
-      "text": "Di’ l’ultima volta che hai fatto una stories solo per far rosicare qualcuno. Confessa o beccati 3 penalità."
+      "text": "Di’ l’ultima volta che hai fatto una story solo per far rosicare qualcuno. Confessa o beccati 3 penalità."
     },
     {
       "text": "Hai mai messo like a un post cringe solo per non passare per stronzo? Se sì paga 2 penalità."
@@ -6145,7 +6084,7 @@
       "text": "Se hai un tatuaggio di cui ti sei pentito/a, 3 penalità."
     },
     {
-      "text": "Se hai mai Photoshoppato una foto sul presente sul tuo profilo instagram paga 4 penalità."
+      "text": "Se hai mai Photoshoppato una foto presente sul tuo profilo Instagram paga 4 penalità."
     },
     {
       "text": "3 penalità se hai mai parlato alle spalle di qualcuno qua presente. Confessa chi o ti becchi 3 penalità."
@@ -6187,7 +6126,7 @@
       "text": "Cosa non sopporti di [player]? Confessa o paga 3 penalità."
     },
     {
-      "text": "Rispondi sinceramente… ritieni più intelligente di [player]? Se la risposta è no paga 3 penalità."
+      "text": "Rispondi sinceramente… ti ritieni più intelligente di [player]? Se la risposta è no paga 3 penalità."
     },
     {
       "text": "Nomina una cosa che ti fa incazzare di [player] quando uscite insieme o beccati 4 penalità."
@@ -6235,7 +6174,7 @@
       "text": "Che metodo usi per depilarti? Se non rispondi paghi 2 penalità."
     },
     {
-      "text": "Distribuisci 3 penalità se ci dici la disgustosa che hai mai fatto."
+      "text": "Distribuisci 3 penalità se ci dici una cosa disgustosa che hai fatto."
     },
     {
       "text": "Se per 100 euro faresti sesso con il tuo migliore amico ricevi 2 penalità."
@@ -6384,16 +6323,10 @@
       "text": "Sfida: Tu e {playerB} dovete fare una sfida di squat per 30 secondi. Chi ne fa di meno fa 4 penalità"
     },
     {
-      "text": "Sfida: Sfida di resistenza con un dito contro {playerB} (il gioco del cerchio con le dita). Il perdente fa 3 penalità"
-    },
-    {
       "text": "Sfida: Tu e {playerB} dovete bere un bicchiere di una bevanda preparata dal gruppo (non alcolica). Chi si rifiuta fa 5 penalità"
     },
     {
       "text": "Sfida: Sfida di 'Mai ho mai' con {playerB}. Il primo che resta senza dita alzate fa 4 penalità"
-    },
-    {
-      "text": "Sfida: Gioca a 'Pietra, Forbice, Carta' con {playerB}. Il perdente di 5 round fa 3 penalità"
     },
     {
       "text": "Sfida: Tu e {playerB} dovete fare il maggior numero di jumping jack in 30 secondi. Il perdente fa 4 penalità"
@@ -6426,7 +6359,7 @@
       "text": "Sfida: Sfida di memoria. Tu e {playerB} guardate 10 oggetti per 30 secondi, poi dovete ricordarli. Chi ne ricorda di meno fa 4 penalità"
     },
     {
-      "text": "Sfida: Tu e {playerB} dovete fare il gioco delle imitazioni. Imitate a turno persone famose e gli altri devono indovinare. Chi ottiene meno indovinelli fa 4 penalità"
+      "text": "Sfida: Tu e {playerB} dovete fare il gioco delle imitazioni. Imitate a turno persone famose e gli altri devono indovinare. Chi ottiene meno risposte giuste fa 4 penalità"
     },
     {
       "text": "Sfida: Tu e {playerB} dovete fare una sfida di resistenza tenendo le braccia alzate. Chi le abbassa prima fa 4 penalità"
@@ -6487,9 +6420,6 @@
     },
     {
       "text": "Sfida: Sfida di velocità. Tu e {playerB} dovete correre sul posto per 30 secondi. Il più lento fa 3 penalità"
-    },
-    {
-      "text": "Sfida: Fate una battaglia di complimenti. A turno dite qualcosa di gentile all’altro. Il primo che non riesce fa 3 penalità"
     },
     {
       "text": "Sfida: Sfida di piramide di bicchieri. Tu e {playerB} dovete costruire una piramide di bicchieri in plastica. Chi fa crollare la propria prima fa 4 penalità"
@@ -6699,7 +6629,7 @@
       "text": "Sfida: Sfida di resistenza con il cibo piccante. Chi rinuncia per primo fa 5 penalità"
     },
     {
-      "text": "Sfida: Tu e {playerB} dovete fare una sfida di chi riesce a fare la migliore impressione di un animale. Il gruppo vota la peggiore. Il perdente fa 3 penalità"
+      "text": "Sfida: Tu e {playerB} dovete fare una sfida di chi riesce a fare la migliore imitazione di un animale. Il gruppo vota la peggiore. Il perdente fa 3 penalità"
     },
     {
       "text": "Sfida: Sfida di velocità nel completare un puzzle semplice. Il perdente fa 3 penalità"
@@ -6744,7 +6674,7 @@
       "text": "Sfida: Gara di resistenza: tu e {playerB} dovete tenere una posizione di squat contro il muro. Chi molla prima fa 6 penalità"
     },
     {
-      "text": "Sfida: Tu e {playerB} dovete mimare un animale scelto dal gruppo. Chi ottiene meno indovinelli fa 4 penalità"
+      "text": "Sfida: Tu e {playerB} dovete mimare un animale scelto dal gruppo. Chi ottiene meno risposte giuste fa 4 penalità"
     },
     {
       "text": "Sfida: Battaglia di karaoke tra te e {playerB}. Il gruppo vota il perdente che fa 5 penalità"
@@ -6794,16 +6724,10 @@
       "text": "Distribuisci 4 penalità a chi secondo te ha più profili social segreti. Nessuna giustificazione richiesta."
     },
     {
-      "text": "Scambia 2 penalità con chi ha la playlist più cringe nel telefono."
-    },
-    {
       "text": "Se hai mai finto di capire una battuta che non hai capito… 3 penalità subito."
     },
     {
       "text": "Imita il bidello leggendario del tuo liceo per 10 secondi. Se nessuno indovina, 4 penalità."
-    },
-    {
-      "text": "Fai finta di ricevere un messaggio hot da un ex e reagisci come faresti davvero. Se nessuno si scandalizza… Penitenza massima."
     },
     {
       "text": "Se nella tua stanza c’è un oggetto che non sai perché lo possiedi… 2 penalità."
@@ -6816,9 +6740,6 @@
     },
     {
       "text": "Sei mai stato ghostato? Se sì, paga 3 penalità. Se no… distribuiscile."
-    },
-    {
-      "text": "Scambia 3 penalità con chi, secondo te, ha la memoria peggiore per i compleanni."
     },
     {
       "text": "Fai l’annuncio “buongiorno viaggiatori” come se fossi un altoparlante dell’aeroporto. Se nessuno applaude, 4 penalità."
@@ -6866,9 +6787,6 @@
       "text": "Se hai mai usato la scusa del “telefono scarico” per non rispondere… 3 penalità."
     },
     {
-      "text": "Scambia 4 penalità con chi ha la collezione di sticker WhatsApp più imbarazzante."
-    },
-    {
       "text": "Distribuisci 2 penalità a chi, secondo te, controlla sempre la porta di casa due volte."
     },
     {
@@ -6885,9 +6803,6 @@
     },
     {
       "text": "Se hai mai ordinato cibo a domicilio anche se la dispensa era piena… 2 penalità."
-    },
-    {
-      "text": "Scambia 3 penalità con chi potrebbe imparare a fare un Reel migliore di te."
     },
     {
       "text": "Sei in grado di fare la battuta più trash del gruppo? Prova! Se nessuno ride… 4 penalità."
@@ -7112,9 +7027,6 @@
       "text": "Se a scuola avevi la calligrafia più brutta… 2 penalità."
     },
     {
-      "text": "Distribuisci 4 penalità a chi, secondo te, ha più “toppe” nel guardaroba."
-    },
-    {
       "text": "Se hai mai provato a impressionare qualcuno senza riuscirci… 3 penalità."
     },
     {
@@ -7283,9 +7195,6 @@
       "text": "Confessa un'abitudine strana che hai quando sei da solo oppure 2 penalità"
     },
     {
-      "text": "Fai una sfilata di moda improvvisata insieme a {playerB}, il gruppo vota il migliore oppure 3 penalità ciascuno"
-    },
-    {
       "text": "Tu e {playerB} dovete improvvisare una scenetta romantica di 30 secondi oppure 3 penalità ciascuno"
     },
     {
@@ -7376,7 +7285,7 @@
       "text": "Inventa sul momento un nome da supereroe per ogni giocatore spiegando i suoi poteri oppure 3 penalità"
     },
     {
-      "text": "Prova a vendere l'oggetto più vicino a te come se fossi in un televendita per 30 secondi oppure 2 penalità"
+      "text": "Prova a vendere l'oggetto più vicino a te come se fossi in una televendita per 30 secondi oppure 2 penalità"
     },
     {
       "text": "Tu e {playerB} dovete fare una sfida di sguardi: chi ride prima fa 2 penalità"
@@ -7391,7 +7300,7 @@
       "text": "Credi nell'oroscopo? Prova a indovinare il segno zodiacale di {playerB} - se sbagli, fai 2 penalità"
     },
     {
-      "text": "Fai la tua impressione di tre emojii, il gruppo deve indovinarle oppure 2 penalità"
+      "text": "Fai la tua imitazione di tre emoji, il gruppo deve indovinarli oppure 2 penalità"
     },
     {
       "text": "Tutti i giocatori devono applaudire un tuo talento speciale che devi mostrare oppure 3 penalità"
@@ -7629,9 +7538,6 @@
     },
     {
       "text": "Lascia che {playerB} ti disegni qualcosa sulla fronte con un pennarello lavabile oppure 3 penalità"
-    },
-    {
-      "text": "Racconta una bugia sulla tua vita, il gruppo deve indovinare se è vera o falsa. Se indovinano, fai 2 penalità"
     },
     {
       "text": "Esegui la coreografia di 'Macarena' senza musica oppure 2 penalità"
@@ -7883,7 +7789,7 @@
       "text": "Fai un'imitazione di {playerB} che si prepara per un appuntamento oppure 2 penalità"
     },
     {
-      "text": "Fai la migliore impressione di un personaggio Disney oppure 2 penalità"
+      "text": "Fai la migliore imitazione di un personaggio Disney oppure 2 penalità"
     },
     {
       "text": "Lascia che {playerB} scatti la tua nuova foto profilo oppure 3 penalità"
@@ -7928,7 +7834,7 @@
       "text": "Mostra il meme più divertente che hai salvato sul telefono oppure 2 penalità"
     },
     {
-      "text": "Fai un'impressione di qualcuno famoso che guida un autobus oppure 2 penalità"
+      "text": "Fai un'imitazione di qualcuno famoso che guida un autobus oppure 2 penalità"
     },
     {
       "text": "Recita 'Romeo e Giulietta' usando solo emoji oppure 2 penalità"
@@ -8233,7 +8139,7 @@
       "text": "Scrivete segretamente su un foglio tre cose che vi attraggono l'uno dell'altro, poi confrontatele oppure 3 penalità ciascuno"
     },
     {
-      "text": "Prendetevi le mani e guardate negli occhi per 20 secondi, poi dite cosa avete letto nello sguardo dell'altro oppure 3 penalità"
+      "text": "Prendetevi le mani e guardatevi negli occhi per 20 secondi, poi dite cosa avete letto nello sguardo dell'altro oppure 3 penalità"
     },
     {
       "text": "Racconta al tuo partner una tua fragilità che solo lui/lei sa gestire bene oppure 4 penalità"
@@ -8332,7 +8238,7 @@
       "text": "Condividi col tuo partner una piccola paura che hai superato grazie a lui/lei oppure 3 penalità"
     },
     {
-      "text": "Descrivete a turno tre parole che descrivono perfettamente il vostro legame e spiegate il perché oppure 3 penalità ciascuno"
+      "text": "Dite a turno tre parole che descrivono perfettamente il vostro legame e spiegate il perché oppure 3 penalità ciascuno"
     },
     {
       "text": "Racconta al tuo partner un suo talento o abilità che ammiri particolarmente oppure 3 penalità"
@@ -8473,7 +8379,7 @@
       "text": "Guardate insieme un oggetto che rappresenta un ricordo speciale e raccontate perché è significativo oppure 3 penalità ciascuno"
     },
     {
-      "text": "Fate insieme tre respiri profondi guardandovi negli occhi, poi dite una cosa che vi dà serenità dell'altro oppure 3 penalità ciascuno"
+      "text": "Fate insieme tre respiri profondi guardandovi negli occhi, poi dite una cosa dell'altro che vi dà serenità oppure 3 penalità ciascuno"
     },
     {
       "text": "Spiega al tuo partner quale suo piccolo gesto quotidiano non daresti mai per scontato oppure 3 penalità"
@@ -8926,9 +8832,6 @@
       "text": "Datevi un bacio sexy con tanto di morso leggero sul labbro. Se non lo fate, 2 penalità a testa."
     },
     {
-      "text": "Raccontate un giocatore e raccontategli un dettaglio intimo della vostra coppia. Se vi rifiutate, entrambi 4 penalità."
-    },
-    {
       "text": "Ricreate davanti al gruppo la vostra posa preferita quando siete a letto. Se saltate, 3 penalità ciascuno."
     },
     {
@@ -9334,7 +9237,7 @@
       "text": "Dite contemporaneamente il colore preferito dell’altro. Se sbagliate, 3 penalità entrambi."
     },
     {
-      "text": "l piatto preferito dell’altro. Ditelo contemporaneamente, 2 penalità a chi sbaglia."
+      "text": "Il piatto preferito dell’altro. Ditelo contemporaneamente, 2 penalità a chi sbaglia."
     },
     {
       "text": "La canzone che vi rappresenta come coppia. Ditela contemporaneamente, 3 penalità a chi sbaglia."
@@ -9382,13 +9285,10 @@
       "text": "Paga 4 penalità se sei quello che russa di più."
     },
     {
-      "text": "Qual'è il primo regalo che ti ha fatto il tuo partner? Se non te lo ricordi ricevi 4 penalità."
+      "text": "Qual è il primo regalo che ti ha fatto il tuo partner? Se non te lo ricordi ricevi 4 penalità."
     },
     {
       "text": "Se hai mai fatto finta di non stare bene per non fare sesso, ti meriti 5 penalità."
-    },
-    {
-      "text": "Se hai mai guardato avanti una serie senza dirtelo, meriti 2 penalità."
     },
     {
       "text": "Paga 3 penalità se sei quello che perde sempre le chiavi."
@@ -9439,7 +9339,7 @@
       "text": "Dov’è nato il tuo/a partner? Se sbagli ti becchi 5 penalità."
     },
     {
-      "text": "Qual’è l’hobby preferito del/la tuo/a partner? 4 penalità in palio."
+      "text": "Qual è l’hobby preferito del/la tuo/a partner? 4 penalità in palio."
     },
     {
       "text": "Qual è il cibo preferito del tuo partner? Se sbagli… ricevi 2 penalità."
@@ -9460,7 +9360,7 @@
       "text": "Paga 3 penalità se non ricordi il vostro primo viaggio insieme."
     },
     {
-      "text": "Racconta un sogno erotico che hai fatto sul tuo/a partner? Se non lo ricordi beccati 4 penalità."
+      "text": "Racconta un sogno erotico che hai fatto sul tuo/a partner. Se non lo ricordi beccati 4 penalità."
     },
     {
       "text": "Qual è la paura più ridicola del tuo partner? Rispondi o ricevi 3 penalità."
@@ -9469,7 +9369,7 @@
       "text": "Paga penalità massima se non ricordi il regalo che ti ha fatto per il primo anniversario."
     },
     {
-      "text": "Qual’è il kink nascosto del tuo partner? Se indovini pagate 2 penalità a testa."
+      "text": "Qual è il kink nascosto del tuo partner? Se indovini pagate 2 penalità a testa."
     },
     {
       "text": "Elenca 3 modi per eccitare il tuo partner. 2 penalità per ogni errore. Via!"
@@ -9485,9 +9385,6 @@
     },
     {
       "text": "Valuta la bellezza del partner da 1 a 10. Se il voto è 9 o 10, paga 5 penalità."
-    },
-    {
-      "text": "Quanto è bravo/a a baciare da 1 a 10 basandoti sulla tua esperienza? Se il voto è 9 o 10, paga 5 penalità, altrimenti pagale tu."
     },
     {
       "text": "Nomina l’animale preferito del tuo partner o paga 2 penalità."
@@ -9598,7 +9495,7 @@
       "text": "Fatti fare un succhiotto o paga 4 penalità."
     },
     {
-      "text": "Se ami il partner condividete 3 penalità a testa…altrimenti pagali solo tu."
+      "text": "Se ami il partner condividete 3 penalità a testa…altrimenti pagale solo tu."
     },
     {
       "text": "Succhia il dito del partner come se fosse qualcos'altro... o ricevi 4 penalità."
@@ -9622,7 +9519,7 @@
       "text": "Ti meriti 2 penalità se hai mai pensato a un parente del partner nudo. Confessa."
     },
     {
-      "text": "Qual’è il capo d’abbigliamento del partner che odi, ma che non hai mai confessato? Rivelalo o taci e paga 3 penalità."
+      "text": "Qual è il capo d’abbigliamento del partner che odi, ma che non hai mai confessato? Rivelalo o taci e paga 3 penalità."
     },
     {
       "text": "Succhia il dito del partner come se fosse qualcos'altro... o ricevi 2 penalità."
@@ -9649,7 +9546,7 @@
       "text": "Se hai mai fatto finta di ascoltare il partner mentre pensavi a un ex, meriti 4 penalità... un po’ bastardo, eh."
     },
     {
-      "text": "Confessa se hai mai rubato le mutande del partner per annusarli. Nel caso paghi 2 penalità."
+      "text": "Confessa se hai mai rubato le mutande del partner per annusarle. Nel caso paghi 2 penalità."
     },
     {
       "text": "Nomina l’abitudine più schifosa del partner e ricevi 2 penalità."

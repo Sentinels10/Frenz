@@ -1,0 +1,1856 @@
+[
+  {
+    "id": "/specialGames/tuttoHaUnPrezzo/party/14",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "10",
+      "000"
+    ],
+    "reason": "Ripristina il compenso di 10.000 euro presente nel canonico e omesso in francese."
+  },
+  {
+    "id": "/specialGames/penitenzeGruppo/redRoom/138",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [
+      "3",
+      "10"
+    ],
+    "after": [
+      "10",
+      "3"
+    ],
+    "reason": "Riordina la sintassi: differenza di età 10+ anni e penalità 3 restano identiche."
+  },
+  {
+    "id": "/specialGames/penitenzeGruppo/darkRoom/115",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[player]"
+    ],
+    "after": [
+      "[player]",
+      "[player]"
+    ],
+    "reason": "Ripristina il primo giocatore omesso rispetto ai due partecipanti canonici."
+  },
+  {
+    "id": "/specialGames/penitenzeGruppo/darkRoom/116",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[player]"
+    ],
+    "after": [
+      "[player]",
+      "[player]"
+    ],
+    "reason": "Ripristina il soggetto omesso; due segnaposto come nel canonico."
+  },
+  {
+    "id": "/specialGames/penitenzeGruppo/darkRoom/116",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[player]"
+    ],
+    "after": [
+      "[player]",
+      "[player]"
+    ],
+    "reason": "Ripara il segnaposto iniziale corrotto joueur]; due giocatori come nel canonico."
+  },
+  {
+    "id": "/redRoom/9/text",
+    "language": "en",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[player's]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripara segnaposto possessivo corrotto preservando il giocatore canonico."
+  },
+  {
+    "id": "/redRoom/9/text",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristina il destinatario omesso rispetto al canonico."
+  },
+  {
+    "id": "/redRoom/9/text",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristina il destinatario omesso rispetto al canonico."
+  },
+  {
+    "id": "/redRoom/11/text",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristina il destinatario omesso rispetto al canonico."
+  },
+  {
+    "id": "/redRoom/11/text",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[joueur]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripara segnaposto tradotto non riconosciuto dal renderer."
+  },
+  {
+    "id": "/redRoom/122/text",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[jugador]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristina segnaposto player tradotto in jugador."
+  },
+  {
+    "id": "/redRoom/122/text",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[joueur]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristina segnaposto player tradotto in joueur."
+  },
+  {
+    "id": "/redRoom/130/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [
+      "6"
+    ],
+    "after": [
+      "3",
+      "6"
+    ],
+    "reason": "Ripristina 3 penalità omesse; 6 resta invariato."
+  },
+  {
+    "id": "/redRoom/143/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "10"
+    ],
+    "reason": "Ripristina 10 penalità e distribuzione omesse come nel canonico."
+  },
+  {
+    "id": "/redRoom/328/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Ripristina le 3 penalità omesse rispetto al canonico."
+  },
+  {
+    "id": "/redRoom/376/text",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[jugador]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristino [player] dal canonico."
+  },
+  {
+    "id": "/redRoom/376/text",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[joueur]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristino [player] dal canonico."
+  },
+  {
+    "id": "/redRoom/380/text",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[jugador]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristino [player] dal canonico."
+  },
+  {
+    "id": "/redRoom/380/text",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[joueur]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristino [player] dal canonico."
+  },
+  {
+    "id": "/redRoom/382/text",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[jugador]",
+      "[jugador]"
+    ],
+    "after": [
+      "[player]",
+      "[player]"
+    ],
+    "reason": "Ripristino i due [player] dal canonico."
+  },
+  {
+    "id": "/redRoom/382/text",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[joueur]",
+      "[joueur]"
+    ],
+    "after": [
+      "[player]",
+      "[player]"
+    ],
+    "reason": "Ripristino i due [player] dal canonico."
+  },
+  {
+    "id": "/redRoom/384/text",
+    "language": "en",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[player's]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristino [player] senza possessivo dentro il segnaposto."
+  },
+  {
+    "id": "/redRoom/384/text",
+    "language": "es",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristino il destinatario [player] omesso dalla traduzione."
+  },
+  {
+    "id": "/redRoom/384/text",
+    "language": "fr",
+    "pattern": "\\[[^\\[\\]]+\\]",
+    "before": [
+      "[le joueur]"
+    ],
+    "after": [
+      "[player]"
+    ],
+    "reason": "Ripristino [player] dal canonico."
+  },
+  {
+    "id": "/darkRoom/11/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/12/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 dal canonico."
+  },
+  {
+    "id": "/darkRoom/16/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/20/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "5"
+    ],
+    "after": [
+      "5",
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/28/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/37/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/52/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/55/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 dal canonico."
+  },
+  {
+    "id": "/darkRoom/62/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/72/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/75/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/clash/4/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Il canonico assegna 3 penalità; la traduzione aveva il numero scritto in lettere."
+  },
+  {
+    "id": "/clash/28/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [
+      "3",
+      "3"
+    ],
+    "after": [
+      "2",
+      "3",
+      "3"
+    ],
+    "reason": "Ripristinati i 2 round persi su 3 del canonico."
+  },
+  {
+    "id": "/clash/28/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [
+      "3",
+      "3"
+    ],
+    "after": [
+      "2",
+      "3",
+      "3"
+    ],
+    "reason": "Ripristinati i 2 round persi su 3 del canonico."
+  },
+  {
+    "id": "/clash/28/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "3",
+      "3"
+    ],
+    "after": [
+      "2",
+      "3",
+      "3"
+    ],
+    "reason": "Ripristinati i 2 round persi su 3 del canonico."
+  },
+  {
+    "id": "/clash/71/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "4"
+    ],
+    "after": [
+      "1",
+      "4"
+    ],
+    "reason": "Ripristinato il numero 1 nella durata del canonico."
+  },
+  {
+    "id": "/coppie/7/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Cifra 3 scritta trois, recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/12/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Cifra 3 scritta trois, recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/29/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Cifra 3 scritta trois, recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/35/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "Penalità 4 ciascuno omessa, recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/44/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Cifra 3 scritta trois, recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/117/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Penalità 3 scritta trois, cifra canonica"
+  },
+  {
+    "id": "/coppie/154/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Penalità 3 scritta trois, cifra canonica"
+  },
+  {
+    "id": "/darkRoom/106/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/111/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/121/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 dal canonico."
+  },
+  {
+    "id": "/darkRoom/135/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/coppie/202/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Penalità 3 scritta trois, cifra canonica"
+  },
+  {
+    "id": "/coppie/228/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "20"
+    ],
+    "after": [
+      "20",
+      "3"
+    ],
+    "reason": "Penalità 3 scritta trois, cifra canonica"
+  },
+  {
+    "id": "/party/0/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/4/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "10"
+    ],
+    "after": [
+      "10",
+      "4"
+    ],
+    "reason": "Numero 4 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/8/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/11/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "Numero 4 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/13/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "5"
+    ],
+    "after": [
+      "5",
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/14/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Numero 2 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/18/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/21/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/29/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/30/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/32/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Numero 2 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/36/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/43/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/46/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Numero 3 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/party/49/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Numero 2 reso in lettere nella traduzione."
+  },
+  {
+    "id": "/darkRoom/151/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 dal canonico."
+  },
+  {
+    "id": "/darkRoom/161/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 dal canonico."
+  },
+  {
+    "id": "/darkRoom/182/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 dal canonico."
+  },
+  {
+    "id": "/darkRoom/184/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 dal canonico."
+  },
+  {
+    "id": "/darkRoom/193/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 dal canonico."
+  },
+  {
+    "id": "/darkRoom/197/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 dal canonico."
+  },
+  {
+    "id": "/darkRoom/531/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Ripristinate le 3 penalità presenti nel canonico e omesse nella traduzione."
+  },
+  {
+    "id": "/darkRoom/202/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/205/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/209/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/214/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/220/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/darkRoom/221/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/darkRoom/238/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "5",
+      "3"
+    ],
+    "after": [
+      "5",
+      "2",
+      "3"
+    ],
+    "reason": "2 dal canonico."
+  },
+  {
+    "id": "/party/52/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/55/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/59/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/60/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/70/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/72/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/76/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/77/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/82/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/83/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/85/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/88/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "5"
+    ],
+    "after": [
+      "5",
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/90/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/102/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "10"
+    ],
+    "after": [
+      "10",
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/104/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/107/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/109/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/111/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/116/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/119/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/122/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/coppie/258/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto three"
+  },
+  {
+    "id": "/coppie/258/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto tres"
+  },
+  {
+    "id": "/coppie/258/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto trois"
+  },
+  {
+    "id": "/coppie/260/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto trois"
+  },
+  {
+    "id": "/coppie/262/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 canonico scritto four"
+  },
+  {
+    "id": "/coppie/262/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 canonico scritto cuatro"
+  },
+  {
+    "id": "/coppie/262/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 canonico scritto quatre"
+  },
+  {
+    "id": "/coppie/264/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 canonico scritto two"
+  },
+  {
+    "id": "/coppie/264/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 canonico scritto dos"
+  },
+  {
+    "id": "/coppie/264/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 canonico scritto deux"
+  },
+  {
+    "id": "/coppie/266/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto three"
+  },
+  {
+    "id": "/coppie/266/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto tres"
+  },
+  {
+    "id": "/coppie/266/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto trois"
+  },
+  {
+    "id": "/coppie/269/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto trois"
+  },
+  {
+    "id": "/coppie/271/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [
+      "3"
+    ],
+    "after": [
+      "3",
+      "2"
+    ],
+    "reason": "2 canonico scritto two"
+  },
+  {
+    "id": "/coppie/271/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [
+      "3"
+    ],
+    "after": [
+      "3",
+      "2"
+    ],
+    "reason": "2 canonico scritto dos"
+  },
+  {
+    "id": "/coppie/271/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "3"
+    ],
+    "after": [
+      "3",
+      "2"
+    ],
+    "reason": "2 canonico scritto deux"
+  },
+  {
+    "id": "/coppie/274/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto three"
+  },
+  {
+    "id": "/coppie/274/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto tres"
+  },
+  {
+    "id": "/coppie/274/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto trois"
+  },
+  {
+    "id": "/coppie/275/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto trois"
+  },
+  {
+    "id": "/coppie/276/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Penalità2 omessa recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/276/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Penalità2 omessa recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/276/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Penalità2 omessa recuperata dal canonico"
+  },
+  {
+    "id": "/coppie/277/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto three"
+  },
+  {
+    "id": "/coppie/277/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto tres"
+  },
+  {
+    "id": "/coppie/277/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 canonico scritto trois"
+  },
+  {
+    "id": "/party/125/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/128/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/132/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "3"
+    ],
+    "after": [
+      "3",
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/134/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/138/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/143/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/144/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/149/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 in lettere."
+  },
+  {
+    "id": "/party/169/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 in lettere."
+  },
+  {
+    "id": "/party/203/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Quantità 2 tradotta in lettere."
+  },
+  {
+    "id": "/party/216/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "30"
+    ],
+    "after": [
+      "30",
+      "1"
+    ],
+    "reason": "Quantità 1 tradotta in lettere."
+  },
+  {
+    "id": "/coppie/353/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto trois recuperato canonico"
+  },
+  {
+    "id": "/coppie/363/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto trois recuperato canonico"
+  },
+  {
+    "id": "/coppie/374/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto trois recuperato canonico"
+  },
+  {
+    "id": "/coppie/383/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto trois recuperato canonico"
+  },
+  {
+    "id": "/coppie/393/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto Deux recuperato canonico"
+  },
+  {
+    "id": "/coppie/394/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto trois recuperato canonico"
+  },
+  {
+    "id": "/coppie/397/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto three recuperato canonico"
+  },
+  {
+    "id": "/coppie/397/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto tres recuperato canonico"
+  },
+  {
+    "id": "/coppie/397/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto trois recuperato canonico"
+  },
+  {
+    "id": "/coppie/409/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 scritto trois recuperato canonico"
+  },
+  {
+    "id": "/coppie/414/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 scritto four recuperato canonico"
+  },
+  {
+    "id": "/coppie/414/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 scritto cuatro recuperato canonico"
+  },
+  {
+    "id": "/coppie/414/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 scritto quatre recuperato canonico"
+  },
+  {
+    "id": "/darkRoom/304/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "3 dal canonico."
+  },
+  {
+    "id": "/party/304/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "Quantità 2 tradotta in lettere."
+  },
+  {
+    "id": "/party/347/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Quantità 3 tradotta in lettere."
+  },
+  {
+    "id": "/coppie/432/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 scritto five recuperato canonico"
+  },
+  {
+    "id": "/coppie/432/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 scritto cinco recuperato canonico"
+  },
+  {
+    "id": "/coppie/432/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 scritto cinq recuperato canonico"
+  },
+  {
+    "id": "/coppie/434/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto two recuperato canonico"
+  },
+  {
+    "id": "/coppie/434/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto dos recuperato canonico"
+  },
+  {
+    "id": "/coppie/434/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto deux recuperato canonico"
+  },
+  {
+    "id": "/coppie/436/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto two recuperato canonico"
+  },
+  {
+    "id": "/coppie/436/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto dos recuperato canonico"
+  },
+  {
+    "id": "/coppie/436/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto deux recuperato canonico"
+  },
+  {
+    "id": "/coppie/440/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 scritto four recuperato canonico"
+  },
+  {
+    "id": "/coppie/440/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 scritto cuatro recuperato canonico"
+  },
+  {
+    "id": "/coppie/440/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "4"
+    ],
+    "reason": "4 scritto quatre recuperato canonico"
+  },
+  {
+    "id": "/coppie/454/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [
+      "1"
+    ],
+    "after": [
+      "1",
+      "5"
+    ],
+    "reason": "5 scritto cinq recuperato canonico"
+  },
+  {
+    "id": "/coppie/470/text",
+    "language": "en",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 scritto five recuperato canonico"
+  },
+  {
+    "id": "/coppie/470/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 scritto cinco recuperato canonico"
+  },
+  {
+    "id": "/coppie/470/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "5"
+    ],
+    "reason": "5 scritto cinq recuperato canonico"
+  },
+  {
+    "id": "/coppie/477/text",
+    "language": "es",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "3"
+    ],
+    "reason": "Penalità3 omessa recuperata canonico"
+  },
+  {
+    "id": "/coppie/508/text",
+    "language": "fr",
+    "pattern": "\\d+",
+    "before": [],
+    "after": [
+      "2"
+    ],
+    "reason": "2 scritto deux recuperato canonico"
+  }
+]
