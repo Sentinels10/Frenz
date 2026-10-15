@@ -2,7 +2,7 @@ import SwiftUI
 
 struct PlayerSetupView<VM: PlayerSetupRouting>: View {
     @ObservedObject var vm: VM
-    @State private var focusPlayerID: Int?
+    @FocusState private var focusPlayerID: Int?
 
     var body: some View {
         ZStack {
@@ -10,6 +10,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
             LinearGradient(colors: [Color(hex: 0x2B0B58), Color(hex: 0x18042F)],
                            startPoint: .top, endPoint: .bottom)
                 .ignoresSafeArea()
+                .onTapGesture { focusPlayerID = nil }
 
             VStack(spacing: 18) {
                 header
@@ -23,6 +24,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                     .padding(.top, 6)
                     .lineSpacing(3)
                     .shadow(color: .black.opacity(0.35), radius: 6, x: 0, y: 3)
+                    .onTapGesture { focusPlayerID = nil }
 
                 // Lista input
                 ScrollView {
@@ -33,7 +35,7 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                                 text: p.name,
                                 placeholder: vm.playerInputPlaceholder,
                                 isDuplicate: isDuplicateName(p.name),
-                                shouldFocus: focusPlayerID == p.id,
+                                focusedPlayerID: $focusPlayerID,
                                 onChange: { vm.updatePlayerName(id: p.id, name: $0) },
                                 onRemove: {
                                     if focusPlayerID == p.id {
@@ -79,7 +81,9 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                     }
                     .padding(.horizontal, 20)
                     .padding(.vertical, 4)
+                    .background(keyboardDismissArea)
                 }
+                .background(keyboardDismissArea)
 
                 Spacer(minLength: 6)
 
@@ -91,7 +95,10 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                         .frame(height: 1)
                         .frame(maxWidth: .infinity)
 
-                    Button(action: vm.startGame) {
+                    Button(action: {
+                        focusPlayerID = nil
+                        vm.startGame()
+                    }) {
                         Text(vm.continueTitle)
                             .font(.rammetto(size: 18))
                             .foregroundColor(.white)
@@ -111,16 +118,21 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
                     }
                     .disabled(!canContinue)
                 }
+                .background(keyboardDismissArea)
             }
         }
         .navigationBarHidden(true)
+        .onDisappear { focusPlayerID = nil }
     }
 
     // MARK: - Header
     private var header: some View {
         HStack {
             Spacer()
-            Button(action: { vm.openLanguageSelector() }) {
+            Button(action: {
+                focusPlayerID = nil
+                vm.openLanguageSelector()
+            }) {
                 Image(systemName: "gearshape.fill")
                     .font(.system(size: 16, weight: .bold))
                     .foregroundColor(.white)
@@ -129,19 +141,32 @@ struct PlayerSetupView<VM: PlayerSetupRouting>: View {
         }
         .padding(.horizontal, 16)
         .padding(.top, 12)
+        .background(keyboardDismissArea)
         
     }
 
     private func addPlayerAndFocus() {
         guard vm.inputPlayers.count < 15 else { return }
 
-        let nextID = (vm.inputPlayers.map(\.id).max() ?? 0) + 1
-        focusPlayerID = nextID
+        let previousIDs = Set(vm.inputPlayers.map(\.id))
         withAnimation(.spring(response: 0.25)) {
             vm.addPlayerInput()
         }
+
+        guard let newPlayer = vm.inputPlayers.first(where: { !previousIDs.contains($0.id) }) else { return }
+        // Wait for the new TextField to be mounted before requesting focus.
+        DispatchQueue.main.async {
+            guard vm.inputPlayers.contains(where: { $0.id == newPlayer.id }) else { return }
+            focusPlayerID = newPlayer.id
+        }
     }
-    
+
+    // Only the background handles these taps: fields and buttons keep their own taps.
+    private var keyboardDismissArea: some View {
+        Color.clear
+            .contentShape(Rectangle())
+            .onTapGesture { focusPlayerID = nil }
+    }
 
 
     // MARK: - Computed
@@ -182,10 +207,9 @@ private struct PlayerFieldRow: View {
     @State var text: String
     let placeholder: String
     let isDuplicate: Bool
-    let shouldFocus: Bool
+    let focusedPlayerID: FocusState<Int?>.Binding
     let onChange: (String) -> Void
     let onRemove: () -> Void
-    @FocusState private var isFocused: Bool
 
     var body: some View {
         ZStack {
@@ -207,7 +231,9 @@ private struct PlayerFieldRow: View {
                     }
                     TextField("", text: $text)
                         .onChange(of: text) { onChange(text) }   // compat iOS16/17
-                        .focused($isFocused)
+                        .focused(focusedPlayerID, equals: id)
+                        .submitLabel(.done)
+                        .onSubmit { focusedPlayerID.wrappedValue = nil }
                         .textInputAutocapitalization(.words)
                         .disableAutocorrection(true)
                         .foregroundColor(.white)
@@ -226,12 +252,6 @@ private struct PlayerFieldRow: View {
                 .padding(.trailing, 8)
             }
         }
-        .onAppear {
-            focusIfNeeded()
-        }
-        .onChange(of: shouldFocus) { _ in
-            focusIfNeeded()
-        }
         .frame(height: 56)
         .overlay(
             Group {
@@ -248,11 +268,4 @@ private struct PlayerFieldRow: View {
         )
     }
 
-    private func focusIfNeeded() {
-        guard shouldFocus else { return }
-
-        DispatchQueue.main.async {
-            isFocused = true
-        }
-    }
 }
