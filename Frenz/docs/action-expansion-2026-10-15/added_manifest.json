@@ -1,0 +1,1782 @@
+[
+  {
+    "pool": "party",
+    "id": "party-01",
+    "texts": {
+      "it": "Fai le previsioni del tempo per l'interno del tuo frigorifero. Hai 15 secondi; se passi, 2 penalità.",
+      "en": "Give a weather forecast for the inside of your fridge. You have 15 seconds; if you pass, take 2 penalties.",
+      "es": "Da el pronóstico del tiempo para el interior de tu nevera. Tienes 15 segundos; si pasas, recibes 2 penalizaciones.",
+      "fr": "Fais la météo de l'intérieur de ton frigo. Tu as 15 secondes ; si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-02",
+    "texts": {
+      "it": "Tu e {playerB} siete a un colloquio: tu vuoi assumere un vampiro come bagnino, l'altro vuole il posto. Fate 2 domande e risposte. Se passate, 2 penalità ciascuno.",
+      "en": "You and {playerB} are at a job interview: you want to hire a vampire as a lifeguard, and they want the job. Ask and answer 2 questions. If you pass, take 2 penalties each.",
+      "es": "Tú y {playerB} estáis en una entrevista: tú quieres contratar a un vampiro como socorrista y la otra persona quiere el puesto. Haced 2 preguntas y respuestas. Si pasáis, recibís 2 penalizaciones cada uno.",
+      "fr": "Toi et {playerB}, vous passez un entretien : tu veux embaucher un vampire comme maître-nageur, l'autre veut le poste. Faites 2 questions-réponses. Si vous passez, prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-03",
+    "texts": {
+      "it": "Leggi un finto scontrino come se fosse una lettera d'amore. Devi nominare 3 prodotti. Se ti blocchi, 2 penalità.",
+      "en": "Read an imaginary receipt as if it were a love letter. You must name 3 products. If you get stuck, take 2 penalties.",
+      "es": "Lee un recibo inventado como si fuera una carta de amor. Tienes que nombrar 3 productos. Si te bloqueas, recibes 2 penalizaciones.",
+      "fr": "Lis un ticket de caisse imaginaire comme une lettre d'amour. Tu dois citer 3 produits. Si tu bloques, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-05",
+    "texts": {
+      "it": "Tutti scegliete mentalmente chi del gruppo vorreste come voce del navigatore. Indicatelo insieme: il più votato deve dire «Hai sbagliato di nuovo» oppure paga 2 penalità.",
+      "en": "Everyone silently picks whose voice they'd want for their satnav. Point together: whoever gets the most votes must say “You've gone the wrong way again” or take 2 penalties.",
+      "es": "Todos elegid en silencio a quién querríais como voz del GPS. Señalad a la vez: quien tenga más votos debe decir «Te has vuelto a equivocar» o recibir 2 penalizaciones.",
+      "fr": "Choisissez en silence qui vous voudriez comme voix de GPS. Désignez cette personne en même temps : la plus choisie doit dire « Tu t'es encore trompé » ou prendre 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-06",
+    "texts": {
+      "it": "Registra per finta il messaggio di attesa del dentista più inquietante del mondo. Hai 15 secondi; se passi, 2 penalità.",
+      "en": "Pretend to record the hold message for the world's creepiest dentist. You have 15 seconds; if you pass, take 2 penalties.",
+      "es": "Finge que grabas el mensaje de espera del dentista más inquietante del mundo. Tienes 15 segundos; si pasas, recibes 2 penalizaciones.",
+      "fr": "Fais semblant d'enregistrer le message d'attente du dentiste le plus inquiétant du monde. Tu as 15 secondes ; si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-07",
+    "texts": {
+      "it": "Fai finta che la tua scarpa abbia appena vinto un premio. Ringrazia 3 persone che l'hanno sostenuta oppure paga 2 penalità.",
+      "en": "Pretend your shoe has just won an award. Thank 3 people who supported it or take 2 penalties.",
+      "es": "Finge que tu zapato acaba de ganar un premio. Da las gracias a 3 personas que lo apoyaron o recibe 2 penalizaciones.",
+      "fr": "Fais comme si ta chaussure venait de gagner un prix. Remercie 3 personnes qui l'ont soutenue ou prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-08",
+    "texts": {
+      "it": "Tu e {playerB} siete 2 piccioni che litigano per una briciola. Potete dire soltanto «mio». Il primo che ride paga 2 penalità; dopo 15 secondi senza risate, nessuna penalità.",
+      "en": "You and {playerB} are 2 pigeons arguing over a crumb. You can only say “mine”. The first to laugh takes 2 penalties; after 15 seconds without laughter, nobody gets a penalty.",
+      "es": "Tú y {playerB} sois 2 palomas peleando por una miga. Solo podéis decir «mía». Quien se ría primero recibe 2 penalizaciones; tras 15 segundos sin risas, no hay penalizaciones.",
+      "fr": "Toi et {playerB}, vous êtes 2 pigeons qui se disputent une miette. Vous pouvez seulement dire « à moi ». Le premier qui rit prend 2 pénalités ; après 15 secondes sans rire, personne ne prend de pénalité."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-09",
+    "texts": {
+      "it": "Dai un nome da profumo di lusso all'odore della palestra e recita lo spot. Se passi, 2 penalità.",
+      "en": "Give the smell of a gym a luxury perfume name and perform its advert. If you pass, take 2 penalties.",
+      "es": "Ponle un nombre de perfume de lujo al olor del gimnasio e interpreta su anuncio. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Donne un nom de parfum de luxe à l'odeur d'une salle de sport et joue la pub. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-10",
+    "texts": {
+      "it": "Tutti dite a turno una scusa assurda per essere arrivati in ritardo sulla Luna. Chi ripete una scusa o passa paga 2 penalità. Fate 1 giro.",
+      "en": "Take turns giving a ridiculous excuse for arriving late on the Moon. Anyone who repeats an excuse or passes takes 2 penalties. Play 1 round.",
+      "es": "Por turnos, dad una excusa absurda para llegar tarde a la Luna. Quien repita una excusa o pase recibe 2 penalizaciones. Haced 1 ronda.",
+      "fr": "À tour de rôle, donnez une excuse absurde pour être arrivés en retard sur la Lune. Si vous répétez une excuse ou passez, prenez 2 pénalités. Faites 1 tour."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-11",
+    "texts": {
+      "it": "Spiega in 15 secondi perché il telecomando dovrebbe pagare l'affitto. Se passi, 2 penalità.",
+      "en": "Explain in 15 seconds why the remote control should pay rent. If you pass, take 2 penalties.",
+      "es": "Explica en 15 segundos por qué el mando a distancia debería pagar alquiler. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Explique en 15 secondes pourquoi la télécommande devrait payer un loyer. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-12",
+    "texts": {
+      "it": "Tu fai i rumori, {playerB} mima qualcuno che cerca le chiavi con una fretta tremenda. Andate avanti per 15 secondi oppure pagate 2 penalità ciascuno.",
+      "en": "You do the sound effects while {playerB} mimes someone frantically looking for their keys. Keep going for 15 seconds or take 2 penalties each.",
+      "es": "Tú haces los ruidos y {playerB} imita a alguien buscando las llaves con muchísima prisa. Seguid durante 15 segundos o recibid 2 penalizaciones cada uno.",
+      "fr": "Tu fais les bruitages, {playerB} mime quelqu'un qui cherche ses clés en catastrophe. Continuez pendant 15 secondes ou prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-13",
+    "texts": {
+      "it": "Chiedi scusa a una zanzara per averla svegliata. Devi sembrare davvero dispiaciuto per 10 secondi; se ridi, 2 penalità.",
+      "en": "Apologise to a mosquito for waking it up. You must look genuinely sorry for 10 seconds; if you laugh, take 2 penalties.",
+      "es": "Pídele perdón a un mosquito por despertarlo. Debes parecer de verdad arrepentido durante 10 segundos; si te ríes, recibes 2 penalizaciones.",
+      "fr": "Excuse-toi auprès d'un moustique pour l'avoir réveillé. Tu dois avoir l'air vraiment désolé pendant 10 secondes ; si tu ris, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-14",
+    "texts": {
+      "it": "Scegli un giocatore. Inventate a turno 1 regola di un hotel per persone che russano. Se qualcuno dei 2 passa, paga 2 penalità.",
+      "en": "Pick a player. Take turns inventing 1 rule each for a hotel for people who snore. If either of you 2 passes, that person takes 2 penalties.",
+      "es": "Elige a un jugador. Inventad por turnos 1 norma cada uno para un hotel de gente que ronca. Si alguno de los 2 pasa, recibe 2 penalizaciones.",
+      "fr": "Choisis un joueur. Inventez à tour de rôle 1 règle chacun pour un hôtel réservé aux ronfleurs. Si l'un de vous 2 passe, il prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-15",
+    "texts": {
+      "it": "Fai la voce di un distributore automatico che giudica la tua scelta. Usa la frase «Sei proprio sicuro?» oppure paga 2 penalità.",
+      "en": "Voice a vending machine that judges your choice. Use the line “Are you really sure?” or take 2 penalties.",
+      "es": "Ponle voz a una máquina expendedora que juzga tu elección. Usa la frase «¿Seguro que quieres eso?» o recibe 2 penalizaciones.",
+      "fr": "Fais la voix d'un distributeur qui juge ton choix. Utilise la phrase « Tu es vraiment sûr ? » ou prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-16",
+    "texts": {
+      "it": "Tutti indicate insieme chi affiderebbe un segreto a un pappagallo. Il più votato inventa il segreto che il pappagallo ripeterebbe oppure paga 2 penalità.",
+      "en": "Everyone points at once to whoever would trust a parrot with a secret. Whoever gets the most votes invents the secret the parrot would repeat or takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien le confiaría un secreto a un loro. Quien tenga más votos inventa el secreto que repetiría el loro o recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui confierait un secret à un perroquet. La personne la plus choisie invente le secret que le perroquet répéterait ou prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-17",
+    "texts": {
+      "it": "Inventa il nome e il verso di un animale nato dall'incrocio tra una lavatrice e un gatto. Hai 15 secondi, altrimenti 2 penalità.",
+      "en": "Invent the name and call of an animal that's a cross between a washing machine and a cat. You have 15 seconds, or take 2 penalties.",
+      "es": "Inventa el nombre y el sonido de un animal que sea un cruce entre una lavadora y un gato. Tienes 15 segundos; si no, recibes 2 penalizaciones.",
+      "fr": "Invente le nom et le cri d'un animal issu du croisement d'une machine à laver et d'un chat. Tu as 15 secondes, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-18",
+    "texts": {
+      "it": "Tu sei un cliente che vuole rendere una nuvola, {playerB} lavora al servizio resi. Fate 2 battute a testa senza ridere: chi ride paga 2 penalità.",
+      "en": "You're a customer trying to return a cloud; {playerB} works at the returns desk. Say 2 lines each without laughing: anyone who laughs takes 2 penalties.",
+      "es": "Eres un cliente que quiere devolver una nube y {playerB} trabaja en devoluciones. Decid 2 frases cada uno sin reíros: quien se ría recibe 2 penalizaciones.",
+      "fr": "Tu es un client qui veut rendre un nuage, {playerB} travaille au service des retours. Dites 2 répliques chacun sans rire : si vous riez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-19",
+    "texts": {
+      "it": "Di' 3 cose che porteresti a una festa organizzata dai tuoi calzini. Hai 10 secondi, altrimenti 2 penalità.",
+      "en": "Name 3 things you'd bring to a party hosted by your socks. You have 10 seconds, or take 2 penalties.",
+      "es": "Di 3 cosas que llevarías a una fiesta organizada por tus calcetines. Tienes 10 segundos; si no, recibes 2 penalizaciones.",
+      "fr": "Cite 3 choses que tu apporterais à une fête organisée par tes chaussettes. Tu as 10 secondes, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-20",
+    "texts": {
+      "it": "Annuncia a tutti che la tua sveglia va in pensione. Falle un discorso di addio di 15 secondi oppure paga 2 penalità.",
+      "en": "Announce that your alarm clock is retiring. Give it a 15-second farewell speech or take 2 penalties.",
+      "es": "Anuncia que tu despertador se jubila. Dedícale un discurso de despedida de 15 segundos o recibe 2 penalizaciones.",
+      "fr": "Annonce que ton réveil prend sa retraite. Fais-lui un discours d'adieu de 15 secondes ou prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-21",
+    "texts": {
+      "it": "Tutti fate contemporaneamente la faccia di chi sente il proprio nome in una conversazione lontana. Poi votate la più curiosa: il vincitore distribuisce 2 penalità.",
+      "en": "Everyone makes the face of someone hearing their name in a distant conversation, all at once. Then vote for the most curious face: the winner gives out 2 penalties.",
+      "es": "Todos poned a la vez cara de oír vuestro nombre en una conversación lejana. Votad la cara más curiosa: quien gane reparte 2 penalizaciones.",
+      "fr": "Faites tous en même temps la tête de quelqu'un qui entend son nom dans une conversation au loin. Votez pour la tête la plus curieuse : le gagnant distribue 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-22",
+    "texts": {
+      "it": "Tu e {playerB} presentate un telegiornale dove l'unica notizia è che è finito il pane. Fate 1 titolo a testa; chi passa paga 2 penalità.",
+      "en": "You and {playerB} present a news bulletin where the only story is that there's no bread left. Give 1 headline each; anyone who passes takes 2 penalties.",
+      "es": "Tú y {playerB} presentáis un telediario cuya única noticia es que se ha acabado el pan. Dad 1 titular cada uno; quien pase recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, vous présentez un journal dont la seule info est qu'il n'y a plus de pain. Donnez 1 titre chacun ; si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-23",
+    "texts": {
+      "it": "Spiega a un re medievale perché non può mettere una forchetta nel tostapane. Hai 15 secondi; se passi, 2 penalità.",
+      "en": "Explain to a medieval king why he can't put a fork in the toaster. You have 15 seconds; if you pass, take 2 penalties.",
+      "es": "Explícale a un rey medieval por qué no puede meter un tenedor en la tostadora. Tienes 15 segundos; si pasas, recibes 2 penalizaciones.",
+      "fr": "Explique à un roi du Moyen Âge pourquoi il ne peut pas mettre une fourchette dans le grille-pain. Tu as 15 secondes ; si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-24",
+    "texts": {
+      "it": "Inventa 3 gusti di gelato che nessuno vorrebbe ordinare. Il gruppo sceglie il peggiore e tu devi consigliarlo con entusiasmo, oppure 2 penalità.",
+      "en": "Invent 3 ice cream flavours nobody would order. The group picks the worst and you must enthusiastically recommend it, or take 2 penalties.",
+      "es": "Inventa 3 sabores de helado que nadie pediría. El grupo elige el peor y tú tienes que recomendarlo con entusiasmo, o recibes 2 penalizaciones.",
+      "fr": "Invente 3 parfums de glace que personne ne commanderait. Le groupe choisit le pire et tu dois le recommander avec enthousiasme, ou prendre 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-25",
+    "texts": {
+      "it": "Scegli un giocatore: devi chiedergli di sposarti solo per ottenere il suo caricatore. Lui deve rifiutare con gentilezza. Chi ride per primo paga 2 penalità; finite dopo 15 secondi.",
+      "en": "Pick a player: propose to them just to get their charger. They must turn you down politely. The first to laugh takes 2 penalties; stop after 15 seconds.",
+      "es": "Elige a un jugador: pídele matrimonio solo para conseguir su cargador. Debe rechazarte con amabilidad. Quien se ría primero recibe 2 penalizaciones; terminad a los 15 segundos.",
+      "fr": "Choisis un joueur : demande-le en mariage juste pour récupérer son chargeur. Il doit refuser gentiment. Le premier qui rit prend 2 pénalités ; arrêtez après 15 secondes."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-26",
+    "texts": {
+      "it": "Fai un annuncio da aeroporto per chi ha perso la voglia di lavorare. Se passi, 2 penalità.",
+      "en": "Make an airport announcement for people who've lost the will to work. If you pass, take 2 penalties.",
+      "es": "Haz un anuncio de aeropuerto para quienes han perdido las ganas de trabajar. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Fais une annonce d'aéroport pour les gens qui ont perdu l'envie de travailler. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-27",
+    "texts": {
+      "it": "Tutti dite a turno il nome di un oggetto che sembra il nome di un cane. Chi ripete o non trova nulla in 5 secondi paga 2 penalità. Fate 1 giro.",
+      "en": "Take turns naming an object that sounds like a dog's name. Anyone who repeats one or can't think of one in 5 seconds takes 2 penalties. Play 1 round.",
+      "es": "Por turnos, decid un objeto cuyo nombre parezca de perro. Quien repita o no encuentre ninguno en 5 segundos recibe 2 penalizaciones. Haced 1 ronda.",
+      "fr": "À tour de rôle, nommez un objet qui pourrait être un nom de chien. Si vous répétez ou ne trouvez rien en 5 secondes, prenez 2 pénalités. Faites 1 tour."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-28",
+    "texts": {
+      "it": "Tu e {playerB} litigate perché uno ha spoilerato la lista della spesa. Fate 2 battute a testa oppure pagate 2 penalità ciascuno.",
+      "en": "You and {playerB} argue because one of you spoiled the shopping list. Say 2 lines each or take 2 penalties each.",
+      "es": "Tú y {playerB} discutís porque uno ha hecho un spoiler de la lista de la compra. Decid 2 frases cada uno o recibid 2 penalizaciones cada uno.",
+      "fr": "Toi et {playerB}, vous vous disputez parce que l'un a spoilé la liste de courses. Dites 2 répliques chacun ou prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-29",
+    "texts": {
+      "it": "Inventa una recensione del pianeta Terra scritta da un turista alieno deluso. Devi lamentarti di 2 cose, altrimenti 2 penalità.",
+      "en": "Invent a review of planet Earth by a disappointed alien tourist. You must complain about 2 things, or take 2 penalties.",
+      "es": "Inventa una reseña del planeta Tierra escrita por un turista extraterrestre decepcionado. Debes quejarte de 2 cosas o recibes 2 penalizaciones.",
+      "fr": "Invente un avis sur la Terre écrit par un touriste extraterrestre déçu. Tu dois te plaindre de 2 choses, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-30",
+    "texts": {
+      "it": "Presenta il tuo gomito come un artista che sta per salire sul palco. Se passi, 2 penalità.",
+      "en": "Introduce your elbow as an artist about to go on stage. If you pass, take 2 penalties.",
+      "es": "Presenta tu codo como un artista que está a punto de salir al escenario. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Présente ton coude comme un artiste qui va monter sur scène. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-31",
+    "texts": {
+      "it": "Tutti scegliete un oggetto visibile. A turno spiegate perché dovrebbe essere il sindaco della stanza. Chi passa paga 2 penalità.",
+      "en": "Everyone picks an object they can see. Take turns explaining why it should be mayor of the room. Anyone who passes takes 2 penalties.",
+      "es": "Todos elegid un objeto que esté a la vista. Por turnos, explicad por qué debería ser el alcalde de la habitación. Quien pase recibe 2 penalizaciones.",
+      "fr": "Choisissez chacun un objet visible. Expliquez à tour de rôle pourquoi il devrait être le maire de la pièce. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-32",
+    "texts": {
+      "it": "Tu sei un fantasma timido, {playerB} ti insegna a spaventare. Fate 2 tentativi di «buu» a testa: chi ride paga 2 penalità.",
+      "en": "You're a shy ghost and {playerB} is teaching you to scare people. Try saying “boo” 2 times each: anyone who laughs takes 2 penalties.",
+      "es": "Eres un fantasma tímido y {playerB} te enseña a dar miedo. Intentad decir «buu» 2 veces cada uno: quien se ría recibe 2 penalizaciones.",
+      "fr": "Tu es un fantôme timide, {playerB} t'apprend à faire peur. Essayez de dire « bouh » 2 fois chacun : si vous riez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-33",
+    "texts": {
+      "it": "Canta «sto cercando parcheggio» come fosse il ritornello di una canzone disperata. Se passi, 2 penalità.",
+      "en": "Sing “I'm looking for parking” like the chorus of a desperate song. If you pass, take 2 penalties.",
+      "es": "Canta «estoy buscando aparcamiento» como si fuera el estribillo de una canción desesperada. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Chante « je cherche une place pour me garer » comme le refrain d'une chanson désespérée. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-34",
+    "texts": {
+      "it": "Il giocatore alla tua destra sceglie un animale. Spiega in 15 secondi perché sarebbe un pessimo coinquilino, oppure paga 2 penalità.",
+      "en": "The player on your right picks an animal. Explain in 15 seconds why it would be a terrible flatmate, or take 2 penalties.",
+      "es": "El jugador de tu derecha elige un animal. Explica en 15 segundos por qué sería un compañero de piso horrible, o recibe 2 penalizaciones.",
+      "fr": "Le joueur à ta droite choisit un animal. Explique en 15 secondes pourquoi ce serait un colocataire horrible, ou prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-35",
+    "texts": {
+      "it": "Tutti dite insieme «non sono stato io» guardando il soffitto. Poi votate chi sembrava più colpevole: quella persona paga 2 penalità.",
+      "en": "Everyone says “it wasn't me” at once while looking at the ceiling. Then vote for whoever looked guiltiest: that person takes 2 penalties.",
+      "es": "Todos decid a la vez «yo no he sido» mirando al techo. Votad a quien parecía más culpable: esa persona recibe 2 penalizaciones.",
+      "fr": "Dites tous ensemble « c'est pas moi » en regardant le plafond. Votez pour la personne qui avait l'air la plus coupable : elle prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-36",
+    "texts": {
+      "it": "Tu e {playerB} fate una lite da condominio tra un astronauta e il suo vicino sulla Luna. Avete 15 secondi; se passate, 2 penalità ciascuno.",
+      "en": "You and {playerB} act out a neighbour dispute between an astronaut and the person next door on the Moon. You have 15 seconds; if you pass, take 2 penalties each.",
+      "es": "Tú y {playerB} interpretáis una pelea entre un astronauta y su vecino en la Luna. Tenéis 15 segundos; si pasáis, recibís 2 penalizaciones cada uno.",
+      "fr": "Toi et {playerB}, jouez une dispute de voisinage entre un astronaute et son voisin sur la Lune. Vous avez 15 secondes ; si vous passez, prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-37",
+    "texts": {
+      "it": "Fingi di essere un biscotto che cerca di convincere qualcuno a non inzupparlo. Hai 15 secondi; se passi, 2 penalità.",
+      "en": "Pretend you're a biscuit trying to convince someone not to dunk you. You have 15 seconds; if you pass, take 2 penalties.",
+      "es": "Finge que eres una galleta intentando convencer a alguien de que no la moje. Tienes 15 segundos; si pasas, recibes 2 penalizaciones.",
+      "fr": "Tu es un biscuit qui essaie de convaincre quelqu'un de ne pas le tremper. Tu as 15 secondes ; si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-38",
+    "texts": {
+      "it": "Dai 3 consigli pessimi a un robot che va al suo primo matrimonio. Hai 15 secondi, altrimenti 2 penalità.",
+      "en": "Give 3 terrible tips to a robot attending its first wedding. You have 15 seconds, or take 2 penalties.",
+      "es": "Dale 3 consejos pésimos a un robot que va a su primera boda. Tienes 15 segundos; si no, recibes 2 penalizaciones.",
+      "fr": "Donne 3 conseils nuls à un robot qui va à son premier mariage. Tu as 15 secondes, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-39",
+    "texts": {
+      "it": "Tutti nominate a turno un oggetto che non dovrebbe mai avere il Bluetooth. Chi ripete o passa paga 2 penalità. Fate 1 giro.",
+      "en": "Take turns naming an object that should never have Bluetooth. Anyone who repeats one or passes takes 2 penalties. Play 1 round.",
+      "es": "Por turnos, nombrad un objeto que nunca debería tener Bluetooth. Quien repita o pase recibe 2 penalizaciones. Haced 1 ronda.",
+      "fr": "À tour de rôle, citez un objet qui ne devrait jamais avoir le Bluetooth. Si vous répétez ou passez, prenez 2 pénalités. Faites 1 tour."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-40",
+    "texts": {
+      "it": "Tu e {playerB} dovete inventare il nome di un ristorante gestito da fantasmi e 1 piatto del menu. Avete 15 secondi, altrimenti 2 penalità ciascuno.",
+      "en": "You and {playerB} must invent a name for a restaurant run by ghosts and 1 dish on the menu. You have 15 seconds, or take 2 penalties each.",
+      "es": "Tú y {playerB} debéis inventar el nombre de un restaurante de fantasmas y 1 plato del menú. Tenéis 15 segundos; si no, recibís 2 penalizaciones cada uno.",
+      "fr": "Toi et {playerB}, inventez le nom d'un restaurant tenu par des fantômes et 1 plat du menu. Vous avez 15 secondes, sinon prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-41",
+    "texts": {
+      "it": "Annuncia con orgoglio la tua candidatura a campione mondiale di attese in coda. Spiega come ti alleni oppure paga 2 penalità.",
+      "en": "Proudly announce your bid to become the world champion of queueing. Explain how you train or take 2 penalties.",
+      "es": "Anuncia con orgullo que aspiras a ser campeón mundial de hacer cola. Explica cómo entrenas o recibe 2 penalizaciones.",
+      "fr": "Annonce fièrement que tu vises le titre de champion du monde de la file d'attente. Explique comment tu t'entraînes ou prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-42",
+    "texts": {
+      "it": "Descrivi il rumore della tua pancia come se fosse il motore di un'auto da corsa. Se passi, 2 penalità.",
+      "en": "Describe your stomach rumbling as if it were a racing car engine. If you pass, take 2 penalties.",
+      "es": "Describe el ruido de tu barriga como si fuera el motor de un coche de carreras. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Décris le bruit de ton ventre comme si c'était un moteur de voiture de course. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-43",
+    "texts": {
+      "it": "Tutti indicate insieme chi chiamereste per dare un nome a un dinosauro appena scoperto. Il più votato lo battezza oppure paga 2 penalità.",
+      "en": "Everyone points at once to whoever they'd ask to name a newly discovered dinosaur. Whoever gets the most votes names it or takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien llamaríais para poner nombre a un dinosaurio recién descubierto. Quien tenga más votos lo bautiza o recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui vous appelleriez pour nommer un dinosaure tout juste découvert. La personne la plus choisie le baptise ou prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-44",
+    "texts": {
+      "it": "Tu vendi un biglietto per il concerto del silenzio, {playerB} vuole sapere cosa comprende. Fate 2 battute a testa senza ridere; chi ride paga 2 penalità.",
+      "en": "You're selling a ticket to a concert of silence; {playerB} wants to know what's included. Say 2 lines each without laughing; anyone who laughs takes 2 penalties.",
+      "es": "Vendes una entrada para el concierto del silencio y {playerB} quiere saber qué incluye. Decid 2 frases cada uno sin reíros; quien se ría recibe 2 penalizaciones.",
+      "fr": "Tu vends un billet pour le concert du silence, {playerB} veut savoir ce qui est inclus. Dites 2 répliques chacun sans rire ; si vous riez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-45",
+    "texts": {
+      "it": "Inventa un avviso da mettere sul letto per scoraggiare chi vuole svegliarti. Non puoi usare «dormire». Hai 10 secondi, altrimenti 2 penalità.",
+      "en": "Invent a sign for your bed to discourage anyone from waking you. You can't say “sleep”. You have 10 seconds, or take 2 penalties.",
+      "es": "Inventa un cartel para tu cama que disuada a quien quiera despertarte. No puedes usar «dormir». Tienes 10 segundos; si no, recibes 2 penalizaciones.",
+      "fr": "Invente une pancarte pour ton lit afin de décourager les gens de te réveiller. Tu ne peux pas dire « dormir ». Tu as 10 secondes, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-46",
+    "texts": {
+      "it": "Tutti suggerite a turno una cosa inutile da mettere nel kit di sopravvivenza a una riunione. Chi ripete o passa paga 2 penalità. Fate 1 giro.",
+      "en": "Take turns suggesting a useless item for a meeting survival kit. Anyone who repeats one or passes takes 2 penalties. Play 1 round.",
+      "es": "Por turnos, proponed algo inútil para un kit de supervivencia a una reunión. Quien repita o pase recibe 2 penalizaciones. Haced 1 ronda.",
+      "fr": "À tour de rôle, proposez une chose inutile pour un kit de survie à une réunion. Si vous répétez ou passez, prenez 2 pénalités. Faites 1 tour."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-47",
+    "texts": {
+      "it": "Tu e {playerB} fate una conferenza stampa per spiegare perché avete perso contro una porta automatica. Avete 15 secondi; se passate, 2 penalità ciascuno.",
+      "en": "You and {playerB} hold a press conference to explain why you lost to an automatic door. You have 15 seconds; if you pass, take 2 penalties each.",
+      "es": "Tú y {playerB} dais una rueda de prensa para explicar por qué habéis perdido contra una puerta automática. Tenéis 15 segundos; si pasáis, recibís 2 penalizaciones cada uno.",
+      "fr": "Toi et {playerB}, faites une conférence de presse pour expliquer votre défaite contre une porte automatique. Vous avez 15 secondes ; si vous passez, prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "party",
+    "id": "party-48",
+    "texts": {
+      "it": "Trova un nome elegante per il cassetto dove butti tutto e descrivi 2 cose che contiene. Se passi, 2 penalità.",
+      "en": "Give your junk drawer a fancy name and describe 2 things in it. If you pass, take 2 penalties.",
+      "es": "Ponle un nombre elegante al cajón donde tiras de todo y describe 2 cosas que contiene. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Donne un nom chic à ton tiroir fourre-tout et décris 2 choses qu'il contient. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-01",
+    "texts": {
+      "it": "Hai mai controllato chi non ti aveva fatto gli auguri, invece di goderti quelli ricevuti? Se sì, 2 penalità.",
+      "en": "Have you ever checked who hadn't wished you a happy birthday instead of enjoying the wishes you got? If so, take 2 penalties.",
+      "es": "¿Has mirado quién no te había felicitado el cumpleaños en vez de disfrutar de las felicitaciones recibidas? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà regardé qui ne t'avait pas souhaité ton anniversaire au lieu de profiter des messages reçus ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-02",
+    "texts": {
+      "it": "Quale persona speravi notasse che l'avevi smessa di cercare? Niente nomi: racconta la situazione o paga 3 penalità.",
+      "en": "Who did you hope would notice you'd stopped reaching out? No names: tell us the situation or take 3 penalties.",
+      "es": "¿Quién esperabas que notara que habías dejado de buscarle? Sin nombres: cuenta la situación o recibe 3 penalizaciones.",
+      "fr": "Qui espérais-tu voir remarquer que tu ne prenais plus de ses nouvelles ? Sans donner de nom, raconte la situation ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-03",
+    "texts": {
+      "it": "Tu e {playerB} dovete fare pace per finta, continuando però a darvi la colpa. Fate 2 battute a testa; chi dice «scusa» paga 2 penalità.",
+      "en": "You and {playerB} pretend to make up while still blaming each other. Say 2 lines each; anyone who says “sorry” takes 2 penalties.",
+      "es": "Tú y {playerB} fingís hacer las paces mientras seguís culpándoos. Decid 2 frases cada uno; quien diga «perdón» recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, faites semblant de vous réconcilier tout en vous rejetant la faute. Dites 2 répliques chacun ; si vous dites « pardon », prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-04",
+    "texts": {
+      "it": "Tutti indicate insieme chi direbbe «fate voi» per poi bocciare ogni proposta. Il più votato deve bocciare una pizzeria immaginaria oppure paga 2 penalità.",
+      "en": "Everyone points at once to whoever would say “you decide” then reject every suggestion. Whoever gets the most votes must reject an imaginary pizza place or take 2 penalties.",
+      "es": "Todos señalad a la vez a quien diría «decidid vosotros» para luego rechazar cada propuesta. Quien tenga más votos debe rechazar una pizzería imaginaria o recibir 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui dirait « décidez » pour ensuite rejeter chaque idée. La personne la plus choisie doit critiquer une pizzeria imaginaire ou prendre 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-05",
+    "texts": {
+      "it": "Hai mai aspettato che qualcuno uscisse dalla stanza per cambiare posto e stare lontano da lui? Se sì, 2 penalità.",
+      "en": "Have you ever waited for someone to leave the room so you could move seats to get away from them? If so, take 2 penalties.",
+      "es": "¿Has esperado a que alguien saliera de la habitación para cambiarte de sitio y alejarte de esa persona? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà attendu que quelqu'un quitte la pièce pour changer de place et t'éloigner de lui ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-06",
+    "texts": {
+      "it": "Quale messaggio hai scritto solo per comparire di nuovo nelle notifiche di qualcuno? Racconta o paga 3 penalità.",
+      "en": "What message did you send just to pop up in someone's notifications again? Tell us or take 3 penalties.",
+      "es": "¿Qué mensaje escribiste solo para volver a aparecer en las notificaciones de alguien? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Quel message as-tu écrit juste pour réapparaître dans les notifications de quelqu'un ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-07",
+    "texts": {
+      "it": "Rivela una cosa che fai apposta quando vuoi che qualcuno capisca che sei arrabbiato, senza dirglielo. Se passi, 3 penalità.",
+      "en": "Reveal something you do on purpose when you want someone to know you're angry without telling them. If you pass, take 3 penalties.",
+      "es": "Di algo que haces a propósito para que alguien note que estás enfadado sin decírselo. Si pasas, recibes 3 penalizaciones.",
+      "fr": "Révèle une chose que tu fais exprès pour qu'on comprenne que tu es en colère sans le dire. Si tu passes, prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-08",
+    "texts": {
+      "it": "Tu sei quello che ha escluso {playerB} da una cena. Inventa una giustificazione pessima; l'altro risponde soltanto «ah, certo». Se ridi, 2 penalità.",
+      "en": "You left {playerB} out of a dinner invitation. Invent a terrible excuse; they can only reply “oh, sure”. If you laugh, take 2 penalties.",
+      "es": "Has dejado a {playerB} fuera de una cena. Inventa una excusa pésima; la otra persona solo responde «ah, claro». Si te ríes, recibes 2 penalizaciones.",
+      "fr": "Tu n'as pas invité {playerB} à un dîner. Invente une excuse nulle ; l'autre répond seulement « ah, bien sûr ». Si tu ris, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-09",
+    "texts": {
+      "it": "Tutti nominate a turno un pretesto con cui avete controllato se qualcuno vi stava evitando. Chi passa paga 2 penalità.",
+      "en": "Take turns naming an excuse you used to check whether someone was avoiding you. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, contad qué pretexto usasteis para comprobar si alguien os evitaba. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, racontez un prétexte utilisé pour vérifier si quelqu'un vous évitait. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-10",
+    "texts": {
+      "it": "Hai mai criticato un posto soltanto perché non ti avevano invitato? Se sì, 2 penalità.",
+      "en": "Have you ever criticised a place just because you weren't invited? If so, take 2 penalties.",
+      "es": "¿Has criticado un sitio solo porque no te habían invitado? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà critiqué un endroit juste parce qu'on ne t'y avait pas invité ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-12",
+    "texts": {
+      "it": "Hai mai lasciato una notifica visibile sperando che qualcuno sbirciasse? Se sì, 2 penalità.",
+      "en": "Have you ever left a notification visible hoping someone would peek at it? If so, take 2 penalties.",
+      "es": "¿Has dejado una notificación a la vista esperando que alguien la leyera de reojo? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà laissé une notification visible en espérant que quelqu'un y jette un œil ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-13",
+    "texts": {
+      "it": "Tu e {playerB} inventate a turno 1 modo elegante per dire «non ti ho chiesto niente». Chi passa paga 2 penalità.",
+      "en": "You and {playerB} take turns inventing 1 elegant way each to say “I didn't ask you”. Anyone who passes takes 2 penalties.",
+      "es": "Tú y {playerB} inventáis por turnos 1 forma elegante de decir «no te he preguntado». Quien pase recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, inventez chacun à votre tour 1 façon élégante de dire « je ne t'ai rien demandé ». Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-14",
+    "texts": {
+      "it": "Tutti indicate insieme chi sceglierebbe la foto di gruppo in cui è venuto bene solo lui. Il più votato paga 2 penalità.",
+      "en": "Everyone points at once to whoever would pick the group photo where only they look good. Whoever gets the most votes takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien elegiría la foto de grupo en la que solo sale bien esa persona. Quien tenga más votos recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui choisirait la photo de groupe où il est le seul à être bien. La personne la plus choisie prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-15",
+    "texts": {
+      "it": "Quale cosa presti volentieri solo perché speri che non te la restituiscano? Rispondi o paga 2 penalità.",
+      "en": "What do you happily lend out just because you hope you won't get it back? Answer or take 2 penalties.",
+      "es": "¿Qué prestas encantado solo porque esperas que no te lo devuelvan? Responde o recibe 2 penalizaciones.",
+      "fr": "Qu'est-ce que tu prêtes volontiers juste parce que tu espères qu'on ne te le rendra pas ? Réponds ou prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-17",
+    "texts": {
+      "it": "Quale piccolo vantaggio hai perso quando due persone hanno fatto pace? Racconta senza nomi o paga 3 penalità.",
+      "en": "What little advantage did you lose when two people made up? Tell us without naming names or take 3 penalties.",
+      "es": "¿Qué pequeña ventaja perdiste cuando dos personas hicieron las paces? Cuéntalo sin nombres o recibe 3 penalizaciones.",
+      "fr": "Quel petit avantage as-tu perdu quand deux personnes se sont réconciliées ? Raconte sans donner de noms ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-18",
+    "texts": {
+      "it": "Scegli un giocatore. Dite a turno quale frase usereste per cacciarvi da casa con educazione. Chi passa paga 2 penalità.",
+      "en": "Pick a player. Take turns saying what line you'd use to politely kick each other out of your home. Anyone who passes takes 2 penalties.",
+      "es": "Elige a un jugador. Por turnos, decid qué frase usaríais para echaros de casa con educación. Quien pase recibe 2 penalizaciones.",
+      "fr": "Choisis un joueur. Dites à tour de rôle quelle phrase vous utiliseriez pour mettre l'autre dehors poliment. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-19",
+    "texts": {
+      "it": "Tutti dite a turno una cosa che vi fa pensare «ecco, adesso vuole un favore». Chi passa paga 2 penalità.",
+      "en": "Take turns naming something that makes you think “here comes a favour”. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, decid algo que os haga pensar «ya está, quiere un favor». Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, dites ce qui vous fait penser « voilà, il veut un service ». Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-20",
+    "texts": {
+      "it": "Hai mai portato un amico a un evento solo per non essere l'unico a non conoscere nessuno? Se sì, 2 penalità.",
+      "en": "Have you ever brought a friend to an event just so you wouldn't be the only one who knew nobody? If so, take 2 penalties.",
+      "es": "¿Has llevado a un amigo a un evento solo para no ser la única persona que no conocía a nadie? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà emmené un ami à un événement juste pour ne pas être la seule personne à ne connaître personne ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-21",
+    "texts": {
+      "it": "Quale versione di te reciti quando incontri qualcuno che vuoi impressionare? Falle dire una frase o paga 3 penalità.",
+      "en": "What version of yourself do you play when meeting someone you want to impress? Say a line as that version or take 3 penalties.",
+      "es": "¿Qué versión de ti interpretas cuando conoces a alguien a quien quieres impresionar? Di una frase como esa versión o recibe 3 penalizaciones.",
+      "fr": "Quelle version de toi joues-tu devant quelqu'un que tu veux impressionner ? Fais-lui dire une phrase ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-22",
+    "texts": {
+      "it": "Hai mai tenuto il conto di chi offriva, dicendo però «non guardiamo queste cose»? Se sì, 2 penalità.",
+      "en": "Have you ever kept track of who paid while saying “we don't count that stuff”? If so, take 2 penalties.",
+      "es": "¿Has llevado la cuenta de quién invitaba mientras decías «no miramos esas cosas»? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà tenu le compte de qui payait tout en disant « on ne compte pas entre nous » ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-23",
+    "texts": {
+      "it": "Tu e {playerB} dovete vantare una vostra qualità iniziando con «il mio problema è che...». Fate 1 frase a testa; chi passa paga 2 penalità.",
+      "en": "You and {playerB} must brag about a quality of yours starting with “my problem is...”. Say 1 line each; anyone who passes takes 2 penalties.",
+      "es": "Tú y {playerB} debéis presumir de una cualidad empezando con «mi problema es que...». Decid 1 frase cada uno; quien pase recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, vantez une de vos qualités en commençant par « mon problème, c'est que... ». Faites 1 phrase chacun ; si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-24",
+    "texts": {
+      "it": "Tutti indicate insieme chi trasformerebbe una semplice correzione in una rivalità a vita. Il più votato paga 2 penalità.",
+      "en": "Everyone points at once to whoever would turn a simple correction into a lifelong rivalry. Whoever gets the most votes takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien convertiría una simple corrección en una rivalidad de por vida. Quien tenga más votos recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui transformerait une simple correction en rivalité à vie. La personne la plus choisie prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-25",
+    "texts": {
+      "it": "Quale cosa lasci volutamente in vista quando arriva qualcuno che vuoi impressionare? Racconta o paga 3 penalità.",
+      "en": "What do you deliberately leave on display when someone you want to impress comes over? Tell us or take 3 penalties.",
+      "es": "¿Qué dejas a la vista a propósito cuando viene alguien a quien quieres impresionar? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Que laisses-tu exprès en évidence quand quelqu'un que tu veux impressionner vient chez toi ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-26",
+    "texts": {
+      "it": "Hai mai chiesto un parere solo per sentirti dire che avevi ragione? Racconta l'argomento o paga 3 penalità.",
+      "en": "Have you ever asked for an opinion just to hear that you were right? Tell us what it was about or take 3 penalties.",
+      "es": "¿Has pedido una opinión solo para que te dijeran que tenías razón? Cuenta sobre qué era o recibe 3 penalizaciones.",
+      "fr": "As-tu déjà demandé un avis juste pour qu'on te dise que tu avais raison ? Dis sur quel sujet ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-27",
+    "texts": {
+      "it": "Quale messaggio vorresti ricevere soltanto per avere il piacere di non rispondere? Dillo o paga 3 penalità.",
+      "en": "What message would you love to receive just for the pleasure of not replying? Say it or take 3 penalties.",
+      "es": "¿Qué mensaje te gustaría recibir solo por el placer de no contestar? Dilo o recibe 3 penalizaciones.",
+      "fr": "Quel message aimerais-tu recevoir juste pour le plaisir de ne pas répondre ? Dis-le ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-28",
+    "texts": {
+      "it": "Tu e {playerB} siete rivali a una premiazione. Il gruppo sceglie chi vince; l'altro deve congratularsi a denti stretti oppure paga 2 penalità.",
+      "en": "You and {playerB} are rivals at an awards ceremony. The group picks the winner; the other must congratulate them through gritted teeth or take 2 penalties.",
+      "es": "Tú y {playerB} sois rivales en una entrega de premios. El grupo elige quién gana; la otra persona debe felicitarle entre dientes o recibir 2 penalizaciones.",
+      "fr": "Toi et {playerB}, vous êtes rivaux à une remise de prix. Le groupe choisit le gagnant ; l'autre doit le féliciter en serrant les dents ou prendre 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-29",
+    "texts": {
+      "it": "Tutti dite a turno una cosa che fate meglio quando qualcuno che vi sta antipatico vi guarda. Chi passa paga 2 penalità.",
+      "en": "Take turns naming something you do better when someone you dislike is watching. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, decid algo que hacéis mejor cuando os mira alguien que os cae mal. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, dites ce que vous faites mieux quand quelqu'un que vous n'aimez pas vous regarde. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-30",
+    "texts": {
+      "it": "Hai mai fatto finta di cercare le chiavi per evitare un saluto? Se sì, 2 penalità.",
+      "en": "Have you ever pretended to look for your keys to avoid saying hello? If so, take 2 penalties.",
+      "es": "¿Has fingido buscar las llaves para evitar saludar? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà fait semblant de chercher tes clés pour éviter de saluer quelqu'un ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-31",
+    "texts": {
+      "it": "Quale opinione ti sei tenuto per te perché la persona di cui parlavate era dietro di voi? Racconta senza nomi o paga 3 penalità.",
+      "en": "What opinion did you keep to yourself because the person you were discussing was right behind you? Tell us without names or take 3 penalties.",
+      "es": "¿Qué opinión te callaste porque la persona de la que hablabais estaba detrás? Cuéntalo sin nombres o recibe 3 penalizaciones.",
+      "fr": "Quelle opinion as-tu gardée pour toi parce que la personne dont vous parliez était juste derrière ? Raconte sans donner de noms ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-32",
+    "texts": {
+      "it": "Hai mai aggiunto «per me» a una critica solo per poter dire che non stavi giudicando? Se sì, 2 penalità.",
+      "en": "Have you ever added “in my opinion” to a criticism just so you could say you weren't judging? If so, take 2 penalties.",
+      "es": "¿Has añadido «para mí» a una crítica solo para poder decir que no estabas juzgando? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà ajouté « pour moi » à une critique juste pour pouvoir dire que tu ne jugeais pas ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-33",
+    "texts": {
+      "it": "Scegli un giocatore. Inventate insieme il messaggio di chi lascia un gruppo chat ma vuole essere fermato. Avete 15 secondi, altrimenti 2 penalità ciascuno.",
+      "en": "Pick a player. Together, invent the message of someone leaving a group chat who wants to be stopped. You have 15 seconds, or take 2 penalties each.",
+      "es": "Elige a un jugador. Inventad juntos el mensaje de alguien que se va de un grupo de chat pero quiere que lo detengan. Tenéis 15 segundos; si no, recibís 2 penalizaciones cada uno.",
+      "fr": "Choisis un joueur. Inventez ensemble le message de quelqu'un qui quitte une discussion de groupe mais veut qu'on le retienne. Vous avez 15 secondes, sinon prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-34",
+    "texts": {
+      "it": "Tutti indicate insieme chi ricorderebbe ancora una battuta fatta su di lui durante questa partita fra un anno. Il più votato paga 2 penalità.",
+      "en": "Everyone points at once to whoever would still remember a joke about them from this game a year from now. Whoever gets the most votes takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien seguiría recordando dentro de un año una broma sobre él hecha en esta partida. Quien tenga más votos recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui se souviendrait encore dans un an d'une blague sur lui faite pendant cette partie. La personne la plus choisie prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-35",
+    "texts": {
+      "it": "Hai mai ridotto un complimento a «carino» per non dare troppa soddisfazione? Se sì, 2 penalità.",
+      "en": "Have you ever reduced a compliment to “nice” so you wouldn't give someone too much satisfaction? If so, take 2 penalties.",
+      "es": "¿Has reducido un cumplido a «está bien» para no darle demasiada satisfacción a alguien? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà réduit un compliment à « sympa » pour ne pas donner trop de satisfaction à quelqu'un ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-36",
+    "texts": {
+      "it": "Quale dettaglio hai corretto in una storia solo per far capire che c'eri anche tu? Racconta o paga 3 penalità.",
+      "en": "What detail did you correct in a story just to make it clear you were there too? Tell us or take 3 penalties.",
+      "es": "¿Qué detalle corregiste en una historia solo para dejar claro que tú también estabas allí? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Quel détail as-tu corrigé dans une histoire juste pour montrer que tu y étais aussi ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-37",
+    "texts": {
+      "it": "Quale tua abitudine diventa improvvisamente insopportabile quando la fa qualcun altro? Confessa o paga 3 penalità.",
+      "en": "Which of your habits suddenly becomes unbearable when someone else does it? Confess or take 3 penalties.",
+      "es": "¿Qué costumbre tuya se vuelve insoportable cuando la tiene otra persona? Confiesa o recibe 3 penalizaciones.",
+      "fr": "Laquelle de tes habitudes devient soudain insupportable quand quelqu'un d'autre la fait ? Avoue ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-38",
+    "texts": {
+      "it": "Tu e {playerB} fingete di contendervi il titolo di persona meno competitiva. Fate 2 battute a testa senza ammettere di voler vincere. Chi lo ammette paga 2 penalità.",
+      "en": "You and {playerB} pretend to compete for the title of least competitive person. Say 2 lines each without admitting you want to win. Anyone who admits it takes 2 penalties.",
+      "es": "Tú y {playerB} fingís competir por el título de persona menos competitiva. Decid 2 frases cada uno sin admitir que queréis ganar. Quien lo admita recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, disputez-vous le titre de personne la moins compétitive. Dites 2 répliques chacun sans avouer vouloir gagner. Si vous l'avouez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-39",
+    "texts": {
+      "it": "Tutti nominate a turno una frase che sembra gentile ma vi fa venire voglia di discutere. Chi passa paga 2 penalità.",
+      "en": "Take turns saying a line that sounds kind but makes you want to argue. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, decid una frase que suene amable pero os dé ganas de discutir. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, citez une phrase qui semble gentille mais vous donne envie de vous disputer. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-40",
+    "texts": {
+      "it": "Hai mai chiesto «chi viene?» quando volevi soltanto sapere se veniva una persona precisa? Se sì, 2 penalità.",
+      "en": "Have you ever asked “who's coming?” when you only wanted to know about one specific person? If so, take 2 penalties.",
+      "es": "¿Has preguntado «quién viene» cuando solo querías saber si iba una persona concreta? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà demandé « qui vient ? » juste pour savoir si une personne précise serait là ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-41",
+    "texts": {
+      "it": "Quale cosa fai per sembrare impegnato quando non vuoi essere disponibile? Racconta o paga 3 penalità.",
+      "en": "What do you do to look busy when you don't want to be available? Tell us or take 3 penalties.",
+      "es": "¿Qué haces para parecer ocupado cuando no quieres estar disponible? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Que fais-tu pour avoir l'air occupé quand tu ne veux pas être disponible ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-42",
+    "texts": {
+      "it": "Hai mai voluto sapere quanto era costato un regalo per confrontarlo con il tuo? Se sì, 2 penalità.",
+      "en": "Have you ever wanted to know how much a gift cost so you could compare it with yours? If so, take 2 penalties.",
+      "es": "¿Has querido saber cuánto costó un regalo para compararlo con el tuyo? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà voulu savoir combien coûtait un cadeau pour le comparer au tien ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-43",
+    "texts": {
+      "it": "Tu e {playerB} inventate a turno 1 frase che suoni come un perdono ma sia una frecciatina. Chi passa paga 2 penalità.",
+      "en": "You and {playerB} take turns inventing 1 line each that sounds like forgiveness but is really a dig. Anyone who passes takes 2 penalties.",
+      "es": "Tú y {playerB} inventáis por turnos 1 frase que suene a perdón pero sea una pulla. Quien pase recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, inventez chacun à votre tour 1 phrase qui ressemble à un pardon mais cache une pique. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-44",
+    "texts": {
+      "it": "Tutti indicate insieme chi direbbe «non importa» per poi ricordarlo a ogni occasione. Il più votato paga 2 penalità.",
+      "en": "Everyone points at once to whoever would say “it doesn't matter” then bring it up at every opportunity. Whoever gets the most votes takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien diría «no importa» para luego recordarlo a la mínima ocasión. Quien tenga más votos recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui dirait « c'est pas grave » pour ensuite le rappeler à chaque occasion. La personne la plus choisie prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-45",
+    "texts": {
+      "it": "Quale cosa hai smesso di consigliare appena è diventata troppo popolare? Racconta o paga 3 penalità.",
+      "en": "What did you stop recommending as soon as it became too popular? Tell us or take 3 penalties.",
+      "es": "¿Qué dejaste de recomendar en cuanto se volvió demasiado popular? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Qu'as-tu arrêté de recommander dès que c'est devenu trop populaire ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-47",
+    "texts": {
+      "it": "Racconta una volta in cui hai detto «l'avevo capito» ma non avevi capito nulla. Se passi, 3 penalità.",
+      "en": "Tell us about a time you said “I'd figured that out” but had no idea. If you pass, take 3 penalties.",
+      "es": "Cuenta una vez que dijiste «ya me había dado cuenta» sin haberte enterado de nada. Si pasas, recibes 3 penalizaciones.",
+      "fr": "Raconte une fois où tu as dit « j'avais compris » alors que tu n'avais rien compris. Si tu passes, prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "darkRoom",
+    "id": "darkRoom-48",
+    "texts": {
+      "it": "Quale complimento accetti con un finto «ma no» sperando che venga ripetuto? Dillo o paga 3 penalità.",
+      "en": "What compliment do you greet with a fake “oh, stop” hoping they'll repeat it? Say it or take 3 penalties.",
+      "es": "¿Qué cumplido recibes con un falso «qué va» esperando que lo repitan? Dilo o recibe 3 penalizaciones.",
+      "fr": "Quel compliment accueilles-tu avec un faux « mais non » en espérant qu'on le répète ? Dis-le ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-02",
+    "texts": {
+      "it": "Tu e {playerB} flirtate come due persone che si contendono l'ultima presa per caricare il telefono. Fate 2 battute a testa oppure pagate 2 penalità ciascuno.",
+      "en": "You and {playerB} flirt as two people fighting over the last socket to charge a phone. Say 2 lines each or take 2 penalties each.",
+      "es": "Tú y {playerB} ligáis mientras os disputáis el último enchufe para cargar el móvil. Decid 2 frases cada uno o recibid 2 penalizaciones cada uno.",
+      "fr": "Toi et {playerB}, draguez-vous en vous disputant la dernière prise pour charger un téléphone. Dites 2 répliques chacun ou prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-03",
+    "texts": {
+      "it": "Tutti dite a turno una frase capace di rovinare l'atmosfera subito prima di un bacio. Chi passa paga 2 penalità.",
+      "en": "Take turns saying a line that would ruin the mood right before a kiss. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, decid una frase capaz de arruinar el ambiente justo antes de un beso. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, dites une phrase qui casserait l'ambiance juste avant un baiser. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-04",
+    "texts": {
+      "it": "Hai mai allungato un saluto sperando che diventasse un bacio? Se sì, 2 penalità.",
+      "en": "Have you ever dragged out a goodbye hoping it would turn into a kiss? If so, take 2 penalties.",
+      "es": "¿Has alargado una despedida esperando que acabara en un beso? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà fait durer un au revoir en espérant qu'il se transforme en baiser ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-06",
+    "texts": {
+      "it": "Scegli un giocatore. Tu fai un complimento, lui risponde come un centralino automatico. Fate 2 battute a testa; chi ride paga 2 penalità.",
+      "en": "Pick a player. You give a compliment; they reply like an automated phone system. Say 2 lines each; anyone who laughs takes 2 penalties.",
+      "es": "Elige a un jugador. Tú haces un cumplido y la otra persona responde como una centralita automática. Decid 2 frases cada uno; quien se ría recibe 2 penalizaciones.",
+      "fr": "Choisis un joueur. Tu fais un compliment, l'autre répond comme un standard automatique. Dites 2 répliques chacun ; si vous riez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-07",
+    "texts": {
+      "it": "Quale cosa assolutamente non sexy trovi inspiegabilmente attraente? Confessa o paga 3 penalità.",
+      "en": "What completely unsexy thing do you find inexplicably attractive? Confess or take 3 penalties.",
+      "es": "¿Qué cosa nada sexy te resulta inexplicablemente atractiva? Confiesa o recibe 3 penalizaciones.",
+      "fr": "Quelle chose pas du tout sexy trouves-tu inexplicablement attirante ? Avoue ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-08",
+    "texts": {
+      "it": "Tutti indicate insieme chi saprebbe flirtare anche chiedendo uno scontrino. Il più votato deve provarci con un cassiere immaginario oppure paga 2 penalità.",
+      "en": "Everyone points at once to whoever could flirt while asking for a receipt. Whoever gets the most votes must try it with an imaginary cashier or take 2 penalties.",
+      "es": "Todos señalad a la vez a quien sabría ligar hasta pidiendo un recibo. Quien tenga más votos debe intentarlo con un cajero imaginario o recibir 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui saurait draguer en demandant un ticket de caisse. La personne la plus choisie doit essayer avec un caissier imaginaire ou prendre 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-09",
+    "texts": {
+      "it": "Hai mai scelto il posto a tavola solo per avere qualcuno di fronte? Se sì, 2 penalità.",
+      "en": "Have you ever chosen a seat at the table just to sit opposite someone? If so, take 2 penalties.",
+      "es": "¿Has elegido sitio en la mesa solo para tener a alguien enfrente? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà choisi ta place à table juste pour être en face de quelqu'un ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-10",
+    "texts": {
+      "it": "Pronuncia il nome di un elettrodomestico come se fosse il nome della tua grande tentazione. Se ridi, 2 penalità.",
+      "en": "Say the name of a household appliance as if it were your greatest temptation. If you laugh, take 2 penalties.",
+      "es": "Di el nombre de un electrodoméstico como si fuera tu gran tentación. Si te ríes, recibes 2 penalizaciones.",
+      "fr": "Prononce le nom d'un appareil électroménager comme celui de ta plus grande tentation. Si tu ris, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-11",
+    "texts": {
+      "it": "Tu e {playerB} inventate un dialogo di flirt in cui ogni frase finisce con «forse». Fate 2 battute a testa; chi dimentica la parola paga 2 penalità.",
+      "en": "You and {playerB} invent a flirty dialogue where every line ends with “maybe”. Say 2 lines each; anyone who forgets the word takes 2 penalties.",
+      "es": "Tú y {playerB} inventáis un diálogo de ligoteo en el que cada frase termina con «quizás». Decid 2 frases cada uno; quien olvide la palabra recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, inventez un dialogue de drague où chaque phrase finit par « peut-être ». Dites 2 répliques chacun ; si vous oubliez le mot, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-12",
+    "texts": {
+      "it": "Quale tuo tentativo di fare la voce sexy è finito in tosse, risate o imbarazzo? Racconta o paga 3 penalità.",
+      "en": "Which attempt at a sexy voice ended in coughing, laughter or embarrassment? Tell us or take 3 penalties.",
+      "es": "¿Qué intento de poner voz sexy acabó en tos, risas o vergüenza? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Quelle tentative de voix sexy a fini en toux, en rire ou en gêne ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-13",
+    "texts": {
+      "it": "Tutti dite a turno una cosa che sembra romantica nei film ma dal vivo vi farebbe ridere. Chi passa paga 2 penalità.",
+      "en": "Take turns naming something that looks romantic in films but would make you laugh in real life. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, decid algo que parece romántico en las películas pero os haría reír en la vida real. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, citez une chose romantique au cinéma qui vous ferait rire en vrai. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-14",
+    "texts": {
+      "it": "Hai mai chiesto di ripetere qualcosa solo perché ti piaceva la voce di chi parlava? Se sì, 2 penalità.",
+      "en": "Have you ever asked someone to repeat something just because you liked their voice? If so, take 2 penalties.",
+      "es": "¿Has pedido que alguien repitiera algo solo porque te gustaba su voz? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà demandé à quelqu'un de répéter juste parce que tu aimais sa voix ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-15",
+    "texts": {
+      "it": "Inventa il titolo di un film malizioso ambientato in una lavanderia. Hai 10 secondi, altrimenti 2 penalità.",
+      "en": "Invent the title of a cheeky film set in a laundrette. You have 10 seconds, or take 2 penalties.",
+      "es": "Inventa el título de una película picante ambientada en una lavandería. Tienes 10 segundos; si no, recibes 2 penalizaciones.",
+      "fr": "Invente le titre d'un film coquin qui se passe dans une laverie. Tu as 10 secondes, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-16",
+    "texts": {
+      "it": "Scegli un giocatore e chiedigli una penna come se fosse una scusa per conoscerlo. Deve risponderti come se avesse capito tutto. Se uno ride, paga 2 penalità.",
+      "en": "Pick a player and ask for a pen as an excuse to get to know them. They must reply as if they've seen right through you. Anyone who laughs takes 2 penalties.",
+      "es": "Elige a un jugador y pídele un boli como excusa para conocerle. Debe responder como si hubiera pillado tus intenciones. Quien se ría recibe 2 penalizaciones.",
+      "fr": "Choisis un joueur et demande-lui un stylo comme prétexte pour faire connaissance. Il doit répondre comme s'il avait tout compris. Si l'un rit, il prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-17",
+    "texts": {
+      "it": "Quale accessorio ti fa guardare una persona una seconda volta? Dillo o paga 3 penalità.",
+      "en": "What accessory makes you look at someone twice? Say it or take 3 penalties.",
+      "es": "¿Qué accesorio hace que mires a alguien dos veces? Dilo o recibe 3 penalizaciones.",
+      "fr": "Quel accessoire te fait regarder quelqu'un une deuxième fois ? Dis-le ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-19",
+    "texts": {
+      "it": "Hai mai fatto più passaggi del necessario davanti a qualcuno che ti piaceva? Se sì, 2 penalità.",
+      "en": "Have you ever walked past someone you liked more times than necessary? If so, take 2 penalties.",
+      "es": "¿Has pasado delante de alguien que te gustaba más veces de las necesarias? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà fait plus de passages que nécessaire devant quelqu'un qui te plaisait ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-20",
+    "texts": {
+      "it": "Di' «Manca solo la tua firma» come se stessi invitando qualcuno a un appuntamento segreto. Se ridi, 2 penalità.",
+      "en": "Say “All that's missing is your signature” as if you're inviting someone on a secret date. If you laugh, take 2 penalties.",
+      "es": "Di «Solo falta tu firma» como si invitaras a alguien a una cita secreta. Si te ríes, recibes 2 penalizaciones.",
+      "fr": "Dis « Il ne manque que ta signature » comme si tu invitais quelqu'un à un rendez-vous secret. Si tu ris, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-21",
+    "texts": {
+      "it": "Tu e {playerB} inventate 1 battuta a testa per flirtare durante una noiosissima riunione. Non potete usare «lavoro». Chi passa o usa la parola paga 2 penalità.",
+      "en": "You and {playerB} invent 1 line each to flirt during a painfully boring meeting. You can't say “work”. Anyone who passes or uses the word takes 2 penalties.",
+      "es": "Tú y {playerB} inventáis 1 frase cada uno para ligar durante una reunión aburridísima. No podéis usar «trabajo». Quien pase o use la palabra recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, inventez 1 réplique chacun pour draguer pendant une réunion mortellement ennuyeuse. Vous ne pouvez pas dire « travail ». Si vous passez ou utilisez ce mot, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-22",
+    "texts": {
+      "it": "Quale gesto ti fa capire che qualcuno sta cercando una scusa per avvicinarsi? Rispondi o paga 3 penalità.",
+      "en": "What gesture tells you someone is looking for an excuse to get closer? Answer or take 3 penalties.",
+      "es": "¿Qué gesto te indica que alguien busca una excusa para acercarse? Responde o recibe 3 penalizaciones.",
+      "fr": "Quel geste te fait comprendre que quelqu'un cherche une excuse pour se rapprocher ? Réponds ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-23",
+    "texts": {
+      "it": "Tutti completate a turno: «Pensavo stesse flirtando, invece...». Potete inventare. Chi passa paga 2 penalità.",
+      "en": "Take turns finishing: “I thought they were flirting, but...”. You can make it up. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, completad: «Pensaba que estaba ligando, pero...». Podéis inventarlo. Quien pase recibe 2 penalizaciones.",
+      "fr": "Complétez à tour de rôle : « Je pensais qu'on me draguait, mais... ». Vous pouvez inventer. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-24",
+    "texts": {
+      "it": "Hai mai cambiato il modo di sederti appena è arrivata una persona che ti piaceva? Se sì, 2 penalità.",
+      "en": "Have you ever changed how you were sitting the moment someone you liked arrived? If so, take 2 penalties.",
+      "es": "¿Has cambiado tu forma de sentarte en cuanto llegó alguien que te gustaba? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà changé ta façon de t'asseoir dès l'arrivée de quelqu'un qui te plaisait ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-26",
+    "texts": {
+      "it": "Scegli un giocatore. Inventate un appuntamento in un posto per niente romantico e trovate 1 motivo a testa per cui potrebbe funzionare. Chi passa paga 2 penalità.",
+      "en": "Pick a player. Invent a date somewhere completely unromantic and give 1 reason each why it could work. Anyone who passes takes 2 penalties.",
+      "es": "Elige a un jugador. Inventad una cita en un sitio nada romántico y dad 1 motivo cada uno por el que podría funcionar. Quien pase recibe 2 penalizaciones.",
+      "fr": "Choisis un joueur. Inventez un rendez-vous dans un lieu pas du tout romantique et trouvez 1 raison chacun pour que ça marche. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-27",
+    "texts": {
+      "it": "Quale modo di dire il tuo nome ti farebbe perdere il filo del discorso? Descrivilo o paga 3 penalità.",
+      "en": "What way of saying your name would make you lose your train of thought? Describe it or take 3 penalties.",
+      "es": "¿Qué forma de decir tu nombre te haría perder el hilo? Descríbela o recibe 3 penalizaciones.",
+      "fr": "Quelle façon de dire ton prénom te ferait perdre le fil ? Décris-la ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-28",
+    "texts": {
+      "it": "Tutti indicate insieme chi saprebbe trasformare un «buonanotte» in un invito a continuare la chat. Il più votato inventa il messaggio oppure paga 2 penalità.",
+      "en": "Everyone points at once to whoever could turn “goodnight” into an invitation to keep chatting. Whoever gets the most votes invents the message or takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien convertiría un «buenas noches» en una invitación a seguir chateando. Quien tenga más votos inventa el mensaje o recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui transformerait un « bonne nuit » en invitation à continuer la conversation. La personne la plus choisie invente le message ou prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-29",
+    "texts": {
+      "it": "Hai mai abbassato apposta la voce per far avvicinare qualcuno? Se sì, 2 penalità.",
+      "en": "Have you ever deliberately lowered your voice to make someone lean closer? If so, take 2 penalties.",
+      "es": "¿Has bajado la voz a propósito para que alguien se acercara? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà baissé la voix exprès pour que quelqu'un se rapproche ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-30",
+    "texts": {
+      "it": "Fai la pubblicità di un ascensore che sale solo se c'è intesa tra i passeggeri. Hai 15 secondi; se passi, 3 penalità.",
+      "en": "Advertise a lift that only goes up if there's chemistry between its passengers. You have 15 seconds; if you pass, take 3 penalties.",
+      "es": "Anuncia un ascensor que solo sube si hay química entre los pasajeros. Tienes 15 segundos; si pasas, recibes 3 penalizaciones.",
+      "fr": "Fais la pub d'un ascenseur qui ne monte que s'il y a une alchimie entre les passagers. Tu as 15 secondes ; si tu passes, prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-31",
+    "texts": {
+      "it": "Tu e {playerB} fate finta di flirtare a una festa dove non si sente niente: solo labiale, niente contatto. Avete 15 secondi; se passate, 2 penalità ciascuno.",
+      "en": "You and {playerB} pretend to flirt at a party where you can't hear anything: just mouth the words, no touching. You have 15 seconds; if you pass, take 2 penalties each.",
+      "es": "Tú y {playerB} fingís ligar en una fiesta donde no se oye nada: solo movéis los labios, sin tocaros. Tenéis 15 segundos; si pasáis, recibís 2 penalizaciones cada uno.",
+      "fr": "Toi et {playerB}, faites semblant de draguer dans une fête où on n'entend rien : juste les lèvres, sans contact. Vous avez 15 secondes ; si vous passez, prenez 2 pénalités chacun."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-32",
+    "texts": {
+      "it": "Quale frase innocente hai riletto troppe volte cercando un doppio senso? Racconta senza mostrare la chat o paga 3 penalità.",
+      "en": "What innocent message did you reread far too often looking for a double meaning? Tell us without showing the chat or take 3 penalties.",
+      "es": "¿Qué frase inocente releíste demasiadas veces buscando un doble sentido? Cuéntalo sin enseñar el chat o recibe 3 penalizaciones.",
+      "fr": "Quelle phrase innocente as-tu trop relue pour y chercher un double sens ? Raconte sans montrer la conversation ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-33",
+    "texts": {
+      "it": "Tutti dite a turno un posto dove un appuntamento segreto diventerebbe subito ridicolo. Chi ripete o passa paga 2 penalità.",
+      "en": "Take turns naming a place where a secret date would instantly become ridiculous. Anyone who repeats one or passes takes 2 penalties.",
+      "es": "Por turnos, decid un lugar donde una cita secreta se volvería ridícula al instante. Quien repita o pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, citez un endroit où un rendez-vous secret deviendrait immédiatement ridicule. Si vous répétez ou passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-34",
+    "texts": {
+      "it": "Hai mai sbagliato porta o direzione perché eri distratto da qualcuno che ti piaceva? Se sì, 2 penalità.",
+      "en": "Have you ever gone through the wrong door or in the wrong direction because someone you liked distracted you? If so, take 2 penalties.",
+      "es": "¿Te has equivocado de puerta o de dirección por distraerte con alguien que te gustaba? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà pris la mauvaise porte ou direction parce que quelqu'un qui te plaisait te distrayait ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-35",
+    "texts": {
+      "it": "Inventa la notifica che dovrebbe mandarti il telefono quando stai flirtando malissimo. Hai 10 secondi, altrimenti 2 penalità.",
+      "en": "Invent the notification your phone should send when you're flirting terribly. You have 10 seconds, or take 2 penalties.",
+      "es": "Inventa la notificación que debería mandarte el móvil cuando estás ligando fatal. Tienes 10 segundos; si no, recibes 2 penalizaciones.",
+      "fr": "Invente la notification que ton téléphone devrait envoyer quand tu dragues très mal. Tu as 10 secondes, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-36",
+    "texts": {
+      "it": "Scegli un giocatore. Scambiatevi a turno un complimento sotto forma di previsione del tempo. Chi passa paga 2 penalità.",
+      "en": "Pick a player. Take turns giving each other a compliment in the form of a weather forecast. Anyone who passes takes 2 penalties.",
+      "es": "Elige a un jugador. Por turnos, intercambiad cumplidos en forma de pronóstico del tiempo. Quien pase recibe 2 penalizaciones.",
+      "fr": "Choisis un joueur. Faites-vous à tour de rôle un compliment sous forme de bulletin météo. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-37",
+    "texts": {
+      "it": "Quale tua abitudine tradisce subito che qualcuno ti piace? Confessa o paga 3 penalità.",
+      "en": "What habit instantly gives away that you like someone? Confess or take 3 penalties.",
+      "es": "¿Qué costumbre tuya delata enseguida que alguien te gusta? Confiesa o recibe 3 penalizaciones.",
+      "fr": "Quelle habitude trahit immédiatement que quelqu'un te plaît ? Avoue ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-38",
+    "texts": {
+      "it": "Tutti indicate insieme chi riuscirebbe a far sembrare maliziosa una lista della spesa. Il più votato legge «pane, latte, pomodori» oppure paga 2 penalità.",
+      "en": "Everyone points at once to whoever could make a shopping list sound suggestive. Whoever gets the most votes reads “bread, milk, tomatoes” or takes 2 penalties.",
+      "es": "Todos señalad a la vez a quien haría sonar picante una lista de la compra. Quien tenga más votos lee «pan, leche, tomates» o recibe 2 penalizaciones.",
+      "fr": "Désignez tous en même temps qui rendrait une liste de courses coquine. La personne la plus choisie lit « pain, lait, tomates » ou prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-39",
+    "texts": {
+      "it": "Hai mai continuato una conversazione sul meteo perché non sapevi come iniziare a flirtare? Se sì, 2 penalità.",
+      "en": "Have you ever kept talking about the weather because you didn't know how to start flirting? If so, take 2 penalties.",
+      "es": "¿Has seguido hablando del tiempo porque no sabías cómo empezar a ligar? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà continué à parler météo parce que tu ne savais pas comment commencer à draguer ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-40",
+    "texts": {
+      "it": "Inventa una frase per chiedere il numero a qualcuno senza usare «numero», «telefono» o «contatto». Hai 15 secondi, altrimenti 3 penalità.",
+      "en": "Invent a line to ask for someone's number without saying “number”, “phone” or “contact”. You have 15 seconds, or take 3 penalties.",
+      "es": "Inventa una frase para pedirle el número a alguien sin usar «número», «teléfono» ni «contacto». Tienes 15 segundos; si no, recibes 3 penalizaciones.",
+      "fr": "Invente une phrase pour demander le numéro de quelqu'un sans dire « numéro », « téléphone » ni « contact ». Tu as 15 secondes, sinon prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-41",
+    "texts": {
+      "it": "Tu e {playerB} fate una scena in cui entrambi aspettate che sia l'altro a chiedere un appuntamento. Fate 2 battute a testa senza chiederlo direttamente; chi lo fa paga 2 penalità.",
+      "en": "You and {playerB} act out a scene where you're both waiting for the other to ask for a date. Say 2 lines each without asking directly; anyone who does takes 2 penalties.",
+      "es": "Tú y {playerB} interpretáis una escena en la que ambos esperáis que el otro pida una cita. Decid 2 frases cada uno sin pedirla directamente; quien lo haga recibe 2 penalizaciones.",
+      "fr": "Toi et {playerB}, jouez une scène où chacun attend que l'autre propose un rendez-vous. Dites 2 répliques chacun sans demander directement ; si vous le faites, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-42",
+    "texts": {
+      "it": "Quale dettaglio di un appuntamento ricordi benissimo, mentre hai dimenticato di cosa avete parlato? Racconta o paga 3 penalità.",
+      "en": "What detail of a date do you remember perfectly, even though you've forgotten what you talked about? Tell us or take 3 penalties.",
+      "es": "¿Qué detalle de una cita recuerdas perfectamente aunque has olvidado de qué hablasteis? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Quel détail d'un rendez-vous te reste parfaitement en tête alors que tu as oublié de quoi vous avez parlé ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-43",
+    "texts": {
+      "it": "Tutti completate a turno: «Il mio superpotere nel flirt è...». Deve essere un difetto travestito da pregio. Chi passa paga 2 penalità.",
+      "en": "Take turns finishing: “My flirting superpower is...”. It must be a flaw disguised as a strength. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, completad: «Mi superpoder para ligar es...». Debe ser un defecto disfrazado de virtud. Quien pase recibe 2 penalizaciones.",
+      "fr": "Complétez à tour de rôle : « Mon superpouvoir en drague, c'est... ». Il doit s'agir d'un défaut déguisé en qualité. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-44",
+    "texts": {
+      "it": "Hai mai risposto troppo in fretta e poi aspettato apposta prima del messaggio successivo? Se sì, 2 penalità.",
+      "en": "Have you ever replied too quickly, then deliberately waited before your next message? If so, take 2 penalties.",
+      "es": "¿Has contestado demasiado rápido y luego esperado a propósito antes del siguiente mensaje? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà répondu trop vite, puis attendu exprès avant le message suivant ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-45",
+    "texts": {
+      "it": "Presentati a uno specchio immaginario come se stessi provando a conquistarlo. Non puoi fare complimenti sull'aspetto. Se passi, 3 penalità.",
+      "en": "Introduce yourself to an imaginary mirror as if you're trying to win it over. You can't give compliments about looks. If you pass, take 3 penalties.",
+      "es": "Preséntate a un espejo imaginario como si intentaras conquistarlo. No puedes hacer cumplidos sobre el aspecto. Si pasas, recibes 3 penalizaciones.",
+      "fr": "Présente-toi à un miroir imaginaire comme si tu voulais le séduire. Tu ne peux pas complimenter l'apparence. Si tu passes, prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-46",
+    "texts": {
+      "it": "Tu e un giocatore disponibile fate un baciamano da film. Se preferite, inventate invece la battuta finale della scena. Poi distribuite 2 penalità insieme.",
+      "en": "With a willing player, act out a movie-style kiss on the hand. If you prefer, invent the scene's closing line instead. Then give out 2 penalties together.",
+      "es": "Con un jugador que quiera, haced un besamanos de película. Si preferís, inventad en su lugar la frase final de la escena. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Avec un joueur volontaire, faites un baisemain de cinéma. Si vous préférez, inventez plutôt la dernière réplique de la scène. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "redRoom",
+    "id": "redRoom-48",
+    "texts": {
+      "it": "Hai mai fatto un complimento solo per vedere qualcuno arrossire? Se sì, 2 penalità.",
+      "en": "Have you ever given a compliment just to see someone blush? If so, take 2 penalties.",
+      "es": "¿Has hecho un cumplido solo para ver a alguien sonrojarse? Si es así, recibes 2 penalizaciones.",
+      "fr": "As-tu déjà fait un compliment juste pour voir quelqu'un rougir ? Si oui, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-01",
+    "texts": {
+      "it": "Quale cosa fa il partner quando si prepara per uscire che ti farebbe cancellare la prenotazione e restare a casa? Dilla o paga 3 penalità.",
+      "en": "What does your partner do while getting ready to go out that makes you want to cancel the booking and stay home? Say it or take 3 penalties.",
+      "es": "¿Qué hace tu pareja al prepararse para salir que te haría cancelar la reserva y quedaros en casa? Dilo o recibe 3 penalizaciones.",
+      "fr": "Que fait ton partenaire en se préparant à sortir qui te donnerait envie d'annuler la réservation et de rester chez vous ? Dis-le ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-02",
+    "texts": {
+      "it": "Fingete di incontrarvi in un bar dopo anni. Avete 2 battute a testa per far capire che tra voi c'è ancora qualcosa. Chi passa paga 2 penalità.",
+      "en": "Pretend to meet in a bar after years apart. You have 2 lines each to show there's still something between you. Anyone who passes takes 2 penalties.",
+      "es": "Fingid que os encontráis en un bar después de años. Tenéis 2 frases cada uno para dejar claro que aún hay algo entre vosotros. Quien pase recibe 2 penalizaciones.",
+      "fr": "Faites comme si vous vous retrouviez dans un bar après des années. Vous avez 2 répliques chacun pour montrer qu'il reste quelque chose entre vous. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-03",
+    "texts": {
+      "it": "Scegliete: un bacio sulla guancia che sembri una promessa, oppure una promessa maliziosa senza bacio. Poi distribuite insieme 2 penalità.",
+      "en": "Choose: a kiss on the cheek that feels like a promise, or a cheeky promise without a kiss. Then give out 2 penalties together.",
+      "es": "Elegid: un beso en la mejilla que parezca una promesa, o una promesa picante sin beso. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Choisissez : un baiser sur la joue qui ressemble à une promesse, ou une promesse coquine sans baiser. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-04",
+    "texts": {
+      "it": "Il partner sceglie una parola da ufficio. Inseriscila in un invito a una serata solo vostra. Hai 10 secondi, altrimenti 2 penalità.",
+      "en": "Your partner picks an office word. Use it in an invitation to an evening just for you two. You have 10 seconds, or take 2 penalties.",
+      "es": "Tu pareja elige una palabra de oficina. Úsala en una invitación a una noche solo para vosotros. Tienes 10 segundos; si no, recibes 2 penalizaciones.",
+      "fr": "Ton partenaire choisit un mot de bureau. Glisse-le dans une invitation à une soirée rien qu'à vous. Tu as 10 secondes, sinon prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-05",
+    "texts": {
+      "it": "Quale vestito del partner vorresti che non finisse mai in lavatrice, così potrebbe rimetterlo subito? Confessa o paga 3 penalità.",
+      "en": "Which outfit of your partner's do you wish never went in the wash, so they could wear it again straight away? Confess or take 3 penalties.",
+      "es": "¿Qué conjunto de tu pareja querrías que nunca fuera a la lavadora para que pudiera volver a ponérselo enseguida? Confiesa o recibe 3 penalizaciones.",
+      "fr": "Quelle tenue de ton partenaire aimerais-tu ne jamais voir au lavage, pour qu'il puisse la remettre tout de suite ? Avoue ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-06",
+    "texts": {
+      "it": "A turno, inventate il messaggio che mandereste al partner da una cena noiosa per dirgli che vorreste essere altrove insieme. Chi passa paga 2 penalità.",
+      "en": "Take turns inventing the message you'd send your partner from a boring dinner to say you'd rather be somewhere else together. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, inventad el mensaje que mandaríais a vuestra pareja desde una cena aburrida para decirle que preferiríais estar juntos en otro sitio. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, inventez le message que vous enverriez à votre partenaire depuis un dîner ennuyeux pour dire que vous aimeriez être ailleurs ensemble. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-07",
+    "texts": {
+      "it": "Scegliete in silenzio: bacio d'arrivo o bacio d'addio? Dite insieme la risposta. Se coincidete, distribuite insieme 2 penalità; altrimenti spiegatevi la scelta.",
+      "en": "Choose silently: a hello kiss or a goodbye kiss? Say your answers together. If they match, give out 2 penalties together; otherwise, explain your choices to each other.",
+      "es": "Elegid en silencio: ¿beso de llegada o de despedida? Decid la respuesta a la vez. Si coincidís, repartid 2 penalizaciones entre los dos; si no, explicaos la elección.",
+      "fr": "Choisissez en silence : baiser de retrouvailles ou d'au revoir ? Répondez en même temps. Si vous êtes d'accord, distribuez 2 pénalités ensemble ; sinon, expliquez-vous votre choix."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-08",
+    "texts": {
+      "it": "Descrivi al partner un vostro appuntamento come farebbe il vicino che ha capito tutto ma finge di niente. Se passi, 2 penalità.",
+      "en": "Describe one of your dates to your partner as a neighbour who knows exactly what's going on but pretends not to. If you pass, take 2 penalties.",
+      "es": "Describe a tu pareja una de vuestras citas como un vecino que lo ha pillado todo pero se hace el despistado. Si pasas, recibes 2 penalizaciones.",
+      "fr": "Décris un de vos rendez-vous à ton partenaire comme le voisin qui a tout compris mais fait semblant de rien. Si tu passes, prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-09",
+    "texts": {
+      "it": "Quale parte di un normale appuntamento salteresti volentieri per avere più tempo da soli? Rispondi o paga 3 penalità.",
+      "en": "What part of a normal date would you happily skip to have more time alone together? Answer or take 3 penalties.",
+      "es": "¿Qué parte de una cita normal te saltarías encantado para tener más tiempo a solas? Responde o recibe 3 penalizaciones.",
+      "fr": "Quelle partie d'un rendez-vous normal sauterais-tu volontiers pour passer plus de temps seuls ? Réponds ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-10",
+    "texts": {
+      "it": "Il partner ti fa un invito malizioso. Tu devi rispondere come un avvocato che cerca il cavillo. Fate 2 battute a testa; chi ride paga 2 penalità.",
+      "en": "Your partner makes a cheeky invitation. You must reply like a lawyer looking for a loophole. Say 2 lines each; anyone who laughs takes 2 penalties.",
+      "es": "Tu pareja te hace una invitación picante. Responde como un abogado buscando una trampa en la letra pequeña. Decid 2 frases cada uno; quien se ría recibe 2 penalizaciones.",
+      "fr": "Ton partenaire te fait une invitation coquine. Réponds comme un avocat qui cherche la faille. Dites 2 répliques chacun ; si vous riez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-11",
+    "texts": {
+      "it": "Scegliete: intrecciare le dita sotto il tavolo per 15 secondi, oppure dirvi cosa pensereste se succedesse durante una cena elegante. Poi distribuite insieme 2 penalità.",
+      "en": "Choose: lace your fingers together under the table for 15 seconds, or tell each other what you'd think if that happened at a fancy dinner. Then give out 2 penalties together.",
+      "es": "Elegid: entrelazar los dedos bajo la mesa durante 15 segundos, o contaros qué pensaríais si pasara en una cena elegante. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Choisissez : entrelacer vos doigts sous la table pendant 15 secondes, ou vous dire ce que vous penseriez si ça arrivait pendant un dîner chic. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-12",
+    "texts": {
+      "it": "Quale scusa useresti per rubare al partner un bacio mentre state facendo le pulizie? Dilla o paga 2 penalità.",
+      "en": "What excuse would you use to sneak a kiss with your partner while you're cleaning? Say it or take 2 penalties.",
+      "es": "¿Qué excusa usarías para robarle un beso a tu pareja mientras hacéis la limpieza? Dila o recibe 2 penalizaciones.",
+      "fr": "Quelle excuse utiliserais-tu pour voler un baiser à ton partenaire pendant le ménage ? Dis-la ou prends 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-13",
+    "texts": {
+      "it": "A turno, dite al partner quale suo gesto vi distrae anche quando state cercando di essere seri. Chi passa paga 3 penalità.",
+      "en": "Take turns telling your partner which gesture of theirs distracts you even when you're trying to be serious. Anyone who passes takes 3 penalties.",
+      "es": "Por turnos, contadle a vuestra pareja qué gesto suyo os distrae incluso cuando intentáis estar serios. Quien pase recibe 3 penalizaciones.",
+      "fr": "À tour de rôle, dites à votre partenaire quel geste de sa part vous distrait même quand vous essayez d'être sérieux. Si vous passez, prenez 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-14",
+    "texts": {
+      "it": "Fingete di essere due sconosciuti che si incontrano nel corridoio di un hotel. Inventate 1 frase a testa per non chiudere subito la conversazione. Chi passa paga 2 penalità.",
+      "en": "Pretend you're strangers meeting in a hotel corridor. Invent 1 line each to keep the conversation going. Anyone who passes takes 2 penalties.",
+      "es": "Fingid ser desconocidos que se encuentran en el pasillo de un hotel. Inventad 1 frase cada uno para que la conversación no termine enseguida. Quien pase recibe 2 penalizaciones.",
+      "fr": "Faites comme si vous étiez deux inconnus dans un couloir d'hôtel. Inventez 1 phrase chacun pour prolonger la conversation. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-15",
+    "texts": {
+      "it": "Quale tua frase apparentemente normale significa già «vieni più vicino» quando la dici al partner? Svelala o paga 3 penalità.",
+      "en": "What apparently normal thing you say already means “come closer” when you say it to your partner? Reveal it or take 3 penalties.",
+      "es": "¿Qué frase tuya aparentemente normal ya significa «acércate» cuando se la dices a tu pareja? Revélala o recibe 3 penalizaciones.",
+      "fr": "Quelle phrase apparemment banale veut déjà dire « rapproche-toi » quand tu la dis à ton partenaire ? Révèle-la ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-16",
+    "texts": {
+      "it": "Il partner dice «abbiamo solo 5 minuti»; tu rispondi con un'allusione, senza dire cosa hai in mente. Se passi, 3 penalità.",
+      "en": "Your partner says “we've only got 5 minutes”; reply with a hint without saying what you have in mind. If you pass, take 3 penalties.",
+      "es": "Tu pareja dice «solo tenemos 5 minutos»; responde con una insinuación sin decir qué tienes en mente. Si pasas, recibes 3 penalizaciones.",
+      "fr": "Ton partenaire dit « on n'a que 5 minutes » ; réponds par un sous-entendu sans dire ce que tu as en tête. Si tu passes, prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-17",
+    "texts": {
+      "it": "Scegliete: un bacio sulla mano guardandovi negli occhi, oppure scambiarvi la peggior frase da seduttore che riuscite a inventare. Poi distribuite insieme 2 penalità.",
+      "en": "Choose: a kiss on the hand while looking into each other's eyes, or exchange the worst pick-up lines you can invent. Then give out 2 penalties together.",
+      "es": "Elegid: un beso en la mano mirándoos a los ojos, o intercambiar las peores frases para ligar que podáis inventar. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Choisissez : un baiser sur la main en vous regardant dans les yeux, ou échanger les pires phrases de drague que vous puissiez inventer. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-18",
+    "texts": {
+      "it": "Quale momento della giornata del partner vorresti poter interrompere con un appuntamento a sorpresa? Dillo o paga 3 penalità.",
+      "en": "What moment of your partner's day would you like to interrupt with a surprise date? Say it or take 3 penalties.",
+      "es": "¿Qué momento del día de tu pareja te gustaría interrumpir con una cita sorpresa? Dilo o recibe 3 penalizaciones.",
+      "fr": "Quel moment de la journée de ton partenaire aimerais-tu interrompre avec un rendez-vous surprise ? Dis-le ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-19",
+    "texts": {
+      "it": "A turno, inventate una voce da mettere nel menu di una vostra serata a due. Deve avere un nome malizioso ma non dire cosa succederà. Chi passa paga 2 penalità.",
+      "en": "Take turns inventing an item for the menu of an evening together. Give it a cheeky name without saying what will happen. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, inventad un plato para el menú de una noche en pareja. Debe tener un nombre picante sin decir qué pasará. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, inventez une entrée au menu de votre soirée à deux. Son nom doit être coquin sans révéler ce qui va se passer. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-21",
+    "texts": {
+      "it": "Quale complimento del partner ti fa sorridere anche quando cerchi di restare serio? Confessa o paga 3 penalità.",
+      "en": "What compliment from your partner makes you smile even when you're trying to stay serious? Confess or take 3 penalties.",
+      "es": "¿Qué cumplido de tu pareja te hace sonreír aunque intentes seguir serio? Confiesa o recibe 3 penalizaciones.",
+      "fr": "Quel compliment de ton partenaire te fait sourire même quand tu essaies de rester sérieux ? Avoue ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-22",
+    "texts": {
+      "it": "Fingete di telefonarvi da due stanze della stessa casa. Avete 2 battute a testa per convincere l'altro a raggiungervi, senza dire «vieni». Chi passa paga 2 penalità.",
+      "en": "Pretend you're calling each other from different rooms in the same house. You have 2 lines each to persuade the other to join you without saying “come”. Anyone who passes takes 2 penalties.",
+      "es": "Fingid que os llamáis desde distintas habitaciones de la misma casa. Tenéis 2 frases cada uno para convencer al otro de que se acerque sin decir «ven». Quien pase recibe 2 penalizaciones.",
+      "fr": "Faites semblant de vous appeler depuis deux pièces de la même maison. Vous avez 2 répliques chacun pour convaincre l'autre de vous rejoindre sans dire « viens ». Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-23",
+    "texts": {
+      "it": "Scegliete: un abbraccio da finto addio che nessuno vuole finire, oppure inventare il motivo per restare ancora insieme. Poi distribuite insieme 2 penalità.",
+      "en": "Choose: a pretend goodbye hug neither of you wants to end, or invent a reason to stay together a little longer. Then give out 2 penalties together.",
+      "es": "Elegid: un abrazo de despedida fingida que ninguno quiera terminar, o inventar una razón para seguir juntos un rato más. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Choisissez : un faux câlin d'au revoir que personne ne veut finir, ou inventer une raison de rester encore ensemble. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-24",
+    "texts": {
+      "it": "Quale dettaglio del partner noteresti anche se entrasse in una stanza piena di gente? Dillo guardandolo o paga 3 penalità.",
+      "en": "What detail of your partner would you notice even if they walked into a crowded room? Look at them and say it or take 3 penalties.",
+      "es": "¿Qué detalle de tu pareja notarías incluso si entrara en una habitación llena de gente? Díselo mirándole o recibe 3 penalizaciones.",
+      "fr": "Quel détail de ton partenaire remarquerais-tu même dans une pièce pleine de monde ? Dis-le en le regardant ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-25",
+    "texts": {
+      "it": "Il partner ti nomina un posto banalissimo. Descrivi come lo trasformeresti in un appuntamento segreto per voi. Hai 15 secondi, altrimenti 3 penalità.",
+      "en": "Your partner names a completely ordinary place. Describe how you'd turn it into a secret date for you two. You have 15 seconds, or take 3 penalties.",
+      "es": "Tu pareja nombra un sitio de lo más corriente. Describe cómo lo convertirías en una cita secreta para vosotros. Tienes 15 segundos; si no, recibes 3 penalizaciones.",
+      "fr": "Ton partenaire te donne un lieu très banal. Décris comment tu en ferais un rendez-vous secret pour vous. Tu as 15 secondes, sinon prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-27",
+    "texts": {
+      "it": "Quale tuo tentativo di sembrare disinvolto con il partner è fallito miseramente? Racconta o paga 3 penalità.",
+      "en": "What attempt to play it cool with your partner failed miserably? Tell us or take 3 penalties.",
+      "es": "¿Qué intento de parecer despreocupado con tu pareja te salió fatal? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Quelle tentative de jouer les détachés avec ton partenaire a complètement raté ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-28",
+    "texts": {
+      "it": "Fingete che la cena romantica sia stata interrotta da un allarme per il pane bruciato. Fate 2 battute a testa per salvare il flirt; chi ride paga 2 penalità.",
+      "en": "Pretend your romantic dinner was interrupted by an alarm going off over burnt toast. Say 2 lines each to rescue the flirting; anyone who laughs takes 2 penalties.",
+      "es": "Fingid que una alarma por pan quemado ha interrumpido vuestra cena romántica. Decid 2 frases cada uno para salvar el coqueteo; quien se ría recibe 2 penalizaciones.",
+      "fr": "Faites comme si votre dîner romantique était interrompu par une alarme à cause du pain brûlé. Dites 2 répliques chacun pour sauver le flirt ; si vous riez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-29",
+    "texts": {
+      "it": "Scegliete: avvicinarvi per un bacio e fermarvi entrambi a sorridere, oppure raccontare come finirebbe quella scena in una commedia romantica. Poi distribuite insieme 2 penalità.",
+      "en": "Choose: lean in for a kiss and both stop to smile, or describe how that scene would end in a romantic comedy. Then give out 2 penalties together.",
+      "es": "Elegid: acercaros para un beso y pararos ambos a sonreír, o contar cómo acabaría esa escena en una comedia romántica. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Choisissez : vous rapprocher pour un baiser puis vous arrêter tous les deux pour sourire, ou raconter la fin de cette scène dans une comédie romantique. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-30",
+    "texts": {
+      "it": "Quale frase del partner vorresti sentire proprio prima di uscire insieme? Dilla con il tono giusto o paga 3 penalità.",
+      "en": "What would you like your partner to say right before you go out together? Say it in the right tone or take 3 penalties.",
+      "es": "¿Qué frase de tu pareja te gustaría escuchar justo antes de salir juntos? Dila con el tono adecuado o recibe 3 penalizaciones.",
+      "fr": "Quelle phrase aimerais-tu entendre de ton partenaire juste avant de sortir ensemble ? Dis-la avec le bon ton ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-31",
+    "texts": {
+      "it": "A turno, inventate una recensione da ospite soddisfatto per gli abbracci del partner. Deve contenere un'allusione e nessun voto numerico. Chi passa paga 2 penalità.",
+      "en": "Take turns reviewing your partner's hugs as a satisfied guest. Include a double meaning but no numerical rating. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, reseñad los abrazos de vuestra pareja como huéspedes satisfechos. Incluid una insinuación y ninguna puntuación numérica. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, donnez un avis de client satisfait sur les câlins de votre partenaire. Glissez-y un sous-entendu, mais aucune note chiffrée. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-32",
+    "texts": {
+      "it": "Il partner ti chiede «che programmi hai stasera?». Rispondi senza parole, solo con un'espressione. Se uno di voi ride, paga 2 penalità.",
+      "en": "Your partner asks “what are your plans tonight?”. Reply without words, just a facial expression. If either of you laughs, that person takes 2 penalties.",
+      "es": "Tu pareja pregunta «¿qué planes tienes esta noche?». Responde sin palabras, solo con una expresión. Si alguno se ríe, recibe 2 penalizaciones.",
+      "fr": "Ton partenaire demande « tu as quoi de prévu ce soir ? ». Réponds sans parler, juste avec une expression. Si l'un de vous rit, il prend 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-33",
+    "texts": {
+      "it": "Quale piccola cosa potresti fare per sorprendere il partner senza spendere e senza uscire di casa? Deve essere maliziosa, non una faccenda domestica. Se passi, 3 penalità.",
+      "en": "What little thing could you do to surprise your partner without spending money or leaving home? Make it cheeky, not a household chore. If you pass, take 3 penalties.",
+      "es": "¿Qué pequeña cosa podrías hacer para sorprender a tu pareja sin gastar ni salir de casa? Debe ser picante, no una tarea doméstica. Si pasas, recibes 3 penalizaciones.",
+      "fr": "Quelle petite chose pourrais-tu faire pour surprendre ton partenaire sans dépenser ni sortir ? Il faut que ce soit coquin, pas une tâche ménagère. Si tu passes, prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-34",
+    "texts": {
+      "it": "Fingete di negoziare chi deve fare la prima mossa. Ognuno offre 1 motivo ridicolo per cui tocca all'altro. Chi passa paga 2 penalità.",
+      "en": "Pretend to negotiate who should make the first move. Give 1 ridiculous reason each why it's the other's turn. Anyone who passes takes 2 penalties.",
+      "es": "Fingid negociar quién debe dar el primer paso. Dad 1 motivo ridículo cada uno por el que le toca al otro. Quien pase recibe 2 penalizaciones.",
+      "fr": "Faites semblant de négocier qui doit faire le premier pas. Donnez chacun 1 raison ridicule pour que ce soit l'autre. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-35",
+    "texts": {
+      "it": "Scegliete: ballare vicini per 15 secondi, oppure inventare il titolo della canzone che accompagnerebbe un vostro incontro segreto. Poi distribuite insieme 2 penalità.",
+      "en": "Choose: dance close together for 15 seconds, or invent the title of a song for your secret rendezvous. Then give out 2 penalties together.",
+      "es": "Elegid: bailar muy cerca durante 15 segundos, o inventar el título de la canción para un encuentro secreto vuestro. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Choisissez : danser tout près pendant 15 secondes, ou inventer le titre de la chanson de votre rendez-vous secret. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-36",
+    "texts": {
+      "it": "Quale vostro momento avrebbe avuto bisogno di un cartello «non disturbare» anche senza essere intimo? Racconta o paga 3 penalità.",
+      "en": "What moment together needed a “do not disturb” sign even though it wasn't intimate? Tell us or take 3 penalties.",
+      "es": "¿Qué momento vuestro habría necesitado un cartel de «no molestar» aunque no fuera íntimo? Cuéntalo o recibe 3 penalizaciones.",
+      "fr": "Quel moment à deux aurait mérité une pancarte « ne pas déranger » sans même être intime ? Raconte ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-37",
+    "texts": {
+      "it": "A turno, inventate una scusa pessima per bussare alla porta del partner se foste vicini di casa appena conosciuti. Chi passa paga 2 penalità.",
+      "en": "Take turns inventing a terrible excuse to knock on your partner's door if you were neighbours who'd just met. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, inventad una excusa pésima para llamar a la puerta de vuestra pareja si fuerais vecinos recién conocidos. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, inventez une excuse nulle pour frapper chez votre partenaire si vous étiez des voisins qui viennent de se rencontrer. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-39",
+    "texts": {
+      "it": "Quale abitudine del partner ti fa sorridere in pubblico perché ti ricorda un momento solo vostro? Raccontala senza svelare il momento o paga 3 penalità.",
+      "en": "What habit of your partner makes you smile in public because it reminds you of a private moment together? Describe the habit without revealing the moment or take 3 penalties.",
+      "es": "¿Qué costumbre de tu pareja te hace sonreír en público porque te recuerda un momento solo vuestro? Cuéntala sin revelar el momento o recibe 3 penalizaciones.",
+      "fr": "Quelle habitude de ton partenaire te fait sourire en public parce qu'elle te rappelle un moment rien qu'à vous ? Décris-la sans révéler le moment ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-41",
+    "texts": {
+      "it": "Scegliete: accarezzarvi a turno una mano per 10 secondi, oppure descrivere come vi riconoscereste in una stanza al buio senza parlare. Poi distribuite insieme 2 penalità.",
+      "en": "Choose: take turns stroking each other's hand for 10 seconds, or describe how you'd recognise each other in a dark room without talking. Then give out 2 penalties together.",
+      "es": "Elegid: acariciaros por turnos una mano durante 10 segundos, o describir cómo os reconoceríais a oscuras sin hablar. Después repartid 2 penalizaciones entre los dos.",
+      "fr": "Choisissez : vous caresser une main à tour de rôle pendant 10 secondes, ou décrire comment vous vous reconnaîtriez dans le noir sans parler. Puis distribuez 2 pénalités ensemble."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-42",
+    "texts": {
+      "it": "Quale tuo messaggio vorresti che il partner leggesse con la tua voce più maliziosa? Inventalo ora o paga 3 penalità.",
+      "en": "What message would you like your partner to read in your cheekiest voice? Invent it now or take 3 penalties.",
+      "es": "¿Qué mensaje tuyo querrías que tu pareja leyera con tu voz más pícara? Invéntalo ahora o recibe 3 penalizaciones.",
+      "fr": "Quel message aimerais-tu que ton partenaire lise avec ta voix la plus coquine ? Invente-le maintenant ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-43",
+    "texts": {
+      "it": "A turno, dite quale vostro appuntamento meriterebbe un seguito e inventate il titolo del secondo episodio. Chi passa paga 2 penalità.",
+      "en": "Take turns saying which of your dates deserves a sequel and invent the title of the second episode. Anyone who passes takes 2 penalties.",
+      "es": "Por turnos, decid qué cita vuestra merece una continuación e inventad el título del segundo episodio. Quien pase recibe 2 penalizaciones.",
+      "fr": "À tour de rôle, dites lequel de vos rendez-vous mérite une suite et inventez le titre du deuxième épisode. Si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-44",
+    "texts": {
+      "it": "Il partner è un detective: ha scoperto che stai organizzando una sorpresa. Rispondi a 2 domande con allusioni, senza svelare nulla. Se passi, 3 penalità.",
+      "en": "Your partner is a detective who's discovered you're planning a surprise. Answer 2 questions with hints without giving anything away. If you pass, take 3 penalties.",
+      "es": "Tu pareja es detective y ha descubierto que preparas una sorpresa. Responde a 2 preguntas con insinuaciones sin revelar nada. Si pasas, recibes 3 penalizaciones.",
+      "fr": "Ton partenaire joue un détective qui a découvert que tu préparais une surprise. Réponds à 2 questions par des sous-entendus sans rien révéler. Si tu passes, prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-45",
+    "texts": {
+      "it": "Quale cosa del partner trovi più attraente quando non sta cercando di fare colpo? Dilla o paga 3 penalità.",
+      "en": "What do you find most attractive about your partner when they're not trying to impress you? Say it or take 3 penalties.",
+      "es": "¿Qué te atrae más de tu pareja cuando no intenta impresionar? Dilo o recibe 3 penalizaciones.",
+      "fr": "Que trouves-tu le plus attirant chez ton partenaire quand il n'essaie pas de faire de l'effet ? Dis-le ou prends 3 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-46",
+    "texts": {
+      "it": "Fingete di salutare degli amici mentre cercate di far capire soltanto all'altro che volete restare soli. Fate 1 frase a testa; chi passa paga 2 penalità.",
+      "en": "Pretend you're saying goodbye to friends while trying to tell only each other that you want to be alone together. Say 1 line each; anyone who passes takes 2 penalties.",
+      "es": "Fingid despediros de amigos mientras intentáis que solo el otro entienda que queréis estar a solas. Decid 1 frase cada uno; quien pase recibe 2 penalizaciones.",
+      "fr": "Faites semblant de saluer des amis en essayant de faire comprendre seulement à l'autre que vous voulez rester seuls. Dites 1 phrase chacun ; si vous passez, prenez 2 pénalités."
+    }
+  },
+  {
+    "pool": "coppie",
+    "id": "coppie-48",
+    "texts": {
+      "it": "Quale innocente commissione fareste molto più lentamente se diventasse una scusa per flirtare? Decidetela insieme in 10 secondi, altrimenti 2 penalità ciascuno.",
+      "en": "What innocent errand would you take much longer over if it became an excuse to flirt? Decide together in 10 seconds, or take 2 penalties each.",
+      "es": "¿Qué recado inocente haríais mucho más despacio si fuera una excusa para coquetear? Decididlo juntos en 10 segundos; si no, recibís 2 penalizaciones cada uno.",
+      "fr": "Quelle petite course feriez-vous beaucoup plus lentement si elle devenait une excuse pour flirter ? Décidez ensemble en 10 secondes, sinon prenez 2 pénalités chacun."
+    }
+  }
+]

@@ -4340,6 +4340,135 @@
     },
     {
       "text": "Which object in the room would be the worst gift after a first night together? Pick it and explain yourself, or take 3 penalties."
+    },
+    {
+      "text": "You and {playerB} flirt as two people fighting over the last socket to charge a phone. Say 2 lines each or take 2 penalties each."
+    },
+    {
+      "text": "Take turns saying a line that would ruin the mood right before a kiss. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever dragged out a goodbye hoping it would turn into a kiss? If so, take 2 penalties."
+    },
+    {
+      "text": "Pick a player. You give a compliment; they reply like an automated phone system. Say 2 lines each; anyone who laughs takes 2 penalties."
+    },
+    {
+      "text": "What completely unsexy thing do you find inexplicably attractive? Confess or take 3 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever could flirt while asking for a receipt. Whoever gets the most votes must try it with an imaginary cashier or take 2 penalties."
+    },
+    {
+      "text": "Have you ever chosen a seat at the table just to sit opposite someone? If so, take 2 penalties."
+    },
+    {
+      "text": "Say the name of a household appliance as if it were your greatest temptation. If you laugh, take 2 penalties."
+    },
+    {
+      "text": "You and {playerB} invent a flirty dialogue where every line ends with “maybe”. Say 2 lines each; anyone who forgets the word takes 2 penalties."
+    },
+    {
+      "text": "Which attempt at a sexy voice ended in coughing, laughter or embarrassment? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Take turns naming something that looks romantic in films but would make you laugh in real life. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever asked someone to repeat something just because you liked their voice? If so, take 2 penalties."
+    },
+    {
+      "text": "Invent the title of a cheeky film set in a laundrette. You have 10 seconds, or take 2 penalties."
+    },
+    {
+      "text": "Pick a player and ask for a pen as an excuse to get to know them. They must reply as if they've seen right through you. Anyone who laughs takes 2 penalties."
+    },
+    {
+      "text": "What accessory makes you look at someone twice? Say it or take 3 penalties."
+    },
+    {
+      "text": "Have you ever walked past someone you liked more times than necessary? If so, take 2 penalties."
+    },
+    {
+      "text": "Say “All that's missing is your signature” as if you're inviting someone on a secret date. If you laugh, take 2 penalties."
+    },
+    {
+      "text": "You and {playerB} invent 1 line each to flirt during a painfully boring meeting. You can't say “work”. Anyone who passes or uses the word takes 2 penalties."
+    },
+    {
+      "text": "What gesture tells you someone is looking for an excuse to get closer? Answer or take 3 penalties."
+    },
+    {
+      "text": "Take turns finishing: “I thought they were flirting, but...”. You can make it up. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever changed how you were sitting the moment someone you liked arrived? If so, take 2 penalties."
+    },
+    {
+      "text": "Pick a player. Invent a date somewhere completely unromantic and give 1 reason each why it could work. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "What way of saying your name would make you lose your train of thought? Describe it or take 3 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever could turn “goodnight” into an invitation to keep chatting. Whoever gets the most votes invents the message or takes 2 penalties."
+    },
+    {
+      "text": "Have you ever deliberately lowered your voice to make someone lean closer? If so, take 2 penalties."
+    },
+    {
+      "text": "Advertise a lift that only goes up if there's chemistry between its passengers. You have 15 seconds; if you pass, take 3 penalties."
+    },
+    {
+      "text": "You and {playerB} pretend to flirt at a party where you can't hear anything: just mouth the words, no touching. You have 15 seconds; if you pass, take 2 penalties each."
+    },
+    {
+      "text": "What innocent message did you reread far too often looking for a double meaning? Tell us without showing the chat or take 3 penalties."
+    },
+    {
+      "text": "Take turns naming a place where a secret date would instantly become ridiculous. Anyone who repeats one or passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever gone through the wrong door or in the wrong direction because someone you liked distracted you? If so, take 2 penalties."
+    },
+    {
+      "text": "Invent the notification your phone should send when you're flirting terribly. You have 10 seconds, or take 2 penalties."
+    },
+    {
+      "text": "Pick a player. Take turns giving each other a compliment in the form of a weather forecast. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "What habit instantly gives away that you like someone? Confess or take 3 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever could make a shopping list sound suggestive. Whoever gets the most votes reads “bread, milk, tomatoes” or takes 2 penalties."
+    },
+    {
+      "text": "Have you ever kept talking about the weather because you didn't know how to start flirting? If so, take 2 penalties."
+    },
+    {
+      "text": "Invent a line to ask for someone's number without saying “number”, “phone” or “contact”. You have 15 seconds, or take 3 penalties."
+    },
+    {
+      "text": "You and {playerB} act out a scene where you're both waiting for the other to ask for a date. Say 2 lines each without asking directly; anyone who does takes 2 penalties."
+    },
+    {
+      "text": "What detail of a date do you remember perfectly, even though you've forgotten what you talked about? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Take turns finishing: “My flirting superpower is...”. It must be a flaw disguised as a strength. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever replied too quickly, then deliberately waited before your next message? If so, take 2 penalties."
+    },
+    {
+      "text": "Introduce yourself to an imaginary mirror as if you're trying to win it over. You can't give compliments about looks. If you pass, take 3 penalties."
+    },
+    {
+      "text": "With a willing player, act out a movie-style kiss on the hand. If you prefer, invent the scene's closing line instead. Then give out 2 penalties together."
+    },
+    {
+      "text": "Have you ever given a compliment just to see someone blush? If so, take 2 penalties."
     }
   ],
   "darkRoom": [
@@ -6016,6 +6145,141 @@
     },
     {
       "text": "Give a compliment that becomes an insult when you add “for someone like you”. If you can't think of one in 10 seconds, take 2 penalties."
+    },
+    {
+      "text": "Have you ever checked who hadn't wished you a happy birthday instead of enjoying the wishes you got? If so, take 2 penalties."
+    },
+    {
+      "text": "Who did you hope would notice you'd stopped reaching out? No names: tell us the situation or take 3 penalties."
+    },
+    {
+      "text": "You and {playerB} pretend to make up while still blaming each other. Say 2 lines each; anyone who says “sorry” takes 2 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever would say “you decide” then reject every suggestion. Whoever gets the most votes must reject an imaginary pizza place or take 2 penalties."
+    },
+    {
+      "text": "Have you ever waited for someone to leave the room so you could move seats to get away from them? If so, take 2 penalties."
+    },
+    {
+      "text": "What message did you send just to pop up in someone's notifications again? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Reveal something you do on purpose when you want someone to know you're angry without telling them. If you pass, take 3 penalties."
+    },
+    {
+      "text": "You left {playerB} out of a dinner invitation. Invent a terrible excuse; they can only reply “oh, sure”. If you laugh, take 2 penalties."
+    },
+    {
+      "text": "Take turns naming an excuse you used to check whether someone was avoiding you. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever criticised a place just because you weren't invited? If so, take 2 penalties."
+    },
+    {
+      "text": "Have you ever left a notification visible hoping someone would peek at it? If so, take 2 penalties."
+    },
+    {
+      "text": "You and {playerB} take turns inventing 1 elegant way each to say “I didn't ask you”. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever would pick the group photo where only they look good. Whoever gets the most votes takes 2 penalties."
+    },
+    {
+      "text": "What do you happily lend out just because you hope you won't get it back? Answer or take 2 penalties."
+    },
+    {
+      "text": "What little advantage did you lose when two people made up? Tell us without naming names or take 3 penalties."
+    },
+    {
+      "text": "Pick a player. Take turns saying what line you'd use to politely kick each other out of your home. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Take turns naming something that makes you think “here comes a favour”. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever brought a friend to an event just so you wouldn't be the only one who knew nobody? If so, take 2 penalties."
+    },
+    {
+      "text": "What version of yourself do you play when meeting someone you want to impress? Say a line as that version or take 3 penalties."
+    },
+    {
+      "text": "Have you ever kept track of who paid while saying “we don't count that stuff”? If so, take 2 penalties."
+    },
+    {
+      "text": "You and {playerB} must brag about a quality of yours starting with “my problem is...”. Say 1 line each; anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever would turn a simple correction into a lifelong rivalry. Whoever gets the most votes takes 2 penalties."
+    },
+    {
+      "text": "What do you deliberately leave on display when someone you want to impress comes over? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Have you ever asked for an opinion just to hear that you were right? Tell us what it was about or take 3 penalties."
+    },
+    {
+      "text": "What message would you love to receive just for the pleasure of not replying? Say it or take 3 penalties."
+    },
+    {
+      "text": "You and {playerB} are rivals at an awards ceremony. The group picks the winner; the other must congratulate them through gritted teeth or take 2 penalties."
+    },
+    {
+      "text": "Take turns naming something you do better when someone you dislike is watching. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever pretended to look for your keys to avoid saying hello? If so, take 2 penalties."
+    },
+    {
+      "text": "What opinion did you keep to yourself because the person you were discussing was right behind you? Tell us without names or take 3 penalties."
+    },
+    {
+      "text": "Have you ever added “in my opinion” to a criticism just so you could say you weren't judging? If so, take 2 penalties."
+    },
+    {
+      "text": "Pick a player. Together, invent the message of someone leaving a group chat who wants to be stopped. You have 15 seconds, or take 2 penalties each."
+    },
+    {
+      "text": "Everyone points at once to whoever would still remember a joke about them from this game a year from now. Whoever gets the most votes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever reduced a compliment to “nice” so you wouldn't give someone too much satisfaction? If so, take 2 penalties."
+    },
+    {
+      "text": "What detail did you correct in a story just to make it clear you were there too? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Which of your habits suddenly becomes unbearable when someone else does it? Confess or take 3 penalties."
+    },
+    {
+      "text": "You and {playerB} pretend to compete for the title of least competitive person. Say 2 lines each without admitting you want to win. Anyone who admits it takes 2 penalties."
+    },
+    {
+      "text": "Take turns saying a line that sounds kind but makes you want to argue. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Have you ever asked “who's coming?” when you only wanted to know about one specific person? If so, take 2 penalties."
+    },
+    {
+      "text": "What do you do to look busy when you don't want to be available? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Have you ever wanted to know how much a gift cost so you could compare it with yours? If so, take 2 penalties."
+    },
+    {
+      "text": "You and {playerB} take turns inventing 1 line each that sounds like forgiveness but is really a dig. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever would say “it doesn't matter” then bring it up at every opportunity. Whoever gets the most votes takes 2 penalties."
+    },
+    {
+      "text": "What did you stop recommending as soon as it became too popular? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Tell us about a time you said “I'd figured that out” but had no idea. If you pass, take 3 penalties."
+    },
+    {
+      "text": "What compliment do you greet with a fake “oh, stop” hoping they'll repeat it? Say it or take 3 penalties."
     }
   ],
   "clash": [
@@ -7814,6 +8078,147 @@
     },
     {
       "text": "The player on your left makes up a terrible one-star review of you. Reply like a touchy restaurant owner would, or take 3 penalties."
+    },
+    {
+      "text": "Give a weather forecast for the inside of your fridge. You have 15 seconds; if you pass, take 2 penalties."
+    },
+    {
+      "text": "You and {playerB} are at a job interview: you want to hire a vampire as a lifeguard, and they want the job. Ask and answer 2 questions. If you pass, take 2 penalties each."
+    },
+    {
+      "text": "Read an imaginary receipt as if it were a love letter. You must name 3 products. If you get stuck, take 2 penalties."
+    },
+    {
+      "text": "Everyone silently picks whose voice they'd want for their satnav. Point together: whoever gets the most votes must say “You've gone the wrong way again” or take 2 penalties."
+    },
+    {
+      "text": "Pretend to record the hold message for the world's creepiest dentist. You have 15 seconds; if you pass, take 2 penalties."
+    },
+    {
+      "text": "Pretend your shoe has just won an award. Thank 3 people who supported it or take 2 penalties."
+    },
+    {
+      "text": "You and {playerB} are 2 pigeons arguing over a crumb. You can only say “mine”. The first to laugh takes 2 penalties; after 15 seconds without laughter, nobody gets a penalty."
+    },
+    {
+      "text": "Give the smell of a gym a luxury perfume name and perform its advert. If you pass, take 2 penalties."
+    },
+    {
+      "text": "Take turns giving a ridiculous excuse for arriving late on the Moon. Anyone who repeats an excuse or passes takes 2 penalties. Play 1 round."
+    },
+    {
+      "text": "Explain in 15 seconds why the remote control should pay rent. If you pass, take 2 penalties."
+    },
+    {
+      "text": "You do the sound effects while {playerB} mimes someone frantically looking for their keys. Keep going for 15 seconds or take 2 penalties each."
+    },
+    {
+      "text": "Apologise to a mosquito for waking it up. You must look genuinely sorry for 10 seconds; if you laugh, take 2 penalties."
+    },
+    {
+      "text": "Pick a player. Take turns inventing 1 rule each for a hotel for people who snore. If either of you 2 passes, that person takes 2 penalties."
+    },
+    {
+      "text": "Voice a vending machine that judges your choice. Use the line “Are you really sure?” or take 2 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever would trust a parrot with a secret. Whoever gets the most votes invents the secret the parrot would repeat or takes 2 penalties."
+    },
+    {
+      "text": "Invent the name and call of an animal that's a cross between a washing machine and a cat. You have 15 seconds, or take 2 penalties."
+    },
+    {
+      "text": "You're a customer trying to return a cloud; {playerB} works at the returns desk. Say 2 lines each without laughing: anyone who laughs takes 2 penalties."
+    },
+    {
+      "text": "Name 3 things you'd bring to a party hosted by your socks. You have 10 seconds, or take 2 penalties."
+    },
+    {
+      "text": "Announce that your alarm clock is retiring. Give it a 15-second farewell speech or take 2 penalties."
+    },
+    {
+      "text": "Everyone makes the face of someone hearing their name in a distant conversation, all at once. Then vote for the most curious face: the winner gives out 2 penalties."
+    },
+    {
+      "text": "You and {playerB} present a news bulletin where the only story is that there's no bread left. Give 1 headline each; anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Explain to a medieval king why he can't put a fork in the toaster. You have 15 seconds; if you pass, take 2 penalties."
+    },
+    {
+      "text": "Invent 3 ice cream flavours nobody would order. The group picks the worst and you must enthusiastically recommend it, or take 2 penalties."
+    },
+    {
+      "text": "Pick a player: propose to them just to get their charger. They must turn you down politely. The first to laugh takes 2 penalties; stop after 15 seconds."
+    },
+    {
+      "text": "Make an airport announcement for people who've lost the will to work. If you pass, take 2 penalties."
+    },
+    {
+      "text": "Take turns naming an object that sounds like a dog's name. Anyone who repeats one or can't think of one in 5 seconds takes 2 penalties. Play 1 round."
+    },
+    {
+      "text": "You and {playerB} argue because one of you spoiled the shopping list. Say 2 lines each or take 2 penalties each."
+    },
+    {
+      "text": "Invent a review of planet Earth by a disappointed alien tourist. You must complain about 2 things, or take 2 penalties."
+    },
+    {
+      "text": "Introduce your elbow as an artist about to go on stage. If you pass, take 2 penalties."
+    },
+    {
+      "text": "Everyone picks an object they can see. Take turns explaining why it should be mayor of the room. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "You're a shy ghost and {playerB} is teaching you to scare people. Try saying “boo” 2 times each: anyone who laughs takes 2 penalties."
+    },
+    {
+      "text": "Sing “I'm looking for parking” like the chorus of a desperate song. If you pass, take 2 penalties."
+    },
+    {
+      "text": "The player on your right picks an animal. Explain in 15 seconds why it would be a terrible flatmate, or take 2 penalties."
+    },
+    {
+      "text": "Everyone says “it wasn't me” at once while looking at the ceiling. Then vote for whoever looked guiltiest: that person takes 2 penalties."
+    },
+    {
+      "text": "You and {playerB} act out a neighbour dispute between an astronaut and the person next door on the Moon. You have 15 seconds; if you pass, take 2 penalties each."
+    },
+    {
+      "text": "Pretend you're a biscuit trying to convince someone not to dunk you. You have 15 seconds; if you pass, take 2 penalties."
+    },
+    {
+      "text": "Give 3 terrible tips to a robot attending its first wedding. You have 15 seconds, or take 2 penalties."
+    },
+    {
+      "text": "Take turns naming an object that should never have Bluetooth. Anyone who repeats one or passes takes 2 penalties. Play 1 round."
+    },
+    {
+      "text": "You and {playerB} must invent a name for a restaurant run by ghosts and 1 dish on the menu. You have 15 seconds, or take 2 penalties each."
+    },
+    {
+      "text": "Proudly announce your bid to become the world champion of queueing. Explain how you train or take 2 penalties."
+    },
+    {
+      "text": "Describe your stomach rumbling as if it were a racing car engine. If you pass, take 2 penalties."
+    },
+    {
+      "text": "Everyone points at once to whoever they'd ask to name a newly discovered dinosaur. Whoever gets the most votes names it or takes 2 penalties."
+    },
+    {
+      "text": "You're selling a ticket to a concert of silence; {playerB} wants to know what's included. Say 2 lines each without laughing; anyone who laughs takes 2 penalties."
+    },
+    {
+      "text": "Invent a sign for your bed to discourage anyone from waking you. You can't say “sleep”. You have 10 seconds, or take 2 penalties."
+    },
+    {
+      "text": "Take turns suggesting a useless item for a meeting survival kit. Anyone who repeats one or passes takes 2 penalties. Play 1 round."
+    },
+    {
+      "text": "You and {playerB} hold a press conference to explain why you lost to an automatic door. You have 15 seconds; if you pass, take 2 penalties each."
+    },
+    {
+      "text": "Give your junk drawer a fancy name and describe 2 things in it. If you pass, take 2 penalties."
     }
   ],
   "coppie": [
@@ -9370,6 +9775,135 @@
     },
     {
       "text": "Invent a ridiculous clause you must stick to on your next trip together. You both have to agree within 20 seconds, or take 2 penalties each."
+    },
+    {
+      "text": "What does your partner do while getting ready to go out that makes you want to cancel the booking and stay home? Say it or take 3 penalties."
+    },
+    {
+      "text": "Pretend to meet in a bar after years apart. You have 2 lines each to show there's still something between you. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Choose: a kiss on the cheek that feels like a promise, or a cheeky promise without a kiss. Then give out 2 penalties together."
+    },
+    {
+      "text": "Your partner picks an office word. Use it in an invitation to an evening just for you two. You have 10 seconds, or take 2 penalties."
+    },
+    {
+      "text": "Which outfit of your partner's do you wish never went in the wash, so they could wear it again straight away? Confess or take 3 penalties."
+    },
+    {
+      "text": "Take turns inventing the message you'd send your partner from a boring dinner to say you'd rather be somewhere else together. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Choose silently: a hello kiss or a goodbye kiss? Say your answers together. If they match, give out 2 penalties together; otherwise, explain your choices to each other."
+    },
+    {
+      "text": "Describe one of your dates to your partner as a neighbour who knows exactly what's going on but pretends not to. If you pass, take 2 penalties."
+    },
+    {
+      "text": "What part of a normal date would you happily skip to have more time alone together? Answer or take 3 penalties."
+    },
+    {
+      "text": "Your partner makes a cheeky invitation. You must reply like a lawyer looking for a loophole. Say 2 lines each; anyone who laughs takes 2 penalties."
+    },
+    {
+      "text": "Choose: lace your fingers together under the table for 15 seconds, or tell each other what you'd think if that happened at a fancy dinner. Then give out 2 penalties together."
+    },
+    {
+      "text": "What excuse would you use to sneak a kiss with your partner while you're cleaning? Say it or take 2 penalties."
+    },
+    {
+      "text": "Take turns telling your partner which gesture of theirs distracts you even when you're trying to be serious. Anyone who passes takes 3 penalties."
+    },
+    {
+      "text": "Pretend you're strangers meeting in a hotel corridor. Invent 1 line each to keep the conversation going. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "What apparently normal thing you say already means “come closer” when you say it to your partner? Reveal it or take 3 penalties."
+    },
+    {
+      "text": "Your partner says “we've only got 5 minutes”; reply with a hint without saying what you have in mind. If you pass, take 3 penalties."
+    },
+    {
+      "text": "Choose: a kiss on the hand while looking into each other's eyes, or exchange the worst pick-up lines you can invent. Then give out 2 penalties together."
+    },
+    {
+      "text": "What moment of your partner's day would you like to interrupt with a surprise date? Say it or take 3 penalties."
+    },
+    {
+      "text": "Take turns inventing an item for the menu of an evening together. Give it a cheeky name without saying what will happen. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "What compliment from your partner makes you smile even when you're trying to stay serious? Confess or take 3 penalties."
+    },
+    {
+      "text": "Pretend you're calling each other from different rooms in the same house. You have 2 lines each to persuade the other to join you without saying “come”. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Choose: a pretend goodbye hug neither of you wants to end, or invent a reason to stay together a little longer. Then give out 2 penalties together."
+    },
+    {
+      "text": "What detail of your partner would you notice even if they walked into a crowded room? Look at them and say it or take 3 penalties."
+    },
+    {
+      "text": "Your partner names a completely ordinary place. Describe how you'd turn it into a secret date for you two. You have 15 seconds, or take 3 penalties."
+    },
+    {
+      "text": "What attempt to play it cool with your partner failed miserably? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Pretend your romantic dinner was interrupted by an alarm going off over burnt toast. Say 2 lines each to rescue the flirting; anyone who laughs takes 2 penalties."
+    },
+    {
+      "text": "Choose: lean in for a kiss and both stop to smile, or describe how that scene would end in a romantic comedy. Then give out 2 penalties together."
+    },
+    {
+      "text": "What would you like your partner to say right before you go out together? Say it in the right tone or take 3 penalties."
+    },
+    {
+      "text": "Take turns reviewing your partner's hugs as a satisfied guest. Include a double meaning but no numerical rating. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Your partner asks “what are your plans tonight?”. Reply without words, just a facial expression. If either of you laughs, that person takes 2 penalties."
+    },
+    {
+      "text": "What little thing could you do to surprise your partner without spending money or leaving home? Make it cheeky, not a household chore. If you pass, take 3 penalties."
+    },
+    {
+      "text": "Pretend to negotiate who should make the first move. Give 1 ridiculous reason each why it's the other's turn. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Choose: dance close together for 15 seconds, or invent the title of a song for your secret rendezvous. Then give out 2 penalties together."
+    },
+    {
+      "text": "What moment together needed a “do not disturb” sign even though it wasn't intimate? Tell us or take 3 penalties."
+    },
+    {
+      "text": "Take turns inventing a terrible excuse to knock on your partner's door if you were neighbours who'd just met. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "What habit of your partner makes you smile in public because it reminds you of a private moment together? Describe the habit without revealing the moment or take 3 penalties."
+    },
+    {
+      "text": "Choose: take turns stroking each other's hand for 10 seconds, or describe how you'd recognise each other in a dark room without talking. Then give out 2 penalties together."
+    },
+    {
+      "text": "What message would you like your partner to read in your cheekiest voice? Invent it now or take 3 penalties."
+    },
+    {
+      "text": "Take turns saying which of your dates deserves a sequel and invent the title of the second episode. Anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "Your partner is a detective who's discovered you're planning a surprise. Answer 2 questions with hints without giving anything away. If you pass, take 3 penalties."
+    },
+    {
+      "text": "What do you find most attractive about your partner when they're not trying to impress you? Say it or take 3 penalties."
+    },
+    {
+      "text": "Pretend you're saying goodbye to friends while trying to tell only each other that you want to be alone together. Say 1 line each; anyone who passes takes 2 penalties."
+    },
+    {
+      "text": "What innocent errand would you take much longer over if it became an excuse to flirt? Decide together in 10 seconds, or take 2 penalties each."
     }
   ]
 }

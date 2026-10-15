@@ -1,0 +1,25 @@
+{
+  "result": "PASS",
+  "checked_at": "2026-10-15T15:23:23.500211+00:00",
+  "original_records": 4199,
+  "added": 178,
+  "active_records_per_language": {
+    "it": 4377,
+    "en": 4377,
+    "es": 4377,
+    "fr": 4377
+  },
+  "per_pool": {
+    "party": 47,
+    "darkRoom": 45,
+    "redRoom": 43,
+    "coppie": 43
+  },
+  "existing_content_unchanged": true,
+  "sha256": {
+    "it": "e6a03bf4957022fbbdfd31397667e2d76c2997cbd9b71d6a69de8053deb13807",
+    "en": "a270b0959fe5c77fe97a00aa70ded7a189024ef255bf161eba229ffc10cafd12",
+    "es": "b9291944766b7682d1fe0deadf645741338611c07d7ef6a168b306b2e82a0820",
+    "fr": "710f9fd77b97e8daaed0ada271e665fee393f3d1a0cfd5c464217e9c83a60f36"
+  }
+}

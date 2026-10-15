@@ -1,0 +1,64 @@
+{
+  "status": "COMPLETED",
+  "phase": null,
+  "languages": [
+    "it",
+    "en",
+    "es",
+    "fr"
+  ],
+  "original_records": 4199,
+  "target_candidates": 200,
+  "applied_pools": [
+    "party",
+    "darkRoom",
+    "redRoom",
+    "coppie"
+  ],
+  "last_applied_sha256": {
+    "it": "e6a03bf4957022fbbdfd31397667e2d76c2997cbd9b71d6a69de8053deb13807",
+    "en": "a270b0959fe5c77fe97a00aa70ded7a189024ef255bf161eba229ffc10cafd12",
+    "es": "b9291944766b7682d1fe0deadf645741338611c07d7ef6a168b306b2e82a0820",
+    "fr": "710f9fd77b97e8daaed0ada271e665fee393f3d1a0cfd5c464217e9c83a60f36"
+  },
+  "problematic_ids": [],
+  "updated_at": "2026-10-15T15:23:23.587872+00:00",
+  "pools": {
+    "party": {
+      "generated": 50,
+      "reviewed": 50,
+      "rejected": 3,
+      "translated": 47,
+      "applied": true
+    },
+    "darkRoom": {
+      "generated": 50,
+      "reviewed": 50,
+      "rejected": 5,
+      "translated": 45,
+      "applied": true
+    },
+    "redRoom": {
+      "generated": 50,
+      "reviewed": 50,
+      "rejected": 7,
+      "translated": 43,
+      "applied": true
+    },
+    "coppie": {
+      "generated": 50,
+      "reviewed": 50,
+      "rejected": 7,
+      "translated": 43,
+      "applied": true
+    }
+  },
+  "next_pool": null,
+  "current_pool": null,
+  "added_records": 178,
+  "generated_candidates": 200,
+  "reviewed_candidates": 200,
+  "rejected_candidates": 22,
+  "active_records_per_language": 4377,
+  "completed_at": "2026-10-15T15:23:23.587889+00:00"
+}

@@ -1,5 +1,7 @@
 # Revisione editoriale selettiva, 15 ottobre 2026
 
+Nota successiva: le nuove200 candidate richieste dopo questa revisione sono gestite in `../action-expansion-2026-10-15/`. Per validare il database attuale usare il suo `manage.py verify`; questa cartella e i suoi checkpoint restano lo storico della revisione precedente. Non rieseguire apply di questa fase per aggiornare le nuove carte.
+
 Richiesta: aggiungere le 45 proposte approvate e tradurle in IT/EN/ES/FR; ricontrollare tutte le azioni esistenti per chiarezza, divertimento e coerenza con la stanza. Non riscrivere le azioni valide. Questa è una nuova revisione editoriale, successiva alla revisione linguistica di ottobre 5 e alla rimozione autorizzata di 43 ambiguità. Non ripristinare contenuti rimossi.
 
 Il baseline di questa fase contiene esattamente il database trovato il 15 ottobre; records.json conserva gli indici immutabili e i quattro originali. Il checkpoint progress.json registra ogni batch effettivamente letto, anche se lasciato invariato. Le decisioni motivano ogni modifica o rimozione. removed_actions.json rende recuperabili le rimozioni; nessun file storico precedente va sovrascritto per far quadrare gli indici.
