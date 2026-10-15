@@ -1,0 +1,5 @@
+{"start":2294,"end":2394,"second_pass":true,"changes":[
+{"index":2324,"action":"edit","reason":"Ruolo alternato al singolare non identifica una preferenza comprensibile; esplicitato il contesto a letto e l'alternanza dei ruoli, senza introdurre pratiche specifiche.","texts":{"it":"Se a letto ti piace alternare i ruoli, distribuisci 3 penalità a chi vuoi. Altrimenti pagale.","en":"If you like switching roles in bed, distribute 3 penalties to whoever you want. Otherwise, take them.","es":"Si te gusta alternar los roles en la cama, reparte 3 sanciones a quien quieras. Si no, tómalas tú.","fr":"Si tu aimes alterner les rôles au lit, distribue 3 pénalités à qui tu veux. Sinon, prends-les."}},
+{"index":2372,"action":"remove","reason":"Duplicato certo di /redRoom/156/text (indice2345): togliersi un indumento a scelta oppure3 penalità, stessa scelta e quantità."},
+{"index":2386,"action":"remove","reason":"Duplicato certo di /redRoom/34/text (indice2223): aver mandato un messaggio hot al destinatario sbagliato comporta4 penalità."}
+]}

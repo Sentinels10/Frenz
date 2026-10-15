@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-10-15T13:59:00.506786+00:00",
+  "result": "PASS",
+  "review_scope": "Every original Italian record reviewed for editorial fit; all four originals compared for edits. All 45 additions reviewed in four languages.",
+  "source_records": 4294,
+  "checked_records": 4294,
+  "unchanged_records": 4144,
+  "edited_records": 10,
+  "removed_records": 140,
+  "added_records": 45,
+  "active_records_per_language": {
+    "it": 4199,
+    "en": 4199,
+    "es": 4199,
+    "fr": 4199
+  },
+  "added_by_pool": {
+    "party": 16,
+    "darkRoom": 10,
+    "redRoom": 9,
+    "coppie": 10
+  },
+  "main_pool_counts": {
+    "party": 452,
+    "darkRoom": 558,
+    "redRoom": 408,
+    "coppie": 518,
+    "clash": 146
+  },
+  "unresolved_ids": [],
+  "databases_sha256": {
+    "it": "e2dc9095c53a25f2bd3da3465edb32193fe26c9a85a3ecdb8a928b744a3c44ff",
+    "en": "d7008badd17e31fdf28c111f34207e0a17a6edf6b2e823ea6e94e427f32f6747",
+    "es": "dd8909af5fd5bd65bea84785a383e7bc3a952f8a88b2d55dc16c2a01ff75d488",
+    "fr": "4c87b60aa51791ac830ab51e96899fa7d3123523b3dbeacad2b316dfa5b6eb02"
+  },
+  "checks": [
+    "complete_disjoint_batch_coverage",
+    "runtime_matches_decisions",
+    "unchanged_texts_preserved_in_four_languages",
+    "edited_numbers_and_placeholders_preserved",
+    "approved_ids_and_rooms_exact",
+    "rejected_proposals_absent",
+    "45_additions_each_present_once_per_language",
+    "no_exact_addition_duplicates_in_baseline",
+    "same_numeric_tokens_for_added_translations",
+    "schema_and_nonempty_pools_preserved",
+    "all_removals_recoverable_with_four_originals"
+  ]
+}

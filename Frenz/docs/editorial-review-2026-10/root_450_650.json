@@ -1,0 +1,5 @@
+{"start":450,"end":650,"second_pass":true,"changes":[
+{"index":485,"action":"remove","reason":"Aquiloni/falchi è un confronto incoerente fra oggetto e animale in un elenco di animali; le traduzioni confermano l'ambiguità. Sostituire l'animale significherebbe indovinare il contenuto voluto."},
+{"index":505,"action":"remove","reason":"Ripete tradire/essere tradito del record498 invertendo le alternative."},
+{"index":594,"action":"remove","reason":"Ripete sparire a metà serata del record555, con identica penalità3 e stesso destinatario."}
+]}

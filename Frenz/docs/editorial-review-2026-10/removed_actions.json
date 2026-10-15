@@ -1,0 +1,1542 @@
+[
+  {
+    "index": 132,
+    "id": "/specialGames/questoOQuello/redRoom/106",
+    "reason": "Ripete il dilemma lingua lenta/veloce del record69, invertendo soltanto l'ordine delle alternative.",
+    "texts": {
+      "it": "Lingua rapida o lingua lenta?",
+      "en": "Fast or slow tongue?",
+      "es": "¿Lengua rápida o lenta?",
+      "fr": "Langue rapide ou lente ?"
+    }
+  },
+  {
+    "index": 179,
+    "id": "/specialGames/questoOQuello/party/31",
+    "reason": "Stessa scelta treno/aereo già presente al record169 nella stessa raccolta.",
+    "texts": {
+      "it": "Treno o aereo?",
+      "en": "Train or plane?",
+      "es": "¿Tren o avión?",
+      "fr": "Train ou avion ?"
+    }
+  },
+  {
+    "index": 219,
+    "id": "/specialGames/questoOQuello/party/71",
+    "reason": "TikTok Reels mescola nomi di due piattaforme; il confronto voluto YouTube Shorts/TikTok esiste già corretto al record324.",
+    "texts": {
+      "it": "YouTube Shorts o TikTok Reels?",
+      "en": "YouTube Shorts or TikTok Reels?",
+      "es": "¿YouTube Shorts o TikTok Reels?",
+      "fr": "YouTube Shorts ou TikTok Reels ?"
+    }
+  },
+  {
+    "index": 238,
+    "id": "/specialGames/questoOQuello/party/90",
+    "reason": "Milkshake e frappè sono sinonimi nell'uso comune: non offre una scelta immediatamente distinguibile.",
+    "texts": {
+      "it": "Milkshake o frappè?",
+      "en": "Milkshake or frappè?",
+      "es": "¿Milkshake o frappè?",
+      "fr": "Un milkshake ou une frappè ?"
+    }
+  },
+  {
+    "index": 327,
+    "id": "/specialGames/questoOQuello/party/179",
+    "reason": "Ripete iOS/Android del record205 invertendo le alternative.",
+    "texts": {
+      "it": "Android o iOS?",
+      "en": "Android or iOS?",
+      "es": "¿Android o iOS?",
+      "fr": "Android ou iOS ?"
+    }
+  },
+  {
+    "index": 330,
+    "id": "/specialGames/questoOQuello/party/182",
+    "reason": "Ripete messaggi vocali/scritti del record163 nella stessa raccolta.",
+    "texts": {
+      "it": "Messaggi vocali o messaggi scritti?",
+      "en": "Voice messages or written messages?",
+      "es": "¿Mensajes de voz o mensajes escritos?",
+      "fr": "Messages vocaux ou écrits ?"
+    }
+  },
+  {
+    "index": 346,
+    "id": "/specialGames/questoOQuello/party/198",
+    "reason": "Ripete viaggio in treno/aereo del record169.",
+    "texts": {
+      "it": "Viaggio in treno o viaggio in aereo?",
+      "en": "Train trip or plane trip?",
+      "es": "¿Viaje en tren o viaje en avión?",
+      "fr": "Voyage en train ou en avion ?"
+    }
+  },
+  {
+    "index": 348,
+    "id": "/specialGames/questoOQuello/party/200",
+    "reason": "Ripete burger vegano/classico del record263 invertendo le alternative.",
+    "texts": {
+      "it": "Hamburger di carne o hamburger vegano?",
+      "en": "Meat burger or vegan burger?",
+      "es": "¿Hamburguesa de carne o hamburguesa vegana?",
+      "fr": "Un burger à la viande ou un burger végétalien ?"
+    }
+  },
+  {
+    "index": 361,
+    "id": "/specialGames/questoOQuello/party/213",
+    "reason": "Ripete film horror/commedia del record340 cambiando solo il plurale.",
+    "texts": {
+      "it": "Film horror o commedie?",
+      "en": "horror movies or comedies?",
+      "es": "¿películas de terror o comedias?",
+      "fr": "Des films d'horreur ou des comédies ?"
+    }
+  },
+  {
+    "index": 429,
+    "id": "/specialGames/questoOQuello/party/281",
+    "reason": "Ripete skateboard/rollerblade del record261 usando il sinonimo pattini in linea.",
+    "texts": {
+      "it": "Skateboard o pattini in linea?",
+      "en": "Skateboard or inline skates?",
+      "es": "¿Skateboards o patines en línea?",
+      "fr": "Skateboards ou skates en ligne ?"
+    }
+  },
+  {
+    "index": 445,
+    "id": "/specialGames/questoOQuello/party/297",
+    "reason": "Ripete football americano/rugby del record342 invertendo le alternative.",
+    "texts": {
+      "it": "Rugby o football americano?",
+      "en": "Rugby or American football?",
+      "es": "¿Rugby o fútbol americano?",
+      "fr": "Rugby ou football américain ?"
+    }
+  },
+  {
+    "index": 485,
+    "id": "/specialGames/questoOQuello/party/337",
+    "reason": "Aquiloni/falchi è un confronto incoerente fra oggetto e animale in un elenco di animali; le traduzioni confermano l'ambiguità. Sostituire l'animale significherebbe indovinare il contenuto voluto.",
+    "texts": {
+      "it": "Aquiloni o falchi?",
+      "en": "Kites or hawks?",
+      "es": "¿Cometas o halcones?",
+      "fr": "Cerfs-volants ou faucons ?"
+    }
+  },
+  {
+    "index": 505,
+    "id": "/specialGames/questoOQuello/darkRoom/11",
+    "reason": "Ripete tradire/essere tradito del record498 invertendo le alternative.",
+    "texts": {
+      "it": "Essere tradito o tradire tu?",
+      "en": "Being betrayed or doing the betraying?",
+      "es": "¿Ser traicionado o traicionar tú?",
+      "fr": "Être trahi ou trahir toi-même ?"
+    }
+  },
+  {
+    "index": 594,
+    "id": "/specialGames/chiEPiuProbabile/party/60",
+    "reason": "Ripete sparire a metà serata del record555, con identica penalità3 e stesso destinatario.",
+    "texts": {
+      "it": "Chi è più probabile che sparisca nel nulla a metà serata? Il più votato prende 3 penalità .",
+      "en": "Who's more likely to disappear in the middle of the night? Whoever gets the most votes gets 3 penalties .",
+      "es": "¿Quién es más probable que desaparezca en medio de la noche? El más votado toma 3 penalidades.",
+      "fr": "Qui est le plus susceptible de disparaître au milieu de la nuit ? Le plus voté prend 3 pénalités ."
+    }
+  },
+  {
+    "index": 671,
+    "id": "/specialGames/chiEPiuProbabile/redRoom/12",
+    "reason": "Ripete collezione nascosta di sex toys del record663, identica penalità3 al più votato.",
+    "texts": {
+      "it": "Chi è più probabile che abbia una collezione nascosta di sex toy? Il più votato paga 3 penalità .",
+      "en": "Who is more likely to have a hidden collection of sex toys? Whoever gets the most votes gets 3 penalties .",
+      "es": "¿Quién es más probable que tenga una colección oculta de juguetes sexuales? El más votado paga 3 penalidades.",
+      "fr": "Qui est le plus susceptible d'avoir une collection cachée de sextoys? Le plus voté paie 3 pénalités ."
+    }
+  },
+  {
+    "index": 691,
+    "id": "/specialGames/chiEPiuProbabile/redRoom/32",
+    "reason": "Ripete nome sbagliato a letto del record677 con identica penalità4 al più votato.",
+    "texts": {
+      "it": "Chi è più probabile che confonda il nome del partner a letto? Il più votato prende 4 penalità .",
+      "en": "Who is more likely to confuse the name of the partner in bed? Whoever gets the most votes gets 4 penalties.",
+      "es": "¿Quién es más propenso a confundir el nombre del compañero en la cama? El más votado toma 4 penalidades.",
+      "fr": "Qui est le plus susceptible de confondre le nom du partenaire au lit? Le plus voté prend 4 pénalités."
+    }
+  },
+  {
+    "index": 775,
+    "id": "/specialGames/chiEPiuProbabile/darkRoom/32",
+    "reason": "Ripete paura assurda tenuta nascosta del record754 con identica penalità2 al più votato.",
+    "texts": {
+      "it": "Chi è più probabile che abbia una fobia assurda e la nasconda a tutti? Il più votato riceve 2 penalità.",
+      "en": "Who is more likely to have an absurd phobia and hide it from everyone? Whoever gets the most votes gets 2 penalties.",
+      "es": "¿Quién tiene más probabilidades de tener una fobia absurda y ocultarla a todos? El más votado recibe 2 penalidades.",
+      "fr": "Qui est le plus susceptible d'avoir une phobie absurde et de la cacher à tout le monde ? La personne qui reçoit le plus de votes prend 2 pénalités."
+    }
+  },
+  {
+    "index": 927,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/3",
+    "reason": "Chiede di dichiarare di non essersi mai sentiti orgogliosi di sé: svalutazione personale pesante fuori dal mood leggero Chilling.",
+    "texts": {
+      "it": "Confesseresti che non ti sei mai sentito orgoglioso di te stesso per 80.000€?",
+      "en": "Would you confess that you have never felt proud of yourself for €80,000?",
+      "es": "¿Confesarías que nunca te has sentido orgulloso de ti mismo por 80.000 €?",
+      "fr": "Avoueriez-vous ne jamais avoir été fier de vous pour 80 000 € ?"
+    }
+  },
+  {
+    "index": 932,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/8",
+    "reason": "Perdita permanente di sensazioni durante il sesso: fuori dal mood leggero della raccolta Party/Chilling.",
+    "texts": {
+      "it": "Accetteresti di non provare più nulla durante il sesso per 500.000€?",
+      "en": "Would you agree to no longer feel anything during sex for €500,000?",
+      "es": "¿Estarías de acuerdo en no sentir nada durante el sexo por 500.000 €?",
+      "fr": "Accepteriez-vous de ne plus rien ressentir pendant le sexe pour 500 000 € ?"
+    }
+  },
+  {
+    "index": 934,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/10",
+    "reason": "Spinge a dire al partner che si pensa spesso di lasciarlo: conflitto di coppia pesante, fuori dal mood Chilling.",
+    "texts": {
+      "it": "Diresti al tuo partner che pensi spesso di lasciarlo per 60.000€?",
+      "en": "Would you tell your partner that you often think about leaving him for €60,000?",
+      "es": "¿Le diría a su compañero que a menudo piensa en dejarle por 60.000 €?",
+      "fr": "Diriez-vous à votre partenaire que vous pensez souvent le quitter pour 60 000 € ?"
+    }
+  },
+  {
+    "index": 937,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/13",
+    "reason": "Dimenticare ogni volto amato è una perdita affettiva pesante, fuori dal mood leggero Chilling.",
+    "texts": {
+      "it": "Accetteresti di dimenticare ogni volto che hai amato finora per 1.000.000€?",
+      "en": "Would you agree to forget every face you've loved so far for €1,000,000?",
+      "es": "¿Estarías de acuerdo en olvidar cada cara que has amado hasta ahora por 1.000.000 €?",
+      "fr": "Accepteriez-vous d'oublier chaque visage que vous avez aimé jusqu'à présent pour 1 000 000 € ?"
+    }
+  },
+  {
+    "index": 938,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/14",
+    "reason": "Chiede di dichiarare di non provare niente da molto tempo: tema di sofferenza emotiva senza spunto giocoso in Chilling.",
+    "texts": {
+      "it": "Diresti che non provi niente da molto tempo per 10.000€?",
+      "en": "Would you say you haven't felt anything in a long time for €10,000?",
+      "es": "¿Dirías que no sientes nada desde hace mucho tiempo por 10.000 euros?",
+      "fr": "Diriez-vous que vous ne ressentez rien depuis longtemps pour 10 000 € ?"
+    }
+  },
+  {
+    "index": 939,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/15",
+    "reason": "Giudizio distruttivo sulla propria madre in cambio di denaro: conflitto familiare pesante, fuori dal mood Chilling.",
+    "texts": {
+      "it": "Diresti che non credi che tua madre sia una brava persona per 300.000€?",
+      "en": "Would you say that you don't think your mother is a good person for €300,000?",
+      "es": "¿Dirías que no crees que tu madre sea una buena persona por 300.000 €?",
+      "fr": "Diriez-vous que vous ne pensez pas que votre mère est une bonne personne pour 300 000 € ?"
+    }
+  },
+  {
+    "index": 944,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/20",
+    "reason": "Rinuncia definitiva ad essere compresi: privazione emotiva pesante, fuori dal mood leggero Chilling.",
+    "texts": {
+      "it": "Rinunceresti alla possibilità di essere mai compreso davvero per 600.000€?",
+      "en": "Would you give up the chance of ever being truly understood for €600,000?",
+      "es": "¿Renunciarías a la oportunidad de ser realmente comprendida por 600.000 €?",
+      "fr": "Renonceriez-vous à la chance d'être vraiment compris pour 600 000 € ?"
+    }
+  },
+  {
+    "index": 945,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/21",
+    "reason": "Dichiarare al fratello di non averlo mai stimato: conflitto familiare gratuito fuori dal mood Chilling.",
+    "texts": {
+      "it": "Diresti a tuo fratello che non l'hai mai stimato per 3.000€?",
+      "en": "Would you tell your brother that you never valued him for €3,000?",
+      "es": "¿Le dirías a tu hermano que nunca lo valoraste por 3.000 euros?",
+      "fr": "Diriez-vous à votre frère que vous ne l'avez jamais estimé pour 3 000 € ?"
+    }
+  },
+  {
+    "index": 950,
+    "id": "/specialGames/tuttoHaUnPrezzo/party/26",
+    "reason": "Non essere mai più amati per tutta la vita: tema emotivamente pesante senza spunto divertente per Chilling.",
+    "texts": {
+      "it": "Accetteresti che nessuno ti ami mai più, pur essendo sempre circondato da persone, per 1.200.000€?",
+      "en": "Would you accept never being loved again, despite always being surrounded by people, for €1,200,000?",
+      "es": "¿Aceptarías que nadie volviera a amarte, aunque siempre estuvieras rodeado de gente, por 1.200.000 €?",
+      "fr": "Accepteriez-vous que personne ne vous aime plus jamais, tout en étant toujours entouré de gens, pour 1 200 000 € ?"
+    }
+  },
+  {
+    "index": 1083,
+    "id": "/specialGames/penitenzeGruppo/party/97",
+    "reason": "Confessione esplicita sul sesso in pubblico in Party/Chilling; il contenuto resta già presente nella raccolta Red appropriata ai record885 e664.",
+    "texts": {
+      "it": "Chi ha mai fatto sesso in un luogo pubblico paga 3 penalità.",
+      "en": "Anyone who has ever had sex in a public place pays 3 penalties.",
+      "es": "Quien ha tenido sexo en un lugar público paga 3 penalidades.",
+      "fr": "Qui a déjà eu des relations sexuelles dans un lieu public paie 3 pénalités."
+    }
+  },
+  {
+    "index": 1274,
+    "id": "/specialGames/penitenzeGruppo/redRoom/109",
+    "reason": "Richiede di scambiarsi mutande indossate: igiene sproporzionata rispetto alla provocazione da party e penale condivisa sul rifiuto. Tolta questa specifica prova, conservate le altre azioni piccanti.",
+    "texts": {
+      "it": "[player] e [player] devono scambiarsi le mutande. Se rifiutano, entrambi pagano 6 penalità.",
+      "en": "[player] and [player] must exchange the underwear. If they refuse, they both pay 6 penalties.",
+      "es": "[player] y [player] deben intercambiar su ropa interior. Si se niegan, ambos pagan 6 penalidades.",
+      "fr": "[player] et [player] doivent échanger les sous-vêtements. S'ils refusent, ils paient 6 pénalités."
+    }
+  },
+  {
+    "index": 1282,
+    "id": "/specialGames/penitenzeGruppo/redRoom/117",
+    "reason": "Doppione della penitenza1259: stesso presupposto di sesso con specchi e medesime3 penalità; nessuna meccanica nuova.",
+    "texts": {
+      "it": "Quelli e quelle che hanno fatto sesso davanti ad uno specchio ricevono 3 penalità.",
+      "en": "Those who have had sex in front of a mirror receive 3 penalties.",
+      "es": "Aquellos que han tenido sexo frente a un espejo reciben 3 penalidades.",
+      "fr": "Ceux qui ont eu des rapports sexuels devant un miroir reçoivent 3 pénalités."
+    }
+  },
+  {
+    "index": 1299,
+    "id": "/specialGames/penitenzeGruppo/redRoom/134",
+    "reason": "Penalità pari al body count senza limite: per alcuni giocatori la quantità diventa sproporzionata rispetto alle normali2–5 penalità e la domanda non aggiunge una prova giocabile. Conservate le altre confessioni sul numero di partner.",
+    "texts": {
+      "it": "Tutti ricevono tante penalità quante il loro body count.",
+      "en": "Everyone gets as many penalties as their body count.",
+      "es": "Todo el mundo recibe tantas penalidades como su body count.",
+      "fr": "Tout le monde a autant de pénalités que son body count."
+    }
+  },
+  {
+    "index": 1394,
+    "id": "/specialGames/penitenzeGruppo/darkRoom/75",
+    "reason": "Chiede di leggere l'ultima frase cancellata da una chat, normalmente non più recuperabile. Il blocco contiene già la lettura dei messaggi non inviati1390; rimossa questa variante tecnicamente impraticabile.",
+    "texts": {
+      "it": "Uno per uno leggete la vostra ultima frase cancellata da una chat. Saltare significa 3 penalità.",
+      "en": "One by one read your last sentence deleted from a chat. Skipping means 3 penalties.",
+      "es": "Uno a uno, leed vuestra última frase borrada de un chat. Saltar significa 3 penalidades.",
+      "fr": "Un par un, lisez votre dernière phrase supprimée d'un chat. Passer son tour signifie 3 pénalités."
+    }
+  },
+  {
+    "index": 1600,
+    "id": "/truthDareGame/dare/party/48",
+    "reason": "Leccare il pavimento comporta un'esposizione igienica diretta senza una sfida o battuta che la giustifichi; conservate le prove fisiche e le imitazioni circostanti.",
+    "texts": {
+      "it": "Tocca con la lingua il pavimento per un secondo.",
+      "en": "Touch the floor with your tongue for a second.",
+      "es": "Toca con la lengua el suelo por un segundo.",
+      "fr": "Touchez le sol avec votre langue pour une seconde."
+    }
+  },
+  {
+    "index": 1606,
+    "id": "/truthDareGame/dare/party/54",
+    "reason": "Leccare il pomello di una porta ripete la gag della superficie sporca e aggiunge un rischio igienico evitabile per un obbligo da party.",
+    "texts": {
+      "it": "Lecca il pomello di una porta.",
+      "en": "Lick the knob of a door.",
+      "es": "Lame el pomo de una puerta.",
+      "fr": "Lèche le bouton d'une porte."
+    }
+  },
+  {
+    "index": 1739,
+    "id": "/wouldYouRather/party/33/text",
+    "reason": "Chiede di conoscere la morte propria o della persona più amata: dilemma sul lutto sproporzionato al mood leggero Party. Non rimossa la più ampia varietà di dilemmi morali o assurdi.",
+    "texts": {
+      "it": "Preferiresti sapere quando morirai tu o quando morirà la persona che ami di più ? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather know when you die or when the person you love most dies? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías saber cuándo mueres o cuándo muere la persona que más amas? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Tu préfères savoir quand tu meurs ou quand la personne que tu aimes le plus meurt ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 1743,
+    "id": "/wouldYouRather/party/37/text",
+    "reason": "Alternativa fra malattia permanente e uccisione di un gattino: crudeltà e sofferenza reale senza gag, fuori dal mood Party leggero.",
+    "texts": {
+      "it": "Preferiresti essere malato per sempre o uccidere un gattino per salvarne cento? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather be sick forever or kill a kitten to save a hundred? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías estar enfermo para siempre o matar a un gatito para salvar a cien? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous être malade pour toujours ou tuer un chaton pour en sauver une centaine ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 1753,
+    "id": "/wouldYouRather/party/47/text",
+    "reason": "Confronto fra due forme di sepoltura e tortura prolungata, fuori dal mood Party leggero; non è una semplice disavventura assurda.",
+    "texts": {
+      "it": "Preferiresti essere sepolto fino al collo sotto il sole per otto ore o tra formiche rosse per venti minuti? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather be buried to the neck under the sun for eight hours or among red ants for twenty minutes? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías ser enterrado al cuello bajo el sol durante ocho horas o entre las hormigas rojas durante veinte minutos? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Voudriez-vous être enterré jusqu'au cou sous le soleil pendant huit heures ou parmi des fourmis rouges pendant vingt minutes ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 1754,
+    "id": "/wouldYouRather/party/48/text",
+    "reason": "Entrambe le opzioni sono essere mangiati vivi: immagine di morte cruenta e scelta quasi equivalente, con scarso valore da dilemma Party.",
+    "texts": {
+      "it": "Preferiresti essere mangiato vivo da un orso o da un lupo? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather be eaten alive by a bear or wolf? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías ser comido vivo por un oso o lobo? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Préférez-vous être mangé vivant par un ours ou un loup ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 1813,
+    "id": "/wouldYouRather/redRoom/1/text",
+    "reason": "Doppione delle identiche alternative MAMMAAA/FORZA JUVE del1838; mantenuta la versione completa di voto e penalità.",
+    "texts": {
+      "it": "Preferiresti che ogni volta che vieni urli “MAMMAAA!” o “FORZA JUVE!”?",
+      "en": "Would you prefer that every time you come you scream “MOMMYYY!” or “FORZA JUVE!”?",
+      "es": "¿Prefieres que cada vez que te corres grites «¡MAMÁÁÁ!» o “FORZA JUVE!”?",
+      "fr": "Préférez-vous que chaque fois que vous jouissez, vous criez \"MAMAAAN !\" ou \"FORZA JUVE!\"?"
+    }
+  },
+  {
+    "index": 1816,
+    "id": "/wouldYouRather/redRoom/4/text",
+    "reason": "Confronta urlare un kink quando squilla il telefono con farlo in silenzio: il secondo farlo non ha un referente univoco e può significare sia dire il kink sia fare sesso. Le alternative non costituiscono un dilemma comprensibile senza inventarne una.",
+    "texts": {
+      "it": "Preferiresti dover gridare il tuo k*nk preferito ogni volta che squilla il telefono o farlo in silenzio?",
+      "en": "Would you rather have to shout your favorite k*nk every time the phone rings or do it in silence?",
+      "es": "¿Preferirías gritar tu k*nk favorito cada vez que el teléfono suena o hacerlo en silencio?",
+      "fr": "Préféreriez-vous crier votre k*nk préféré à chaque fois que le téléphone sonne ou le faire en silence?"
+    }
+  },
+  {
+    "index": 1830,
+    "id": "/wouldYouRather/redRoom/18/text",
+    "reason": "Doppione di1846: porno doppiato in napoletano contro slow motion, mantenuta la variante completa con voto e penalità.",
+    "texts": {
+      "it": "Preferiresti guardare un porno doppiato in napoletano o uno in slow motion?",
+      "en": "Would you rather watch porn dubbed in Neapolitan or one in slow motion?",
+      "es": "¿Preferirías ver porno doblado en napolitano o en cámara lenta?",
+      "fr": "Voudriez-vous regarder du porno doublé en napolitain ou au ralenti ?"
+    }
+  },
+  {
+    "index": 1901,
+    "id": "/wouldYouRather/darkRoom/0/text",
+    "reason": "Preferiresti con una sola opzione: manca la seconda alternativa e inventarla cambierebbe il contenuto.",
+    "texts": {
+      "it": "Preferiresti sapere cosa pensano tutti di te… ma non poter replicare?",
+      "en": "Would you rather know what everyone thinks of you... but not be able to reply?",
+      "es": "¿Prefieres saber lo que todos piensan de ti... pero no ser capaz de responder?",
+      "fr": "Tu préfères savoir ce que tout le monde pense de toi... mais ne pas pouvoir répondre ?"
+    }
+  },
+  {
+    "index": 1905,
+    "id": "/wouldYouRather/darkRoom/4/text",
+    "reason": "Doppione del1921: perdere fiducia altrui contro capacità di fidarsi; tenuta la versione completa con voto.",
+    "texts": {
+      "it": "Preferiresti perdere la fiducia di tutti o la capacità di fidarti?",
+      "en": "Would you rather lose everyone's trust or the ability to trust?",
+      "es": "¿Preferirías perder la confianza de todos o la capacidad de confiar?",
+      "fr": "Préférez-vous perdre la confiance de chacun ou la capacité de faire confiance?"
+    }
+  },
+  {
+    "index": 1909,
+    "id": "/wouldYouRather/darkRoom/8/text",
+    "reason": "Doppione del1922: sacrificare persona amata contro mille sconosciuti, tenuta la versione che esplicita entrambe le alternative.",
+    "texts": {
+      "it": "Preferiresti sacrificare una persona amata per salvare mille sconosciuti o il contrario?",
+      "en": "Would you rather sacrifice a loved one to save a thousand strangers or the opposite?",
+      "es": "¿Preferirías sacrificar a un ser querido para salvar a mil extraños o lo contrario?",
+      "fr": "Voudriez-vous sacrifier un être cher pour sauver mille inconnus ou le contraire ?"
+    }
+  },
+  {
+    "index": 1912,
+    "id": "/wouldYouRather/darkRoom/11/text",
+    "reason": "Doppione del1923: nulla cambia contro tutto cambia tranne te, tenuta la versione completa con voto.",
+    "texts": {
+      "it": "Preferiresti vivere sapendo che nulla cambierà o che tutto cambierà tranne te?",
+      "en": "Would you rather live knowing that nothing will change or that everything will change except you?",
+      "es": "¿Preferirías vivir sabiendo que nada cambiará o que todo cambiará excepto tú?",
+      "fr": "Voudriez-vous vivre en sachant que rien ne changera ou que tout changera sauf vous ?"
+    }
+  },
+  {
+    "index": 1915,
+    "id": "/wouldYouRather/darkRoom/14/text",
+    "reason": "Esperimento sociale contro aver creato l'illusione: illusione non definita e alternativa scollegata, senza un dilemma ricostruibile dal testo.",
+    "texts": {
+      "it": "Preferiresti sapere di essere stato scelto/a per un esperimento sociale o aver creato tu l’illusione?",
+      "en": "Would you rather know that you were chosen for a social experiment or that you created the illusion?",
+      "es": "¿Preferirías saber que fuiste elegido para un experimento social o que creaste la ilusión?",
+      "fr": "Préféreriez-vous savoir que vous avez été choisi pour une expérience sociale ou que vous avez créé l'illusion ?"
+    }
+  },
+  {
+    "index": 1916,
+    "id": "/wouldYouRather/darkRoom/15/text",
+    "reason": "Doppione del1924: parlare con sé futuro o bambino; tenuta la versione completa con voto.",
+    "texts": {
+      "it": "Preferiresti parlare con il tuo io futuro o il tuo io bambino?",
+      "en": "Would you rather talk to your future self or your child self?",
+      "es": "¿Preferirías hablar con tu yo futuro o con tu yo de niño?",
+      "fr": "Préférez-vous parler à votre moi futur ou à votre moi enfant ?"
+    }
+  },
+  {
+    "index": 1919,
+    "id": "/wouldYouRather/darkRoom/18/text",
+    "reason": "Doppione del1925: cancellare ricordi senza sapere quali o tenerli col dolore; tenuta la versione completa con voto.",
+    "texts": {
+      "it": "Preferiresti avere il potere di cancellare i ricordi… ma non sapere quali hai cancellato, o tenerli tutti con il dolore incluso?",
+      "en": "Would you rather have the power to erase memories... but not know which ones, or keep them all with the pain included?",
+      "es": "¿Preferirías tener el poder de borrar recuerdos... pero no saber cuáles, o mantenerlos todos con el dolor incluido?",
+      "fr": "Voudriez-vous avoir le pouvoir d'effacer les souvenirs... mais ne pas savoir lesquels, ou les garder tous avec la douleur incluse ?"
+    }
+  },
+  {
+    "index": 1920,
+    "id": "/wouldYouRather/darkRoom/19/text",
+    "reason": "Doppione del1926: felice solo contro infelice circondato; tenuta la versione completa con voto.",
+    "texts": {
+      "it": "Preferiresti essere felice e solo o infelice ma pieno di persone?",
+      "en": "Would you rather be happy and alone or unhappy but surrounded by people?",
+      "es": "¿Preferirías ser feliz y estar solo o ser infeliz pero estar rodeado de gente?",
+      "fr": "Voudriez-vous être heureux et seul ou malheureux mais entouré de gens ?"
+    }
+  },
+  {
+    "index": 1940,
+    "id": "/wouldYouRather/darkRoom/39/text",
+    "reason": "Ripropone lo stesso identico dilemma sulla fiducia del1921 con opzioni invertite e sola penalità diversa; nessuna nuova scelta.",
+    "texts": {
+      "it": "Preferiresti non poterti più fidare di nessuno o che nessuno voglia più fidarsi di te? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather not be able to trust anyone anymore or have no one want to trust you anymore? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías no poder confiar en nadie nunca más o que nadie quisiera confiar en ti nunca más? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Tu préfères ne plus pouvoir faire confiance à personne ou que personne ne veuille plus te faire confiance ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 1997,
+    "id": "/wouldYouRather/coppie/26/text",
+    "reason": "Doppione1972: partner tace rabbia oppure la esprime solo con emoji, stesse due scelte.",
+    "texts": {
+      "it": "Preferiresti che il tuo partner non ti dicesse mai quando è arrabbiato o che lo dicesse solo con emoji? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather your partner never tell you when he's angry or only tell you with emojis? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Prefieres que tu compañero nunca te diga cuándo está enfadado o que te lo diga sólo con emojis? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Préférez-vous que votre partenaire ne vous dise jamais quand il est en colère ou qu'il vous le dise seulement avec des emojis ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 1998,
+    "id": "/wouldYouRather/coppie/27/text",
+    "reason": "Weekend hot con ex contrapposto a fingere di nulla per testare il partner: manca cosa fingere e quale situazione scatenerebbe la reazione; seconda alternativa non interpretabile senza inventare contesto.",
+    "texts": {
+      "it": "Preferiresti fare un weekend hot con il tuo ex per soldi o fingere di nulla per testare la reazione del tuo partner? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather have a hot weekend with your ex for money or act as if nothing happened to test your partner's reaction? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías tener un fin de semana caliente con tu ex por dinero o hacer como si nada para probar la reacción de tu pareja? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Voudriez-vous avoir un week-end chaud avec votre ex pour de l'argent ou faire comme si de rien n'était pour tester la réaction de votre partenaire ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 1999,
+    "id": "/wouldYouRather/coppie/28/text",
+    "reason": "Doppione1974: feticcio mai detto a te oppure raccontato ad altri.",
+    "texts": {
+      "it": "Preferiresti scoprire che il tuo partner non ti ha mai detto il suo feticcio segreto o che lo abbia raccontato a qualcun altro? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather find out that your partner never told you his secret fetish or told someone else? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías descubrir que tu compañero nunca te dijo su fetiche secreto o le dijo a alguien más? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Voudriez-vous savoir que votre partenaire ne vous a jamais dit son fétichisme secret ou en a parlé à quelqu'un d'autre ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2000,
+    "id": "/wouldYouRather/coppie/29/text",
+    "reason": "Doppione1975: partner non cerca mai sesso oppure cerca solo quello.",
+    "texts": {
+      "it": "Preferiresti che il tuo partner non ti cercasse mai per farlo o che ti cercasse solo per quello? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather your partner never look for you to do it or just look for you for that? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Prefieres que tu pareja nunca te busque para hacerlo o que te busque sólo para eso? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous que votre partenaire ne vous cherche jamais pour le faire ou qu'il vous cherche seulement pour ça ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2001,
+    "id": "/wouldYouRather/coppie/30/text",
+    "reason": "Doppione1976: convivenza in casa senza porte oppure stanza piena di telecamere.",
+    "texts": {
+      "it": "Preferiresti vivere con il tuo partner per sempre in una casa senza porte o in una stanza con telecamere ovunque? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather live with your partner forever in a home without doors or in a room with cameras everywhere? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías vivir con tu pareja para siempre en un hogar sin puertas o en una habitación con cámaras por todas partes? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Voudriez-vous vivre avec votre partenaire pour toujours dans une maison sans portes ou dans une pièce avec des caméras partout ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2003,
+    "id": "/wouldYouRather/coppie/32/text",
+    "reason": "Doppione1978: ricevere oppure inviare ogni giorno una foto imbarazzante al partner.",
+    "texts": {
+      "it": "Preferiresti ricevere ogni giorno una foto imbarazzante dal tuo partner o doverne inviare una tu? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you prefer to receive an embarrassing photo from your partner every day or have to send one yourself? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Prefieres recibir una foto vergonzosa de tu pareja todos los días o tener que enviar una tú? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Préférez-vous recevoir une photo embarrassante de votre partenaire tous les jours ou devoir en envoyer une vous-même ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2004,
+    "id": "/wouldYouRather/coppie/33/text",
+    "reason": "Doppione1979: partner sa ogni masturbazione oppure lo vedi per webcam accesa per errore.",
+    "texts": {
+      "it": "Preferiresti che il tuo partner sapesse ogni volta che ti masturbi o vederlo/a farlo con la webcam accesa per sbaglio? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you prefer your partner to know every time you masturbate or see them doing it with the webcam accidentally turned on? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Prefieres que tu pareja sepa cada vez que te masturbas o verla hacerlo con la webcam encendida por accidente? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous que votre partenaire sache chaque fois que vous vous masturbez ou le voir le faire avec la webcam allumée par accident ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2005,
+    "id": "/wouldYouRather/coppie/34/text",
+    "reason": "Doppione1980: sesso sempre in silenzio oppure con canzoni trash anni2000.",
+    "texts": {
+      "it": "Preferiresti farlo solo in silenzio per sempre o solo con canzoni trash anni 2000? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather do it only in silence forever or only with trashy songs from the 2000s? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías hacerlo sólo en silencio para siempre o sólo con canciones horteras de los años 2000? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Voudriez-vous le faire seulement en silence pour toujours ou seulement avec des chansons kitsch des années 2000 ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2006,
+    "id": "/wouldYouRather/coppie/35/text",
+    "reason": "Doppione1982: partner legge il pensiero oppure non ascolta mai.",
+    "texts": {
+      "it": "Preferiresti che il tuo partner ti leggesse nel pensiero o che non ti ascoltasse mai? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather your partner read your mind or never listen to you? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Prefieres que tu compañero te lea en el pensamiento o nunca te escuche? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Préférez-vous que votre partenaire lise dans vos pensées ou ne vous écoute jamais ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2007,
+    "id": "/wouldYouRather/coppie/36/text",
+    "reason": "Doppione1983: una settimana legati oppure ignorarsi sette giorni, identica durata.",
+    "texts": {
+      "it": "Preferiresti passare una settimana legati insieme o ignorarvi completamente per sette giorni? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather spend a week tied together or completely ignore each other for seven days? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías pasar una semana atados el uno al otro o ignoraros por completo durante siete días? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Voudriez-vous passer une semaine attachés l'un à l'autre ou vous ignorer complètement pendant sept jours ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2008,
+    "id": "/wouldYouRather/coppie/37/text",
+    "reason": "Doppione1985: scoprire tradimento online oppure fisico.",
+    "texts": {
+      "it": "Preferiresti scoprire un tradimento online o uno fisico? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather discover an online betrayal or a physical one? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías descubrir una traición en línea o una traición física? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Vous préférez découvrir une trahison en ligne ou physique ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2009,
+    "id": "/wouldYouRather/coppie/38/text",
+    "reason": "Doppione1987: vivere insieme ma dormire separati oppure vivere lontani e sognarsi.",
+    "texts": {
+      "it": "Preferiresti vivere insieme ma dormire sempre separati o vivere lontani ma sognarvi ogni notte? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather live together but always sleep apart or live far apart but dream of each other every night? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías vivir juntos pero siempre dormir separados o vivir lejos pero soñar el uno con el otro cada noche? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Voudriez-vous vivre ensemble mais toujours dormir séparément ou vivre loin l'un de l'autre mais rêver l'un de l'autre chaque nuit ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2010,
+    "id": "/wouldYouRather/coppie/39/text",
+    "reason": "Doppione1988: dimenticare compleanno oppure sbagliare nome durante sesso.",
+    "texts": {
+      "it": "Preferiresti che il tuo partner dimenticasse il tuo compleanno o confondesse il tuo nome mentre fate l’amore? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather your partner forget your birthday or confuse your name while you make love? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías que tu pareja olvidara tu cumpleaños o confundiera tu nombre mientras hacéis el amor? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous que votre partenaire oublie votre anniversaire ou confonde votre nom pendant que vous faites l'amour ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2011,
+    "id": "/wouldYouRather/coppie/40/text",
+    "reason": "Doppione1989: genitori sentono sesso oppure sorprendono sul divano.",
+    "texts": {
+      "it": "Preferiresti che i genitori del tuo partner vi ascoltassero mentre fate l’amore o che vi sorprendessero sul divano? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather your partner's parents listen to you while you make love or surprise you on the couch? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Prefieres que los padres de tu pareja os escuchen mientras hacéis el amor o que os sorprendan en el sofá? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Préférez-vous que les parents de votre partenaire vous écoutent pendant que vous faites l'amour ou vous surprennent sur le canapé ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2012,
+    "id": "/wouldYouRather/coppie/41/text",
+    "reason": "Doppione1990: partner sorprende sempre oppure capisce senza parlare.",
+    "texts": {
+      "it": "Preferiresti un partner che ti sorprenda sempre o uno che ti capisca senza che tu dica nulla? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you prefer a partner who always surprises you or someone who understands you without you saying anything? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías un compañero que siempre te sorprenda o alguien que te entienda sin que tú digas nada? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous un partenaire qui vous surprend toujours ou quelqu'un qui vous comprend sans que vous disiez quoi que ce soit ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2017,
+    "id": "/wouldYouRather/coppie/46/text",
+    "reason": "Doppione1986: regalo costoso impersonale oppure buffo ma significativo.",
+    "texts": {
+      "it": "Preferiresti ricevere un regalo costoso ma freddo o uno buffo ma super personale? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather receive an expensive but cold gift or a funny but super personal gift? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías recibir un regalo caro pero frío o un regalo divertido pero super personal? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Voudriez-vous recevoir un cadeau cher mais froid ou un cadeau drôle mais super personnel? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2019,
+    "id": "/wouldYouRather/coppie/48/text",
+    "reason": "Doppione1993: partner molto geloso oppure totalmente indifferente, identiche anche3 penalità.",
+    "texts": {
+      "it": "Preferiresti che il tuo partner fosse super geloso o totalmente indifferente? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather your partner be super jealous or totally indifferent? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Prefieres que tu pareja sea súper celosa o totalmente indiferente? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous que votre partenaire soit super jaloux ou totalement indifférent ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2035,
+    "id": "/wouldYouRather/coppie/64/text",
+    "reason": "Doppione2022: sesso al mattino appena svegli oppure la sera prima di dormire, identiche3 penalità.",
+    "texts": {
+      "it": "Preferiresti farlo al mattino appena svegli o alla sera prima di dormire? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather do it in the morning when you wake up or in the evening before bed? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías hacerlo por la mañana cuando despiertes o por la noche antes de acostarte? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Tu préfères le faire le matin quand tu te réveilles ou le soir avant le coucher ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2038,
+    "id": "/wouldYouRather/coppie/67/text",
+    "reason": "Doppione2028: posizioni sempre nuove oppure classiche preferite; cambia solo la quantità di penalità.",
+    "texts": {
+      "it": "Preferiresti provare sempre posizioni nuove o restare sulle vostre classiche preferite? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you prefer to always try new positions or stay on your favorite classics? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Prefieres probar siempre nuevas posiciones o quedarte en tus clásicos favoritos? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Préférez-vous toujours essayer de nouvelles positions ou rester sur vos classiques préférés ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2045,
+    "id": "/wouldYouRather/coppie/74/text",
+    "reason": "Doppione1991: ricevere foto hot oppure audio piccante a sorpresa, ordine invertito, stesse3 penalità.",
+    "texts": {
+      "it": "Preferiresti ricevere una foto hot a sorpresa o un audio piccante inaspettato? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you rather receive a surprise hot photo or an unexpected dirty voice message? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Preferirías recibir una foto caliente sorpresa o un audio picante inesperado? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous recevoir une photo chaude surprise ou un message vocal coquin inattendu ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2060,
+    "id": "/wouldYouRather/coppie/89/text",
+    "reason": "Doppione2047: ricevere lap dance dal partner oppure farla per lui/lei; sola quantità differente.",
+    "texts": {
+      "it": "Preferiresti ricevere un lap dance o farlo tu al tuo partner? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather get a lap dance or do it to your partner? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías recibir un lap dance o hacérselo tú a tu pareja? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Tu préfères une lap dance ou la faire à ton partenaire ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2061,
+    "id": "/wouldYouRather/coppie/90/text",
+    "reason": "Doppione2051: gioco di ruolo con costumi buffi oppure spontaneità nudi, identiche3 penalità.",
+    "texts": {
+      "it": "Preferiresti un gioco di ruolo con costumi buffi o una serata spontanea senza niente addosso? Votate tutti contemporaneamente, la minoranza riceve 3 penitenze.",
+      "en": "Would you prefer a role-playing game with funny costumes or a spontaneous evening without anything? Everyone votes at the same time; the minority receives 3 penalties.",
+      "es": "¿Prefieres un juego de rol con trajes divertidos o una noche espontánea sin nada? Voten todos al mismo tiempo; la minoría recibe 3 penalidades.",
+      "fr": "Préférez-vous un jeu de rôle avec des costumes drôles ou une soirée spontanée sans rien ? Votez tous en même temps ; la minorité reçoit 3 pénalités."
+    }
+  },
+  {
+    "index": 2066,
+    "id": "/wouldYouRather/coppie/95/text",
+    "reason": "Doppione2048: parole piccanti sussurrate all'orecchio oppure messaggio hot al telefono, identiche2 penalità.",
+    "texts": {
+      "it": "Preferiresti ricevere un sussurro piccante all’orecchio o un messaggio hot sul telefono? Votate tutti contemporaneamente, la minoranza riceve 2 penitenze.",
+      "en": "Would you rather receive a spicy whisper in your ear or a hot message on your phone? Everyone votes at the same time; the minority receives 2 penalties.",
+      "es": "¿Preferirías recibir un susurro picante en tu oído o un mensaje caliente en tu teléfono? Voten todos al mismo tiempo; la minoría recibe 2 penalidades.",
+      "fr": "Préférez-vous recevoir un murmure coquin à l'oreille ou un message chaud sur votre téléphone ? Votez tous en même temps ; la minorité reçoit 2 pénalités."
+    }
+  },
+  {
+    "index": 2189,
+    "id": "/redRoom/0/text",
+    "reason": "La penalità non ha quantità e viene poi richiesta una distribuzione plurale: nessuna delle quattro lingue permette di recuperare quante assegnarne. Non inventata una quantità.",
+    "texts": {
+      "it": "Penalità se ti è mai capitato di pensare a uno dei presenti mentre eri con qualcun altro/a. Se dici chi... distribuiscile.",
+      "en": "Penalty if you've ever thought about a player here while you were with someone else. If you say who... distribute them.",
+      "es": "Penalización si alguna vez has pensado en un jugador aquí mientras estabas con alguien más. Si dices quién... repártelas.",
+      "fr": "Pénalité si vous avez déjà pensé à un joueur ici pendant que vous étiez avec quelqu'un d'autre. Si vous dites qui... distribuez-les."
+    }
+  },
+  {
+    "index": 2372,
+    "id": "/redRoom/183/text",
+    "reason": "Duplicato certo di /redRoom/156/text (indice2345): togliersi un indumento a scelta oppure3 penalità, stessa scelta e quantità.",
+    "texts": {
+      "it": "Togliti un indumento a tua scelta o ricevi 3 penalità.",
+      "en": "Take off a piece of clothing of your choice or receive 3 penalties.",
+      "es": "Quítate una prenda de tu elección o recibe 3 penalizaciones.",
+      "fr": "Enlevez un vêtement de votre choix ou recevez 3 pénalités."
+    }
+  },
+  {
+    "index": 2386,
+    "id": "/redRoom/197/text",
+    "reason": "Duplicato certo di /redRoom/34/text (indice2223): aver mandato un messaggio hot al destinatario sbagliato comporta4 penalità.",
+    "texts": {
+      "it": "Hai mai mandato un messaggio hot alla persona sbagliata? Se sì paghi 4 penalità.",
+      "en": "Have you ever sent a hot message to the wrong person? If yes you pay 4 penalties.",
+      "es": "¿Has enviado un mensaje caliente a la persona equivocada? Si sí pagas 4 penalizaciones.",
+      "fr": "Avez-vous déjà envoyé un message chaud à la mauvaise personne ? Si oui, vous payez 4 pénalités."
+    }
+  },
+  {
+    "index": 2565,
+    "id": "/redRoom/376/text",
+    "reason": "Ogni rifiuto implica3 penalità non identifica chi le riceva né quando finisce la richiesta di contatto intimo; la reiterazione dei rifiuti è la meccanica centrale. Servirebbe inventare destinatario e limite, mentre esistono sfide intime con alternativa chiara.",
+    "texts": {
+      "it": "Fatti toccare le parti intime da un giocatore a tua scelta. Ogni rifiuto implica 3 penalità.",
+      "en": "Have your private parts touched by a player of your choice. Each refusal implies 3 penalties.",
+      "es": "Deja que un jugador de tu elección te toque las partes íntimas. Cada negativa implica 3 sanciones.",
+      "fr": "Faites toucher vos parties privées par un joueur de votre choix. Chaque refus implique trois pénalités."
+    }
+  },
+  {
+    "index": 2566,
+    "id": "/redRoom/377/text",
+    "reason": "Convinci una ragazza a mostrarti il seno con3 penalità ad ogni rifiuto incentiva richieste ripetute dopo un no, senza limite né destinatario chiaro delle penalità. Non è una singola proposta consensuale con alternativa definita.",
+    "texts": {
+      "it": "Convinci una ragazza qui presente a mostrarti il seno. 3 penalità ad ogni rifiuto.",
+      "en": "Convince a girl here to show you her breasts. 3 penalties for each refusal.",
+      "es": "Convence a una chica aquí presente de que te muestre los pechos. 3 sanciones por cada negativa.",
+      "fr": "Convainquez une fille ici présente de vous montrer ses seins. 3 pénalités pour chaque refus."
+    }
+  },
+  {
+    "index": 2568,
+    "id": "/redRoom/379/text",
+    "reason": "L'alternativa finale o paga non indica quante penalità: azione non eseguibile senza inventarne la quantità. Conservare altri giochi di spanking con regole complete.",
+    "texts": {
+      "it": "Mettiti a 90 e fatti sculacciare da [player] o paga.",
+      "en": "Bend over at 90 degrees and get spanked by [player] or pay.",
+      "es": "Inclínate a 90 grados y deja que [player] te dé unos azotes o paga.",
+      "fr": "Penchez-vous à 90 degrés et faites-vous donner une fessée par [player] ou payez."
+    }
+  },
+  {
+    "index": 2588,
+    "id": "/redRoom/399/text",
+    "reason": "Duplicato certo di /redRoom/291/text (indice2480): sesso per ripicca, confessione oppure6 penalità, identiche domanda e meccanica.",
+    "texts": {
+      "it": "Hai mai fatto sesso per ripicca verso qualcuno? Confessa o paga 6 penalità.",
+      "en": "Have you ever had sex to spite someone? Confess or pay 6 penalties.",
+      "es": "¿Alguna vez has tenido sexo por despecho hacia alguien? Confiesa o paga 6 penalidades.",
+      "fr": "Avez-vous déjà couché pour vous venger de quelqu'un ? Avouez ou payez 6 pénalités."
+    }
+  },
+  {
+    "index": 2590,
+    "id": "/redRoom/401/text",
+    "reason": "Bere urina altrui impone ingestione di fluidi corporei con rischio igienico sproporzionato e sfida disgustosa estranea alla provocazione consensualeRed; la penalità alternativa non ne giustifica il mantenimento.",
+    "texts": {
+      "it": "Bevi un sorso di pipì di un giocatore o paga 8 penalità.",
+      "en": "Drink a sip of a player's pee or pay 8 penalties.",
+      "es": "Bebe un sorbo de orina de un jugador o paga 8 penalidades.",
+      "fr": "Buvez une gorgée d'urine d'un joueur ou payez 8 pénalités."
+    }
+  },
+  {
+    "index": 2591,
+    "id": "/redRoom/402/text",
+    "reason": "Farsi sputare direttamente in bocca comporta scambio deliberato di saliva e rischio igienico sproporzionato come sfida da party; effetto disgustoso anziché flirt o complicità.",
+    "texts": {
+      "it": "Fatti sputare in bocca da [player] o paga 4 penalità.",
+      "en": "Let [player] spit in your mouth or pay 4 penalties.",
+      "es": "Deja que [player] te escupa en la boca o paga 4 penalidades.",
+      "fr": "Laissez [player] vous cracher dans la bouche ou payez 4 pénalités."
+    }
+  },
+  {
+    "index": 2752,
+    "id": "/darkRoom/155/text",
+    "reason": "Duplicato esatto di /darkRoom/79/text (indice2676): cambiare opinione per farsi accettare da qualcuno,3 penalità.",
+    "texts": {
+      "it": "Se hai mai cambiato opinione solo per farti accettare da qualcuno… ricevi 3 penalità.",
+      "en": "If you've ever changed your opinion just to get someone to accept you... you get 3 penalties.",
+      "es": "Si alguna vez has cambiado tu opinión sólo para que alguien te aceptara... tienes 3 sanciones.",
+      "fr": "Si vous avez changé d'avis juste pour vous faire accepter par quelqu'un... vous obtenez 3 pénalités."
+    }
+  },
+  {
+    "index": 2753,
+    "id": "/darkRoom/156/text",
+    "reason": "Duplicato esatto di /darkRoom/81/text (indice2678): mostrare un'app imbarazzante,5 penalità se non si vuole o non se ne ha una.",
+    "texts": {
+      "it": "Mostra un'app imbarazzante sul tuo telefono. Se rifiuti o non ne hai, beccati 5 penalità.",
+      "en": "Show an embarrassing app on your phone. If you refuse or don't have any, you get 5 penalties.",
+      "es": "Muestra una aplicación embarazosa en tu teléfono. Si te niegas o no tienes ninguna, tienes 5 penalizaciones.",
+      "fr": "Montrez une application gênante sur votre téléphone. Si vous refusez ou n'en avez pas, vous obtenez 5 pénalités."
+    }
+  },
+  {
+    "index": 2754,
+    "id": "/darkRoom/157/text",
+    "reason": "Duplicato di /darkRoom/93/text (indice2690): sospettare di essere l'amico noioso del gruppo,4 penalità; cambia solo l'introduzione della condizione.",
+    "texts": {
+      "it": "Se hai mai avuto il sospetto di essere l'amico noioso del gruppo… 4 penalità.",
+      "en": "If you've ever suspected that you're the boring friend of the group... 4 penalties.",
+      "es": "Si alguna vez has sospechado que eres el amigo aburrido del grupo... 4 sanciones.",
+      "fr": "Si vous avez déjà suspecté que vous êtes l'ami ennuyeux du groupe... 4 pénalités."
+    }
+  },
+  {
+    "index": 2837,
+    "id": "/darkRoom/240/text",
+    "reason": "Se confessi sottrai1penalità senza alcuna quantità già assegnata: le5penalità si applicano soltanto al ramo in cui non confessi. Non esiste una base da cui sottrarre nel ramo positivo; ripararla richiederebbe scegliere una nuova meccanica.",
+    "texts": {
+      "it": "Ammetti una bugia che hai detto per sembrare più figo in chat. Se non lo fai, paga 5 penalità. Se lo fai, sottrai 1 penalità.",
+      "en": "Admit a lie you told to seem cooler in chat. If you don't, pay 5 penalties. If you do, subtract 1 penalty.",
+      "es": "Admite una mentira que dijiste para parecer más genial en chat. Si no lo haces, paga 5 penalizaciones. Si lo haces, resta 1 penalización.",
+      "fr": "Admettez un mensonge que vous avez dit pour paraître plus cool dans la conversation. Sinon, payez 5 pénalités. Si vous le faites, soustrayez 1 pénalité."
+    }
+  },
+  {
+    "index": 2866,
+    "id": "/darkRoom/269/text",
+    "reason": "Duplicato di /darkRoom/243/text (indice2840): segreto nascosto per paura del giudizio,8penalità se noioso/banale e5da distribuire se sconvolge il gruppo. Stesse condizioni, premi e quantità.",
+    "texts": {
+      "it": "Rivela un segreto che hai tenuto per paura di essere giudicato. Se il gruppo lo trova banale, paga 8 penalità. Se li sciocca, distribuisci 5.",
+      "en": "Reveal a secret you've kept for fear of being judged. If the group finds it trivial, pay 8 penalties. If it shocks them, deal 5.",
+      "es": "Revela un secreto que has guardado por miedo a ser juzgado. Si el grupo lo encuentra trivial, paga 8 penalizaciones. Si les impacta, reparte 5.",
+      "fr": "Révèle un secret que tu as gardé de peur d'être jugé. Si le groupe le trouve banal, paie 8 pénalités. Si ça les choque, distribue 5."
+    }
+  },
+  {
+    "index": 2962,
+    "id": "/darkRoom/365/text",
+    "reason": "Duplicato di /darkRoom/310/text (indice2907): soddisfazione per un piccolo fail di un amico,5penalità con riduzione di1se lo racconti; identica confessione e conteggio.",
+    "texts": {
+      "it": "Se hai mai provato soddisfazione per un piccolo fail di un amico, confessa. Paga 5 penalità. Se lo racconti, sottrai 1.",
+      "en": "If you've ever felt satisfaction over a friend's little fail, confess. Pay 5 penalties. If you tell it, subtract 1.",
+      "es": "Si alguna vez has sentido satisfacción por el pequeño fracaso de un amigo, confiesa. Paga 5 penalizaciones. Si lo cuentas, resta 1.",
+      "fr": "Si vous avez déjà ressenti de la satisfaction pour un petit échec d'un ami, confessez. Payez 5 pénalités. Si vous le dites, soustrayez 1."
+    }
+  },
+  {
+    "index": 2972,
+    "id": "/darkRoom/375/text",
+    "reason": "Duplicato di /darkRoom/270/text (indice2867): pensare ben ti sta mentre un amico è nei guai/ha un problema, confessione oppure7penalità.",
+    "texts": {
+      "it": "Hai mai pensato \"ben ti sta\" mentre un amico aveva un problema? Confessa o ricevi 7 penalità.",
+      "en": "Have you ever thought \"serves you right\" when a friend was having a problem? Confess or receive 7 penalties.",
+      "es": "¿Alguna vez has pensado \"bien te está\" cuando un amigo tenía un problema? Confiesa o recibe 7 sanciones.",
+      "fr": "Avez-vous déjà pensé \"bien fait pour toi\" quand un ami avait un problème ? Confessez ou recevez 7 pénalités."
+    }
+  },
+  {
+    "index": 2991,
+    "id": "/darkRoom/394/text",
+    "reason": "Duplicato di /darkRoom/339/text (indice2936): lasciare che un amico sbagli/fallisca per sentirsi meglio,7penalità se non lo racconti.",
+    "texts": {
+      "it": "Confessa un momento in cui hai lasciato che un amico sbagliasse per sentirti meglio. Paga 7 penalità se stai zitto.",
+      "en": "Confess a time when you let a friend make a mistake to make yourself feel better. Pay 7 penalties if you stay silent.",
+      "es": "Confiesa una vez en que dejaste que un amigo cometa un error para hacerte sentir mejor. Paga 7 penalizaciones si te callas.",
+      "fr": "Confessez un moment où vous avez laissé un ami faire une erreur pour vous faire sentir mieux. Payez 7 pénalités si vous restez silencieux."
+    }
+  },
+  {
+    "index": 2993,
+    "id": "/darkRoom/396/text",
+    "reason": "Duplicato di /darkRoom/341/text (indice2938): ritenere che un amico non meriti il successo, confessione oppure9penalità; cambia solo ammetti/confessa.",
+    "texts": {
+      "it": "Se hai mai pensato che un amico non meritasse il suo successo, confessa. Paga 9 penalità se non parli.",
+      "en": "If you've ever felt like a friend didn't deserve their success, own up. Pay 9 penalties if you don't speak.",
+      "es": "Si alguna vez has sentido que un amigo no merecía su éxito, confiésalo. Paga 9 penalizaciones si no hablas.",
+      "fr": "Si vous avez déjà eu l'impression qu'un ami ne méritait pas son succès, avouez-le. Payez 9 pénalités si vous ne parlez pas."
+    }
+  },
+  {
+    "index": 2994,
+    "id": "/darkRoom/397/text",
+    "reason": "Duplicato di /darkRoom/342/text (indice2939): segreto scomodo mai rivelato,10penalità da distribuire se il gruppo è scioccato,10da prendere se si tace.",
+    "texts": {
+      "it": "Di' il segreto più scomodo che hai sempre tenuto dentro. Se il gruppo resta scioccato, distribuisci 10 penalità. Se stai zitto, paghi 10.",
+      "en": "Tell the most uncomfortable secret you've always kept inside. If the group is shocked, give out 10 penalties. If you keep quiet, you pay 10.",
+      "es": "Cuenta el secreto más incómodo que siempre has mantenido dentro. Si el grupo está conmocionado, reparte 10 penalizaciones. Si te callas, pagas 10.",
+      "fr": "Dites le secret le plus inconfortable que vous avez toujours gardé à l'intérieur. Si le groupe est choqué, donnez 10 pénalités. Si vous restez silencieux, vous payez 10."
+    }
+  },
+  {
+    "index": 2999,
+    "id": "/darkRoom/402/text",
+    "reason": "Duplicato di /darkRoom/358/text (indice2955): una penalità al comico/più spiritoso del gruppo,3se non scegli; stesso bersaglio e meccanica.",
+    "texts": {
+      "it": "Dai una penalità a chi sembra sempre voler fare il \"comico\" del gruppo. Se non scegli, paghi 3.",
+      "en": "Give a penalty to anyone who always seems to want to be the \"comedian\" of the group. If you don't choose, you pay 3.",
+      "es": "Da una penalización a cualquiera que siempre parece querer ser el \"cómico\" del grupo. Si no eliges, pagas 3.",
+      "fr": "Accordez une pénalité à quiconque semble toujours vouloir être le « humoriste » du groupe. Si vous ne choisissez pas, vous payez 3."
+    }
+  },
+  {
+    "index": 3002,
+    "id": "/darkRoom/405/text",
+    "reason": "Duplicato di /darkRoom/257/text (indice2854): dire tutto ok/a posto mentre eri a pezzi, confessione e3penalità.",
+    "texts": {
+      "it": "Se hai mai detto \"tutto a posto\" ma eri a pezzi, ammetti. Paga 3 penalità.",
+      "en": "If you've ever said \"everything's fine\" but were broken, admit it. Pay 3 penalties.",
+      "es": "Si alguna vez has dicho \"todo está bien\" pero estabas hecho polvo, admítelo. Paga 3 penalizaciones.",
+      "fr": "Si vous avez déjà dit \"tout va bien\" mais que vous étiez en morceaux, admettez-le. Payez 3 pénalités."
+    }
+  },
+  {
+    "index": 3011,
+    "id": "/darkRoom/414/text",
+    "reason": "Duplicato di /darkRoom/315/text (indice2912): raccontare scusa ridicola per ghostare qualcuno,4da distribuire se il gruppo la trova epica,altrimenti5da prendere.",
+    "texts": {
+      "it": "Di' la scusa più patetica che hai usato per ghostare qualcuno. Se il gruppo la trova epica, distribuisci 4 penalità, altrimenti paghi 5.",
+      "en": "Name the most pathetic excuse you've used to ghost someone. If the group finds it epic, you deal 4 penalties, otherwise you pay 5.",
+      "es": "Nombra la excusa más patética que has usado para ghostear a alguien. Si el grupo la encuentra épica, reparte 4 penalizaciones; si no, pagas 5.",
+      "fr": "Nommez l'excuse la plus pathétique que vous ayez utilisée pour ghoster quelqu'un. Si le groupe la trouve épique, vous offrez 4 pénalités, sinon vous payez 5."
+    }
+  },
+  {
+    "index": 3012,
+    "id": "/darkRoom/415/text",
+    "reason": "Duplicato di /darkRoom/328/text (indice2925): fare il superiore per nascondere insicurezza,confessione oppure6penalità.",
+    "texts": {
+      "it": "Confessa un momento in cui hai fatto il superiore per nascondere un'insicurezza. Paga 6 penalità se non parli.",
+      "en": "Confess a time when you acted superior to hide an insecurity. Pay 6 penalties if you don't speak.",
+      "es": "Confiesa una vez en que actuaste superior para ocultar una inseguridad. Paga 6 penalizaciones si no hablas.",
+      "fr": "Confessez un temps où vous avez joué les supérieurs pour cacher une insécurité. Payez 6 pénalités si vous ne parlez pas."
+    }
+  },
+  {
+    "index": 3013,
+    "id": "/darkRoom/416/text",
+    "reason": "Duplicato di /darkRoom/372/text (indice2969):3penalità a chi crea drammi per attirare attenzione,altrimenti le paghi tu.",
+    "texts": {
+      "it": "Dai 3 penalità a chi sembra creare drammi per attirare attenzione. Altrimenti, le paghi tu.",
+      "en": "Give 3 penalties to anyone who seems to create drama to get attention. Otherwise, you take the penalties yourself.",
+      "es": "Da 3 sanciones a cualquiera que parezca crear drama para llamar la atención. De lo contrario, recíbelas tú.",
+      "fr": "Donnez 3 pénalités à quiconque semble créer des drames pour attirer l'attention. Sinon, vous les payez."
+    }
+  },
+  {
+    "index": 3016,
+    "id": "/darkRoom/419/text",
+    "reason": "Duplicato di /darkRoom/270/text (indice2867): pensare che un amico meriti i propri guai,confessione oppure7penalità.",
+    "texts": {
+      "it": "Hai mai pensato \"se lo merita\" mentre un amico era in crisi? Confessa o ricevi 7 penalità.",
+      "en": "Have you ever thought “he deserves it” while a friend was in crisis? Confess or receive 7 penalties.",
+      "es": "¿Alguna vez has pensado “se lo merece” mientras un amigo estaba en crisis? Confiesa o recibe 7 sanciones.",
+      "fr": "Avez-vous déjà pensé qu'il le mérite pendant qu'un ami était en crise ? Confessez ou recevez 7 pénalités."
+    }
+  },
+  {
+    "index": 3020,
+    "id": "/darkRoom/423/text",
+    "reason": "Duplicato di /darkRoom/379/text (indice2976): dire nessun/non è un problema mentre si ribolle dentro,confessione e4penalità.",
+    "texts": {
+      "it": "Se hai mai detto \"non è un problema\" ma dentro stavi esplodendo, confessa. Paga 4 penalità.",
+      "en": "If you've ever said \"it's no big deal\" but inside you were exploding, confess. Pay 4 penalties.",
+      "es": "Si alguna vez has dicho \"no es gran cosa\" pero dentro estabas explotando, confiesa. Paga 4 penalizaciones.",
+      "fr": "Si vous avez déjà dit \"ce n'est pas grave\", mais à l'intérieur vous explosiez, confessez. Payez 4 pénalités."
+    }
+  },
+  {
+    "index": 3027,
+    "id": "/darkRoom/430/text",
+    "reason": "Duplicato di /darkRoom/386/text (indice2983): peggior momento da finto esperto in conversazione andato male,6penalità se il gruppo lo trova cringe.",
+    "texts": {
+      "it": "Racconta il tuo peggior momento di \"finto esperto\" andato male. Se il gruppo lo trova cringe, paga 6 penalità.",
+      "en": "Tell us about your worst \"pretend expert\" moment gone wrong. If the group finds it cringe, pay 6 penalties.",
+      "es": "Háblanos de tu peor momento de \"experto fingido\" que salió mal. Si el grupo lo encuentra cringe, paga 6 penalizaciones.",
+      "fr": "Parlez-nous de votre pire moment de «faux expert» qui a mal tourné. Si le groupe trouve ça gênant, payez 6 pénalités."
+    }
+  },
+  {
+    "index": 3034,
+    "id": "/darkRoom/437/text",
+    "reason": "Duplicato di /darkRoom/393/text (indice2990): pianificare un piccolo dispetto/vendetta senza attuarlo,8penalità oppure4da distribuire raccontandolo.",
+    "texts": {
+      "it": "Se hai mai pianificato una piccola vendetta ma non l'hai fatta, raccontalo. Paga 8 penalità o distribuisci 4 se lo ammetti.",
+      "en": "If you've ever planned a little revenge but didn't follow through, tell it. Pay 8 penalties or deal 4 if you admit.",
+      "es": "Si alguna vez has planeado una pequeña venganza pero no la has llevado a cabo, cuéntalo. Paga 8 penalizaciones o reparte 4 si lo admites.",
+      "fr": "Si vous avez déjà planifié une petite vengeance mais ne l'avez pas réalisée, dites-le. Payez 8 pénalités ou distribuez-en 4 si vous l'admettez."
+    }
+  },
+  {
+    "index": 3037,
+    "id": "/darkRoom/440/text",
+    "reason": "Duplicato di /darkRoom/341/text (indice2938): pensare che un amico non meriti il successo/momento di gloria,confessione oppure9penalità.",
+    "texts": {
+      "it": "Se hai mai pensato che un amico non meritasse il suo momento di gloria, ammetti. Paga 9 penalità se non parli.",
+      "en": "If you've ever felt like a friend didn't deserve their moment in the sun, admit it. Pay 9 penalties if you don't speak.",
+      "es": "Si alguna vez has pensado que un amigo no merecía su momento al sol, admítelo. Paga 9 penalizaciones si no hablas.",
+      "fr": "Si vous avez déjà senti qu'un ami ne méritait pas son moment de gloire, admettez-le. Payez 9 pénalités si vous ne parlez pas."
+    }
+  },
+  {
+    "index": 3038,
+    "id": "/darkRoom/441/text",
+    "reason": "Duplicato di /darkRoom/342/text (indice2939): segreto scomodo,10da distribuire se sconvolge il gruppo oppure10da prendere se si tace.",
+    "texts": {
+      "it": "Di' il segreto più scomodo che hai tenuto nascosto finora. Se il gruppo resta senza parole, distribuisci 10 penalità. Se stai zitto, paghi 10.",
+      "en": "Tell the most uncomfortable secret you've kept hidden so far. If the group is speechless, deal 10 penalties. If you keep quiet, you pay 10.",
+      "es": "Cuenta el secreto más incómodo que has mantenido escondido hasta ahora. Si el grupo se queda sin palabras, reparte 10 sanciones. Si te callas, pagas 10.",
+      "fr": "Dites le secret le plus inconfortable que vous ayez gardé jusqu'ici. Si le groupe est sans voix, offrez 10 pénalités. Si vous restez silencieux, vous payez 10."
+    }
+  },
+  {
+    "index": 3088,
+    "id": "/darkRoom/491/text",
+    "reason": "Due azioni complete incollate in una sola,già presenti separatamente a /darkRoom/348/text (2945) e /darkRoom/349/text (2946),con le stesse4e3penalità. Manteniamo le due versioni giocabili separate.",
+    "texts": {
+      "it": "Di’ il commento più velenoso che hai sentito su un amico qui presente. Racconta o paga 4 penalità. Se hai mai finto di ridere a una battuta schifosa per non fare brutta figura, confessa. Paga 3 penalità.",
+      "en": "Say the most poisonous comment you heard about a friend here. Tell us about it or pay 4 penalties. If you've ever pretended to laugh at a crappy joke not to look bad, confess. Pay 3 penalties.",
+      "es": "Di el comentario más venenoso que escuchaste sobre un amigo aquí presente. Cuéntalo o paga 4 penalidades. Si alguna vez has fingido reírte de una broma de mierda para no quedar mal, confiesa. Paga 3 penalidades.",
+      "fr": "Dites le commentaire le plus venimeux que vous avez entendu sur un ami ici présent. Racontez ou payez 4 pénalités. Si vous avez déjà fait semblant de rire d'une blague pourrie pour ne pas avoir l'air nul, confessez. Payez 3 pénalités."
+    }
+  },
+  {
+    "index": 3089,
+    "id": "/darkRoom/492/text",
+    "reason": "Frammento Paga7penalità se stai zitto privo della domanda o confessione a cui si riferisce; non esiste un'azione da eseguire e servirebbe inventarla.",
+    "texts": {
+      "it": "Paga 7 penalità se stai zitto.",
+      "en": "Pay 7 penalties if you shut up.",
+      "es": "Paga 7 penalidades si te callas.",
+      "fr": "Payez 7 pénalités si vous la fermez."
+    }
+  },
+  {
+    "index": 3094,
+    "id": "/darkRoom/497/text",
+    "reason": "Richiede mostrare indiscriminatamente l'intera sezione Nascosti della galleria: può esporre foto intime altrui senza autorizzazione. Diversamente dal raccontare un segreto personale,il contenuto non è limitato a materiale proprio scelto per il gioco.",
+    "texts": {
+      "it": "Se mostri la sezione “Nascosti” della galleria del telefono distribuisci 6 penalità.",
+      "en": "If you show the “hidden” section of the phone gallery you distribute 6 penalties.",
+      "es": "Si muestras la sección «Ocultos» de la galería del teléfono, distribuyes 6 penalidades.",
+      "fr": "Si vous montrez la section « Masqués » de la galerie du téléphone, vous distribuez 6 pénalités."
+    }
+  },
+  {
+    "index": 3106,
+    "id": "/darkRoom/509/text",
+    "reason": "Il ramo altrimenti sacrificati in nome dell'amicizia non specifica azione,quantità né penalità: mancano regole essenziali e ripararle richiederebbe inventarle.",
+    "texts": {
+      "it": "Se sveli un segreto di uno tra i qui presenti distribuisci 6 penalità, altrimenti sacrificati tu in nome dell’amicizia.",
+      "en": "If you reveal a secret of someone here, you distribute 6 penalties; otherwise, sacrifice yourself in the name of friendship.",
+      "es": "Si revelas un secreto de uno de los presentes aquí, distribuyes 6 penalidades; de lo contrario, sacrifícate en nombre de la amistad.",
+      "fr": "Si vous révélez un secret de l'une des personnes ici présentes, vous distribuez 6 pénalités, sinon sacrifiez-vous au nom de l'amitié."
+    }
+  },
+  {
+    "index": 3107,
+    "id": "/darkRoom/510/text",
+    "reason": "Duplicato di /darkRoom/62/text (indice2659): assegnare una penalità a chi si convince delle proprie bugie,identici soggetto e meccanica.",
+    "texts": {
+      "it": "Dai una penalità a chi tra i giocatori si convince delle proprie bugie.",
+      "en": "You give a penalty to those who believe their lies.",
+      "es": "Usted da una penalidad a los que creen sus mentiras.",
+      "fr": "Vous donnez une pénalité à ceux qui croient leurs mensonges."
+    }
+  },
+  {
+    "index": 3124,
+    "id": "/darkRoom/527/text",
+    "reason": "Frammento La parte del tuo corpo che odi.2penalità in palio senza istruzione,condizione o destinatario: non chiarisce se dirla,mostrarla o farla indovinare e chi prende/distribuisce2.",
+    "texts": {
+      "it": "La parte del tuo corpo che odi. 2 penalità in palio.",
+      "en": "The part of your body you hate. 2 penalties at stake.",
+      "es": "La parte de tu cuerpo que odias. 2 penalidades en juego.",
+      "fr": "La partie de votre corps que vous détestez. Deux pénalités en jeu."
+    }
+  },
+  {
+    "index": 3183,
+    "id": "/clash/11/text",
+    "reason": "Duplicato di /clash/4/text (indice3176): duello di pollici con{playerB},3penalità al perdente.",
+    "texts": {
+      "it": "Sfida: Duello di pollice contro {playerB}. Il perdente fa 3 penalità",
+      "en": "Challenge: Thumb Duel against {playerB}. The loser gets 3 penalties",
+      "es": "Desafío: Duelo de pulgares contra {playerB}. El perdedor recibe 3 sanciones",
+      "fr": "Défi: Duel de pouce contre {playerB}. Le perdant obtient 3 pénalités"
+    }
+  },
+  {
+    "index": 3186,
+    "id": "/clash/14/text",
+    "reason": "Duplicato di /clash/5/text (indice3177): gara di flessioni con{playerB}per30secondi,5penalità a chi ne fa meno.",
+    "texts": {
+      "it": "Sfida: Gara di flessioni con {playerB} per 30 secondi. Il perdente fa 5 penalità",
+      "en": "Challenge: Push-up competition with {playerB} for 30 seconds. The loser gets 5 penalties",
+      "es": "Desafío: Competición de flexiones con {playerB} durante 30 segundos. El perdedor recibe 5 penalizaciones",
+      "fr": "Défi : Concours de pompes avec {playerB} pendant 30 secondes. Le perdant reçoit 5 pénalités"
+    }
+  },
+  {
+    "index": 3192,
+    "id": "/clash/20/text",
+    "reason": "Gara di resistenza al piccante in cui perde chi cerca da bere: premia ignorare il bruciore anziché una capacità divertente,con intensità del cibo non definita e rischio fisico sproporzionato.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete mangiare qualcosa di piccante. Il primo che corre a bere fa 5 penalità",
+      "en": "Challenge: You and {playerB} need to eat something spicy. The first person who runs to drink gets 5 penalties",
+      "es": "Desafío: Usted y {playerB} necesitan comer algo picante. La primera persona que va a beber recibe 5 penalizaciones",
+      "fr": "Défi : Toi et {playerB} devez manger quelque chose de piquant. Le premier qui court boire reçoit 5 pénalités"
+    }
+  },
+  {
+    "index": 3193,
+    "id": "/clash/21/text",
+    "reason": "Duplicato di /clash/1/text (indice3173): sfida di sguardi con{playerB},3penalità a chi distoglie lo sguardo per primo.",
+    "texts": {
+      "it": "Sfida: Sfida di sguardi con {playerB}. Il primo che distoglie lo sguardo fa 3 penalità",
+      "en": "Challenge: Staring challenge with {playerB}. The first person to look away gets 3 penalties",
+      "es": "Desafío: Duelo de miradas con {playerB}. El primero que aparte la mirada recibe 3 sanciones",
+      "fr": "Défi : Duel de regards avec {playerB}. Le premier qui détourne le regard reçoit 3 pénalités"
+    }
+  },
+  {
+    "index": 3202,
+    "id": "/clash/30/text",
+    "reason": "Gara a trattenere il respiro il più a lungo possibile: incentiva ignorare il bisogno di respirare e spingersi al limite,con rischio fisico sproporzionato per una sfida da party.",
+    "texts": {
+      "it": "Sfida: Gara a chi riesce a trattenere il respiro più a lungo con {playerB}. Il perdente fa 4 penalità",
+      "en": "Challenge: Race to see who can hold their breath the longest with {playerB}. The loser gets 4 penalties",
+      "es": "Reto: Compite con {playerB} para ver quién aguanta más tiempo sin respirar. El perdedor recibe 4 penalizaciones",
+      "fr": "Défi : Avec {playerB}, voyez qui peut retenir sa respiration le plus longtemps. Le perdant reçoit 4 pénalités"
+    }
+  },
+  {
+    "index": 3211,
+    "id": "/clash/39/text",
+    "reason": "Duplicato di /clash/5/text (indice3177): maggior numero di flessioni/push-up in30secondi con{playerB},5penalità al perdente.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete fare il maggior numero di push up in 30 secondi. Il perdente fa 5 penalità",
+      "en": "Challenge: You and {playerB} must do the most push ups in 30 seconds. The loser gets 5 penalties",
+      "es": "Desafío: Tú y {playerB} deben hacer el mayor número de flexiones en 30 segundos. El perdedor recibe 5 penalizaciones",
+      "fr": "Défi : Toi et {playerB} devez faire le plus de pompes en 30 secondes. Le perdant reçoit 5 pénalités"
+    }
+  },
+  {
+    "index": 3233,
+    "id": "/clash/61/text",
+    "reason": "Duplicato di /clash/29/text (indice3201): gara di saltelli/salti su una gamba in30secondi con{playerB},4penalità al perdente.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete fare una gara di salti su una gamba sola per 30 secondi. Il perdente fa 4 penalità",
+      "en": "Challenge: You and {playerB} must do a one-legged jumping competition for 30 seconds. The loser gets 4 penalties",
+      "es": "Desafío: Usted y {playerB} deben hacer una competencia de salto de una sola pierna durante 30 segundos. El perdedor recibe 4 penalizaciones",
+      "fr": "Défi : Vous et {playerB} devez faire une compétition de saut d'un pied pendant 30 secondes. Le perdant obtient 4 pénalités"
+    }
+  },
+  {
+    "index": 3259,
+    "id": "/clash/87/text",
+    "reason": "Bere un bicchiere d'acqua a velocità senza mani combina gara d'ingestione e controllo ridotto del bicchiere: rischio di soffocamento sproporzionato rispetto al divertimento della sfida.",
+    "texts": {
+      "it": "Sfida: Sfida di velocità nel bere un bicchiere d'acqua senza mani. Il perdente fa 4 penalità",
+      "en": "Challenge: Speed challenge in drinking a glass of water without hands. The loser gets 4 penalties",
+      "es": "Desafío: Desafío rápido para beber un vaso de agua sin manos. El perdedor recibe 4 penalizaciones",
+      "fr": "Défi : Défi de vitesse en buvant un verre d'eau sans mains. Le perdant obtient 4 pénalités"
+    }
+  },
+  {
+    "index": 3263,
+    "id": "/clash/91/text",
+    "reason": "Capriole da improvvisare in una stanza e giudicare in gara senza sapere esperienza o superficie: rischio per collo e schiena,non una prova fisica adatta a un party improvvisato.",
+    "texts": {
+      "it": "Sfida: Sfida di capriole. Tu e {playerB} dovete fare una capriola. Chi la fa peggio fa 4 penalità",
+      "en": "Challenge: Somersaults challenge. You and {playerB} need to do a somersault. Whoever does it worse gets 4 penalties",
+      "es": "Desafío: Reto de volteretas. Tú y {playerB} deben hacer una voltereta. Quien la haga peor recibe 4 penalizaciones",
+      "fr": "Défi : Défi de roulades. Toi et {playerB} devez faire une roulade. Celui qui la fait le moins bien reçoit 4 pénalités"
+    }
+  },
+  {
+    "index": 3272,
+    "id": "/clash/100/text",
+    "reason": "Equilibrio il più a lungo possibile su oggetti instabili non definiti: il compito richiede deliberatamente una base che può cedere o far cadere,in un contesto domestico non predisposto.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete fare una sfida di chi riesce a mantenere l'equilibrio su oggetti instabili più a lungo. Il perdente fa 4 penalità",
+      "en": "Challenge: You and {playerB} have a challenge of who can keep their balance on unstable objects the longest. The loser gets 4 penalties",
+      "es": "Desafío: Tú y {playerB} compiten para ver quién aguanta más tiempo en equilibrio sobre objetos inestables. El perdedor recibe 4 penalizaciones",
+      "fr": "Défi : Toi et {playerB} devez voir qui garde son équilibre le plus longtemps sur des objets instables. Le perdant reçoit 4 pénalités"
+    }
+  },
+  {
+    "index": 3275,
+    "id": "/clash/103/text",
+    "reason": "Duplicato di /clash/42/text (indice3214): camminare con un libro sulla testa,3penalità a chi lo fa cadere per primo.",
+    "texts": {
+      "it": "Sfida: Sfida di equilibrio con un libro in testa mentre si cammina. Chi fa cadere prima il libro fa 3 penalità",
+      "en": "Challenge: Balance challenge with a book on your head while walking. Whoever drops the book first gets 3 penalties",
+      "es": "Desafío: Reto de equilibrio con un libro en la cabeza mientras caminas. Quien deje caer el libro primero recibe 3 penalizaciones",
+      "fr": "Défi : Défi d'équilibre avec un livre sur la tête en marchant. Le premier qui fait tomber le livre reçoit 3 pénalités"
+    }
+  },
+  {
+    "index": 3288,
+    "id": "/clash/116/text",
+    "reason": "Duplicato di /clash/76/text (indice3248): restare immobili più a lungo dell'altro giocatore,3penalità al perdente; la metafora delle statue non cambia la sfida.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete fare una sfida di chi riesce a rimanere immobile più a lungo. Il perdente fa 3 penalità",
+      "en": "Challenge: You and {playerB} have a challenge of who can stay still the longest. The loser gets 3 penalties",
+      "es": "Desafío: Tú y {playerB} compiten para ver quién permanece inmóvil más tiempo. El perdedor recibe 3 sanciones",
+      "fr": "Défi : Toi et {playerB} devez voir qui reste immobile le plus longtemps. Le perdant reçoit 3 pénalités"
+    }
+  },
+  {
+    "index": 3289,
+    "id": "/clash/117/text",
+    "reason": "Meta-sfida che chiede alle squadre di completare una sfida senza definirla: costruire una torre di carte è solo un esempio,senza altezza,tempo o criterio di vittoria. Serve inventare obiettivo e regole per determinare squadra perdente.",
+    "texts": {
+      "it": "Sfida: Sfida di squadra. Divisi in due squadre, dovete completare una sfida (tipo costruire una torre di carte). La squadra perdente fa 3 penalità a testa",
+      "en": "Challenge: Team challenge. Split into two teams and complete a challenge (such as building a tower of cards). Everyone on the losing team gets 3 penalties",
+      "es": "Desafío: Reto por equipos. Divídanse en dos equipos y completen un desafío (como construir una torre de cartas). Cada jugador del equipo perdedor recibe 3 sanciones",
+      "fr": "Défi : Défi d'équipe. Répartissez-vous en deux équipes et relevez un défi (comme construire une tour de cartes). Chaque joueur de l'équipe perdante reçoit 3 pénalités"
+    }
+  },
+  {
+    "index": 3302,
+    "id": "/clash/130/text",
+    "reason": "La gara invita a girare fino a perdere l'equilibrio, premiando l'insistenza nonostante le vertigini; rischio di caduta sproporzionato per un party game.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete fare una sfida di chi riesce a fare più giri su se stesso senza cadere. Il perdente fa 4 penalità",
+      "en": "Challenge: You and {playerB} compete to see who can spin around the most times without falling. The loser gets 4 penalties",
+      "es": "Desafío: Tú y {playerB} compiten para ver quién da más vueltas sobre sí mismo sin caerse. El perdedor recibe 4 penalizaciones",
+      "fr": "Défi : Toi et {playerB} devez voir qui tourne le plus de fois sur lui-même sans tomber. Le perdant reçoit 4 pénalités"
+    }
+  },
+  {
+    "index": 3303,
+    "id": "/clash/131/text",
+    "reason": "La resistenza al ghiaccio premia il prolungamento del dolore e del contatto freddo senza limite di durata; sfida poco adatta a una serata conviviale.",
+    "texts": {
+      "it": "Sfida: Sfida di chi riesce a stare più tempo con un cubetto di ghiaccio in mano. Il perdente fa 4 penalità",
+      "en": "Challenge: Challenge of who can spend the longest time with an ice cube in their hand. The loser gets 4 penalties",
+      "es": "Desafío: A ver quién aguanta más tiempo con un cubito de hielo en la mano. El perdedor recibe 4 penalizaciones",
+      "fr": "Défi : Voyez qui tient le plus longtemps avec un glaçon dans la main. Le perdant reçoit 4 pénalités"
+    }
+  },
+  {
+    "index": 3307,
+    "id": "/clash/135/text",
+    "reason": "Gara di resistenza al piccante senza quantità o limite: la penalità spinge a continuare nonostante il malessere; rischio sproporzionato rispetto al gioco.",
+    "texts": {
+      "it": "Sfida: Sfida di resistenza con il cibo piccante. Chi rinuncia per primo fa 5 penalità",
+      "en": "Challenge: Spicy food endurance challenge. Whoever gives up first gets 5 penalties",
+      "es": "Desafío: Desafío de resistencia a la comida picante. Quien se rinde primero recibe 5 penalizaciones",
+      "fr": "Défi : Défi d'endurance avec de la nourriture piquante. Le premier qui abandonne reçoit 5 pénalités"
+    }
+  },
+  {
+    "index": 3317,
+    "id": "/clash/145/text",
+    "reason": "La gara premia la velocità di ingestione del biscotto senza mani, aumentando il rischio di soffocamento; la meccanica non si conserva correggendo soltanto il testo.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete fare una gara a chi mangia più velocemente un biscotto senza usare le mani. Il perdente fa 4 penalità",
+      "en": "Challenge: You and {playerB} have to compete to see who can eat a cookie the fastest without using their hands. The loser gets 4 penalties",
+      "es": "Desafío: Tú y {playerB} compiten para ver quién come una galleta más rápido sin usar las manos. El perdedor recibe 4 penalizaciones",
+      "fr": "Défi : Vous et {playerB} devez rivaliser pour voir qui peut manger un cookie le plus rapidement sans utiliser leurs mains. Le perdant obtient 4 pénalités"
+    }
+  },
+  {
+    "index": 3318,
+    "id": "/clash/146/text",
+    "reason": "Flessioni sulle sole punte delle dita: prova atletica che carica le articolazioni e non si presta a giocatori comuni durante una festa.",
+    "texts": {
+      "it": "Sfida: Gara di flessioni sulla punta delle dita tra te e {playerB}. Il perdente fa 5 penalità",
+      "en": "Challenge: Fingertip push-up contest between you and {playerB}. The loser gets 5 penalties",
+      "es": "Desafío: Concurso de flexiones sobre la punta de los dedos entre tú y {playerB}. El perdedor recibe 5 penalizaciones",
+      "fr": "Défi : Concours de pompes sur le bout des doigts entre toi et {playerB}. Le perdant reçoit 5 pénalités"
+    }
+  },
+  {
+    "index": 3323,
+    "id": "/clash/151/text",
+    "reason": "Il gruppo sceglie già l'animale da mimare, ma il vincitore dipende da risposte giuste non attribuite a un soggetto o a una serie di prove; manca una meccanica di punteggio coerente.",
+    "texts": {
+      "it": "Sfida: Tu e {playerB} dovete mimare un animale scelto dal gruppo. Chi ottiene meno risposte giuste fa 4 penalità",
+      "en": "Challenge: You and {playerB} must mime an animal chosen by the group. Whoever gets the fewest correct guesses gets 4 penalties",
+      "es": "Desafío: Tú y {playerB} deben imitar a un animal elegido por el grupo. Quien consiga menos aciertos recibe 4 penalizaciones",
+      "fr": "Défi : Toi et {playerB} devez mimer un animal choisi par le groupe. Celui qui obtient le moins de bonnes réponses reçoit 4 pénalités"
+    }
+  },
+  {
+    "index": 3451,
+    "id": "/party/114/text",
+    "reason": "Doppione certo di /party/32 (indice3369): fingere una chiamata importante, rispondere serissimi, penitenza massima se nessuno ride. Cambiano soltanto sinonimi, non contenuto o meccanica.",
+    "texts": {
+      "it": "Fai finta di ricevere una chiamata importante e rispondi con un tono serissimo. Se nessuno ride… Penitenza massima.",
+      "en": "Pretend you receive an important call and answer in a very serious tone. If no one laughs... Maximum penance.",
+      "es": "Finge que recibes una llamada importante y contesta con un tono muy serio. Si nadie se ríe... Penitencia máxima.",
+      "fr": "Fais semblant de recevoir un appel important et réponds d'un ton très sérieux. Si personne ne rit... Pénitence maximale."
+    }
+  },
+  {
+    "index": 3611,
+    "id": "/party/274/text",
+    "reason": "Doppione certo di /party/257 (indice3594): Macarena senza musica, stessa penalità2; essere guardati è già implicito nell'esecuzione davanti al gruppo.",
+    "texts": {
+      "it": "Esegui la coreografia di 'Macarena' senza musica oppure 2 penalità",
+      "en": "Perform the 'Macarena' choreography without music or 2 penalties",
+      "es": "Haz la coreografía de la 'Macarena' sin música o 2 penalizaciones.",
+      "fr": "Fais la chorégraphie de la 'Macarena' sans musique ou 2 pénalités."
+    }
+  },
+  {
+    "index": 3621,
+    "id": "/party/284/text",
+    "reason": "Chiede una posa yoga addirittura impossibile mantenuta per20secondi: invito a forzare una posizione non definita, senza una prova giocabile o adatta a una festa.",
+    "texts": {
+      "it": "Fai una posa da yoga impossibile per 20 secondi oppure 2 penalità",
+      "en": "Do an impossible yoga pose for 20 seconds or 2 penalties",
+      "es": "Haz una pose de yoga imposible por 20 segundos o 2 sanciones",
+      "fr": "Fais une pose de yoga impossible pendant 20 secondes ou 2 pénalités"
+    }
+  },
+  {
+    "index": 3656,
+    "id": "/party/319/text",
+    "reason": "La verticale contro il muro richiede capacità atletiche e introduce rischio di caduta su testa o collo; poco proporzionata a una stanza party leggera.",
+    "texts": {
+      "it": "Fai una verticale contro il muro oppure 3 penalità",
+      "en": "Do a handstand against the wall or 3 penalties",
+      "es": "Haz el pino contra la pared o 3 sanciones.",
+      "fr": "Fais le poirier contre le mur ou 3 sanctions."
+    }
+  },
+  {
+    "index": 3739,
+    "id": "/party/402/text",
+    "reason": "Doppione di /party/331 (indice3668): commentatore sportivo che descrive {playerB} mentre beve acqua, con identiche2penalità. Nessuna variazione di scena o regola.",
+    "texts": {
+      "it": "Parla come un commentatore sportivo mentre descrivi {playerB} che beve acqua oppure 2 penalità",
+      "en": "Talk like a sports commentator while describing {playerB} drinking water or 2 penalties",
+      "es": "Habla como un comentarista deportivo mientras describes a {playerB} bebiendo agua o 2 sanciones",
+      "fr": "Parlez comme un commentateur sportif tout en décrivant {playerB} qui boit de l'eau ou 2 pénalités"
+    }
+  },
+  {
+    "index": 3757,
+    "id": "/party/420/text",
+    "reason": "Doppione certo di /party/353 (indice3690): inventare un ballo che porti il proprio nome e insegnarlo a tutti, identiche3penalità.",
+    "texts": {
+      "it": "Crea un ballo che porti il tuo nome e insegnalo a tutti oppure 3 penalità",
+      "en": "Create a dance named after you, '{tuo nome}', and teach it to everyone or 3 penalties",
+      "es": "Crea un baile que lleve tu nombre, '{tuo nome}', y enséñalo a todos o 3 penalizaciones",
+      "fr": "Créez une danse portant votre nom, « {tuo nome} », et enseignez-la à tout le monde ou 3 pénalités"
+    }
+  },
+  {
+    "index": 3970,
+    "id": "/coppie/191/text",
+    "reason": "Doppione di /coppie/130 (indice3909): una qualità del carattere del partner che si ammira e si vorrebbe sviluppare personalmente, identiche3penalità.",
+    "texts": {
+      "it": "Spiega al tuo partner un suo tratto di personalità che ammiri e vorresti coltivare anche tu oppure 3 penalità",
+      "en": "Tell your partner about a personality trait of theirs that you admire and would like to cultivate too, or 3 penalties",
+      "es": "Cuéntale a tu pareja un rasgo de su personalidad que admiras y que te gustaría cultivar también, o 3 penas",
+      "fr": "Parlez à votre partenaire d'un trait de sa personnalité que vous admirez et que vous aimeriez cultiver aussi, ou 3 pénalités"
+    }
+  },
+  {
+    "index": 3986,
+    "id": "/coppie/207/text",
+    "reason": "Doppione di /coppie/161 (indice3940): descrivere al partner cosa si prova nel suo abbraccio, senza durata o altri gesti aggiunti e con identiche3penalità.",
+    "texts": {
+      "it": "Descrivi al tuo partner cosa provi quando siete abbracciati oppure 3 penalità",
+      "en": "Describe to your partner what you feel when you are hugging or 3 penalties",
+      "es": "Describe a tu pareja lo que sientes cuando estáis abrazados o 3 penalizaciones",
+      "fr": "Décrivez à votre partenaire ce que vous ressentez lorsque vous êtes dans les bras l'un de l'autre ou 3 pénalités"
+    }
+  },
+  {
+    "index": 4002,
+    "id": "/coppie/223/text",
+    "reason": "Doppione di /coppie/183 (indice3962): chiedere il momento della giornata in cui il legame o la connessione con il partner è più forte, con identiche3penalità.",
+    "texts": {
+      "it": "Spiega al tuo partner qual è il momento della giornata in cui senti più forte il legame tra voi oppure 3 penalità",
+      "en": "Tell your partner what time of day you feel the bond between you is strongest or 3 penalties",
+      "es": "Dile a tu pareja en qué momento del día sientes más fuerte el vínculo entre vosotros o 3 sanciones",
+      "fr": "Dites à votre partenaire à quel moment de la journée vous sentez que le lien entre vous est le plus fort ou 3 pénalités"
+    }
+  },
+  {
+    "index": 4198,
+    "id": "/coppie/419/text",
+    "reason": "Doppione letterale di /coppie/420 (indice4199), che conserva la stessa azione e3penalità con la forma inclusiva quello/a: cucinare sempre lo stesso piatto.",
+    "texts": {
+      "it": "Paga 3 penalità se sei quello che cucina sempre lo stesso piatto.",
+      "en": "Pay 3 penalties if you are the one who always cooks the same dish.",
+      "es": "Paga 3 penalidades si eres quien siempre cocina el mismo plato.",
+      "fr": "Payez 3 pénalités si vous êtes celui qui cuisine toujours le même plat."
+    }
+  },
+  {
+    "index": 4247,
+    "id": "/coppie/468/text",
+    "reason": "Il tratto indicato è infilare le dita nell'ano del partner senza preavviso: il contatto invasivo a sorpresa è presentato come gag, poco coerente con complicità e provocazione consensuale della stanza.",
+    "texts": {
+      "it": "Paga 4 penalità se sei quello/a che infila le dita nel culo del partner senza preavviso.",
+      "en": "Pay 4 penalties if you're the one who puts their fingers in their partner's ass without warning.",
+      "es": "Paga 4 penalidades si eres quien mete los dedos en el culo de su pareja sin previo aviso.",
+      "fr": "Payez 4 pénalités si vous êtes celui qui met ses doigts dans le cul de son partenaire sans prévenir."
+    }
+  },
+  {
+    "index": 4265,
+    "id": "/coppie/486/text",
+    "reason": "Chiede un atto sessuale esplicito immediato ovunque ci si trovi, incentivandolo con10penalità evitate; fuori dalla complicità piccante da party e inadatto quando il gruppo o altre persone sono presenti.",
+    "texts": {
+      "it": "Se fai un lavoretto di mano adesso al partner, ovunque voi siate, non ti becchi 10 penalità.",
+      "en": "If you give your partner a handjob now, wherever you are, you don't get 10 penalties.",
+      "es": "Si le haces una paja a tu pareja ahora, estéis donde estéis, no recibes 10 penalidades.",
+      "fr": "Si vous masturbez votre partenaire à la main maintenant, où que vous soyez, vous ne recevez pas 10 pénalités."
+    }
+  },
+  {
+    "index": 4289,
+    "id": "/coppie/510/text",
+    "reason": "Doppione di /coppie/309 (indice4088): preferire preliminari al rapporto sessuale, con identiche2penalità. La variazione sesso/rapporto completo non crea un'azione diversa.",
+    "texts": {
+      "it": "Se preferisci i preliminari al sesso, 2 penalità.",
+      "en": "If you prefer foreplay to sex, 2 penalties.",
+      "es": "Si prefieres los preliminares al sexo, 2 penalidades.",
+      "fr": "Si vous préférez les préliminaires au sexe, 2 pénalités."
+    }
+  }
+]

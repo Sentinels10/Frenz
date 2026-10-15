@@ -1,0 +1,10 @@
+{"start":3094,"end":3194,"second_pass":true,"changes":[
+{"index":3094,"action":"remove","reason":"Richiede mostrare indiscriminatamente l'intera sezione Nascosti della galleria: può esporre foto intime altrui senza autorizzazione. Diversamente dal raccontare un segreto personale,il contenuto non è limitato a materiale proprio scelto per il gioco."},
+{"index":3106,"action":"remove","reason":"Il ramo altrimenti sacrificati in nome dell'amicizia non specifica azione,quantità né penalità: mancano regole essenziali e ripararle richiederebbe inventarle."},
+{"index":3107,"action":"remove","reason":"Duplicato di /darkRoom/62/text (indice2659): assegnare una penalità a chi si convince delle proprie bugie,identici soggetto e meccanica."},
+{"index":3124,"action":"remove","reason":"Frammento La parte del tuo corpo che odi.2penalità in palio senza istruzione,condizione o destinatario: non chiarisce se dirla,mostrarla o farla indovinare e chi prende/distribuisce2."},
+{"index":3183,"action":"remove","reason":"Duplicato di /clash/4/text (indice3176): duello di pollici con{playerB},3penalità al perdente."},
+{"index":3186,"action":"remove","reason":"Duplicato di /clash/5/text (indice3177): gara di flessioni con{playerB}per30secondi,5penalità a chi ne fa meno."},
+{"index":3192,"action":"remove","reason":"Gara di resistenza al piccante in cui perde chi cerca da bere: premia ignorare il bruciore anziché una capacità divertente,con intensità del cibo non definita e rischio fisico sproporzionato."},
+{"index":3193,"action":"remove","reason":"Duplicato di /clash/1/text (indice3173): sfida di sguardi con{playerB},3penalità a chi distoglie lo sguardo per primo."}
+]}

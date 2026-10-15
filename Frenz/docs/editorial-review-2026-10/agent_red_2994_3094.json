@@ -1,0 +1,16 @@
+{"start":2994,"end":3094,"second_pass":true,"changes":[
+{"index":2994,"action":"remove","reason":"Duplicato di /darkRoom/342/text (indice2939): segreto scomodo mai rivelato,10penalità da distribuire se il gruppo è scioccato,10da prendere se si tace."},
+{"index":2999,"action":"remove","reason":"Duplicato di /darkRoom/358/text (indice2955): una penalità al comico/più spiritoso del gruppo,3se non scegli; stesso bersaglio e meccanica."},
+{"index":3002,"action":"remove","reason":"Duplicato di /darkRoom/257/text (indice2854): dire tutto ok/a posto mentre eri a pezzi, confessione e3penalità."},
+{"index":3011,"action":"remove","reason":"Duplicato di /darkRoom/315/text (indice2912): raccontare scusa ridicola per ghostare qualcuno,4da distribuire se il gruppo la trova epica,altrimenti5da prendere."},
+{"index":3012,"action":"remove","reason":"Duplicato di /darkRoom/328/text (indice2925): fare il superiore per nascondere insicurezza,confessione oppure6penalità."},
+{"index":3013,"action":"remove","reason":"Duplicato di /darkRoom/372/text (indice2969):3penalità a chi crea drammi per attirare attenzione,altrimenti le paghi tu."},
+{"index":3016,"action":"remove","reason":"Duplicato di /darkRoom/270/text (indice2867): pensare che un amico meriti i propri guai,confessione oppure7penalità."},
+{"index":3020,"action":"remove","reason":"Duplicato di /darkRoom/379/text (indice2976): dire nessun/non è un problema mentre si ribolle dentro,confessione e4penalità."},
+{"index":3027,"action":"remove","reason":"Duplicato di /darkRoom/386/text (indice2983): peggior momento da finto esperto in conversazione andato male,6penalità se il gruppo lo trova cringe."},
+{"index":3034,"action":"remove","reason":"Duplicato di /darkRoom/393/text (indice2990): pianificare un piccolo dispetto/vendetta senza attuarlo,8penalità oppure4da distribuire raccontandolo."},
+{"index":3037,"action":"remove","reason":"Duplicato di /darkRoom/341/text (indice2938): pensare che un amico non meriti il successo/momento di gloria,confessione oppure9penalità."},
+{"index":3038,"action":"remove","reason":"Duplicato di /darkRoom/342/text (indice2939): segreto scomodo,10da distribuire se sconvolge il gruppo oppure10da prendere se si tace."},
+{"index":3088,"action":"remove","reason":"Due azioni complete incollate in una sola,già presenti separatamente a /darkRoom/348/text (2945) e /darkRoom/349/text (2946),con le stesse4e3penalità. Manteniamo le due versioni giocabili separate."},
+{"index":3089,"action":"remove","reason":"Frammento Paga7penalità se stai zitto privo della domanda o confessione a cui si riferisce; non esiste un'azione da eseguire e servirebbe inventarla."}
+]}
