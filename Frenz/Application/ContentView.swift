@@ -61,6 +61,11 @@ struct ContentView: View {
                     .routeTransition(trigger: gameVM.gameState)
             }
         }
+        .buttonStyle(HapticButtonStyle())
+        .onAppear { OrientationCoordinator.update(for: gameVM.gameState) }
+        .onChange(of: gameVM.gameState) { _, state in
+            OrientationCoordinator.update(for: state)
+        }
     }
 }
 

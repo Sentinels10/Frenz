@@ -98,6 +98,7 @@ public protocol PlayingRouting: ObservableObject {
     var totalSteps: Int { get }    // es. 50
     func backToRooms()             // torna alla RoomSelection
     var isSpecialCurrent: Bool { get }             // se l’azione corrente è un minigioco
+    var currentSpecialGameID: String? { get }        // ID del minigioco nella carta corrente
     var currentRenderedActionText: String? { get } // testo con placeholder risolti
     // Testi UI
     var playingTitle: String { get }

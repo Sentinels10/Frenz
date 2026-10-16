@@ -128,7 +128,10 @@ struct RoomSelectionView<VM: RoomSelectionRouting>: View {
                     .contentShape(Rectangle())
                     .padding(.horizontal, 20)
                     .padding(.vertical, 10)
-                    .onTapGesture { vm.openPlayerSetup() }
+                    .onTapGesture {
+                        HapticFeedback.lightTap()
+                        vm.openPlayerSetup()
+                    }
                 }
             }
         }

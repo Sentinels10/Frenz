@@ -115,7 +115,7 @@ struct GameOverView<VM: PlayingRouting>: View {
             }
 
             // Testo centrale
-            VStack(spacing: 18) {
+            VStack(spacing: -20) {
                 Text(vm.gameOverPart1)
                     .font(.rammetto(size: 54))
                     .kerning(1)
@@ -130,7 +130,10 @@ struct GameOverView<VM: PlayingRouting>: View {
             }
         }
         .contentShape(Rectangle())                 // per il tap su tutta la schermata
-        .onTapGesture { vm.continueFromGameOver() }
+        .onTapGesture {
+            HapticFeedback.lightTap()
+            vm.continueFromGameOver()
+        }
         .onAppear {
             float = true
             registerCompletedMatchAndRequestReviewIfAppropriate()

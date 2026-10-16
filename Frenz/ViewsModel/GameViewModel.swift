@@ -411,6 +411,11 @@ final class GameViewModel: ObservableObject,
         guard currentIndex < actions.count, let gid = actions[currentIndex].game else { return nil }
         return ContentLoader.specialMeta(lang: language, id: gid)?.title
     }
+
+    var currentSpecialGameID: String? {
+        guard currentIndex < actions.count else { return nil }
+        return actions[currentIndex].game
+    }
     
     var currentSpecialDescription: String? {
         guard currentIndex < actions.count, let gid = actions[currentIndex].game else { return nil }

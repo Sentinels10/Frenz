@@ -64,7 +64,7 @@ struct LanguageSelectionView<ViewModel: LanguageSelectionRouting>: View {
             }
             .font(.system(size: 13, weight: .medium))
             .foregroundColor(.white.opacity(0.72))
-            .buttonStyle(.plain)
+            .buttonStyle(HapticButtonStyle())
 
             Button(action: { vm.goBack() }) {
                 Text(vm.closeTitle)
@@ -138,6 +138,6 @@ private struct LanguageRow: View {
                     .fill(Color.white.opacity(isSelected ? 0.10 : 0.06))
             )
         }
-        .buttonStyle(.plain)
+        .buttonStyle(HapticButtonStyle())
     }
 }

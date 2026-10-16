@@ -2,6 +2,7 @@ import SwiftUI
 
 @main
 struct FrenzApp: App {
+    @UIApplicationDelegateAdaptor(OrientationAppDelegate.self) private var orientationAppDelegate
     @StateObject private var gameVM = GameViewModel()
     @StateObject private var languageManager = LanguageManager()
     

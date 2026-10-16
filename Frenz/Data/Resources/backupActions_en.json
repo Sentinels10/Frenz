@@ -1483,7 +1483,7 @@
       ]
     },
     "newRule": {
-      "text": "{player} has established a NEW RULE! Nobody can [rule] anymore until the end of the game! Otherwise 3 penalties",
+      "text": "Until the end of the game, no one can [rule]. Anyone who breaks the rule gets 3 penalties.",
       "rules": [
         "say bad words",
         "touch your hair",

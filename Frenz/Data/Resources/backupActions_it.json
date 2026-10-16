@@ -1483,7 +1483,7 @@
       ]
     },
     "newRule": {
-      "text": "{player} ha stabilito una NUOVA REGOLA! Nessuno può più [regola] fino a fine partita! Altrimenti 3 penalità",
+      "text": "Fino a fine partita nessuno può [rule]. Chi sgarra prende 3 penalità.",
       "rules": [
         "dire parolacce",
         "toccarsi i capelli",

@@ -2,6 +2,7 @@ import SwiftUI
 
 struct PlayingView<VM: PlayingRouting>: View {
     @ObservedObject var vm: VM
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         ZStack {
@@ -13,29 +14,12 @@ struct PlayingView<VM: PlayingRouting>: View {
                 Spacer(minLength: 24)
 
                 // Centro: titolo (special o player) + azione renderizzata
-                VStack(spacing: 18) {
-                    if vm.isSpecialCurrent, let special = vm.currentSpecialTitle {
-                        Text(special.uppercased())
-                            .font(.system(size: 28, weight: .heavy))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 24)
-                    } else if let player = vm.currentPlayerNameTitle, !player.isEmpty {
-                        Text(player.uppercased())
-                            .font(.system(size: 28, weight: .heavy))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 24)
-                    }
-
-                    if let text = vm.currentRenderedActionText {
-                        Text(text)
-                            .font(.system(size: 22, weight: .semibold))
-                            .foregroundColor(.white)
-                            .multilineTextAlignment(.center)
-                            .padding(.horizontal, 28)
-                    }
+                ZStack {
+                    cardText
+                        .id(vm.currentStep)
+                        .transition(cardTransition)
                 }
+                .animation(cardAnimation, value: vm.currentStep)
 
                 Spacer()
 
@@ -48,8 +32,51 @@ struct PlayingView<VM: PlayingRouting>: View {
         }
         .navigationBarHidden(true)
         .contentShape(Rectangle())
-        .onTapGesture { vm.goNext() }
+        .onTapGesture {
+            HapticFeedback.lightTap()
+            vm.goNext()
+        }
         .onAppear { vm.onPlayingAppear() }
+    }
+
+    private var cardText: some View {
+        VStack(spacing: 18) {
+            if vm.isSpecialCurrent, let special = vm.currentSpecialTitle {
+                cardTitle(special)
+            } else if let player = vm.currentPlayerNameTitle, !player.isEmpty {
+                cardTitle(player)
+            }
+
+            if let text = vm.currentRenderedActionText {
+                Text(text)
+                    .font(.system(size: 22, weight: .semibold))
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 28)
+                    .shadow(color: .black.opacity(0.15), radius: 3, y: 2)
+            }
+        }
+    }
+
+    private func cardTitle(_ title: String) -> some View {
+        Text(title.uppercased())
+            .font(.rammetto(size: 25))
+            .foregroundColor(.white)
+            .multilineTextAlignment(.center)
+            .minimumScaleFactor(0.8)
+            .padding(.horizontal, 24)
+            .shadow(color: .black.opacity(0.28), radius: 4, y: 3)
+    }
+
+    private var cardTransition: AnyTransition {
+        reduceMotion ? .opacity : .asymmetric(
+            insertion: .opacity.combined(with: .scale(scale: 0.96)).combined(with: .offset(y: 8)),
+            removal: .opacity
+        )
+    }
+
+    private var cardAnimation: Animation? {
+        reduceMotion ? nil : .spring(response: 0.32, dampingFraction: 0.72)
     }
 
     // MARK: Header (back + nome modalità in grigino)
@@ -76,6 +103,18 @@ struct PlayingView<VM: PlayingRouting>: View {
 
     // MARK: Gradient per modalità
     private var backgroundGradient: LinearGradient {
+        if let id = vm.currentSpecialGameID,
+           let colors = SpecialGamePalette.colors(for: id) {
+            return LinearGradient(colors: colors, startPoint: .top, endPoint: .bottom)
+        }
+
+        if vm.currentRoom == .games,
+           let game = vm.currentGame,
+           let colors = SpecialGamePalette.colors(for: game) {
+            return LinearGradient(colors: colors,
+                                  startPoint: .top, endPoint: .bottom)
+        }
+
         let colors: [Color]
         switch vm.currentRoom {
         case .some(.party):

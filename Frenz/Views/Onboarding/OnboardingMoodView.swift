@@ -180,7 +180,7 @@ struct OnboardingMoodView<VM: OnboardingRouting>: View {
                                 )
                             }
                         }
-                        .buttonStyle(.plain)
+                        .buttonStyle(HapticButtonStyle())
                     }
                 }
                 

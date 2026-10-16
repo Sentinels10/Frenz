@@ -343,6 +343,18 @@ struct ContentLoader {
         let description = node["text"] as? String
         let timerSec = (id == "timerChallenge") ? 15 : nil
 
+        if id == "newRule",
+           let template = description,
+           let rules = node["rules"] as? [String],
+           let rule = rules.filter({ !$0.isEmpty }).randomElement() {
+            return SpecialGameContent(
+                title: title,
+                description: description,
+                action: template.replacingOccurrences(of: "[rule]", with: rule),
+                timerSeconds: nil
+            )
+        }
+
         let pool = poolForRoom(node: node, room: room)
         if let action = pool.randomElement() {
             return SpecialGameContent(title: title, description: description, action: action, timerSeconds: timerSec)
@@ -470,7 +482,7 @@ struct ContentLoader {
             case "timerChallenge":  return "Mini-sfida (Timer)"
             case "penitenzaRandom": return "Penitenza random"
             case "penitenzeGruppo": return "Penitenze di gruppo"
-            case "chiEPiuProbabile":return "Chi è più probabile..."
+            case "chiEPiuProbabile":return "Chi è più probabile che..."
             case "pointFinger":     return "Punta il dito"
             case "infamata":        return "Infamata"
             case "chatDetective":   return "Chat Detective"

@@ -1483,7 +1483,7 @@
       ]
     },
     "newRule": {
-      "text": "¡{player} ha establecido una NUEVA REGLA! ¡Nadie puede [regla] más hasta el final del juego! De lo contrario 3 penalidades",
+      "text": "Hasta el final de la partida, nadie puede [rule]. Quien incumpla la regla recibe 3 penalizaciones.",
       "rules": [
         "decir malas palabras",
         "tocarse el pelo",

@@ -1483,7 +1483,7 @@
       ]
     },
     "newRule": {
-      "text": "{player} a établi une nouvelle règle! Personne ne peut plus [régler] jusqu'à la fin du jeu ! Sinon 3 pénalités",
+      "text": "Jusqu'à la fin de la partie, personne ne peut [rule]. Celui qui enfreint la règle prend 3 pénalités.",
       "rules": [
         "dire des gros mots",
         "se toucher les cheveux",

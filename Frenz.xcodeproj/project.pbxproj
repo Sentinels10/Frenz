@@ -55,8 +55,8 @@
 				Assets/lucchetto.psd,
 				"Assets/noun-lock-7773507.svg",
 				"Assets/Scorpione d_oro su sfondo trasparente.png",
-				Info.plist,
 				docs,
+				Info.plist,
 			);
 			target = D63816DB2E5F41E70017A5DB /* Frenz */;
 		};
@@ -68,10 +68,10 @@
 			exceptions = (
 				D6CEE9762E70145900A7ED07 /* Exceptions for "Frenz" folder in "Frenz" target */,
 			);
-			path = Frenz;
 			explicitFolders = (
 				docs,
 			);
+			path = Frenz;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -311,7 +311,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = FP667FMR7C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -342,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = FP667FMR7C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

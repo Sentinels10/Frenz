@@ -148,7 +148,7 @@ struct OnboardingWhoView<VM: OnboardingRouting>: View {
                                 )
                             }
                         }
-                        .buttonStyle(.plain)
+                        .buttonStyle(HapticButtonStyle())
                     }
                 }
                 

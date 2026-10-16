@@ -120,6 +120,6 @@ private struct GameCard: View {
                     .fill(Color.white.opacity(isSelected ? 0.16 : 0.08))
             )
         }
-        .buttonStyle(.plain)
+        .buttonStyle(HapticButtonStyle())
     }
 }

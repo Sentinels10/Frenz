@@ -3,6 +3,7 @@ import SwiftUI
 struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
     @ObservedObject var vm: VM
     @Environment(\.locale) private var locale
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         ZStack {
@@ -13,11 +14,21 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
 
                 Spacer(minLength: 24)
 
-                if vm.todIsChoosePhase {
-                    choosePhase
-                } else {
-                    resultPhase
+                ZStack {
+                    Group {
+                        if vm.todIsChoosePhase {
+                            choosePhase
+                        } else {
+                            resultPhase
+                        }
+                    }
+                    .id(todContentID)
+                    .transition(reduceMotion ? .opacity : .asymmetric(
+                        insertion: .opacity.combined(with: .scale(scale: 0.96)).combined(with: .offset(y: 8)),
+                        removal: .opacity
+                    ))
                 }
+                .animation(reduceMotion ? nil : .spring(response: 0.32, dampingFraction: 0.72), value: todContentID)
 
                 Spacer()
 
@@ -32,6 +43,10 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
             }
         }
         .navigationBarHidden(true)
+    }
+
+    private var todContentID: String {
+        "\(vm.currentStep)|\(vm.todCurrentPlayerName ?? "")|\(vm.todIsChoosePhase)|\(vm.todPromptText ?? "")"
     }
     
     private func roomBackground(room: GameRoom) -> LinearGradient {
@@ -85,15 +100,17 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
     private var choosePhase: some View {
         VStack(spacing: 20) {
             Text(vm.todTitle)
-                .font(.system(size: 32, weight: .heavy))
+                .font(.rammetto(size: 27))
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
+                .shadow(color: .black.opacity(0.28), radius: 4, y: 3)
 
             if let p = vm.todCurrentPlayerName {
                 Text(p)
-                    .font(.system(size: 22, weight: .semibold))
+                    .font(.rammetto(size: 22))
                     .foregroundColor(.white)
+                    .shadow(color: .black.opacity(0.28), radius: 4, y: 3)
             }
 
             VStack(spacing: 14) {
@@ -127,7 +144,7 @@ struct TruthOrDareView<VM: TruthOrDareRouting & PlayingRouting>: View {
     private var resultPhase: some View {
         VStack(spacing: 18) {
             Text(vm.todPromptTitle)
-                .font(.system(size: 28, weight: .heavy))
+                .font(.rammetto(size: 25))
                 .foregroundColor(vm.todIsShowingTruth ? .black : .white)
                 .padding(.top, 12)
 
